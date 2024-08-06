@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="zonenpcspawn" version="0.18" module="14" maxid="127">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="zone" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="id" type="Int16" key="True" required="True" min="-32768" max="127" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="npc" type="Ref" ref="npc" refel="1" required="True" />
+		<attribute name="area" type="Ref" ref="ZoneArea" refel="1" required="True" />
+		<attribute name="yaw-min" type="Int16" default="0" max="359" />
+		<attribute name="yaw-max" type="Int16" default="0" max="359" />
+		<attribute name="init-spawn" type="Bool" default="n" />
+		<attribute name="respawn" type="Bool" default="n" />
+		<attribute name="respawn-delay-min" type="Msec" default="0" />
+		<attribute name="respawn-delay-max" type="Msec" default="0" />
+		<attribute name="despawn-delay" type="Msec" default="0" />
+		<attribute name="act-area" type="Ref" ref="ZoneArea" refel="1" repeat="2" />
+		<attribute name="act-detect" type="Seq" refel="1" repeat="2">
+			<case name="none" />
+			<case name="both-180" />
+			<case name="both-360" />
+			<case name="npc-180" />
+			<case name="npc-360" />
+			<case name="pc-180" />
+			<case name="pc-360" />
+		</attribute>
+		<attribute name="act-social" type="Ref" ref="Social" refel="1" repeat="2" />
+		<attribute name="act-sequence" type="Ref" ref="ActSequence" refel="1" repeat="2" />
+	</el>
+</table>

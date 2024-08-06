@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="QuestRewardSkill3" version="0.3" module="-1">
+	<el name="table" child="1" />
+	<el name="record">
+		<attribute name="alias" type="String" required="y" max="70" />
+
+	</el>
+</table>
