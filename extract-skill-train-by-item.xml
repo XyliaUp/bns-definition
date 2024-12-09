@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="extract-skill-train-by-item" type="134" version="2.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="skill-train-by-item" type="Ref" required="True" ref="skill-train-by-item" refel="1" />
+		<attribute name="skill-train-by-item-extract-cost-group" type="Ref" repeat="8" ref="cost-group" refel="1" />
+		<attribute name="extract-skill-train-by-item" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="disable-seal-transmitted-equipment" type="Bool" default="y" />
+	</el>
+</table>

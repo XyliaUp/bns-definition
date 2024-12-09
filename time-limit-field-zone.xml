@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="time-limit-field-zone" type="426" version="0.3" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="zone" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="time-limit-quota" type="Ref" required="True" ref="content-quota" refel="1" />
+		<attribute name="required-level" type="Int8" default="0" max="100" />
+		<attribute name="required-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="required-cost" type="Ref" ref="cost-group" refel="1" />
+		<attribute name="time-limit-field-zone-name2" type="Ref" ref="text" refel="1" />
+		<attribute name="time-limit-field-zone-desc" type="Ref" ref="text" refel="1" />
+		<attribute name="ui-text-grade" type="Int8" default="0" min="-128" max="8" />
+		<attribute name="reward-summary" type="Ref" ref="attractionrewardsummary" refel="1" />
+		<attribute name="recommend-alias" type="Ref" ref="contentsjournalrecommenditem" refel="1" />
+		<attribute name="recommend-attack-power" type="Int16" default="0" max="9999" />
+	</el>
+</table>

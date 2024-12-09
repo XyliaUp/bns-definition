@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="dungeon" type="114" version="9.11" module="78" maxid="31999">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="31999" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="dungeon-type" type="Seq" default="unbind">
+			<case name="unbind" />
+			<case name="bind" />
+		</attribute>
+		<attribute name="group" type="Ref" ref="attraction-group" refel="1" />
+		<attribute name="zone-neutral" type="Ref" repeat="2" ref="zone" refel="1" />
+		<attribute name="zone" type="Ref" repeat="9" ref="zone" refel="1" />
+		<attribute name="zone-mission-step" type="Int8" repeat="9" default="0" max="16" />
+		<attribute name="feedback" type="Ref" ref="feedback" refel="1" />
+		<attribute name="arena-entrance-zone" type="Ref" ref="zone" refel="1" />
+		<attribute name="required-level" type="Int8" default="0" max="100" />
+		<attribute name="required-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="required-preceding-quest" type="Ref" repeat="3" ref="quest" refel="1" />
+		<attribute name="required-preceding-quest-check" type="Seq" default="and">
+			<case name="and" />
+			<case name="or" />
+		</attribute>
+		<attribute name="enable-heart-count" type="Bool" default="n" />
+		<attribute name="max-instant-heart-count-difficulty-type" type="Int8" repeat="3" default="0" min="-128" max="127" />
+		<attribute name="gs-item-blade-master" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-blade-master-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-blade-master-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-kung-fu-fighter" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-kung-fu-fighter-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-kung-fu-fighter-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-force-master" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-force-master-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-force-master-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-destroyer" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-destroyer-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-destroyer-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-summoner" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-summoner-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-summoner-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-assassin" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-assassin-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-assassin-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-sword-master" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-sword-master-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-sword-master-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-warlock" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-warlock-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-warlock-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-soul-fighter" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-soul-fighter-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-soul-fighter-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-shooter" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-shooter-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-shooter-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-warrior" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-warrior-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-warrior-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-archer" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-archer-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-archer-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-spear-master" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-spear-master-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-spear-master-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-thunderer" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-thunderer-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-thunderer-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-dual-blader" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-dual-blader-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-dual-blader-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-bard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-bard-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="gs-item-bard-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="apply-contents-ban-id" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="pc-max" type="Int16" default="0" max="6" />
+		<attribute name="ignore-party-difficulty-type" type="Bool" default="n" />
+		<attribute name="npc-for-step" type="Ref" repeat="9" ref="npc" refel="1" />
+		<attribute name="pc-spawn-for-step" type="Int16" repeat="9" default="0" min="-32768" max="32767" />
+		<attribute name="money-for-step" type="Int32" repeat="9" default="0" max="2147483647" />
+		<attribute name="item-for-step" type="Ref" repeat="9" ref="item" refel="1" />
+		<attribute name="item-count-for-step" type="Int16" repeat="9" default="0" max="1000" />
+		<attribute name="quest-for-step" type="Ref" repeat="9" ref="quest" refel="1" />
+		<attribute name="quest" type="Ref" hidden="True" ref="quest" refel="1" />
+		<attribute name="dungeon-quest-difficulty-type" type="Ref" repeat="3" ref="quest" refel="1" />
+		<attribute name="effect-pc-difficulty-type" type="Ref" repeat="3" ref="effect" refel="1" />
+		<attribute name="effect-npc-difficulty-type" type="Ref" repeat="3" ref="effect" refel="1" />
+		<attribute name="enable-skill-score" type="Bool" default="n" />
+		<attribute name="skill-score-recommend-gear-score" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="skill-score-recommend-clear-time-step" type="Msec" repeat="5" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="skill-score-recommend-clear-time-bonus" type="Int16" repeat="5" default="0" min="-32768" max="32767" />
+		<attribute name="skill-score-recommand-party-member-count-bonus-difficulty-type" type="Int16" repeat="3" default="0" min="-32768" max="32767" />
+		<attribute name="skill-score-recommend-hp-step" type="Int32" repeat="5" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="skill-score-recommend-hp-bonus" type="Int16" repeat="5" default="0" min="-32768" max="32767" />
+		<attribute name="skill-score-recommend-use-heart-count" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="skill-score-recommend-use-heart-count-bonus" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="skill-score-recommend-use-item-point" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="skill-score-recommend-use-item-bonus" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="skill-score-boss-npc" type="Ref" ref="npc" refel="1" />
+		<attribute name="skill-score-boss-npc-bonus" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="attraction-quest" type="Ref" repeat="10" hidden="True" ref="quest" refel="1" />
+		<attribute name="ui-filter-attraction-quest-only" type="Bool" default="n" />
+		<attribute name="respawn-confirm-text" type="Ref" ref="text" refel="1" />
+		<attribute name="escape-cave-confirm-text" type="Ref" ref="text" refel="1" />
+		<attribute name="ui-text-grade" type="Int8" default="0" min="-128" max="8" />
+		<attribute name="dungeon-name2" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="dungeon-desc" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="faction-battle-field" type="Bool" default="n" />
+		<attribute name="arena-minimap" type="XUnknown2" default="" max="256" />
+		<attribute name="recommend-attack-power-easy" type="Int16" default="0" max="9999" />
+		<attribute name="recommend-attack-power-normal" type="Int16" default="0" max="9999" />
+		<attribute name="recommend-attack-power-hard" type="Int16" default="0" max="9999" />
+		<attribute name="standard-gear-weapon-easy" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="standard-gear-weapon-normal" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="standard-gear-weapon-hard" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="use-difficulty-normal" type="Bool" default="n" />
+		<attribute name="use-difficulty-hard" type="Bool" default="n" />
+		<attribute name="reward-summary" type="Ref" ref="attractionrewardsummary" refel="1" />
+		<attribute name="recommand-level-min" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-level-max" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-mastery-level-min" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-mastery-level-max" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="display-quests" type="Ref" repeat="12" hidden="True" ref="quest" refel="1" />
+		<attribute name="tactic-normal" type="Ref" ref="text" refel="1" />
+		<attribute name="tactic-hard" type="Ref" ref="text" refel="1" />
+		<attribute name="tactic-easy" type="Ref" ref="text" refel="1" />
+		<attribute name="recommend-alias-normal" type="Ref" ref="contentsjournalrecommenditem" refel="1" />
+		<attribute name="recommend-alias-hard" type="Ref" ref="contentsjournalrecommenditem" refel="1" />
+		<attribute name="recommend-alias-easy" type="Ref" ref="contentsjournalrecommenditem" refel="1" />
+		<attribute name="boss-ui-extend-distance" type="Bool" default="n" />
+		<attribute name="boss-npc-alias" type="Ref" repeat="8" ref="npc" refel="1" />
+		<attribute name="boss-npc-section" type="Ref" repeat="8" ref="text" refel="1" />
+		<sub name="none" />
+		<sub name="normal" />
+		<sub name="sealed">
+			<attribute name="max-sealed-level" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="modify-data" type="Ref" required="True" ref="sealed-dungeon-modify" refel="1" />
+			<attribute name="bind-quota" type="Ref" ref="content-quota" refel="1" />
+			<attribute name="theme-version" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="theme-arena-entrance-zone" type="Ref" ref="zone" refel="1" />
+			<attribute name="gimmick-week-start-date-time" type="XUnknown1" default="" />
+			<attribute name="ui-scroll-slot-index" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="wave">
+			<attribute name="max-wave" type="Int8" required="True" max="127" />
+			<attribute name="entrance-quota" type="Ref" ref="content-quota" refel="1" />
+			<attribute name="reward-box-data-id" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="reward-data-id" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="contents-reset" type="Ref" hidden="True" ref="contents-reset" refel="1" />
+		</sub>
+	</el>
+</table>

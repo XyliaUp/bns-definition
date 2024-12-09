@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="badge-set-item" type="27" version="0.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="score" type="Int32" key="True" required="True" min="1" max="30000" />
+		<attribute name="effect" type="Ref" repeat="2" ref="effect" refel="1" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

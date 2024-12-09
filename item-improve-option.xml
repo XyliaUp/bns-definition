@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="item-improve-option" type="207" version="4.2" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="level" type="Int8" key="True" required="True" min="1" max="127" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="ability" type="Seq" default="none">
+			<case name="none" />
+			<case name="attack-power-equip-min-and-max" />
+			<case name="defend-power-equip-value" />
+			<case name="defend-resist-power-equip-value" />
+			<case name="attack-hit-base-percent" />
+			<case name="attack-hit-value" />
+			<case name="attack-critical-base-percent" />
+			<case name="attack-critical-value" />
+			<case name="defend-critical-base-percent" />
+			<case name="defend-critical-value" />
+			<case name="defend-dodge-base-percent" />
+			<case name="defend-dodge-value" />
+			<case name="defend-parry-base-percent" />
+			<case name="defend-parry-value" />
+			<case name="attack-stiff-duration-base-percent" />
+			<case name="attack-stiff-duration-value" />
+			<case name="defend-stiff-duration-base-percent" />
+			<case name="defend-stiff-duration-value" />
+			<case name="cast-duration-base-percent" />
+			<case name="cast-duration-value" />
+			<case name="defend-physical-damage-reduce-percent" />
+			<case name="defend-force-damage-reduce-percent" />
+			<case name="attack-damage-modify-percent" />
+			<case name="attack-damage-modify-diff" />
+			<case name="defend-damage-modify-percent" />
+			<case name="defend-damage-modify-diff" />
+			<case name="max-hp" />
+			<case name="hp-regen" />
+			<case name="hp-regen-combat" />
+			<case name="attack-pierce-value" />
+			<case name="attack-concentrate-value" />
+			<case name="defend-perfect-parry-reduce-percent" />
+			<case name="defend-counter-reduce-percent" />
+			<case name="attack-critical-damage-percent" />
+			<case name="pve-boss-level-npc-attack-power-equip-min-and-max" />
+			<case name="pve-boss-level-npc-defend-power-equip-value" />
+			<case name="pvp-attack-power-equip-min-and-max" />
+			<case name="pvp-defend-power-equip-value" />
+			<case name="attack-critical-damage-value" />
+			<case name="max-guard-gauge" />
+			<case name="attack-attribute-value" />
+			<case name="r-attack-stiff-duration-equip-value" />
+			<case name="r-defend-stiff-duration-equip-value" />
+			<case name="r-aoe-defend-power-value-equip" />
+			<case name="r-heal-power-equip-value" />
+			<case name="r-defend-strength-equip-value" />
+			<case name="r-attack-precise-equip-value" />
+			<case name="r-attack-aoe-pierce-value-equip" />
+			<case name="r-attack-abnormal-hit-equip-value" />
+			<case name="r-defend-abnormal-dodge-equip-value" />
+			<case name="r-support-power-equip-value" />
+			<case name="r-hypermove-power-equip-value" />
+			<case name="attack-attribute-base-percent" />
+			<case name="defend-difficulty-type-damage-reduce-percent" />
+			<case name="attack-attribute-value-equip" />
+			<case name="abnormal-attack-power-value-equip" />
+			<case name="abnormal-defend-power-value" />
+			<case name="heal-power-value" />
+			<case name="attack-critical-damage-value-equip" />
+			<case name="attack-pierce-base-percent" />
+			<case name="abnormal-attack-base-percent" />
+			<case name="abnormal-attack-power-value" />
+			<case name="abnormal-defend-base-percent" />
+			<case name="heal-power-base-percent" />
+			<case name="race-type-1-attack-damage-modify-percent" />
+			<case name="race-type-2-attack-damage-modify-percent" />
+			<case name="race-type-3-attack-damage-modify-percent" />
+			<case name="race-type-4-attack-damage-modify-percent" />
+			<case name="race-type-5-attack-damage-modify-percent" />
+			<case name="race-type-6-attack-damage-modify-percent" />
+			<case name="race-type-7-attack-damage-modify-percent" />
+			<case name="race-type-1-defend-damage-modify-percent" />
+			<case name="race-type-2-defend-damage-modify-percent" />
+			<case name="race-type-3-defend-damage-modify-percent" />
+			<case name="race-type-4-defend-damage-modify-percent" />
+			<case name="race-type-5-defend-damage-modify-percent" />
+			<case name="race-type-6-defend-damage-modify-percent" />
+			<case name="race-type-7-defend-damage-modify-percent" />
+			<case name="attribute-type-1-attack-damage-modify-percent" />
+			<case name="attribute-type-2-attack-damage-modify-percent" />
+			<case name="attribute-type-3-attack-damage-modify-percent" />
+			<case name="attribute-type-4-attack-damage-modify-percent" />
+			<case name="attribute-type-5-attack-damage-modify-percent" />
+			<case name="attribute-type-6-attack-damage-modify-percent" />
+			<case name="attribute-type-7-attack-damage-modify-percent" />
+			<case name="attribute-type-8-attack-damage-modify-percent" />
+			<case name="attribute-type-9-attack-damage-modify-percent" />
+			<case name="attribute-type-10-attack-damage-modify-percent" />
+			<case name="attribute-type-11-attack-damage-modify-percent" />
+			<case name="attribute-type-12-attack-damage-modify-percent" />
+			<case name="attribute-type-1-defend-damage-modify-percent" />
+			<case name="attribute-type-2-defend-damage-modify-percent" />
+			<case name="attribute-type-3-defend-damage-modify-percent" />
+			<case name="attribute-type-4-defend-damage-modify-percent" />
+			<case name="attribute-type-5-defend-damage-modify-percent" />
+			<case name="attribute-type-6-defend-damage-modify-percent" />
+			<case name="attribute-type-7-defend-damage-modify-percent" />
+			<case name="attribute-type-8-defend-damage-modify-percent" />
+			<case name="attribute-type-9-defend-damage-modify-percent" />
+			<case name="attribute-type-10-defend-damage-modify-percent" />
+			<case name="attribute-type-11-defend-damage-modify-percent" />
+			<case name="attribute-type-12-defend-damage-modify-percent" />
+			<case name="defend-critical-damage-value" />
+			<case name="defend-critical-damage-value-equip" />
+			<case name="attack-parry-pierce-percent" />
+			<case name="defend-critical-damage-percent" />
+			<case name="job-ability-1" />
+			<case name="job-ability-2" />
+			<case name="heal-power-diff" />
+			<case name="aoe-defend-base-percent" />
+			<case name="aoe-defend-power-value" />
+			<case name="hate-power-equip-value" />
+			<case name="additional-exp-diff-by-kill" />
+			<case name="additional-exp-percent-by-kill" />
+			<case name="attack-abnormal-hit-equip-value" />
+			<case name="defend-abnormal-resistance-equip-value" />
+		</attribute>
+		<attribute name="ability-value" type="Int32" default="0" max="2147483647" />
+		<attribute name="effect" type="Ref" ref="effect" refel="1" />
+		<attribute name="effect-description" type="Ref" ref="text" refel="1" />
+		<attribute name="skill-modify-info-group" type="Ref" repeat="10" ref="skill-modify-info-group" refel="1" />
+		<attribute name="additional-description" type="Ref" ref="text" refel="1" />
+		<attribute name="draw-option-icon" type="Icon" default="none" max="32767" />
+	</el>
+</table>

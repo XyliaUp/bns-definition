@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="faction" type="136" version="0.20" module="270" maxid="100">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int8" key="True" required="True" max="100" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="hostile-faction" type="Ref" ref="faction" refel="1" />
+		<attribute name="main-faction" type="Bool" deprecated="True" default="n" />
+		<attribute name="category" type="Seq" default="gang">
+			<case name="gang" />
+			<case name="main" />
+			<case name="second" />
+		</attribute>
+		<attribute name="koreaname" type="String" deprecated="True" default="" max="50" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="tag-name" type="Ref" ref="text" refel="1" />
+		<attribute name="icon" type="Icon" max="32767" />
+		<attribute name="activated-icon" type="Icon" max="32767" />
+		<attribute name="activated-desc" type="Ref" ref="text" refel="1" />
+		<attribute name="level-up-show" type="XUnknown2" default="" max="256" />
+		<attribute name="text" type="Ref" ref="text" refel="1" />
+		<attribute name="join-confirm-msg" type="Ref" ref="text" refel="1" />
+		<attribute name="join-confirm-input" type="Ref" ref="text" refel="1" />
+		<attribute name="transfer-confirm-msg" type="Ref" ref="text" refel="1" />
+		<attribute name="transfer-confirm-input" type="Ref" ref="text" refel="1" />
+		<attribute name="grade-name" type="Ref" ref="text" refel="1" />
+		<attribute name="grade-image" type="Ref" ref="text" refel="1" />
+		<attribute name="grade-type" type="Int8" default="0" max="100" />
+		<attribute name="grade-icon" type="Icon" max="32767" />
+		<attribute name="grade-tooltip" type="Ref" ref="text" refel="1" />
+		<attribute name="hide-name" type="Ref" ref="text" refel="1" />
+		<attribute name="hide-summoned-name" type="Ref" ref="text" refel="1" />
+		<attribute name="guild-battle-field-teleport" type="Ref" ref="teleport" refel="1" />
+	</el>
+</table>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="character-membership" type="54" version="2.3" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="market-membership" />
+		</attribute>
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="membership-benefit" type="Ref" repeat="8" ref="membership-benefit" refel="1" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="description" type="Ref" ref="text" refel="1" />
+		<attribute name="icon" type="Icon" max="32767" />
+	</el>
+</table>

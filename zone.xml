@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="zone" type="468" version="9.1" module="526" maxid="30000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="-2147483647" max="30000" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="domain-id" type="Int8" deprecated="True" default="1" min="1" max="20" />
+		<attribute name="deprecated-zone" type="Bool" default="n" />
+		<attribute name="transfer-pcspawn-by-deprecated" type="Ref" ref="zonepcspawn" refel="1" />
+		<attribute name="chat-channel" type="Ref" ref="static-chat-channel" refel="1" />
+		<attribute name="zone-type" type="Seq" required="True" deprecated="True">
+			<case name="none" />
+			<case name="persistant" />
+			<case name="single" />
+			<case name="instant" />
+			<case name="dungeon" />
+			<case name="arena" />
+			<case name="single-dungeon" />
+			<case name="duel" />
+		</attribute>
+		<attribute name="zone-type2" type="Seq" required="True">
+			<case name="none" />
+			<case name="persistent" />
+			<case name="single" />
+			<case name="instant" />
+		</attribute>
+		<attribute name="attraction" type="TRef" hidden="True" />
+		<attribute name="district" type="Ref" ref="district" refel="1" />
+		<attribute name="sector-xmin" type="Int16" required="True" min="-32000" max="31999" />
+		<attribute name="sector-xmax" type="Int16" required="True" min="-32000" max="31999" />
+		<attribute name="sector-ymin" type="Int16" required="True" min="-32000" max="31999" />
+		<attribute name="sector-ymax" type="Int16" required="True" min="-32000" max="31999" />
+		<attribute name="pc-max" type="Int16" hidden="True" min="50" max="1500" />
+		<attribute name="pc-max-by-main-faction" type="Int16" hidden="True" default="0" max="1500" />
+		<attribute name="recommend-pc-count" type="Int16" required="True" min="24" max="1000" />
+		<attribute name="npc-max" type="Int16" default="64" max="1400" />
+		<attribute name="cube-xysize" type="Int16" deprecated="True" default="0" max="32767" />
+		<attribute name="sight-cube" type="Bool" default="y" />
+		<attribute name="terrain" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="region" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="respawn" type="Ref" ref="zonerespawn" refel="1" />
+		<attribute name="respawn-by-activated-faction-required-faction" type="Ref" repeat="2" ref="faction" refel="1" />
+		<attribute name="respawn-by-activated-faction" type="Ref" repeat="2" ref="zonerespawn" refel="1" />
+		<attribute name="basecamp" type="Ref" ref="zonebasecamp" refel="1" />
+		<attribute name="description2" type="Ref" ref="text" refel="1" />
+		<attribute name="kismet-name" type="String" default="" max="50" />
+		<attribute name="enter-kismet-name" type="String" default="" max="50" />
+		<attribute name="leave-kismet-name" type="String" default="" max="50" />
+		<attribute name="aiid" type="String" default="" max="50" />
+		<attribute name="reentrance-pcspawn" type="Ref" ref="zonepcspawn" refel="1" />
+		<attribute name="reentrance-pcspawn-in-arena" type="Ref" ref="zonepcspawn" refel="1" />
+		<attribute name="sealed-dungeon-reentrance-pcspawn-in-arena" type="Ref" ref="zonepcspawn" refel="1" />
+		<attribute name="use-zone-exit" type="Bool" default="n" />
+		<attribute name="map" type="Ref" ref="mapinfo" refel="1" />
+		<attribute name="area" type="Ref" ref="map-area" refel="1" />
+		<attribute name="effect-link-type" type="Seq" default="effect-persistant">
+			<case name="effect-persistant" />
+			<case name="effect-single" />
+			<case name="effect-instant" />
+			<case name="effect-conflictarea" />
+			<case name="effect-dungeon-wayin" />
+			<case name="effect-dungeon" />
+			<case name="effect-blocked" />
+			<case name="effect-single-normal" />
+			<case name="effect-single-higher" />
+			<case name="effect-single-veryhigher" />
+			<case name="effect-single-hero" />
+			<case name="effect-instant-normal" />
+			<case name="effect-instant-higher" />
+			<case name="effect-instant-veryhigher" />
+			<case name="effect-raid-dungeon" />
+		</attribute>
+		<attribute name="tutorial" type="Bool" default="n" />
+		<attribute name="sharable-combatmode" type="Bool" default="n" />
+		<attribute name="use-perfmon" type="Bool" default="n" />
+		<attribute name="recharge-exp-boost" type="Bool" default="n" />
+		<attribute name="available-sextet-party" type="Bool" default="n" />
+		<attribute name="write-equipinfo-log" type="Bool" default="n" />
+		<attribute name="phase-quest-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="phase-quest" type="Ref" repeat="40" hidden="True" default="0" ref="quest" refel="1" />
+		<attribute name="phase-id" type="Int8" repeat="40" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="phase-zone" type="Ref" repeat="17" ref="zone" refel="1" />
+		<attribute name="phase-zone-disable-in-arena" type="Bool" repeat="17" hidden="True" default="n" />
+		<attribute name="default-phase-zone" type="Bool" default="y" />
+		<attribute name="phase-main-zone" type="Ref" hidden="True" ref="zone" refel="1" />
+		<attribute name="default-phase-pc-spawn-id" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="dungeon-step" type="Int8" hidden="True" default="0" max="16" />
+		<attribute name="loadingscene" type="Ref" deprecated="True" default="default-loading" ref="loadingimage" refel="1" />
+		<attribute name="is-arena-entrance" type="Bool" default="n" />
+		<attribute name="light-client-enable" type="Bool" deprecated="True" default="n" />
+		<attribute name="download-level" type="Int8" deprecated="True" default="0" min="-128" max="127" />
+		<attribute name="enable-ghost-mode" type="Seq" default="none">
+			<case name="none" />
+			<case name="basic" />
+			<case name="phase" />
+		</attribute>
+		<attribute name="available-infield-contents" type="Bool" default="n" />
+	</el>
+</table>

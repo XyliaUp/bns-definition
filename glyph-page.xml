@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="glyph-page" type="159" version="1.2" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="page" type="Int8" key="True" required="True" min="1" max="10" />
+		<attribute name="name" type="Ref" ref="text" refel="1" />
+		<attribute name="cost-money" type="Int32" default="0" max="2147483647" />
+		<attribute name="cost-item" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="cost-item-count" type="Int16" repeat="4" default="0" max="30000" />
+	</el>
+</table>

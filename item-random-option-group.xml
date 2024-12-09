@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="item-random-option-group" type="214" version="8.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="job" type="Prop_seq" key="True" required="True">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="effect-list" type="Ref" ref="effect-list" refel="1" />
+		<attribute name="ability-list" type="Ref" repeat="3" ref="ability-list" refel="1" />
+		<attribute name="ability-list-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="skill-build-up-group-list" type="Ref" repeat="3" ref="skill-build-up-group-list" refel="1" />
+		<attribute name="skill-build-up-group-list-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="skill-train-by-item-list" type="Ref" repeat="6" ref="skill-train-by-item-list" refel="1" />
+		<attribute name="skill-train-by-item-list-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="skill-train-by-item-list-select-min" type="Int8" default="0" max="6" />
+		<attribute name="skill-train-by-item-list-select-max" type="Int8" default="0" max="6" />
+		<attribute name="skill-train-by-item-list-title" type="Ref" ref="text" refel="1" />
+		<attribute name="duplication-enable" type="Bool" default="n" />
+		<attribute name="unlimited-draw" type="Bool" default="y" />
+		<attribute name="draw-enable-count" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="draw-cost-money" type="Int32" repeat="4" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="draw-cost-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="draw-cost-main-item" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="draw-cost-main-item-count" type="Int16" repeat="4" default="0" min="-32768" max="32767" />
+		<attribute name="draw-cost-sub-item-1" type="Ref" repeat="6" ref="item" refel="1" />
+		<attribute name="draw-cost-sub-item-count-1" type="Int16" repeat="6" default="0" min="-32768" max="32767" />
+		<attribute name="draw-cost-sub-item-2" type="Ref" repeat="6" ref="item" refel="1" />
+		<attribute name="draw-cost-sub-item-count-2" type="Int16" repeat="6" default="0" min="-32768" max="32767" />
+		<attribute name="draw-cost-sub-item-3" type="Ref" repeat="6" ref="item" refel="1" />
+		<attribute name="draw-cost-sub-item-count-3" type="Int16" repeat="6" default="0" min="-32768" max="32767" />
+		<attribute name="draw-cost-sub-item-4" type="Ref" repeat="6" ref="item" refel="1" />
+		<attribute name="draw-cost-sub-item-count-4" type="Int16" repeat="6" default="0" min="-32768" max="32767" />
+	</el>
+</table>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="ranking2-season-group" type="319" version="4.0" module="16390">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="contents" type="Ref" ref="ranking2-contents" refel="1" />
+		<attribute name="season" type="Ref" repeat="10" ref="ranking2-season" refel="1" />
+		<attribute name="main-season" type="Ref" ref="ranking2-season" refel="1" />
+		<attribute name="contents-score-type" type="Seq" default="contents-single">
+			<case name="invalid" />
+			<case name="contents-single" />
+			<case name="contents-total" />
+			<case name="tier-total" />
+		</attribute>
+		<attribute name="dungeon" type="Ref" ref="dungeon" refel="1" />
+		<attribute name="tier-contents-seasons" type="Ref" repeat="15" ref="ranking2-season-group" refel="1" />
+		<attribute name="tier" type="Ref" ref="ranking2-tier" refel="1" />
+		<attribute name="min-accumulate-reward" type="Int64" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="min-accumulate-reward-range" type="Int16" default="0" max="10000" />
+	</el>
+</table>

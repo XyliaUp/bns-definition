@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="soul-boost-mission-task" type="392" version="7.0" module="16390">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name" type="String" default="" max="128" />
+		<attribute name="name-en" type="String" default="" max="128" />
+		<attribute name="name-fr" type="String" default="" max="128" />
+		<attribute name="name-de" type="String" default="" max="128" />
+		<attribute name="name-pt" type="String" default="" max="128" />
+		<attribute name="name-th" type="String" default="" max="128" />
+		<attribute name="name-vn" type="String" default="" max="128" />
+		<attribute name="name-text" type="Ref" ref="text" refel="1" />
+		<attribute name="event" type="Ref" ref="soul-boost-event" refel="1" />
+		<attribute name="mission-step" type="Ref" ref="soul-boost-mission-step" refel="1" />
+		<attribute name="task-number" type="Int8" min="1" max="50" />
+		<attribute name="mission" type="Ref" ref="soul-boost-mission" refel="1" />
+		<attribute name="proceedable-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="before-open" />
+			<case name="after-open" />
+		</attribute>
+		<attribute name="actor-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="character" />
+			<case name="account" />
+		</attribute>
+		<attribute name="goal-count" type="Int64" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="mission-task-repeat-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="daily" />
+			<case name="weekly" />
+		</attribute>
+		<attribute name="mission-task-repeat-max-count" type="Int64" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="mission-point" type="Int32" max="10000000" />
+		<attribute name="mission-level" type="Int8" default="1" min="1" max="8" />
+		<attribute name="description" type="String" default="" max="128" />
+		<attribute name="description-en" type="String" default="" max="128" />
+		<attribute name="description-fr" type="String" default="" max="128" />
+		<attribute name="description-de" type="String" default="" max="128" />
+		<attribute name="description-pt" type="String" default="" max="128" />
+		<attribute name="description-th" type="String" default="" max="128" />
+		<attribute name="description-vn" type="String" default="" max="128" />
+		<attribute name="description-text" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

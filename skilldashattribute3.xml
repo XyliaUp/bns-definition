@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="skilldashattribute3" type="352" version="0.3" module="2062">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="dash-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="dash" />
+			<case name="rear-dash" />
+			<case name="left-dash" />
+			<case name="right-dash" />
+			<case name="zero-point-dash" />
+			<case name="position-dash" />
+		</attribute>
+		<attribute name="dash-margin" type="Distance" default="0" max="5000" />
+		<attribute name="calculate-dash-position-include-radius" type="Bool" default="y" />
+	</el>
+</table>

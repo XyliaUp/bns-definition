@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="job" type="232" version="0.61" module="14">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="job" type="Prop_seq" key="True" required="True">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="name" type="String" deprecated="True" default="" max="10" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="icon" type="Icon" max="32767" />
+		<attribute name="desc" type="Ref" ref="text" refel="1" />
+		<attribute name="target-angle" type="Float32" deprecated="True" default="120" fmax="360" />
+		<attribute name="target-beam-width" type="Float32" deprecated="True" default="1.4" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="target-band" type="Float32" repeat="2" deprecated="True" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="lobby-chart-imageset" type="String" deprecated="True" default="" max="100" />
+		<attribute name="lobby-job-imageset" type="String" default="" max="100" />
+		<attribute name="character-info-job-imageset" type="String" default="" max="100" />
+		<attribute name="character-info-job-imageset2" type="String" default="" max="100" />
+		<attribute name="item-map-job-icon" type="Ref" ref="text" refel="1" />
+		<attribute name="item-map-job-style-icon" type="Ref" repeat="3" default="" ref="text" refel="1" />
+		<attribute name="common-job-imageset" type="String" default="" max="100" />
+		<attribute name="stance" type="Prop_seq" repeat="3" default="stance-none">
+			<case name="stance-none" />
+			<case name="npc기본자세" />
+			<case name="천검세" />
+			<case name="검령세" />
+			<case name="단타" />
+			<case name="연계" />
+			<case name="체술" />
+			<case name="납도" />
+			<case name="경기공" />
+			<case name="연기공" />
+			<case name="강기공" />
+			<case name="권총모드" />
+			<case name="런처모드" />
+			<case name="파괴" />
+			<case name="보호" />
+			<case name="철벽" />
+			<case name="소환" />
+			<case name="교란" />
+			<case name="은신" />
+			<case name="암살" />
+			<case name="검술" />
+			<case name="어검" />
+			<case name="발도" />
+			<case name="npc자세1" />
+			<case name="npc자세2" />
+			<case name="npc자세3" />
+			<case name="소환수-follow" />
+			<case name="소환수-command-1" />
+			<case name="소환수-flying" />
+			<case name="주술" />
+			<case name="강림" />
+			<case name="유권" />
+			<case name="기공" />
+			<case name="냉정" />
+			<case name="광기" />
+			<case name="장궁" />
+			<case name="정령궁" />
+			<case name="찌르기" />
+			<case name="베기" />
+			<case name="청뢰" />
+			<case name="혈뢰" />
+			<case name="어검세" />
+			<case name="정수" />
+			<case name="역수" />
+			<case name="한손역수" />
+			<case name="간이연주" />
+			<case name="우퍼" />
+			<case name="연주" />
+			<case name="쌍월" />
+			<case name="뇌신" />
+			<case name="침식" />
+			<case name="염제" />
+			<case name="npc주시자세1" />
+			<case name="npc주시자세2" />
+			<case name="npc주시자세3" />
+		</attribute>
+		<attribute name="skillmap-backimageset" type="String" default="" max="100" />
+		<attribute name="skillmap-backimageset-width" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="skillmap-backimageset-height" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="lobby-slot-job-icon-texture" type="Ref" ref="icontexture" refel="1" />
+		<attribute name="lobby-slot-job-icon-index" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="lobby-job-symbol-image" type="XUnknown2" default="" max="256" />
+		<attribute name="introduce-job-style" type="Ref" repeat="3" ref="job-style" refel="1" />
+		<attribute name="play-style-desc" type="Ref" ref="text" refel="1" />
+		<attribute name="play-style-imageset" type="String" default="" max="100" />
+		<attribute name="play-difficulty" type="Int8" default="1" max="10" />
+		<attribute name="play-difficulty-desc" type="Ref" ref="text" refel="1" />
+		<attribute name="hud-player-job-imageset" type="String" default="" max="100" />
+		<attribute name="action-key" type="Seq16" default="action2">
+			<case name="none" />
+			<case name="action1" />
+			<case name="action2" />
+			<case name="action3" />
+			<case name="classic-action1" />
+			<case name="classic-action2" />
+			<case name="classic-action3" />
+			<case name="skill-recommend" />
+			<case name="skill-stance" />
+			<case name="skill-slot1" />
+			<case name="skill-slot2" />
+			<case name="skill-slot3" />
+			<case name="skill-slot4" />
+			<case name="skill-slot5" />
+			<case name="skill-slot6" />
+			<case name="skill-slot7" />
+			<case name="skill-slot8" />
+			<case name="skill-slot9" />
+			<case name="skill-slot10" />
+			<case name="skill-slot11" />
+			<case name="skill-slot12" />
+			<case name="skill-q" />
+			<case name="skill-e" />
+			<case name="skill-special-1" />
+			<case name="skill-special-2" />
+			<case name="item-slot1" />
+			<case name="item-slot2" />
+			<case name="item-slot3" />
+			<case name="item-slot4" />
+			<case name="extra-skill-slot5" />
+			<case name="skill-duel-tag" />
+			<case name="skill-duel-npc-challenge" />
+			<case name="toggle-help" />
+			<case name="toggle-dungeon-guide" />
+			<case name="toggle-inventory" />
+			<case name="toggle-gem" />
+			<case name="toggle-equipped" />
+			<case name="toggle-skill-book" />
+			<case name="toggle-quest-journal" />
+			<case name="toggle-minimap-scale" />
+			<case name="toggle-minimap-visible" />
+			<case name="toggle-quest-quick-slot" />
+			<case name="toggle-collect-manufacture" />
+			<case name="toggle-petition" />
+			<case name="toggle-option" />
+			<case name="toggle-minimap-alpha" />
+			<case name="toggle-party-panel" />
+			<case name="toggle-party-mark" />
+			<case name="toggle-party-search" />
+			<case name="toggle-hud-customize" />
+			<case name="party-match" />
+			<case name="manual-targeting" />
+			<case name="strafe-left" />
+			<case name="strafe-right" />
+			<case name="dash-forward" />
+			<case name="move-forward" />
+			<case name="move-backward" />
+			<case name="turn-left" />
+			<case name="turn-right" />
+			<case name="jump-up" />
+			<case name="toggle-walk-run" />
+			<case name="social-action1" />
+			<case name="social-action2" />
+			<case name="social-action3" />
+			<case name="social-action4" />
+			<case name="social-action5" />
+			<case name="social-action6" />
+			<case name="social-action7" />
+			<case name="social-action8" />
+			<case name="social-action9" />
+			<case name="social-action10" />
+			<case name="toggle-auto-move-forward" />
+			<case name="enter-slash-chatting" />
+			<case name="enter-normal-chatting" />
+			<case name="enter-party-chatting" />
+			<case name="enter-local-chatting" />
+			<case name="enter-private-chatting" />
+			<case name="toggle-hud" />
+			<case name="toggle-light-hud-mode" />
+			<case name="camera-up" />
+			<case name="camera-down" />
+			<case name="camera-zoomin" />
+			<case name="camera-zoomout" />
+			<case name="toggle-voice-chat-option" />
+			<case name="mark1" />
+			<case name="mark2" />
+			<case name="mark3" />
+			<case name="mark4" />
+			<case name="mark5" />
+			<case name="mark6" />
+			<case name="mark7" />
+			<case name="mark8" />
+			<case name="mark-timer" />
+			<case name="mark-timer-immune-break-down" />
+			<case name="mark-timer-immune-break-kneel" />
+			<case name="mark-timer-immune-break-stun" />
+			<case name="mark-timer-immune-break-knockback" />
+			<case name="unmark" />
+			<case name="headline-start-timer" />
+			<case name="minimap-depth-plus" />
+			<case name="minimap-depth-minus" />
+			<case name="rotate-camera" />
+			<case name="rotate-player" />
+			<case name="reset-camera" />
+			<case name="toggle-bns" />
+			<case name="notification-accept" />
+			<case name="notification-decline" />
+			<case name="toggle-joypad-ui-mode" />
+			<case name="close-floating-panels" />
+			<case name="joypad-esc" />
+			<case name="joypad-set-mouse-position" />
+			<case name="joypad-toggle-rotate-type" />
+			<case name="turn-on-social-mode" />
+			<case name="enter-party-search-channel-in-party-match" />
+			<case name="toggle-sns" />
+			<case name="toggle-powerbook" />
+			<case name="toggle-skill-powerbook" />
+			<case name="toggle-nshop" />
+			<case name="toggle-character-info" />
+			<case name="toggle-market" />
+			<case name="toggle-money-market" />
+			<case name="toggle-postbox" />
+			<case name="toggle-tencent-in-game-shop" />
+			<case name="toggle-tencent-cross" />
+			<case name="toggle-second-password" />
+			<case name="toggle-achievement" />
+			<case name="toggle-pc-filter-hidden" />
+			<case name="toggle-guild2" />
+			<case name="toggle-economy-communication" />
+			<case name="cancel-order" />
+			<case name="invite-party" />
+			<case name="duel-start" />
+			<case name="toggle-friend" />
+			<case name="toggle-wardrobe" />
+			<case name="toggle-dragon-jade-shop" />
+			<case name="toggle-ranking" />
+			<case name="toggle-ingame-notice" />
+			<case name="change-item-bar-page" />
+			<case name="duel-tag-order-first" />
+			<case name="duel-tag-order-random" />
+			<case name="leave-arena-square" />
+			<case name="quick-turn" />
+			<case name="joypad-special-function1" />
+			<case name="joypad-special-function2" />
+			<case name="accelerate-mouse-cursor-speed" />
+			<case name="joypad-mouse-left-button" />
+			<case name="joypad-mouse-right-button" />
+			<case name="change-pet-filter-hidden" />
+			<case name="toggle-damage-meter" />
+			<case name="duel-camera-fitpawn-new" />
+			<case name="duel-camera-free-new" />
+			<case name="duel-camera-quater-new" />
+			<case name="duel-camera-alpha-new" />
+			<case name="duel-camera-beta-new" />
+			<case name="duel-camera-free-up-new" />
+			<case name="duel-camera-free-down-new" />
+			<case name="toggle-goods-store" />
+			<case name="enter-skill-training-room" />
+			<case name="toggle-arena-entrance" />
+			<case name="toggle-appearance-pictorial" />
+			<case name="toggle-hybrid-mode" />
+			<case name="toggle-personal-customize" />
+			<case name="toggle-context-simple-mode" />
+			<case name="toggle-mentoring" />
+			<case name="toggle-pvp-enable" />
+			<case name="nova-equip-skill-quick-slot" />
+			<case name="toggle-account-contents" />
+			<case name="toggle-contents-journal-2" />
+			<case name="toggle-fish-collecting" />
+			<case name="toggle-slate" />
+			<case name="toggle-auto-mode" />
+			<case name="toggle-auto-mode-option" />
+			<case name="toggle-auto-mode-enable-item-support" />
+			<case name="toggle-pvp-data" />
+			<case name="toggle-ride-vehicle" />
+			<case name="toggle-museum" />
+			<case name="equip-spare-item" />
+			<case name="toggle-chat-minimize" />
+			<case name="toggle-ranking2" />
+			<case name="toggle-glyph-inventory" />
+			<case name="toggle-constellation" />
+			<case name="toggle-sealed-scroll" />
+			<case name="toggle-inter-battle-field" />
+			<case name="toggle-wanted-mission" />
+			<case name="toggle-expedition" />
+			<case name="toggle-game-information" />
+			<case name="toggle-mark-mode" />
+			<case name="toggle-relic-inventory" />
+			<case name="zone-exit" />
+			<case name="toggle-neopass" />
+			<case name="toggle-notification-center" />
+			<case name="toggle-joypad-lock-on" />
+			<case name="joypad-dash-backward" />
+			<case name="classic-control-mode-lock-on" />
+		</attribute>
+		<attribute name="bns-action-key" type="Seq16" default="action2">
+			<case name="none" />
+			<case name="action1" />
+			<case name="action2" />
+			<case name="action3" />
+			<case name="classic-action1" />
+			<case name="classic-action2" />
+			<case name="classic-action3" />
+			<case name="skill-recommend" />
+			<case name="skill-stance" />
+			<case name="skill-slot1" />
+			<case name="skill-slot2" />
+			<case name="skill-slot3" />
+			<case name="skill-slot4" />
+			<case name="skill-slot5" />
+			<case name="skill-slot6" />
+			<case name="skill-slot7" />
+			<case name="skill-slot8" />
+			<case name="skill-slot9" />
+			<case name="skill-slot10" />
+			<case name="skill-slot11" />
+			<case name="skill-slot12" />
+			<case name="skill-q" />
+			<case name="skill-e" />
+			<case name="skill-special-1" />
+			<case name="skill-special-2" />
+			<case name="item-slot1" />
+			<case name="item-slot2" />
+			<case name="item-slot3" />
+			<case name="item-slot4" />
+			<case name="extra-skill-slot5" />
+			<case name="skill-duel-tag" />
+			<case name="skill-duel-npc-challenge" />
+			<case name="toggle-help" />
+			<case name="toggle-dungeon-guide" />
+			<case name="toggle-inventory" />
+			<case name="toggle-gem" />
+			<case name="toggle-equipped" />
+			<case name="toggle-skill-book" />
+			<case name="toggle-quest-journal" />
+			<case name="toggle-minimap-scale" />
+			<case name="toggle-minimap-visible" />
+			<case name="toggle-quest-quick-slot" />
+			<case name="toggle-collect-manufacture" />
+			<case name="toggle-petition" />
+			<case name="toggle-option" />
+			<case name="toggle-minimap-alpha" />
+			<case name="toggle-party-panel" />
+			<case name="toggle-party-mark" />
+			<case name="toggle-party-search" />
+			<case name="toggle-hud-customize" />
+			<case name="party-match" />
+			<case name="manual-targeting" />
+			<case name="strafe-left" />
+			<case name="strafe-right" />
+			<case name="dash-forward" />
+			<case name="move-forward" />
+			<case name="move-backward" />
+			<case name="turn-left" />
+			<case name="turn-right" />
+			<case name="jump-up" />
+			<case name="toggle-walk-run" />
+			<case name="social-action1" />
+			<case name="social-action2" />
+			<case name="social-action3" />
+			<case name="social-action4" />
+			<case name="social-action5" />
+			<case name="social-action6" />
+			<case name="social-action7" />
+			<case name="social-action8" />
+			<case name="social-action9" />
+			<case name="social-action10" />
+			<case name="toggle-auto-move-forward" />
+			<case name="enter-slash-chatting" />
+			<case name="enter-normal-chatting" />
+			<case name="enter-party-chatting" />
+			<case name="enter-local-chatting" />
+			<case name="enter-private-chatting" />
+			<case name="toggle-hud" />
+			<case name="toggle-light-hud-mode" />
+			<case name="camera-up" />
+			<case name="camera-down" />
+			<case name="camera-zoomin" />
+			<case name="camera-zoomout" />
+			<case name="toggle-voice-chat-option" />
+			<case name="mark1" />
+			<case name="mark2" />
+			<case name="mark3" />
+			<case name="mark4" />
+			<case name="mark5" />
+			<case name="mark6" />
+			<case name="mark7" />
+			<case name="mark8" />
+			<case name="mark-timer" />
+			<case name="mark-timer-immune-break-down" />
+			<case name="mark-timer-immune-break-kneel" />
+			<case name="mark-timer-immune-break-stun" />
+			<case name="mark-timer-immune-break-knockback" />
+			<case name="unmark" />
+			<case name="headline-start-timer" />
+			<case name="minimap-depth-plus" />
+			<case name="minimap-depth-minus" />
+			<case name="rotate-camera" />
+			<case name="rotate-player" />
+			<case name="reset-camera" />
+			<case name="toggle-bns" />
+			<case name="notification-accept" />
+			<case name="notification-decline" />
+			<case name="toggle-joypad-ui-mode" />
+			<case name="close-floating-panels" />
+			<case name="joypad-esc" />
+			<case name="joypad-set-mouse-position" />
+			<case name="joypad-toggle-rotate-type" />
+			<case name="turn-on-social-mode" />
+			<case name="enter-party-search-channel-in-party-match" />
+			<case name="toggle-sns" />
+			<case name="toggle-powerbook" />
+			<case name="toggle-skill-powerbook" />
+			<case name="toggle-nshop" />
+			<case name="toggle-character-info" />
+			<case name="toggle-market" />
+			<case name="toggle-money-market" />
+			<case name="toggle-postbox" />
+			<case name="toggle-tencent-in-game-shop" />
+			<case name="toggle-tencent-cross" />
+			<case name="toggle-second-password" />
+			<case name="toggle-achievement" />
+			<case name="toggle-pc-filter-hidden" />
+			<case name="toggle-guild2" />
+			<case name="toggle-economy-communication" />
+			<case name="cancel-order" />
+			<case name="invite-party" />
+			<case name="duel-start" />
+			<case name="toggle-friend" />
+			<case name="toggle-wardrobe" />
+			<case name="toggle-dragon-jade-shop" />
+			<case name="toggle-ranking" />
+			<case name="toggle-ingame-notice" />
+			<case name="change-item-bar-page" />
+			<case name="duel-tag-order-first" />
+			<case name="duel-tag-order-random" />
+			<case name="leave-arena-square" />
+			<case name="quick-turn" />
+			<case name="joypad-special-function1" />
+			<case name="joypad-special-function2" />
+			<case name="accelerate-mouse-cursor-speed" />
+			<case name="joypad-mouse-left-button" />
+			<case name="joypad-mouse-right-button" />
+			<case name="change-pet-filter-hidden" />
+			<case name="toggle-damage-meter" />
+			<case name="duel-camera-fitpawn-new" />
+			<case name="duel-camera-free-new" />
+			<case name="duel-camera-quater-new" />
+			<case name="duel-camera-alpha-new" />
+			<case name="duel-camera-beta-new" />
+			<case name="duel-camera-free-up-new" />
+			<case name="duel-camera-free-down-new" />
+			<case name="toggle-goods-store" />
+			<case name="enter-skill-training-room" />
+			<case name="toggle-arena-entrance" />
+			<case name="toggle-appearance-pictorial" />
+			<case name="toggle-hybrid-mode" />
+			<case name="toggle-personal-customize" />
+			<case name="toggle-context-simple-mode" />
+			<case name="toggle-mentoring" />
+			<case name="toggle-pvp-enable" />
+			<case name="nova-equip-skill-quick-slot" />
+			<case name="toggle-account-contents" />
+			<case name="toggle-contents-journal-2" />
+			<case name="toggle-fish-collecting" />
+			<case name="toggle-slate" />
+			<case name="toggle-auto-mode" />
+			<case name="toggle-auto-mode-option" />
+			<case name="toggle-auto-mode-enable-item-support" />
+			<case name="toggle-pvp-data" />
+			<case name="toggle-ride-vehicle" />
+			<case name="toggle-museum" />
+			<case name="equip-spare-item" />
+			<case name="toggle-chat-minimize" />
+			<case name="toggle-ranking2" />
+			<case name="toggle-glyph-inventory" />
+			<case name="toggle-constellation" />
+			<case name="toggle-sealed-scroll" />
+			<case name="toggle-inter-battle-field" />
+			<case name="toggle-wanted-mission" />
+			<case name="toggle-expedition" />
+			<case name="toggle-game-information" />
+			<case name="toggle-mark-mode" />
+			<case name="toggle-relic-inventory" />
+			<case name="zone-exit" />
+			<case name="toggle-neopass" />
+			<case name="toggle-notification-center" />
+			<case name="toggle-joypad-lock-on" />
+			<case name="joypad-dash-backward" />
+			<case name="classic-control-mode-lock-on" />
+		</attribute>
+		<attribute name="training-desc-default" type="Ref" ref="text" refel="1" />
+		<attribute name="training-desc-attack" type="Ref" ref="text" refel="1" />
+		<attribute name="training-desc-defence" type="Ref" ref="text" refel="1" />
+		<attribute name="training-desc-maze" type="Ref" ref="text" refel="1" />
+		<attribute name="training-desc-protect" type="Ref" ref="text" refel="1" />
+		<attribute name="training-desc-control" type="Ref" ref="text" refel="1" />
+		<attribute name="training-desc-distance" type="Ref" ref="text" refel="1" />
+		<attribute name="training-chart-value-attack" type="Int16" default="0" max="100" />
+		<attribute name="training-chart-value-defence" type="Int16" default="0" max="100" />
+		<attribute name="training-chart-value-maze" type="Int16" default="0" max="100" />
+		<attribute name="training-chart-value-protect" type="Int16" default="0" max="100" />
+		<attribute name="training-chart-value-control" type="Int16" default="0" max="100" />
+		<attribute name="training-chart-value-distance" type="Int16" default="0" max="100" />
+		<attribute name="train-background-imageset" type="String" default="" max="100" />
+		<attribute name="lobby-chart-value-protection" type="Int16" default="0" max="100" />
+		<attribute name="lobby-chart-value-control" type="Int16" default="0" max="100" />
+		<attribute name="lobby-chart-value-distance" type="Int16" default="0" max="100" />
+		<attribute name="lobby-chart-value-simplecontrols" type="Int16" default="0" max="100" />
+		<attribute name="lobby-chart-value-defense" type="Int16" default="0" max="100" />
+		<attribute name="lobby-chart-value-melee" type="Int16" default="0" max="100" />
+		<attribute name="lobby-play-bink" type="String" default="" max="100" />
+		<attribute name="filter-name" type="String" repeat="3" default="" max="20" />
+		<attribute name="highlight-font" type="String" default="" max="50" />
+		<attribute name="job-quest-text" type="Ref" ref="text" refel="1" />
+		<attribute name="damage-show-split-percent" type="Int16" default="0" max="10000" />
+		<attribute name="job-style-name" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="skill-train-ui-job-style-name" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="skill-train-ui-job-style-imageset" type="String" repeat="10" default="" max="100" />
+		<attribute name="skill-train-ui-trait-open-button-text" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="skill-train-ui-page-job-style-name" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="skill-train-ui-page-job-style-imageset" type="String" repeat="10" default="" max="100" />
+		<attribute name="skill-trainingroom-ui-job-style-imageset" type="String" repeat="10" default="" max="100" />
+		<attribute name="use-guard-gauge" type="Bool" default="n" />
+		<attribute name="use-ui-skill-combo" type="Bool" default="n" />
+		<attribute name="use-ui-skill-train-combo-action" type="Int16" hidden="True" default="0" min="-32768" max="32767" />
+		<attribute name="contents-journal-job-style-icon" type="Ref" repeat="3" default="" ref="text" refel="1" />
+		<attribute name="equip-weapon-scale" type="Float32" default="1.0" fmin="0.5" fmax="1.5" />
+		<attribute name="phantom-weapon-active-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="equip" />
+			<case name="effect-flag" />
+		</attribute>
+		<attribute name="phantom-weapon-active-effect-flag-1st" type="Seq16" default="none">
+			<case name="none" />
+			<case name="stun" />
+			<case name="airdash" />
+			<case name="knockback" />
+			<case name="bind-phantom" />
+			<case name="link" />
+			<case name="detection" />
+			<case name="internal-injury" />
+			<case name="immediately-exec" />
+			<case name="concentration" />
+			<case name="infinity-shot" />
+			<case name="down" />
+			<case name="swoon" />
+			<case name="defence" />
+			<case name="kneel" />
+			<case name="provocation" />
+			<case name="midair-1" />
+			<case name="midair-2" />
+			<case name="midair-3" />
+			<case name="frostbite" />
+			<case name="magnetic-seal" />
+			<case name="fast-freezing" />
+			<case name="rupture" />
+			<case name="impregnability" />
+			<case name="prickblood" />
+			<case name="wildfire-1" />
+			<case name="wildfire-2" />
+			<case name="wildfire-3" />
+			<case name="hide" />
+			<case name="burrow" />
+			<case name="smokescreen" />
+			<case name="embers" />
+			<case name="poison" />
+			<case name="applied-poison" />
+			<case name="spider-web" />
+			<case name="time-bomb" />
+			<case name="defence-block" />
+			<case name="dash-block" />
+			<case name="dexterity" />
+			<case name="soulblade-1" />
+			<case name="soulblade-2" />
+			<case name="soulblade-3" />
+			<case name="joint" />
+			<case name="flydragon" />
+			<case name="landdragon" />
+			<case name="silverweb-1" />
+			<case name="silverweb-2" />
+			<case name="justguard" />
+			<case name="force-flag-1" />
+			<case name="force-flag-2" />
+			<case name="force-flag-3" />
+			<case name="catchshield" />
+			<case name="poundshort" />
+			<case name="axechopshort" />
+			<case name="swingstrikeshort" />
+			<case name="chilblain" />
+			<case name="frontdown" />
+			<case name="bleeding" />
+			<case name="npc-state-1" />
+			<case name="npc-state-2" />
+			<case name="npc-state-3" />
+			<case name="npc-state-4" />
+			<case name="npc-state-5" />
+			<case name="npc-state-6" />
+			<case name="npc-state-7" />
+			<case name="npc-state-8" />
+			<case name="hardwall-break" />
+			<case name="react-link" />
+			<case name="counter" />
+			<case name="Shadow" />
+			<case name="Shuriken" />
+			<case name="Instantkick" />
+			<case name="Hyperkick" />
+			<case name="Saver" />
+			<case name="HeartStab" />
+			<case name="LeafDodge" />
+			<case name="DragonKick" />
+			<case name="BurstBlow" />
+			<case name="Blood" />
+			<case name="BloodFullStack" />
+			<case name="Poison2" />
+			<case name="Poison2FullStack" />
+			<case name="TankingDrain" />
+			<case name="EmberFullStack" />
+			<case name="PoisonFullStack" />
+			<case name="FireBit" />
+			<case name="FireBitFullStack" />
+			<case name="IceBit" />
+			<case name="Hole" />
+			<case name="HoleFullStack" />
+			<case name="Bubble" />
+			<case name="Swallow" />
+			<case name="FireBit2" />
+			<case name="IceBit2" />
+			<case name="IceBitFullStack" />
+			<case name="FireWall1" />
+			<case name="FireWall2" />
+			<case name="FireWall3" />
+			<case name="FireWall4" />
+			<case name="HighKick" />
+			<case name="Abdomen" />
+			<case name="ShortBurst" />
+			<case name="MartialFullHit" />
+			<case name="Smash" />
+			<case name="Hole1" />
+			<case name="Hole2" />
+			<case name="Hole3" />
+			<case name="TargetHole1" />
+			<case name="TargetHole2" />
+			<case name="TargetHole3" />
+			<case name="Hornet" />
+			<case name="MorningGlory" />
+			<case name="cannot-resurrect" />
+			<case name="enable-guild-battle-field" />
+			<case name="Immune-link" />
+			<case name="GhostX0" />
+			<case name="GhostX1" />
+			<case name="GhostX2" />
+			<case name="GhostX3" />
+			<case name="Thornbus" />
+			<case name="BloodBurst" />
+			<case name="AdventMark1" />
+			<case name="AdventMark2" />
+			<case name="HyperMove" />
+			<case name="Talisman" />
+			<case name="Spector01" />
+			<case name="Spector02" />
+			<case name="Spector03" />
+			<case name="Phantomsoul" />
+			<case name="BlueSky" />
+			<case name="EgoAutoParry" />
+			<case name="Pierce" />
+			<case name="burn" />
+			<case name="AttackGlide" />
+			<case name="SecondGaugeStopped" />
+			<case name="BigBossJump" />
+			<case name="BigBossState-1" />
+			<case name="JobSkillFlag-1" />
+			<case name="JobSkillFlag-2" />
+			<case name="JobSkillFlag-3" />
+			<case name="JobSkillFlag-4" />
+			<case name="JobSkillFlag-5" />
+			<case name="JobSkillFlag-6" />
+			<case name="JobSkillFlag-7" />
+			<case name="JobSkillFlag-8" />
+			<case name="JobSkillFlag-9" />
+			<case name="JobSkillFlag-10" />
+			<case name="JobSkillFlag-11" />
+			<case name="JobSkillFlag-12" />
+			<case name="JobSkillFlag-13" />
+			<case name="JobSkillFlag-14" />
+			<case name="JobSkillFlag-15" />
+			<case name="JobSkillFlag-16" />
+			<case name="JobSkillFlag-17" />
+			<case name="JobSkillFlag-18" />
+			<case name="JobSkillFlag-19" />
+			<case name="JobSkillFlag-20" />
+			<case name="JobSkillFlag-21" />
+			<case name="JobSkillFlag-22" />
+			<case name="JobSkillFlag-23" />
+			<case name="JobSkillFlag-24" />
+			<case name="JobSkillFlag-25" />
+			<case name="JobSkillFlag-26" />
+			<case name="JobSkillFlag-27" />
+			<case name="JobSkillFlag-28" />
+			<case name="JobSkillFlag-29" />
+			<case name="JobSkillFlag-30" />
+			<case name="JobSkillFlag-31" />
+			<case name="JobSkillFlag-32" />
+			<case name="JobSkillFlag-33" />
+			<case name="JobSkillFlag-34" />
+			<case name="JobSkillFlag-35" />
+			<case name="JobSkillFlag-36" />
+			<case name="JobSkillFlag-37" />
+			<case name="JobSkillFlag-38" />
+			<case name="JobSkillFlag-39" />
+			<case name="JobSkillFlag-40" />
+			<case name="JobSkillFlag-41" />
+			<case name="JobSkillFlag-42" />
+			<case name="JobSkillFlag-43" />
+			<case name="JobSkillFlag-44" />
+			<case name="JobSkillFlag-45" />
+			<case name="JobSkillFlag-46" />
+			<case name="JobSkillFlag-47" />
+			<case name="JobSkillFlag-48" />
+			<case name="JobSkillFlag-49" />
+			<case name="JobSkillFlag-50" />
+			<case name="JobSkillFlag-51" />
+			<case name="JobSkillFlag-52" />
+			<case name="JobSkillFlag-53" />
+			<case name="JobSkillFlag-54" />
+			<case name="JobSkillFlag-55" />
+			<case name="JobSkillFlag-56" />
+			<case name="npc-skill-1" />
+			<case name="npc-skill-2" />
+			<case name="npc-skill-3" />
+			<case name="npc-skill-4" />
+			<case name="npc-skill-5" />
+			<case name="npc-skill-6" />
+			<case name="npc-skill-7" />
+			<case name="npc-skill-8" />
+			<case name="npc-skill-9" />
+			<case name="npc-skill-10" />
+			<case name="npc-skill-11" />
+			<case name="npc-skill-12" />
+			<case name="stun-miss" />
+			<case name="down-miss" />
+			<case name="Struggle" />
+			<case name="boutiquefree" />
+			<case name="tumbling-block" />
+			<case name="PeaceArea" />
+			<case name="perfect-dodged" />
+			<case name="kneel-miss" />
+			<case name="glyph-1" />
+			<case name="glyph-2" />
+			<case name="glyph-3" />
+			<case name="glyph-4" />
+			<case name="glyph-5" />
+			<case name="glyph-6" />
+			<case name="glyph-7" />
+			<case name="glyph-8" />
+			<case name="glyph-9" />
+			<case name="glyph-10" />
+			<case name="glyph-11" />
+			<case name="glyph-12" />
+			<case name="glyph-13" />
+			<case name="glyph-14" />
+			<case name="glyph-15" />
+			<case name="glyph-16" />
+			<case name="glyph-17" />
+			<case name="glyph-18" />
+			<case name="glyph-19" />
+			<case name="glyph-20" />
+			<case name="Break-1" />
+			<case name="Break-2" />
+			<case name="Break-3" />
+			<case name="condition-event-1" />
+			<case name="condition-event-2" />
+			<case name="condition-event-3" />
+			<case name="condition-event-4" />
+			<case name="condition-event-5" />
+			<case name="condition-event-6" />
+			<case name="condition-event-7" />
+			<case name="condition-event-8" />
+			<case name="condition-event-9" />
+			<case name="condition-event-10" />
+			<case name="linked" />
+		</attribute>
+		<attribute name="phantom-weapon-active-effect-flag-2nd" type="Seq16" default="none">
+			<case name="none" />
+			<case name="stun" />
+			<case name="airdash" />
+			<case name="knockback" />
+			<case name="bind-phantom" />
+			<case name="link" />
+			<case name="detection" />
+			<case name="internal-injury" />
+			<case name="immediately-exec" />
+			<case name="concentration" />
+			<case name="infinity-shot" />
+			<case name="down" />
+			<case name="swoon" />
+			<case name="defence" />
+			<case name="kneel" />
+			<case name="provocation" />
+			<case name="midair-1" />
+			<case name="midair-2" />
+			<case name="midair-3" />
+			<case name="frostbite" />
+			<case name="magnetic-seal" />
+			<case name="fast-freezing" />
+			<case name="rupture" />
+			<case name="impregnability" />
+			<case name="prickblood" />
+			<case name="wildfire-1" />
+			<case name="wildfire-2" />
+			<case name="wildfire-3" />
+			<case name="hide" />
+			<case name="burrow" />
+			<case name="smokescreen" />
+			<case name="embers" />
+			<case name="poison" />
+			<case name="applied-poison" />
+			<case name="spider-web" />
+			<case name="time-bomb" />
+			<case name="defence-block" />
+			<case name="dash-block" />
+			<case name="dexterity" />
+			<case name="soulblade-1" />
+			<case name="soulblade-2" />
+			<case name="soulblade-3" />
+			<case name="joint" />
+			<case name="flydragon" />
+			<case name="landdragon" />
+			<case name="silverweb-1" />
+			<case name="silverweb-2" />
+			<case name="justguard" />
+			<case name="force-flag-1" />
+			<case name="force-flag-2" />
+			<case name="force-flag-3" />
+			<case name="catchshield" />
+			<case name="poundshort" />
+			<case name="axechopshort" />
+			<case name="swingstrikeshort" />
+			<case name="chilblain" />
+			<case name="frontdown" />
+			<case name="bleeding" />
+			<case name="npc-state-1" />
+			<case name="npc-state-2" />
+			<case name="npc-state-3" />
+			<case name="npc-state-4" />
+			<case name="npc-state-5" />
+			<case name="npc-state-6" />
+			<case name="npc-state-7" />
+			<case name="npc-state-8" />
+			<case name="hardwall-break" />
+			<case name="react-link" />
+			<case name="counter" />
+			<case name="Shadow" />
+			<case name="Shuriken" />
+			<case name="Instantkick" />
+			<case name="Hyperkick" />
+			<case name="Saver" />
+			<case name="HeartStab" />
+			<case name="LeafDodge" />
+			<case name="DragonKick" />
+			<case name="BurstBlow" />
+			<case name="Blood" />
+			<case name="BloodFullStack" />
+			<case name="Poison2" />
+			<case name="Poison2FullStack" />
+			<case name="TankingDrain" />
+			<case name="EmberFullStack" />
+			<case name="PoisonFullStack" />
+			<case name="FireBit" />
+			<case name="FireBitFullStack" />
+			<case name="IceBit" />
+			<case name="Hole" />
+			<case name="HoleFullStack" />
+			<case name="Bubble" />
+			<case name="Swallow" />
+			<case name="FireBit2" />
+			<case name="IceBit2" />
+			<case name="IceBitFullStack" />
+			<case name="FireWall1" />
+			<case name="FireWall2" />
+			<case name="FireWall3" />
+			<case name="FireWall4" />
+			<case name="HighKick" />
+			<case name="Abdomen" />
+			<case name="ShortBurst" />
+			<case name="MartialFullHit" />
+			<case name="Smash" />
+			<case name="Hole1" />
+			<case name="Hole2" />
+			<case name="Hole3" />
+			<case name="TargetHole1" />
+			<case name="TargetHole2" />
+			<case name="TargetHole3" />
+			<case name="Hornet" />
+			<case name="MorningGlory" />
+			<case name="cannot-resurrect" />
+			<case name="enable-guild-battle-field" />
+			<case name="Immune-link" />
+			<case name="GhostX0" />
+			<case name="GhostX1" />
+			<case name="GhostX2" />
+			<case name="GhostX3" />
+			<case name="Thornbus" />
+			<case name="BloodBurst" />
+			<case name="AdventMark1" />
+			<case name="AdventMark2" />
+			<case name="HyperMove" />
+			<case name="Talisman" />
+			<case name="Spector01" />
+			<case name="Spector02" />
+			<case name="Spector03" />
+			<case name="Phantomsoul" />
+			<case name="BlueSky" />
+			<case name="EgoAutoParry" />
+			<case name="Pierce" />
+			<case name="burn" />
+			<case name="AttackGlide" />
+			<case name="SecondGaugeStopped" />
+			<case name="BigBossJump" />
+			<case name="BigBossState-1" />
+			<case name="JobSkillFlag-1" />
+			<case name="JobSkillFlag-2" />
+			<case name="JobSkillFlag-3" />
+			<case name="JobSkillFlag-4" />
+			<case name="JobSkillFlag-5" />
+			<case name="JobSkillFlag-6" />
+			<case name="JobSkillFlag-7" />
+			<case name="JobSkillFlag-8" />
+			<case name="JobSkillFlag-9" />
+			<case name="JobSkillFlag-10" />
+			<case name="JobSkillFlag-11" />
+			<case name="JobSkillFlag-12" />
+			<case name="JobSkillFlag-13" />
+			<case name="JobSkillFlag-14" />
+			<case name="JobSkillFlag-15" />
+			<case name="JobSkillFlag-16" />
+			<case name="JobSkillFlag-17" />
+			<case name="JobSkillFlag-18" />
+			<case name="JobSkillFlag-19" />
+			<case name="JobSkillFlag-20" />
+			<case name="JobSkillFlag-21" />
+			<case name="JobSkillFlag-22" />
+			<case name="JobSkillFlag-23" />
+			<case name="JobSkillFlag-24" />
+			<case name="JobSkillFlag-25" />
+			<case name="JobSkillFlag-26" />
+			<case name="JobSkillFlag-27" />
+			<case name="JobSkillFlag-28" />
+			<case name="JobSkillFlag-29" />
+			<case name="JobSkillFlag-30" />
+			<case name="JobSkillFlag-31" />
+			<case name="JobSkillFlag-32" />
+			<case name="JobSkillFlag-33" />
+			<case name="JobSkillFlag-34" />
+			<case name="JobSkillFlag-35" />
+			<case name="JobSkillFlag-36" />
+			<case name="JobSkillFlag-37" />
+			<case name="JobSkillFlag-38" />
+			<case name="JobSkillFlag-39" />
+			<case name="JobSkillFlag-40" />
+			<case name="JobSkillFlag-41" />
+			<case name="JobSkillFlag-42" />
+			<case name="JobSkillFlag-43" />
+			<case name="JobSkillFlag-44" />
+			<case name="JobSkillFlag-45" />
+			<case name="JobSkillFlag-46" />
+			<case name="JobSkillFlag-47" />
+			<case name="JobSkillFlag-48" />
+			<case name="JobSkillFlag-49" />
+			<case name="JobSkillFlag-50" />
+			<case name="JobSkillFlag-51" />
+			<case name="JobSkillFlag-52" />
+			<case name="JobSkillFlag-53" />
+			<case name="JobSkillFlag-54" />
+			<case name="JobSkillFlag-55" />
+			<case name="JobSkillFlag-56" />
+			<case name="npc-skill-1" />
+			<case name="npc-skill-2" />
+			<case name="npc-skill-3" />
+			<case name="npc-skill-4" />
+			<case name="npc-skill-5" />
+			<case name="npc-skill-6" />
+			<case name="npc-skill-7" />
+			<case name="npc-skill-8" />
+			<case name="npc-skill-9" />
+			<case name="npc-skill-10" />
+			<case name="npc-skill-11" />
+			<case name="npc-skill-12" />
+			<case name="stun-miss" />
+			<case name="down-miss" />
+			<case name="Struggle" />
+			<case name="boutiquefree" />
+			<case name="tumbling-block" />
+			<case name="PeaceArea" />
+			<case name="perfect-dodged" />
+			<case name="kneel-miss" />
+			<case name="glyph-1" />
+			<case name="glyph-2" />
+			<case name="glyph-3" />
+			<case name="glyph-4" />
+			<case name="glyph-5" />
+			<case name="glyph-6" />
+			<case name="glyph-7" />
+			<case name="glyph-8" />
+			<case name="glyph-9" />
+			<case name="glyph-10" />
+			<case name="glyph-11" />
+			<case name="glyph-12" />
+			<case name="glyph-13" />
+			<case name="glyph-14" />
+			<case name="glyph-15" />
+			<case name="glyph-16" />
+			<case name="glyph-17" />
+			<case name="glyph-18" />
+			<case name="glyph-19" />
+			<case name="glyph-20" />
+			<case name="Break-1" />
+			<case name="Break-2" />
+			<case name="Break-3" />
+			<case name="condition-event-1" />
+			<case name="condition-event-2" />
+			<case name="condition-event-3" />
+			<case name="condition-event-4" />
+			<case name="condition-event-5" />
+			<case name="condition-event-6" />
+			<case name="condition-event-7" />
+			<case name="condition-event-8" />
+			<case name="condition-event-9" />
+			<case name="condition-event-10" />
+			<case name="linked" />
+		</attribute>
+		<attribute name="phantom-weapon-count" type="Int16" default="0" max="6" />
+		<attribute name="phantom-weapon-anim-set" type="String" default="" max="100" />
+		<attribute name="phantom-weapon-start-create-socket" type="Bool" default="n" />
+		<attribute name="phantom-weapon-start-create-height" type="Distance" default="80" max="32767" />
+		<attribute name="phantom-weapon-reload-create-socket" type="Bool" default="n" />
+		<attribute name="phantom-weapon-reload-create-height" type="Distance" default="80" max="32767" />
+		<attribute name="phantom-weapon-customized-attach-scale" type="Bool" default="n" />
+		<attribute name="phantom-weapon-attach-socket-name-1st" type="String" repeat="6" default="" max="100" />
+		<attribute name="phantom-weapon-attach-socket-name-2nd" type="String" repeat="6" default="" max="100" />
+		<attribute name="phantom-weapon-spawn-start-bone" type="String" default="" max="100" />
+		<attribute name="phantom-weapon-spawn-duration-1st" type="Float32" default="2.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="phantom-weapon-spawn-duration-2nd" type="Float32" default="2.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="phantom-weapon-spawn-attach-duration" type="Float32" default="0.7" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="phantom-weapon-spawn-show-1st" type="String" repeat="6" default="" max="100" />
+		<attribute name="phantom-weapon-spawn-show-2nd" type="String" repeat="6" default="" max="100" />
+		<attribute name="phantom-weapon-spawn-end-bone" type="String" default="" max="100" />
+		<attribute name="phantom-weapon-end-duration" type="Float32" default="2.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="phantom-weapon-end-show" type="String" repeat="6" default="" max="100" />
+		<attribute name="phantom-weapon-exec-end-duration" type="Float32" default="2.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="phantom-weapon-exec-end-show" type="String" repeat="6" default="" max="100" />
+		<attribute name="phantom-weapon-finish-duration" type="Float32" default="2.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="phantom-weapon-finish-show" type="String" repeat="6" default="" max="100" />
+		<attribute name="phantom-weapon-idle-animation-1st" type="String" repeat="6" default="" max="100" />
+		<attribute name="phantom-weapon-idle-animation-2nd" type="String" repeat="6" default="" max="100" />
+		<attribute name="phantom-weapon-sync-time" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+	</el>
+</table>

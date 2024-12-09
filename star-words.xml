@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="star-words" type="400" version="3.2" module="262">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="star-stone-slot" type="Ref" repeat="8" ref="item" refel="1" />
+		<attribute name="name2" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="star-words-desc" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="star-words-condition-event" type="Ref" repeat="60" ref="condition-event" refel="1" />
+		<attribute name="star-words-condition-event-weight" type="Int16" repeat="60" default="0" max="10000" />
+		<attribute name="star-words-condition-event-weight-total" type="Int32" hidden="True" default="0" max="10000" />
+		<attribute name="star-words-condition-event-desc" type="String" repeat="20" default="" max="100" />
+	</el>
+</table>

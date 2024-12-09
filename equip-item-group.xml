@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="equip-item-group" type="124" version="1.1" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="item-group-name" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="item-group-category" type="Int8" required="True" min="1" max="127" />
+	</el>
+</table>

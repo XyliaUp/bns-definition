@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="zonearea" type="462" version="0.55" module="526" maxid="800">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="zone" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="id" type="Int16" key="True" required="True" min="-32768" max="800" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="box" type="Box" required="True" min="-32768" max="32767" />
+		<attribute name="description" type="String" default="" max="50" />
+		<attribute name="areacolor" type="IColor" default="1,122,189" max="255" />
+		<attribute name="pos" type="Vector32" hidden="True" min="-2147483647" max="2147483647" />
+		<attribute name="scale-x" type="Float32" hidden="True" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="scale-y" type="Float32" hidden="True" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="scale-z" type="Float32" hidden="True" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+	</el>
+</table>

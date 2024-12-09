@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="itemusablerelation" type="225" version="0.5" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="attraction-group" type="Ref" required="True" ref="attraction-group" refel="1" />
+		<attribute name="all" type="Bool" default="n" />
+		<attribute name="default" type="Bool" default="n" />
+		<attribute name="duel" type="Bool" default="n" />
+		<attribute name="unusable" type="Bool" default="n" />
+		<attribute name="jeryoungrim" type="Bool" default="n" />
+		<attribute name="deasamak" type="Bool" default="n" />
+		<attribute name="suwal" type="Bool" default="n" />
+		<attribute name="beakchung" type="Bool" default="n" />
+		<attribute name="gunwon" type="Bool" default="n" />
+		<attribute name="epichigh" type="Bool" default="n" />
+		<attribute name="pacheonseongdo" type="Bool" default="n" />
+		<attribute name="musin1-15" type="Bool" default="n" />
+		<attribute name="cave-dungeon" type="Bool" default="n" />
+		<attribute name="potion" type="Bool" default="n" />
+		<attribute name="talisman" type="Bool" default="n" />
+		<attribute name="techeonwangreung" type="Bool" default="n" />
+		<attribute name="event1" type="Bool" default="n" />
+		<attribute name="event2" type="Bool" default="n" />
+		<attribute name="special-potion" type="Bool" default="n" />
+	</el>
+</table>

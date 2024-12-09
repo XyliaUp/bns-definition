@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="skillsystematizationfiltergroup" type="366" version="0.1" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name" type="Ref" ref="text" refel="1" />
+		<attribute name="sort-no" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="tooltip" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

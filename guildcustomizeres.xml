@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="guildcustomizeres" type="8" version="0.3" module="24">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int8" key="True" required="True" min="-128" max="127" />
+		<attribute name="table-resourcetype" type="Seq" key="True" required="True">
+			<case name="cloth-attach-mesh" />
+			<case name="face-acc-mesh" />
+			<case name="hair-acc-mesh" />
+			<case name="flag-acc-mesh" />
+			<case name="cloth-top-mat" />
+			<case name="cloth-lower-mat" />
+			<case name="cloth-attach-top-mask" />
+			<case name="cloth-attach-lower-mask" />
+			<case name="cloth-top-mask" />
+			<case name="cloth-lower-mask" />
+			<case name="hair-acc-mask" />
+			<case name="face-acc-mask" />
+			<case name="flag-acc-mask" />
+			<case name="guild-color" />
+		</attribute>
+		<attribute name="alias" type="String" required="True" max="128" />
+		<attribute name="data-version" type="Int16" default="1" min="-32768" max="32767" />
+		<attribute name="use-item" type="Bool" default="y" />
+		<attribute name="bm-item" type="Bool" default="n" />
+		<sub name="meshres">
+			<attribute name="jinm-mesh" type="XUnknown2" default="" max="256" />
+			<attribute name="jinf-mesh" type="XUnknown2" default="" max="256" />
+			<attribute name="gonm-mesh" type="XUnknown2" default="" max="256" />
+			<attribute name="gonf-mesh" type="XUnknown2" default="" max="256" />
+			<attribute name="lynm-mesh" type="XUnknown2" default="" max="256" />
+			<attribute name="lynf-mesh" type="XUnknown2" default="" max="256" />
+			<attribute name="kunf-mesh" type="XUnknown2" default="" max="256" />
+			<attribute name="jinm-col" type="XUnknown2" default="" max="256" />
+			<attribute name="jinf-col" type="XUnknown2" default="" max="256" />
+			<attribute name="gonm-col" type="XUnknown2" default="" max="256" />
+			<attribute name="gonf-col" type="XUnknown2" default="" max="256" />
+			<attribute name="lynm-col" type="XUnknown2" default="" max="256" />
+			<attribute name="lynf-col" type="XUnknown2" default="" max="256" />
+			<attribute name="kunf-col" type="XUnknown2" default="" max="256" />
+			<attribute name="replace-mesh" type="Bool" default="n" />
+		</sub>
+		<sub name="materialres">
+			<attribute name="jinm-col" type="XUnknown2" default="" max="256" />
+			<attribute name="jinf-col" type="XUnknown2" default="" max="256" />
+			<attribute name="gonm-col" type="XUnknown2" default="" max="256" />
+			<attribute name="gonf-col" type="XUnknown2" default="" max="256" />
+			<attribute name="lynm-col" type="XUnknown2" default="" max="256" />
+			<attribute name="lynf-col" type="XUnknown2" default="" max="256" />
+			<attribute name="kunf-col" type="XUnknown2" default="" max="256" />
+		</sub>
+		<sub name="colorres">
+			<attribute name="color" type="FColor" repeat="10" default="0,0,0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		</sub>
+		<sub name="textureres">
+			<attribute name="texture-path" type="XUnknown2" default="" max="256" />
+		</sub>
+	</el>
+</table>

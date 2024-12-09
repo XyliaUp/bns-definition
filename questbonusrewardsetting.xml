@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="questbonusrewardsetting" type="297" version="3.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int64" key="True" required="True" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="quest" type="Ref" required="True" ref="quest" refel="1" />
+		<attribute name="reward" type="Ref" required="True" ref="questbonusreward" refel="1" />
+		<attribute name="basic-quota" type="Ref" required="True" ref="content-quota" refel="1" />
+		<attribute name="contents-reset" type="Ref" repeat="10" ref="contents-reset" refel="1" />
+		<sub name="sealed-level">
+			<attribute name="sealed-level" type="Int8" required="True" max="127" />
+		</sub>
+		<sub name="difficulty-type">
+			<attribute name="difficulty-type" type="Seq" required="True">
+				<case name="none" />
+				<case name="easy" />
+				<case name="normal" />
+				<case name="hard" />
+			</attribute>
+		</sub>
+		<sub name="ignore-difficulty" />
+	</el>
+</table>

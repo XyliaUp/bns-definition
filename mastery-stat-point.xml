@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="mastery-stat-point" type="260" version="0.5" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="stat-point-attribute" type="Seq" key="True" required="True">
+			<case name="attacker" />
+			<case name="defender" />
+		</attribute>
+		<attribute name="stat-point" type="Int16" key="True" required="True" min="1" max="1000" />
+		<attribute name="stat-effect" type="Ref" ref="effect" refel="1" />
+		<attribute name="event-effect" type="Ref" repeat="4" ref="effect" refel="1" />
+		<attribute name="description" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

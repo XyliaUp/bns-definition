@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="ristrictedcostumeres" type="12" version="0.1" module="24">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int8" key="True" required="True" min="-128" max="127" />
+		<attribute name="default" type="Bool" default="n" />
+		<attribute name="race" type="Prop_seq" default="0">
+			<case name="race-none" />
+			<case name="건" />
+			<case name="곤" />
+			<case name="린" />
+			<case name="진" />
+			<case name="나쁜몹" />
+			<case name="더나쁜몹" />
+			<case name="무서운몹" />
+			<case name="더무서운몹" />
+			<case name="더더무서운몹" />
+			<case name="고양이" />
+			<case name="강림체" />
+			<case name="악귀" />
+		</attribute>
+		<attribute name="sex" type="Prop_seq" default="0">
+			<case name="sex-none" />
+			<case name="남" />
+			<case name="여" />
+			<case name="중" />
+		</attribute>
+		<attribute name="default-mesh" type="String" max="50" />
+		<attribute name="default-material" type="String" max="50" />
+		<attribute name="ristricted-costume" type="String" max="50" />
+	</el>
+</table>

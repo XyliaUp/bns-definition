@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="zoneenv2spawn" type="471" version="0.9" module="526" maxid="255">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="zone" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="id" type="Int16" key="True" required="True" min="-32768" max="255" />
+		<attribute name="env2" type="Ref" required="True" ref="zoneenv2" refel="1" />
+		<attribute name="env2place" type="Ref" required="True" ref="zoneenv2place" refel="1" />
+		<attribute name="random-group" type="Ref" ref="zoneenv2spawnrandomgroup" refel="1" />
+		<attribute name="required-env" type="Ref" ref="zoneenv2spawn" refel="1" />
+		<attribute name="mapunit-map-depth" type="Seq" default="3">
+			<case name="1" />
+			<case name="2" />
+			<case name="3" />
+			<case name="4" />
+			<case name="5" />
+		</attribute>
+		<attribute name="mapunit-arena-dungeon-map-depth" type="Seq" default="3">
+			<case name="1" />
+			<case name="2" />
+			<case name="3" />
+			<case name="4" />
+			<case name="5" />
+		</attribute>
+	</el>
+</table>

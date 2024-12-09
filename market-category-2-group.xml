@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="market-category-2-group" type="252" version="0.3" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="sort-no" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="visible" type="Bool" default="0" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<sub name="favorite" />
+		<sub name="world-boss" />
+		<sub name="market-category-2">
+			<attribute name="market-category-2" type="Seq" default="none">
+				<case name="none" />
+				<case name="weapon" />
+				<case name="equip-gem" />
+				<case name="accessory" />
+				<case name="dress" />
+				<case name="weapon-gem" />
+				<case name="medicine" />
+				<case name="food" />
+				<case name="build-up-stone" />
+				<case name="talisman" />
+				<case name="tool" />
+				<case name="equip-material" />
+				<case name="union-material" />
+				<case name="dress-material" />
+				<case name="etc-material" />
+				<case name="coin" />
+				<case name="deed" />
+				<case name="quest" />
+				<case name="etc-change" />
+				<case name="etc-box" />
+				<case name="badge" />
+				<case name="relic" />
+				<case name="skill-train-by-item-extract" />
+				<case name="gold" />
+				<case name="spirit" />
+			</attribute>
+			<attribute name="market-category-3-group" type="Ref" repeat="15" ref="market-category-3-group" refel="1" />
+		</sub>
+	</el>
+</table>
