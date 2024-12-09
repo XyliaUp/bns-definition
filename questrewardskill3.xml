@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="questrewardskill3" type="285" version="0.3" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="job-style" type="Seq" default="base-1">
+			<case name="base-1" />
+			<case name="base-2" />
+			<case name="base-3" />
+			<case name="base-4" />
+			<case name="base-5" />
+			<case name="advanced-1" />
+			<case name="advanced-2" />
+			<case name="advanced-3" />
+			<case name="advanced-4" />
+			<case name="advanced-5" />
+		</attribute>
+		<attribute name="skill3" type="Ref" repeat="4" ref="skill3" refel="1" />
+	</el>
+</table>

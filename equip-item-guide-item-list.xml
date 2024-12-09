@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="equip-item-guide-item-list" type="122" version="1.0" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="item" type="Ref" ref="item" refel="1" />
+		<attribute name="item-improve-level" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="item-stage-number" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="item-guide" type="Ref" required="True" ref="equip-item-guide" refel="1" />
+	</el>
+</table>

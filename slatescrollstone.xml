@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="slatescrollstone" type="365" version="0.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="scroll" type="Ref" required="True" default="null" ref="slatescroll" refel="1" />
+		<attribute name="stone" type="Ref" required="True" default="null" ref="slatestone" refel="1" />
+		<attribute name="tooltip" type="Bool" default="n" />
+	</el>
+</table>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="faction-level" type="131" version="0.4" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="level" type="Int8" key="True" required="True" min="1" max="127" />
+		<attribute name="reputation" type="Int32" required="True" max="200000" />
+		<attribute name="grade-name" type="Ref" repeat="2" ref="text" refel="1" />
+		<attribute name="max-faction-score" type="Int32" required="True" max="100000" />
+	</el>
+</table>

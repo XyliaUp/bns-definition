@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="boss-challenge" type="44" version="0.10" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="zone" type="Ref" required="True" ref="zone" refel="1" />
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="require-score" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="last-round" type="Int16" hidden="True" min="-32768" max="32767" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="group" type="Ref" ref="attraction-group" refel="1" />
+		<attribute name="attraction-quest" type="Ref" repeat="5" hidden="True" ref="quest" refel="1" />
+		<attribute name="enable-heart-count" type="Bool" default="n" />
+		<attribute name="max-instant-heart-count" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="required-level" type="Int8" default="0" max="100" />
+		<attribute name="required-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="required-preceding-quest" type="Ref" repeat="3" ref="quest" refel="1" />
+		<attribute name="required-preceding-quest-check" type="Seq" default="and">
+			<case name="and" />
+			<case name="or" />
+		</attribute>
+		<attribute name="boss-challenge-name2" type="Ref" ref="text" refel="1" />
+		<attribute name="boss-challenge-desc" type="Ref" ref="text" refel="1" />
+		<attribute name="ui-text-grade" type="Int8" default="0" min="-128" max="8" />
+		<attribute name="reward-summary" type="Ref" ref="attractionrewardsummary" refel="1" />
+		<attribute name="recommand-level-min" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-level-max" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-mastery-level-min" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-mastery-level-max" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommend-attack-power" type="Int16" default="0" max="9999" />
+		<attribute name="standard-gear-weapon" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="display-quests" type="Ref" repeat="12" hidden="True" ref="quest" refel="1" />
+		<attribute name="enable-infinite-hyper-energy" type="Bool" default="n" />
+		<attribute name="tactic" type="Ref" ref="text" refel="1" />
+		<attribute name="recommend-alias" type="Ref" ref="contentsjournalrecommenditem" refel="1" />
+	</el>
+</table>

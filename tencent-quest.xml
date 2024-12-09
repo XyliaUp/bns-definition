@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="tencent-quest" type="402" version="0.2" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="questid" type="Int16" key="True" required="True" min="1" max="25200" />
+		<attribute name="check-vitality" type="Bool" default="y" />
+	</el>
+</table>

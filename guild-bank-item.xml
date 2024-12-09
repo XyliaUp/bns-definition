@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="guild-bank-item" type="160" version="0.2" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="bank-item-type" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="gemstone" />
+			<case name="moonstone" />
+			<case name="tokeniron" />
+			<case name="tokensilver" />
+			<case name="tokengold" />
+		</attribute>
+		<attribute name="bank-item" type="Ref" ref="item" refel="1" />
+		<attribute name="bank-item-round-lot" type="Int16" default="1" min="-32768" max="32767" />
+		<attribute name="bank-item-max-count" type="Int64" default="9223372036854775807" max="9223372036854775807" />
+	</el>
+</table>

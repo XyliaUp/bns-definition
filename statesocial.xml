@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="statesocial" type="381" version="0.1" module="4" maxid="200000000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="200000000" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="sit-state-social" type="Ref" ref="statesocial" refel="1" />
+		<attribute name="can-sitdown" type="Bool" default="n" />
+		<attribute name="start-transit" type="String" default="" max="80" />
+		<attribute name="idle" type="String" default="" max="80" />
+		<attribute name="end-transit" type="String" default="" max="80" />
+	</el>
+</table>

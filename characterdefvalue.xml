@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="characterdefvalue" type="2" version="0.6" module="24">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="table-type" type="Seq" key="True" required="True">
+			<case name="scalarvalue" />
+			<case name="facecustom" />
+			<case name="bodycustom" />
+			<case name="guildscalar" />
+		</attribute>
+		<attribute name="race" type="Prop_seq" key="True" required="True">
+			<case name="race-none" />
+			<case name="건" />
+			<case name="곤" />
+			<case name="린" />
+			<case name="진" />
+			<case name="나쁜몹" />
+			<case name="더나쁜몹" />
+			<case name="무서운몹" />
+			<case name="더무서운몹" />
+			<case name="더더무서운몹" />
+			<case name="고양이" />
+			<case name="강림체" />
+			<case name="악귀" />
+		</attribute>
+		<attribute name="sex" type="Prop_seq" key="True" required="True">
+			<case name="sex-none" />
+			<case name="남" />
+			<case name="여" />
+			<case name="중" />
+		</attribute>
+		<attribute name="index-name" type="String" default="" max="128" />
+		<attribute name="data-version" type="Int16" default="1" min="-32768" max="32767" />
+		<sub name="scalarvalue">
+			<attribute name="face-scalar-min" type="Float32" repeat="13" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+			<attribute name="face-scalar-max" type="Float32" repeat="13" default="1" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+			<attribute name="face-scalar-count" type="Int8" repeat="13" default="21" min="-128" max="127" />
+		</sub>
+		<sub name="facecustom">
+			<attribute name="face-custom-min" type="Float32" repeat="32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+			<attribute name="face-custom-max" type="Float32" repeat="32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+			<attribute name="face-custom-count" type="Int8" repeat="32" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="bodycustom">
+			<attribute name="body-custom-min" type="Float32" repeat="27" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+			<attribute name="body-custom-max" type="Float32" repeat="27" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+			<attribute name="body-custom-count" type="Int8" repeat="27" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="guildscalar">
+			<attribute name="guild-scalar-min" type="Float32" default="0.1" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+			<attribute name="guild-scalar-max" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+			<attribute name="guild-scalar-count" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+	</el>
+</table>

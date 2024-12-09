@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="petition-faq-list" type="276" version="0.4" module="4" maxid="200000000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int64" key="True" required="True" min="1" max="200000000" />
+		<attribute name="title" type="String" required="True" max="256" />
+		<attribute name="contents" type="Native" default="" />
+		<attribute name="new-faq" type="Bool" default="n" />
+		<attribute name="hot-faq" type="Bool" default="n" />
+		<attribute name="file-name" type="String" required="True" deprecated="True" max="256" />
+	</el>
+</table>

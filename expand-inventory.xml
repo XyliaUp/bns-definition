@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="expand-inventory" type="125" version="2.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="inventory-type" type="Seq" key="True" required="True">
+			<case name="inventory" />
+			<case name="depository" />
+			<case name="depository-2" />
+			<case name="wardrobe" />
+			<case name="premium-depository" />
+		</attribute>
+		<attribute name="inventory-size" type="Int16" key="True" required="True" max="192" />
+		<attribute name="level" type="Int8" required="True" min="1" max="60" />
+		<attribute name="desirable-expand-level" type="Int8" default="1" min="1" max="60" />
+		<attribute name="money" type="Int32" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="charge-type" type="Seq" default="item-or-money">
+			<case name="item" />
+			<case name="money" />
+			<case name="item-or-money" />
+		</attribute>
+		<attribute name="expand-size" type="Int8" default="8" min="1" max="8" />
+		<attribute name="required-item" type="Ref" ref="item" refel="1" />
+		<attribute name="required-item-count" type="Int8" default="1" min="-128" max="127" />
+	</el>
+</table>

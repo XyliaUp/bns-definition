@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="summonedbeautyshop" type="387" version="0.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="beauty-item" type="Ref" repeat="120" ref="summonedpreset" refel="1" />
+		<attribute name="sell-rate" type="Int16" required="True" min="1" max="10000" />
+	</el>
+</table>

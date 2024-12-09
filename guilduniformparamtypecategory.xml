@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="guilduniformparamtypecategory" type="171" version="0.4" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="param-type-category" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="style" />
+			<case name="top" />
+			<case name="bottoms" />
+			<case name="point-color" />
+			<case name="face" />
+			<case name="head" />
+		</attribute>
+		<attribute name="param-type" type="Int32" repeat="28" required="True" min="1" max="28" />
+		<attribute name="master-param-type" type="Int32" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="category-name" type="Ref" ref="text" refel="1" />
+		<attribute name="payment-type" type="Seq" default="selective">
+			<case name="none" />
+			<case name="selective" />
+			<case name="all" />
+		</attribute>
+	</el>
+</table>

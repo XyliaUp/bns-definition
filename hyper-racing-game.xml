@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="hyper-racing-game" type="176" version="2.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="zone" type="Ref" required="True" ref="zone" refel="1" />
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="play-time" type="Msec" default="0" max="2147483647" />
+		<attribute name="group" type="Ref" ref="attraction-group" refel="1" />
+		<attribute name="public-raid" type="Ref" required="True" ref="public-raid" refel="1" />
+		<attribute name="reward" type="Ref" repeat="4" ref="hyper-racing-game-reward" refel="1" />
+		<attribute name="reward-time" type="Msec" repeat="4" default="0" max="2147483647" />
+		<attribute name="finish-reward" type="Ref" ref="hyper-racing-game-reward" refel="1" />
+		<attribute name="timeout-reward" type="Ref" ref="hyper-racing-game-reward" refel="1" />
+		<attribute name="goal-foot-switch" type="Ref" ref="zoneenv2spawn" refel="1" />
+	</el>
+</table>

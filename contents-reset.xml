@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="contents-reset" type="72" version="3.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="reset-target" type="TRef" required="True" />
+		<attribute name="reset-money" type="Int32" default="0" max="2147483647" />
+		<attribute name="reset-item" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="reset-item-count" type="Int8" repeat="4" default="0" max="127" />
+		<attribute name="quota" type="Ref" ref="content-quota" refel="1" />
+		<attribute name="max-unbind-count" type="Int8" default="0" max="100" />
+		<attribute name="quota-recharge-amount" type="Int64" default="0" min="-9223372036854775807" max="9223372036854775807" />
+	</el>
+</table>

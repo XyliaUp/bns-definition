@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="fishing-show" type="147" version="0.12" module="12">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32767" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="show-type" type="Seq" required="True">
+			<case name="none" />
+			<case name="casting" />
+			<case name="bonus-fishing-point-casting" />
+			<case name="idle" />
+			<case name="fake" />
+			<case name="before-hookset" />
+			<case name="hookset" />
+			<case name="hookset-half" />
+			<case name="fail" />
+			<case name="catch-small" />
+			<case name="catch-big" />
+			<case name="grab-small-normal" />
+			<case name="grab-small-rare" />
+			<case name="grab-big-normal" />
+			<case name="grab-big-rare" />
+		</attribute>
+		<attribute name="player-show" type="String" default="" max="70" />
+		<attribute name="fishing-rod-anim" type="String" default="" max="70" />
+		<attribute name="fishing-float-show" type="String" default="" max="70" />
+		<attribute name="fish-anim" type="String" default="" max="70" />
+		<attribute name="fishing-show-duration" type="Msec" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="loop" type="Bool" required="True" />
+	</el>
+</table>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="constellation" type="63" version="2.2" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32767" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="description" type="Ref" ref="text" refel="1" />
+		<attribute name="star-count" type="Int8" required="True" min="1" max="127" />
+		<attribute name="widget-name" type="String" default="" max="50" />
+	</el>
+</table>

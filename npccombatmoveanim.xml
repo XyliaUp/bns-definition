@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="npccombatmoveanim" type="254" version="0.1" module="12">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="weapon" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="bare-hand" />
+			<case name="sword" />
+			<case name="gauntlet" />
+			<case name="aura-bangle" />
+			<case name="pistol" />
+			<case name="rifle" />
+			<case name="two-handed-axe" />
+			<case name="bow" />
+			<case name="staff" />
+			<case name="dagger" />
+			<case name="pet-1" />
+			<case name="pet-2" />
+			<case name="gun" />
+			<case name="great-sword" />
+			<case name="long-bow" />
+			<case name="spear" />
+			<case name="orb" />
+			<case name="dual-blade" />
+			<case name="instrument" />
+		</attribute>
+		<attribute name="combat-pose" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="peace" />
+			<case name="combat-nontarget" />
+			<case name="combat-target" />
+		</attribute>
+		<attribute name="stance" type="Prop_seq" key="True" required="True">
+			<case name="stance-none" />
+			<case name="npc기본자세" />
+			<case name="천검세" />
+			<case name="검령세" />
+			<case name="단타" />
+			<case name="연계" />
+			<case name="체술" />
+			<case name="납도" />
+			<case name="경기공" />
+			<case name="연기공" />
+			<case name="강기공" />
+			<case name="권총모드" />
+			<case name="런처모드" />
+			<case name="파괴" />
+			<case name="보호" />
+			<case name="철벽" />
+			<case name="소환" />
+			<case name="교란" />
+			<case name="은신" />
+			<case name="암살" />
+			<case name="검술" />
+			<case name="어검" />
+			<case name="발도" />
+			<case name="npc자세1" />
+			<case name="npc자세2" />
+			<case name="npc자세3" />
+			<case name="소환수-follow" />
+			<case name="소환수-command-1" />
+			<case name="소환수-flying" />
+			<case name="주술" />
+			<case name="강림" />
+			<case name="유권" />
+			<case name="기공" />
+			<case name="냉정" />
+			<case name="광기" />
+			<case name="장궁" />
+			<case name="정령궁" />
+			<case name="찌르기" />
+			<case name="베기" />
+			<case name="청뢰" />
+			<case name="혈뢰" />
+			<case name="어검세" />
+			<case name="정수" />
+			<case name="역수" />
+			<case name="한손역수" />
+			<case name="간이연주" />
+			<case name="우퍼" />
+			<case name="연주" />
+			<case name="쌍월" />
+			<case name="뇌신" />
+			<case name="침식" />
+			<case name="염제" />
+			<case name="npc주시자세1" />
+			<case name="npc주시자세2" />
+			<case name="npc주시자세3" />
+		</attribute>
+		<attribute name="upper-idle" type="String" default="" max="60" />
+		<attribute name="lower-idle" type="String" default="" max="60" />
+		<attribute name="upper-walk-front" type="String" default="" max="60" />
+		<attribute name="lower-walk-front" type="String" default="" max="60" />
+		<attribute name="upper-walk-back" type="String" default="" max="60" />
+		<attribute name="lower-walk-back" type="String" default="" max="60" />
+		<attribute name="upper-walk-left" type="String" default="" max="60" />
+		<attribute name="lower-walk-left" type="String" default="" max="60" />
+		<attribute name="upper-walk-right" type="String" default="" max="60" />
+		<attribute name="lower-walk-right" type="String" default="" max="60" />
+		<attribute name="upper-walk-leftback" type="String" default="" max="60" />
+		<attribute name="lower-walk-leftback" type="String" default="" max="60" />
+		<attribute name="upper-walk-rightback" type="String" default="" max="60" />
+		<attribute name="lower-walk-rightback" type="String" default="" max="60" />
+		<attribute name="upper-run-front" type="String" default="" max="60" />
+		<attribute name="lower-run-front" type="String" default="" max="60" />
+		<attribute name="upper-run-back" type="String" default="" max="60" />
+		<attribute name="lower-run-back" type="String" default="" max="60" />
+		<attribute name="upper-run-left" type="String" default="" max="60" />
+		<attribute name="lower-run-left" type="String" default="" max="60" />
+		<attribute name="upper-run-right" type="String" default="" max="60" />
+		<attribute name="lower-run-right" type="String" default="" max="60" />
+		<attribute name="upper-run-leftback" type="String" default="" max="60" />
+		<attribute name="lower-run-leftback" type="String" default="" max="60" />
+		<attribute name="upper-run-rightback" type="String" default="" max="60" />
+		<attribute name="lower-run-rightback" type="String" default="" max="60" />
+		<attribute name="upper-jump-front" type="String" default="" max="60" />
+		<attribute name="lower-jump-front" type="String" default="" max="60" />
+		<attribute name="upper-jump-left" type="String" default="" max="60" />
+		<attribute name="lower-jump-left" type="String" default="" max="60" />
+		<attribute name="upper-jump-right" type="String" default="" max="60" />
+		<attribute name="lower-jump-right" type="String" default="" max="60" />
+		<attribute name="pullout-weapon" type="String" default="" max="60" />
+		<attribute name="putin-weapon" type="String" default="" max="60" />
+		<attribute name="putin-bare-hand" type="String" default="" max="60" />
+		<attribute name="upper-turn-left" type="String" default="" max="60" />
+		<attribute name="lower-turn-left" type="String" default="" max="60" />
+		<attribute name="upper-turn-right" type="String" default="" max="60" />
+		<attribute name="lower-turn-right" type="String" default="" max="60" />
+		<attribute name="upper-jtoi" type="String" default="" max="60" />
+		<attribute name="lower-jtoi" type="String" default="" max="60" />
+		<attribute name="upper-jtomfront" type="String" default="" max="60" />
+		<attribute name="lower-jtomfront" type="String" default="" max="60" />
+		<attribute name="upper-jtomleft" type="String" default="" max="60" />
+		<attribute name="lower-jtomleft" type="String" default="" max="60" />
+		<attribute name="upper-jtomright" type="String" default="" max="60" />
+		<attribute name="lower-jtomright" type="String" default="" max="60" />
+		<attribute name="upper-jtomback" type="String" default="" max="60" />
+		<attribute name="lower-jtomback" type="String" default="" max="60" />
+		<attribute name="upper-mtojfront" type="String" default="" max="60" />
+		<attribute name="lower-mtojfront" type="String" default="" max="60" />
+		<attribute name="upper-mtojleft" type="String" default="" max="60" />
+		<attribute name="lower-mtojleft" type="String" default="" max="60" />
+		<attribute name="upper-mtojright" type="String" default="" max="60" />
+		<attribute name="lower-mtojright" type="String" default="" max="60" />
+		<attribute name="upper-mtoi" type="String" default="" max="60" />
+		<attribute name="lower-mtoi" type="String" default="" max="60" />
+		<attribute name="upper-ltor" type="String" default="" max="60" />
+		<attribute name="lower-ltor" type="String" default="" max="60" />
+		<attribute name="upper-rtol" type="String" default="" max="60" />
+		<attribute name="lower-rtol" type="String" default="" max="60" />
+	</el>
+</table>

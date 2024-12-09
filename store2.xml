@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="store2" type="383" version="1.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int64" key="True" required="True" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="icon" type="Icon" max="32767" />
+		<attribute name="none-selected-icon" type="Icon" max="32767" />
+		<attribute name="faction" type="Ref" ref="faction" refel="1" />
+		<attribute name="item" type="Ref" repeat="127" ref="item" refel="1" />
+		<attribute name="buy-price" type="Ref" repeat="127" ref="item-buy-price" refel="1" />
+	</el>
+</table>

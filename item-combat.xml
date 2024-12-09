@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="item-combat" type="187" version="3.0" module="2054">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="job-style" type="Seq" default="base-1">
+			<case name="base-1" />
+			<case name="base-2" />
+			<case name="base-3" />
+			<case name="base-4" />
+			<case name="base-5" />
+			<case name="advanced-1" />
+			<case name="advanced-2" />
+			<case name="advanced-3" />
+			<case name="advanced-4" />
+			<case name="advanced-5" />
+		</attribute>
+		<attribute name="item-skill" type="Ref" repeat="16" ref="itemskill" refel="1" />
+		<attribute name="item-skill-second" type="Ref" repeat="16" ref="itemskill" refel="1" />
+		<attribute name="item-skill-third" type="Ref" repeat="16" ref="itemskill" refel="1" />
+		<attribute name="skill-build-up-parent-skill3-id" type="Int32" repeat="3" default="0" max="2147483647" />
+		<attribute name="skill-build-up-level" type="Int8" repeat="3" default="1" min="1" max="30" />
+		<attribute name="skill-modify-info-group" type="Ref" ref="skill-modify-info-group" refel="1" />
+	</el>
+</table>

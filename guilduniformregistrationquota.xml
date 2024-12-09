@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="guilduniformregistrationquota" type="174" version="0.2" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="increase-step" type="Int8" key="True" required="True" min="1" max="3" />
+		<attribute name="payment-item" type="Ref" ref="item" refel="1" />
+		<attribute name="payment-item-count" type="Int32" default="0" max="2147483647" />
+	</el>
+</table>

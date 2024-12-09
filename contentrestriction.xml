@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="contentrestriction" type="67" version="2.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="code" type="Seq" key="True" required="True">
+			<case name="invalid" />
+			<case name="nckorea" />
+			<case name="tencent" />
+			<case name="innova" />
+			<case name="ncjapan" />
+			<case name="sea" />
+			<case name="nctaiwan" />
+			<case name="ncwest" />
+			<case name="garena" />
+			<case name="rncs" />
+			<case name="rtx" />
+			<case name="zncs" />
+			<case name="ztx" />
+		</attribute>
+		<attribute name="require-level" type="Int16" default="0" max="60" />
+		<attribute name="require-grade" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="require-level-post-send" type="Int16" default="0" max="60" />
+		<attribute name="require-grade-post-send" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="force-restrict-post-send" type="Bool" default="n" />
+		<attribute name="force-restrict-personal-trade" type="Bool" default="n" />
+		<attribute name="market-trade" type="Bool" default="n" />
+		<attribute name="post-send" type="Bool" default="n" />
+		<attribute name="account-post-send" type="Bool" default="n" />
+		<attribute name="post-receive" type="Bool" default="n" />
+		<attribute name="personal-trade" type="Bool" default="n" />
+		<attribute name="account-inventory-goods-receive" type="Bool" default="n" />
+	</el>
+</table>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="contents-schedule" type="73" version="1.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="start-time" type="XUnknown1" required="True" />
+		<attribute name="end-time" type="XUnknown1" required="True" />
+		<sub name="random-store-1" />
+		<sub name="random-store-2" />
+		<sub name="treasure-board" />
+		<sub name="unlocated-store">
+			<attribute name="unlocated-store" type="Ref" required="True" ref="unlocated-store" refel="1" />
+		</sub>
+	</el>
+</table>

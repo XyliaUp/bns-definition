@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="duel-bot-training-room" type="104" version="0.12" module="2054">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="zone" type="Ref" required="True" ref="zone" refel="1" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="group" type="Ref" ref="attraction-group" refel="1" />
+		<attribute name="required-level" type="Int8" default="0" max="100" />
+		<attribute name="required-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="required-preceding-quest" type="Ref" repeat="3" ref="quest" refel="1" />
+		<attribute name="required-preceding-quest-check" type="Seq" default="and">
+			<case name="and" />
+			<case name="or" />
+		</attribute>
+		<attribute name="match-select-delay-duration" type="Msec" default="0" max="3600000" />
+		<attribute name="spawn-kismet-delay-duration" type="Msec" default="0" max="3600000" />
+		<attribute name="finish-delay-duration" type="Msec" default="0" max="3600000" />
+		<attribute name="blade-master-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="kung-fu-fighter-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="force-master-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="destroyer-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="summoner-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="assassin-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="sword-master-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="warlock-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="soul-fighter-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="shooter-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="warrior-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="archer-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="spear-master-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="thunderer-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="dual-blader-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="bard-spawn-kismet-name" type="String" default="" max="50" />
+		<attribute name="timeout-duration-second" type="Int16" default="0" max="3600" />
+		<attribute name="achievement-time-limit-second" type="Int16" repeat="2" default="0" max="3600" />
+		<attribute name="ui-text-grade" type="Int8" default="0" min="-128" max="8" />
+		<attribute name="dungeon-name2" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="dungeon-desc" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="arena-minimap" type="String" default="" max="70" />
+		<attribute name="reward-summary" type="Ref" ref="attractionrewardsummary" refel="1" />
+		<attribute name="recommand-level-min" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-level-max" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-mastery-level-min" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-mastery-level-max" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommend-attack-power" type="Int16" default="0" max="9999" />
+		<attribute name="standard-gear-weapon" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="display-quests" type="Ref" repeat="12" hidden="True" ref="quest" refel="1" />
+		<attribute name="tactic" type="Ref" ref="text" refel="1" />
+		<attribute name="recommend-alias" type="Ref" ref="contentsjournalrecommenditem" refel="1" />
+	</el>
+</table>

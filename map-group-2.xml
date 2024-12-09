@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="map-group-2" type="239" version="0.1" module="12">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="quest-filtering-type" type="Seq" default="default">
+			<case name="default" />
+			<case name="current-group-only" />
+		</attribute>
+	</el>
+</table>

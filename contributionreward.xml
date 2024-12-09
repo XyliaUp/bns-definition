@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="contributionreward" type="75" version="0.13" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="contribution-type" type="Seq" default="normal">
+			<case name="normal" />
+			<case name="faction" />
+			<case name="guild" />
+			<case name="probability" />
+		</attribute>
+		<attribute name="minimum-group-item" type="Ref" ref="item" refel="1" />
+		<attribute name="faction-contribution" type="Bool" deprecated="True" default="n" />
+	</el>
+</table>

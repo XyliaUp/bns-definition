@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="raid-dungeon" type="289" version="6.12" module="70" maxid="31999">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="31999" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name2" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="dungeon-type" type="Seq" default="unbind">
+			<case name="unbind" />
+			<case name="bind" />
+		</attribute>
+		<attribute name="group" type="Ref" ref="attraction-group" refel="1" />
+		<attribute name="max-unbind-count" type="Int8" default="0" max="100" />
+		<attribute name="reset-money" type="Int32" default="0" max="2147483647" />
+		<attribute name="reset-item" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="reset-item-count" type="Int8" repeat="4" default="0" max="127" />
+		<attribute name="use-personal-binding" type="Bool" default="n" />
+		<attribute name="personal-binding-slot" type="Seq" default="none">
+			<case name="none" />
+			<case name="slot-1" />
+			<case name="slot-2" />
+			<case name="slot-3" />
+		</attribute>
+		<attribute name="pc-max" type="Int16" default="0" max="12" />
+		<attribute name="required-level" type="Int8" default="0" max="100" />
+		<attribute name="required-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="required-preceding-quest" type="Ref" repeat="3" ref="quest" refel="1" />
+		<attribute name="required-preceding-quest-check" type="Seq" default="and">
+			<case name="and" />
+			<case name="or" />
+		</attribute>
+		<attribute name="attraction-quest" type="Ref" repeat="10" hidden="True" ref="quest" refel="1" />
+		<attribute name="enable-heart-count" type="Bool" default="n" />
+		<attribute name="max-instant-heart-count" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="effect" type="Ref" repeat="3" ref="effect" refel="1" />
+		<attribute name="step-count" type="Int8" default="1" min="1" max="9" />
+		<attribute name="zone" type="Ref" repeat="9" ref="zone" refel="1" />
+		<attribute name="boss-npc" type="Ref" repeat="9" ref="npc" refel="1" />
+		<attribute name="zone-index" type="Int8" repeat="9" default="0" max="17" />
+		<attribute name="dungeon-tap-name2" type="Ref" ref="text" refel="1" />
+		<attribute name="step-name2" type="Ref" repeat="9" ref="text" refel="1" />
+		<attribute name="step-image" type="String" repeat="9" default="" max="70" />
+		<attribute name="arena-minimap" type="String" default="" max="70" />
+		<attribute name="raid-dungeon-desc" type="Ref" ref="text" refel="1" />
+		<attribute name="ui-text-grade" type="Int8" default="0" min="-128" max="8" />
+		<attribute name="reward-summary" type="Ref" ref="attractionrewardsummary" refel="1" />
+		<attribute name="recommand-level-min" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-level-max" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-mastery-level-min" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-mastery-level-max" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommend-attack-power" type="Int16" default="0" max="9999" />
+		<attribute name="standard-gear-weapon" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="display-quests" type="Ref" repeat="12" hidden="True" ref="quest" refel="1" />
+		<attribute name="tactic" type="Ref" ref="text" refel="1" />
+		<attribute name="recommend-alias" type="Ref" ref="contentsjournalrecommenditem" refel="1" />
+		<attribute name="contents-reset" type="Ref" hidden="True" ref="contents-reset" refel="1" />
+		<attribute name="boss-npc-alias" type="Ref" repeat="8" ref="npc" refel="1" />
+		<attribute name="boss-npc-section" type="Ref" repeat="8" ref="text" refel="1" />
+	</el>
+</table>

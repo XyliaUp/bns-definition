@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="zonepathway" type="451" version="1.52" module="14" maxid="250">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="zone" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="id" type="Int16" key="True" required="True" min="-32768" max="250" />
+		<attribute name="waypoint" type="Int16" key="True" required="True" min="-32768" max="32767" />
+		<attribute name="alias" type="String" default="" max="70" />
+		<attribute name="pos" type="Vector32" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="move-type" type="Seq" required="True">
+			<case name="walk" />
+			<case name="run" />
+			<case name="warp" />
+			<case name="sprint" />
+		</attribute>
+		<attribute name="warp-social" type="Ref" ref="social" refel="1" />
+		<attribute name="description" type="String" default="" max="50" />
+		<attribute name="sync" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="duration" type="Msec" deprecated="True" default="0" max="2147483647" />
+	</el>
+</table>

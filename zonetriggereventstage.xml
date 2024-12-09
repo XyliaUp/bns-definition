@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="zonetriggereventstage" type="458" version="0.16" module="6" maxid="200">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="zone" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="zone-mode-set-id" type="Int8" key="True" required="True" min="1" max="1" />
+		<attribute name="zone-mode" type="Int8" key="True" required="True" max="4" />
+		<attribute name="branch-id" type="Int8" key="True" required="True" min="1" max="2" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="next-cond" type="Ref" repeat="2" ref="zonetriggereventcond" refel="1" />
+		<attribute name="next-cond-branch-id" type="Int8" repeat="2" default="1" min="1" max="2" />
+		<attribute name="broadcast-context" type="Seq" default="none">
+			<case name="none" />
+			<case name="timeout-time" />
+			<case name="boss-challenge-attraction-round" />
+		</attribute>
+		<attribute name="start-stage-kismet" type="String" default="" max="50" />
+		<attribute name="end-stage-kismet" type="String" default="" max="50" />
+		<sub name="stage-stand-by-classic-field" />
+		<sub name="stage-stand-by-guild-battle-field-entrance">
+			<attribute name="min-growing-channel" type="Int8" default="0" max="4" />
+			<attribute name="total-duration-minute" type="Int16" repeat="2" default="0" max="1440" />
+		</sub>
+		<sub name="stage-stand-by-persistant-zone">
+			<attribute name="all-channel" type="Bool" default="n" />
+			<attribute name="max-channel" type="Int8" default="0" max="5" />
+			<attribute name="max-event-channel" type="Int8" default="0" max="15" />
+			<attribute name="min-growing-channel" type="Int8" default="0" max="4" />
+			<attribute name="total-duration-minute" type="Int16" repeat="2" default="0" max="1440" />
+			<attribute name="persistant-zone-subtype" type="Seq" default="none">
+				<case name="none" />
+				<case name="invade-town" />
+				<case name="faction-stage" />
+			</attribute>
+			<attribute name="event-channel-text" type="Ref" ref="text" refel="1" />
+			<attribute name="event-notify-diff-zone" type="Ref" repeat="6" ref="zone" refel="1" />
+			<attribute name="event-notify-diff-zone-msg" type="Ref" ref="game-message" refel="1" />
+			<attribute name="event-notify-diff-channel-msg" type="Ref" ref="game-message" refel="1" />
+			<attribute name="event-notify-msg" type="Ref" ref="game-message" refel="1" />
+		</sub>
+		<sub name="stage-stand-by-instant-zone" />
+		<sub name="stage">
+			<attribute name="fail-cond" type="Ref" repeat="3" ref="zonetriggereventcond" refel="1" />
+		</sub>
+	</el>
+</table>

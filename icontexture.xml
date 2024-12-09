@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="icontexture" type="178" version="0.8" module="1028">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="icon-texture" type="XUnknown2" required="True" max="256" />
+		<attribute name="icon-size" type="Int16" required="True" deprecated="True" min="16" max="128" />
+		<attribute name="icon-width" type="Int16" required="True" min="16" max="256" />
+		<attribute name="icon-height" type="Int16" required="True" min="16" max="256" />
+		<attribute name="texture-width" type="Int16" required="True" min="16" max="2048" />
+		<attribute name="texture-height" type="Int16" required="True" min="16" max="2048" />
+	</el>
+</table>

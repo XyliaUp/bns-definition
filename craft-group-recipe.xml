@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="craft-group-recipe" type="80" version="0.4" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="50" />
+		<attribute name="group-item" type="Ref" required="True" default="null" ref="item" refel="1" />
+		<attribute name="craft-union-type" type="Seq" required="True">
+			<case name="none" />
+			<case name="production-type-1" />
+			<case name="production-type-2" />
+			<case name="production-type-3" />
+			<case name="production-type-4" />
+			<case name="production-type-5" />
+			<case name="production-type-6" />
+			<case name="production-type-7" />
+			<case name="gathering-type-1" />
+			<case name="gathering-type-2" />
+			<case name="gathering-type-3" />
+			<case name="gathering-type-4" />
+			<case name="gathering-type-5" />
+			<case name="gathering-type-6" />
+			<case name="gathering-type-7" />
+		</attribute>
+		<attribute name="craft-union-sub-type" type="Seq" required="True">
+			<case name="none" />
+			<case name="gathering" />
+			<case name="production-normal" />
+			<case name="production-transaction" />
+			<case name="production-expert" />
+		</attribute>
+		<attribute name="display-index" type="Int16" default="0" max="32767" />
+		<attribute name="required-craft-exp" type="Int16" default="0" max="32767" />
+		<attribute name="required-completion-quest" type="Ref" ref="quest" refel="1" />
+	</el>
+</table>

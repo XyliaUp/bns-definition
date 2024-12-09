@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="energy-point" type="115" version="0.2" module="6" maxid="1">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int8" key="True" required="True" min="1" max="1" />
+		<attribute name="enable-energy-point" type="Bool" required="True" />
+		<attribute name="ratio-of-point-to-exp" type="Int16" default="100" min="1" max="10000" />
+		<attribute name="acquired-max-energy-point" type="Int32" required="True" max="2000000" />
+		<attribute name="acquired-max-energy-multiple-point" type="Int32" required="True" max="2000000" />
+		<attribute name="multiple-value" type="Int8" repeat="8" default="0" max="63" />
+		<attribute name="multiple-value-hidden" type="Int64" hidden="True" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="additional-effect" type="Ref" ref="effect" refel="1" />
+		<attribute name="reset-hour" type="Int8" default="0" max="23" />
+		<attribute name="reward-count" type="Int8" required="True" min="1" max="127" />
+		<attribute name="reward" type="Ref" repeat="127" ref="energy-point-reward" refel="1" />
+		<attribute name="goodsstore-search-item" type="Ref" ref="item" refel="1" />
+	</el>
+</table>

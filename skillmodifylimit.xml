@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="skillmodifylimit" type="341" version="0.4" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="recycle-duration-min-ratio-percent" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="recycle-duration-max-ratio-percent" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="damage-power-percent-min-ratio-percent" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="damage-power-percent-max-ratio-percent" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="hp-drain-percent-min-ratio-percent" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="hp-drain-percent-max-ratio-percent" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="heal-percent-min-ratio-percent" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="heal-percent-max-ratio-percent" type="Int16" required="True" min="-32768" max="32767" />
+	</el>
+</table>

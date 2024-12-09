@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="discovery-area" type="99" version="0.10" module="14" maxid="100">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="100" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name2" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="map-overlay" type="Ref" deprecated="True" hidden="True" ref="mapoverlay" refel="1" />
+	</el>
+</table>

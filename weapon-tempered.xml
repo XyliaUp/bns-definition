@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="weapon-tempered" type="430" version="1.0" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="weapon-type" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="bare-hand" />
+			<case name="sword" />
+			<case name="gauntlet" />
+			<case name="aura-bangle" />
+			<case name="pistol" />
+			<case name="rifle" />
+			<case name="two-handed-axe" />
+			<case name="bow" />
+			<case name="staff" />
+			<case name="dagger" />
+			<case name="pet-1" />
+			<case name="pet-2" />
+			<case name="gun" />
+			<case name="great-sword" />
+			<case name="long-bow" />
+			<case name="spear" />
+			<case name="orb" />
+			<case name="dual-blade" />
+			<case name="instrument" />
+		</attribute>
+		<attribute name="level" type="Int8" key="True" required="True" min="1" max="20" />
+		<attribute name="show" type="String" default="" max="100" />
+	</el>
+</table>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="event-skill" type="124" version="0.6" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="stance-type" type="Prop_seq" key="True" required="True">
+			<case name="stance-none" />
+			<case name="npc기본자세" />
+			<case name="천검세" />
+			<case name="검령세" />
+			<case name="단타" />
+			<case name="연계" />
+			<case name="체술" />
+			<case name="납도" />
+			<case name="경기공" />
+			<case name="연기공" />
+			<case name="강기공" />
+			<case name="권총모드" />
+			<case name="런처모드" />
+			<case name="파괴" />
+			<case name="보호" />
+			<case name="철벽" />
+			<case name="소환" />
+			<case name="교란" />
+			<case name="은신" />
+			<case name="암살" />
+			<case name="검술" />
+			<case name="어검" />
+			<case name="발도" />
+			<case name="npc자세1" />
+			<case name="npc자세2" />
+			<case name="npc자세3" />
+			<case name="소환수-follow" />
+			<case name="소환수-command-1" />
+			<case name="소환수-flying" />
+			<case name="주술" />
+			<case name="강림" />
+			<case name="유권" />
+			<case name="기공" />
+			<case name="냉정" />
+			<case name="광기" />
+			<case name="장궁" />
+			<case name="정령궁" />
+			<case name="찌르기" />
+			<case name="베기" />
+			<case name="청뢰" />
+			<case name="혈뢰" />
+			<case name="어검세" />
+			<case name="정수" />
+			<case name="역수" />
+			<case name="한손역수" />
+			<case name="간이연주" />
+			<case name="우퍼" />
+			<case name="연주" />
+			<case name="쌍월" />
+			<case name="뇌신" />
+			<case name="침식" />
+			<case name="염제" />
+			<case name="npc주시자세1" />
+			<case name="npc주시자세2" />
+			<case name="npc주시자세3" />
+		</attribute>
+		<attribute name="skill-result" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="hit" />
+			<case name="miss" />
+			<case name="dodge" />
+			<case name="parry" />
+			<case name="perfect-parry" />
+			<case name="bounce" />
+			<case name="counter" />
+			<case name="critical-hit" />
+			<case name="hit-critical-hit" />
+			<case name="back-hit-critical-hit" />
+			<case name="not-hit" />
+			<case name="all" />
+			<case name="hit-critical-hit-parry" />
+			<case name="parry-perfect-parry" />
+			<case name="front-hit-critical-hit" />
+			<case name="parry-perfect-parry-counter" />
+			<case name="parry-perfect-parry-dodge" />
+			<case name="parry-dodge" />
+		</attribute>
+		<attribute name="event-type" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="attack" />
+			<case name="attacked" />
+		</attribute>
+		<attribute name="state" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="hold_deadbody" />
+		</attribute>
+		<attribute name="skill-1" type="Int32" repeat="2" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="skill-2" type="Int32" repeat="12" default="0" min="-2147483647" max="2147483647" />
+	</el>
+</table>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="world-account-card-collection" type="432" version="3.1" module="6" maxid="1000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="1000" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="collection-name" type="Ref" ref="text" refel="1" />
+		<attribute name="collection-season" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="collection-grade" type="Int8" default="1" min="1" max="9" />
+		<attribute name="collection-card" type="Ref" repeat="8" ref="world-account-card" refel="1" />
+		<attribute name="collection-card-count" type="Int16" repeat="8" default="0" min="-32768" max="32767" />
+		<attribute name="collection-card-point" type="Int16" repeat="8" default="0" min="-32768" max="32767" />
+		<attribute name="collection-activate-point" type="Int16" required="True" min="1" max="32767" />
+		<attribute name="ability-activate-point-range" type="Int16" repeat="5" default="0" min="-32768" max="32767" />
+		<attribute name="ability" type="Seq" repeat="5" default="none">
+			<case name="none" />
+			<case name="attack-power-creature-min-max" />
+			<case name="pve-boss-level-npc-attack-power-creature-min-max" />
+			<case name="pvp-attack-power-creature-min-max" />
+			<case name="attack-hit-value" />
+			<case name="attack-critical-value" />
+			<case name="attack-critical-damage-value" />
+			<case name="attack-attribute-value" />
+			<case name="attack-pierce-value" />
+			<case name="abnormal-attack-power-value" />
+			<case name="race-type-1-attack-damage-modify-percent" />
+			<case name="race-type-2-attack-damage-modify-percent" />
+			<case name="race-type-3-attack-damage-modify-percent" />
+			<case name="race-type-4-attack-damage-modify-percent" />
+			<case name="race-type-5-attack-damage-modify-percent" />
+			<case name="race-type-6-attack-damage-modify-percent" />
+			<case name="race-type-7-attack-damage-modify-percent" />
+			<case name="attribute-type-1-attack-damage-modify-percent" />
+			<case name="attribute-type-2-attack-damage-modify-percent" />
+			<case name="attribute-type-3-attack-damage-modify-percent" />
+			<case name="attribute-type-4-attack-damage-modify-percent" />
+			<case name="attribute-type-5-attack-damage-modify-percent" />
+			<case name="attribute-type-6-attack-damage-modify-percent" />
+			<case name="attribute-type-7-attack-damage-modify-percent" />
+			<case name="attribute-type-8-attack-damage-modify-percent" />
+			<case name="attribute-type-9-attack-damage-modify-percent" />
+			<case name="attribute-type-10-attack-damage-modify-percent" />
+			<case name="attribute-type-11-attack-damage-modify-percent" />
+			<case name="attribute-type-12-attack-damage-modify-percent" />
+			<case name="max-hp" />
+			<case name="defend-power-creature-value" />
+			<case name="pve-boss-level-npc-defend-power-creature-value" />
+			<case name="pvp-defend-power-creature-value" />
+			<case name="defend-dodge-value" />
+			<case name="defend-parry-value" />
+			<case name="defend-critical-value" />
+			<case name="hp-regen" />
+			<case name="heal-power-value" />
+			<case name="abnormal-defend-power-value" />
+			<case name="race-type-1-defend-damage-modify-percent" />
+			<case name="race-type-2-defend-damage-modify-percent" />
+			<case name="race-type-3-defend-damage-modify-percent" />
+			<case name="race-type-4-defend-damage-modify-percent" />
+			<case name="race-type-5-defend-damage-modify-percent" />
+			<case name="race-type-6-defend-damage-modify-percent" />
+			<case name="race-type-7-defend-damage-modify-percent" />
+			<case name="attribute-type-1-defend-damage-modify-percent" />
+			<case name="attribute-type-2-defend-damage-modify-percent" />
+			<case name="attribute-type-3-defend-damage-modify-percent" />
+			<case name="attribute-type-4-defend-damage-modify-percent" />
+			<case name="attribute-type-5-defend-damage-modify-percent" />
+			<case name="attribute-type-6-defend-damage-modify-percent" />
+			<case name="attribute-type-7-defend-damage-modify-percent" />
+			<case name="attribute-type-8-defend-damage-modify-percent" />
+			<case name="attribute-type-9-defend-damage-modify-percent" />
+			<case name="attribute-type-10-defend-damage-modify-percent" />
+			<case name="attribute-type-11-defend-damage-modify-percent" />
+			<case name="attribute-type-12-defend-damage-modify-percent" />
+			<case name="r-attack-stiff-duration-value" />
+			<case name="r-defend-stiff-duration-value" />
+			<case name="r-attack-concentrate-value" />
+			<case name="r-aoe-defend-power-value" />
+			<case name="r-defend-strength-creature-value" />
+			<case name="r-attack-precise-creature-value" />
+			<case name="r-attack-aoe-pierce-value" />
+			<case name="r-attack-abnormal-hit-value" />
+			<case name="r-defend-abnormal-dodge-value" />
+			<case name="r-support-power-value" />
+			<case name="defend-critical-damage-value" />
+			<case name="attack-attribute-base-percent" />
+			<case name="attack-critical-damage-percent" />
+			<case name="attack-damage-modify-percent" />
+			<case name="attack-critical-base-percent" />
+		</attribute>
+		<attribute name="ability-base-value" type="Int32" repeat="5" default="0" max="1000000" />
+		<attribute name="effect-activate-point-range" type="Int16" repeat="5" default="0" min="-32768" max="32767" />
+		<attribute name="effect" type="Ref" repeat="5" ref="effect" refel="1" />
+		<attribute name="effect-desc" type="String" repeat="5" default="" max="128" />
+		<attribute name="completion-reward-item" type="Ref" ref="item" refel="1" />
+		<attribute name="completion-reward-item-count" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="start-time" type="XUnknown1" default="" />
+		<attribute name="end-time" type="XUnknown1" default="" />
+		<attribute name="can-not-used" type="Bool" default="n" />
+		<attribute name="main-image" type="String" default="" max="128" />
+	</el>
+</table>

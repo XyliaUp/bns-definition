@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="user-reporting-system" type="418" version="1.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="title-category" type="Seq" key="True" required="True">
+			<case name="user" />
+			<case name="guild" />
+		</attribute>
+		<attribute name="report-scene-code" type="Int8" key="True" required="True" min="1" max="127" />
+		<attribute name="report-reason-code" type="Int16" key="True" required="True" min="1" max="32767" />
+		<attribute name="title-category-name" type="Ref" ref="text" refel="1" />
+		<attribute name="report-scene-name" type="Ref" ref="text" refel="1" />
+		<attribute name="report-reason-name" type="Ref" ref="text" refel="1" />
+		<attribute name="sort" type="Int8" required="True" min="1" max="127" />
+	</el>
+</table>

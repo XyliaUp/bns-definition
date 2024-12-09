@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="zoneenv2place" type="445" version="0.20" module="526">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="region-point" type="Vector32" repeat="4" default="0,0,0" min="-2147483647" max="2147483647" />
+		<attribute name="height" type="Distance" default="0" min="-32768" max="32767" />
+		<attribute name="action-point" type="Vector32" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="action-radius" type="Distance" required="True" min="-32768" max="32767" />
+		<attribute name="use-manipulation-point" type="Bool" required="True" />
+		<attribute name="manipulation-point" type="Vector32" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="manipulation-radius" type="Distance" required="True" min="-32768" max="32767" />
+		<attribute name="manipulation-height-upper" type="Distance" required="True" min="-32768" max="32767" />
+		<attribute name="manipulation-height-lower" type="Distance" required="True" min="-32768" max="32767" />
+		<attribute name="env-actorname" type="String" default="" max="70" />
+		<attribute name="spawn-env" type="Bool" default="n" />
+		<sub name="button" />
+		<sub name="chest" />
+		<sub name="pot" />
+		<sub name="gate" />
+		<sub name="wall" />
+		<sub name="refiner" />
+		<sub name="control-point" />
+		<sub name="portal" />
+		<sub name="foot-switch" />
+		<sub name="effect-region" />
+		<sub name="airdash">
+			<attribute name="duration" type="Msec" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="end-pos" type="Vector32" required="True" min="-2147483647" max="2147483647" />
+			<attribute name="summon-end-pos" type="Vector32" default="0,0,0" min="-2147483647" max="2147483647" />
+		</sub>
+		<sub name="airdash-leave" />
+		<sub name="oceanic-region" />
+		<sub name="fall-death" />
+		<sub name="multiple-loop" />
+		<sub name="deck" />
+		<sub name="fishing-point" />
+		<sub name="attraction-popup" />
+		<sub name="enter-arena-dungeonlobby" />
+	</el>
+</table>

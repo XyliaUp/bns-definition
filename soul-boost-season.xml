@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="soul-boost-season" type="373" version="4.1" module="16390">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="soul-boost-event" type="Ref" ref="soul-boost-event" refel="1" />
+		<attribute name="max-pc-count" type="Int8" default="0" max="127" />
+		<attribute name="start-time" type="XUnknown1" />
+		<attribute name="end-time" type="XUnknown1" />
+		<attribute name="result-expiration-time" type="XUnknown1" />
+		<attribute name="season-slot-id" type="Int8" default="1" min="1" max="127" />
+		<attribute name="season-name" type="String" default="" max="32" />
+		<attribute name="season-name-en" type="String" default="" max="32" />
+		<attribute name="season-name-fr" type="String" default="" max="32" />
+		<attribute name="season-name-de" type="String" default="" max="32" />
+		<attribute name="season-name-pt" type="String" default="" max="32" />
+		<attribute name="season-name-th" type="String" default="" max="32" />
+		<attribute name="season-name-vn" type="String" default="" max="32" />
+		<attribute name="season-name-text" type="Ref" ref="text" refel="1" />
+		<attribute name="season-banner-image-ref" type="String" default="" max="128" />
+		<attribute name="is-battle-pass" type="Bool" default="n" />
+		<attribute name="required-level" type="Int8" default="0" max="100" />
+		<attribute name="required-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="required-preceding-quest" type="Ref" repeat="2" ref="quest" refel="1" />
+		<attribute name="purchase-grade-item" type="Ref" repeat="10" hidden="True" ref="item" refel="1" />
+	</el>
+</table>

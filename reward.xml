@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="reward" type="313" version="1.43" module="14">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int64" key="True" required="True" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="fixed-item" type="Ref" repeat="8" ref="item" refel="1" />
+		<attribute name="fixed-item-min" type="Int16" repeat="8" default="1" min="1" max="10000" />
+		<attribute name="fixed-item-max" type="Int16" repeat="8" default="1" min="1" max="10000" />
+		<attribute name="group-1-2-probability" type="Int16" required="True" max="100" />
+		<attribute name="group-1-prob-weight" type="Int16" default="0" max="1000" />
+		<attribute name="group-1-item" type="Ref" repeat="16" ref="item" refel="1" />
+		<attribute name="group-1-assured-count" type="Int8" default="0" max="16" />
+		<attribute name="group-1-item-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="group-2-prob-weight" type="Int16" default="0" max="1000" />
+		<attribute name="group-2-item" type="Ref" repeat="16" ref="item" refel="1" />
+		<attribute name="group-2-assured-count" type="Int8" default="0" max="16" />
+		<attribute name="group-2-item-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="group-1-2-total-prob-weight" type="Int32" hidden="True" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="group-3-probability" type="Int16" required="True" max="100" />
+		<attribute name="group-3-item" type="Ref" repeat="32" ref="item" refel="1" />
+		<attribute name="group-3-item-prob-weight" type="Int16" repeat="32" default="0" max="1000" />
+		<attribute name="group-3-item-total-prob-weight" type="Int32" hidden="True" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="group-3-item-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="group-4-probability" type="Int16" required="True" max="100" />
+		<attribute name="group-4-item" type="Ref" repeat="10" ref="item" refel="1" />
+		<attribute name="group-4-selected-count" type="Int8" default="0" max="10" />
+		<attribute name="group-4-item-min" type="Int32" repeat="10" default="1" min="1" max="1000000" />
+		<attribute name="group-4-item-max" type="Int32" repeat="10" default="1" min="1" max="1000000" />
+		<attribute name="group-4-item-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="group-5-probability" type="Int16" required="True" max="100" />
+		<attribute name="group-5-item" type="Ref" repeat="10" ref="item" refel="1" />
+		<attribute name="group-5-selected-count" type="Int8" default="0" max="10" />
+		<attribute name="group-5-item-min" type="Int32" repeat="10" default="1" min="1" max="1000000" />
+		<attribute name="group-5-item-max" type="Int32" repeat="10" default="1" min="1" max="1000000" />
+		<attribute name="group-5-item-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="rare-item" type="Ref" repeat="120" ref="item" refel="1" />
+		<attribute name="rare-item-prob-weight-type" type="Int32" default="10000" min="10000" max="1000000000" />
+		<attribute name="rare-item-prob-weight" type="Int32" repeat="120" default="0" max="1000000000" />
+		<attribute name="rare-item-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="rare-item-min" type="Int16" repeat="120" default="1" min="1" max="30000" />
+		<attribute name="rare-item-max" type="Int16" repeat="120" default="1" min="1" max="30000" />
+		<attribute name="selected-item" type="Ref" repeat="64" ref="item" refel="1" />
+		<attribute name="selected-item-count" type="Int16" repeat="64" default="0" max="10000" />
+		<attribute name="selected-item-assured-count" type="Int8" default="0" max="8" />
+		<attribute name="random-item" type="Ref" repeat="90" ref="item" refel="1" />
+	</el>
+</table>

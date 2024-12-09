@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="job-style" type="225" version="0.15" module="14">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="job" type="Prop_seq" key="True" required="True">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="job-style" type="Seq" key="True" required="True">
+			<case name="base-1" />
+			<case name="base-2" />
+			<case name="base-3" />
+			<case name="base-4" />
+			<case name="base-5" />
+			<case name="advanced-1" />
+			<case name="advanced-2" />
+			<case name="advanced-3" />
+			<case name="advanced-4" />
+			<case name="advanced-5" />
+		</attribute>
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="introduce-job-style-icon" type="XUnknown2" default="" max="256" />
+		<attribute name="introduce-job-style-name" type="Ref" ref="text" refel="1" />
+		<attribute name="introduce-job-style-play-desc" type="Ref" ref="text" refel="1" />
+		<attribute name="introduce-job-style-specialization" type="Ref" repeat="5" ref="job-style-specialization" refel="1" />
+		<attribute name="additive-attachment" type="Ref" ref="attachment" refel="1" />
+		<attribute name="combat-start-fx-show" type="XUnknown2" default="" max="256" />
+		<attribute name="combat-end-fx-show" type="XUnknown2" default="" max="256" />
+		<attribute name="right-weapon-particle-ref" type="XUnknown2" default="" max="256" />
+		<attribute name="right-weapon-particle-socket" type="XUnknown2" default="" max="256" />
+		<attribute name="left-weapon-particle-ref" type="XUnknown2" default="" max="256" />
+		<attribute name="left-weapon-particle-socket" type="XUnknown2" default="" max="256" />
+		<attribute name="phantom-weapon-ribbon-particle-ref" type="XUnknown2" default="" max="256" />
+		<attribute name="auto-combat-attack-distance" type="Distance" default="50" min="50" max="32767" />
+		<attribute name="auto-combat-converted-distance-attacker-enemy" type="Distance" default="0" max="32767" />
+		<attribute name="auto-combat-converted-distance-pouch" type="Distance" default="0" max="32767" />
+		<attribute name="auto-combat-converted-distance-enemy" type="Distance" default="0" max="32767" />
+		<attribute name="enable-job-style-gauge-ui" type="Bool" default="n" />
+		<attribute name="job-style-gauge-unit" type="Int8" default="1" min="1" max="100" />
+		<attribute name="job-style-gauge-full-charge-icon" type="Bool" default="n" />
+		<attribute name="job-style-gauge-full-charge-particle-ref" type="XUnknown2" default="" max="256" />
+		<attribute name="job-style-gauge-full-charge-particle-scale" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+	</el>
+</table>

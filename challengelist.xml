@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="challengelist" type="51" version="0.8" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="challenge-type" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="sun" />
+			<case name="mon" />
+			<case name="tue" />
+			<case name="wed" />
+			<case name="thu" />
+			<case name="fri" />
+			<case name="sat" />
+			<case name="week1" />
+			<case name="week2" />
+			<case name="week3" />
+			<case name="week4" />
+			<case name="week5" />
+			<case name="week6" />
+			<case name="week7" />
+			<case name="week8" />
+			<case name="week9" />
+			<case name="week10" />
+		</attribute>
+		<attribute name="required-level" type="Int8" default="0" max="127" />
+		<attribute name="required-mastery-level" type="Int8" default="0" max="127" />
+		<attribute name="challenge-quest-basic" type="Ref" repeat="20" ref="quest" refel="1" />
+		<attribute name="challenge-quest-expansion" type="Ref" repeat="20" ref="quest" refel="1" />
+		<attribute name="challenge-quest-grade" type="Seq" repeat="20" default="none">
+			<case name="none" />
+			<case name="grade1" />
+			<case name="grade2" />
+			<case name="grade3" />
+		</attribute>
+		<attribute name="challenge-quest-complete-count" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="challenge-quest-attraction" type="TRef" repeat="20" />
+		<attribute name="challenge-quest-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="challenge-npc-difficulty" type="Seq" repeat="20" default="none">
+			<case name="none" />
+			<case name="easy" />
+			<case name="normal" />
+			<case name="hard" />
+		</attribute>
+		<attribute name="challenge-npc-kill" type="Ref" repeat="20" ref="npc" refel="1" />
+		<attribute name="challenge-npc-attraction" type="TRef" repeat="20" />
+		<attribute name="challenge-npc-grade" type="Seq" repeat="20" default="none">
+			<case name="none" />
+			<case name="grade1" />
+			<case name="grade2" />
+			<case name="grade3" />
+		</attribute>
+		<attribute name="challenge-npc-quest" type="Ref" repeat="20" ref="quest" refel="1" />
+		<attribute name="challenge-npc-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="challenge-reward-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="challenge-count-for-reward" type="Int8" repeat="20" default="0" max="127" />
+		<attribute name="reward" type="Ref" repeat="20" ref="challengelistreward" refel="1" />
+		<sub name="dayofweek" />
+		<sub name="week">
+			<attribute name="week-start-date-time" type="Time64" default="" />
+		</sub>
+	</el>
+</table>

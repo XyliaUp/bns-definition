@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="ranking2-tier" type="303" version="2.5" module="16390">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="min-score" type="Int32" repeat="20" default="0" max="2147483647" />
+		<attribute name="min-rank" type="Int32" repeat="20" default="0" max="2147483647" />
+		<attribute name="tier-title" type="Ref" repeat="20" ref="text" refel="1" />
+		<attribute name="tier-image" type="XUnknown2" repeat="20" default="" max="256" />
+		<attribute name="tier-image-small" type="XUnknown2" repeat="20" default="" max="256" />
+		<attribute name="gauge-color-conditional" type="String" repeat="5" default="#FF5E00" max="8" />
+		<attribute name="gauge-color-fixed" type="String" repeat="20" default="#FF5E00" max="8" />
+		<attribute name="gauge-percentage-condition" type="Int32" repeat="5" default="-1" min="-2147483647" max="2147483647" />
+	</el>
+</table>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="duel-bot-challenge" type="101" version="0.41" module="2054">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="zone" type="Ref" required="True" ref="zone" refel="1" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="group" type="Ref" ref="attraction-group" refel="1" />
+		<attribute name="required-level" type="Int8" default="0" max="100" />
+		<attribute name="required-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="required-preceding-quest" type="Ref" repeat="3" ref="quest" refel="1" />
+		<attribute name="required-preceding-quest-check" type="Seq" default="and">
+			<case name="and" />
+			<case name="or" />
+		</attribute>
+		<attribute name="recommend-attack-power" type="Int16" default="0" max="9999" />
+		<attribute name="standard-gear-weapon" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="duel-bot-spawn-delay" type="Msec" default="0" max="3600000" />
+		<attribute name="ready-duration" type="Msec" default="0" max="3600000" />
+		<attribute name="floor-timeout-duration-second" type="Int16" default="0" max="3600" />
+		<attribute name="finish-time-section" type="Int16" repeat="10" default="0" max="3600" />
+		<attribute name="finish-time-section-floor-setup" type="Int16" repeat="10" default="0" max="10" />
+		<attribute name="max-floor" type="Int16" default="0" max="200" />
+		<attribute name="card-select-delay-duration" type="Msec" default="0" max="3600000" />
+		<attribute name="change-floor-delay-duration" type="Msec" default="0" max="3600000" />
+		<attribute name="change-floor-kismet-name" type="String" repeat="10" default="" max="50" />
+		<attribute name="change-floor-show-name" type="String" repeat="10" default="" max="50" />
+		<attribute name="result-show-delay-duration" type="Msec" default="0" max="3600000" />
+		<attribute name="blade-master-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="kung-fu-fighter-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="force-master-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="destroyer-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="summoner-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="assassin-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="sword-master-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="warlock-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="soul-fighter-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="shooter-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="warrior-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="archer-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="spear-master-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="thunderer-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="dual-blader-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="bard-floor-kismet-name" type="String" default="" max="50" />
+		<attribute name="countdown-sound-name" type="String" default="" max="50" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="dungeon-name2" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="dungeon-desc" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="arena-minimap" type="String" default="" max="70" />
+		<attribute name="reward-summary" type="Ref" ref="attractionrewardsummary" refel="1" />
+		<attribute name="ui-text-grade" type="Int8" default="0" min="-128" max="8" />
+		<attribute name="recommand-level-min" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-level-max" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-mastery-level-min" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-mastery-level-max" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="display-quests" type="Ref" repeat="12" hidden="True" ref="quest" refel="1" />
+		<attribute name="tactic" type="Ref" ref="text" refel="1" />
+		<attribute name="recommend-alias" type="Ref" ref="contentsjournalrecommenditem" refel="1" />
+		<sub name="time-attack-mode">
+			<attribute name="total-timeout-duration-second" type="Int16" default="0" max="3600" />
+		</sub>
+		<sub name="round-mode">
+			<attribute name="total-round" type="Int8" default="5" min="1" max="20" />
+		</sub>
+	</el>
+</table>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="randomstore" type="292" version="0.8" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="random-store-number" type="Seq" key="True" required="True">
+			<case name="invalid-number" />
+			<case name="random-store-1" />
+			<case name="random-store-2" />
+		</attribute>
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="limit-level" type="Int8" default="16" min="1" max="127" />
+		<attribute name="free-draw-enable" type="Bool" default="n" />
+		<attribute name="item-draw-enable" type="Bool" default="n" />
+		<attribute name="money-draw-enable" type="Bool" default="n" />
+		<attribute name="instant-payment-draw-enable" type="Bool" default="n" />
+		<attribute name="charge-of-item-draw" type="Ref" ref="item" refel="1" />
+		<attribute name="charge-of-money-draw" type="Int64" default="0" max="20000000000" />
+		<attribute name="charge-of-item-instant-payment-draw" type="Ref" ref="item" refel="1" />
+		<attribute name="charge-of-item-five-times-draw" type="Ref" ref="item" refel="1" />
+		<attribute name="charge-of-item-count-five-times-draw" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="charge-of-money-five-times-draw" type="Int64" default="0" max="20000000000" />
+		<attribute name="charge-of-item-instant-payment-five-times-draw" type="Ref" ref="item" refel="1" />
+		<attribute name="free-reward-draw-enable" type="Bool" default="n" />
+		<attribute name="free-reward-draw-add-value" type="Int32" default="1" max="10" />
+		<attribute name="premium-reward-draw-enable" type="Bool" default="n" />
+		<attribute name="premium-reward-draw-premium-draw-count" type="Int16" default="95" min="-32768" max="32767" />
+		<attribute name="acquire-draw-reward-set-repeat-count" type="Int32" default="0" max="30000" />
+	</el>
+</table>

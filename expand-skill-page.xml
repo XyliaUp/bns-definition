@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="expand-skill-page" type="128" version="0.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="skill-page" type="Int8" key="True" required="True" min="1" max="5" />
+		<attribute name="money" type="Int32" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="charge-type" type="Seq" default="item-or-money">
+			<case name="item" />
+			<case name="money" />
+			<case name="item-or-money" />
+		</attribute>
+		<attribute name="required-item" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="required-item-count" type="Int8" repeat="4" default="1" min="-128" max="127" />
+	</el>
+</table>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="soulmaskset" type="374" version="0.7" module="2062">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="soul-mask-id-1" type="Int8" key="True" required="True" max="127" />
+		<attribute name="soul-mask-id-2" type="Int8" key="True" required="True" max="127" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="run-speed" type="Int16" default="109" min="109" max="200" />
+		<attribute name="use-vehicle" type="Bool" required="True" />
+		<attribute name="soulmask-type" type="Seq" default="normal">
+			<case name="normal" />
+			<case name="transform" />
+		</attribute>
+		<attribute name="kun-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="gon-male-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="gon-female-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="lyn-male-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="lyn-female-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="jin-male-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="jin-female-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="kun-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="gon-male-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="gon-female-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="lyn-male-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="lyn-female-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="jin-male-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="jin-female-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="kun-accessory-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="gon-male-accessory-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="gon-female-accessory-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="lyn-male-accessory-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="lyn-female-accessory-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="jin-male-accessory-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="jin-female-accessory-mesh" type="XUnknown2" default="" max="256" />
+		<attribute name="kun-accessory-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="gon-male-accessory-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="gon-female-accessory-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="lyn-male-accessory-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="lyn-female-accessory-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="jin-male-accessory-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="jin-female-accessory-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="is-accessory-skel-hair" type="Bool" default="n" />
+		<attribute name="context-script" type="Ref" ref="contextscript" refel="1" />
+		<attribute name="transform-appearance" type="Ref" ref="creatureappearance" refel="1" />
+		<attribute name="transform-animset" type="XUnknown2" default="" max="256" />
+		<attribute name="transform-equip_hand_appearance" type="Ref" ref="item" refel="1" />
+		<attribute name="transform-job" type="Prop_seq" default="job-none">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="transform-weapon-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="bare-hand" />
+			<case name="sword" />
+			<case name="gauntlet" />
+			<case name="aura-bangle" />
+			<case name="pistol" />
+			<case name="rifle" />
+			<case name="two-handed-axe" />
+			<case name="bow" />
+			<case name="staff" />
+			<case name="dagger" />
+			<case name="pet-1" />
+			<case name="pet-2" />
+			<case name="gun" />
+			<case name="great-sword" />
+			<case name="long-bow" />
+			<case name="spear" />
+			<case name="orb" />
+			<case name="dual-blade" />
+			<case name="instrument" />
+		</attribute>
+		<attribute name="transform-stance" type="Prop_seq" default="stance-none">
+			<case name="stance-none" />
+			<case name="npc기본자세" />
+			<case name="천검세" />
+			<case name="검령세" />
+			<case name="단타" />
+			<case name="연계" />
+			<case name="체술" />
+			<case name="납도" />
+			<case name="경기공" />
+			<case name="연기공" />
+			<case name="강기공" />
+			<case name="권총모드" />
+			<case name="런처모드" />
+			<case name="파괴" />
+			<case name="보호" />
+			<case name="철벽" />
+			<case name="소환" />
+			<case name="교란" />
+			<case name="은신" />
+			<case name="암살" />
+			<case name="검술" />
+			<case name="어검" />
+			<case name="발도" />
+			<case name="npc자세1" />
+			<case name="npc자세2" />
+			<case name="npc자세3" />
+			<case name="소환수-follow" />
+			<case name="소환수-command-1" />
+			<case name="소환수-flying" />
+			<case name="주술" />
+			<case name="강림" />
+			<case name="유권" />
+			<case name="기공" />
+			<case name="냉정" />
+			<case name="광기" />
+			<case name="장궁" />
+			<case name="정령궁" />
+			<case name="찌르기" />
+			<case name="베기" />
+			<case name="청뢰" />
+			<case name="혈뢰" />
+			<case name="어검세" />
+			<case name="정수" />
+			<case name="역수" />
+			<case name="한손역수" />
+			<case name="간이연주" />
+			<case name="우퍼" />
+			<case name="연주" />
+			<case name="쌍월" />
+			<case name="뇌신" />
+			<case name="침식" />
+			<case name="염제" />
+			<case name="npc주시자세1" />
+			<case name="npc주시자세2" />
+			<case name="npc주시자세3" />
+		</attribute>
+		<attribute name="ui-show-job-target-indicator" type="Bool" default="n" />
+		<attribute name="ui-show-job-style-gauge" type="Bool" default="n" />
+		<attribute name="transform-appearance-jin" type="Ref" ref="creatureappearance" refel="1" />
+		<attribute name="transform-appearance-gon" type="Ref" ref="creatureappearance" refel="1" />
+		<attribute name="transform-appearance-kun" type="Ref" ref="creatureappearance" refel="1" />
+		<attribute name="is-race-transform-appearance" type="Bool" default="n" />
+		<attribute name="is-use-grocery" type="Bool" default="y" />
+		<attribute name="is-use-equiped-skill" type="Bool" default="y" />
+		<attribute name="is-show-pet" type="Bool" default="y" />
+		<attribute name="is-use-env" type="Bool" default="y" />
+		<attribute name="is-use-field-item" type="Bool" default="y" />
+		<attribute name="hide-hair" type="Bool" default="n" />
+	</el>
+</table>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="npc-sealed-dungeon-reward" type="259" version="1.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="sealed-level" type="Int8" key="True" required="True" max="127" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="reward-default" type="Ref" ref="reward" refel="1" />
+		<attribute name="reward-event" type="Ref" ref="reward" refel="1" />
+		<attribute name="reward-personal-dropped-pouch" type="Ref" ref="reward" refel="1" />
+	</el>
+</table>

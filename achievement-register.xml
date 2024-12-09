@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="achievement-register" type="7" version="3.1" module="262" maxid="10000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="10000" />
+		<attribute name="job" type="Prop_seq" key="True" required="True">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="version" type="Int16" required="True" min="1" max="100" />
+		<attribute name="max-value" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="for-newbie-care" type="Bool" default="n" />
+		<attribute name="persistant" type="Bool" default="n" />
+		<attribute name="increment-from-client" type="Bool" hidden="True" default="n" />
+		<attribute name="achievement" type="Ref" repeat="8" hidden="True" ref="achievement" refel="1" />
+		<attribute name="register-name" type="Ref" ref="text" refel="1" />
+		<sub name="null" />
+		<sub name="kill-boss-npc">
+			<attribute name="boss-npc" type="Ref" required="True" ref="npc" refel="1" />
+			<attribute name="first-attacker" type="Bool" default="n" />
+			<attribute name="last-attacker" type="Bool" default="n" />
+			<attribute name="max-level" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="team-broadcast" type="Bool" default="n" />
+			<attribute name="difficulty-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="easy" />
+				<case name="normal" />
+				<case name="hard" />
+			</attribute>
+			<attribute name="party-member-min-count" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="party-member-max-count" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="party-same-job" type="Bool" default="n" />
+			<attribute name="min-sealed-level" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="min-sealed-level-op" type="Seq" default="none">
+				<case name="none" />
+				<case name="or-more" />
+				<case name="or-less" />
+				<case name="over" />
+				<case name="under" />
+				<case name="equal" />
+			</attribute>
+			<attribute name="max-sealed-level" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="max-sealed-level-op" type="Seq" default="none">
+				<case name="none" />
+				<case name="or-more" />
+				<case name="or-less" />
+				<case name="over" />
+				<case name="under" />
+				<case name="equal" />
+			</attribute>
+		</sub>
+		<sub name="kill-npc">
+			<attribute name="npc" type="Ref" repeat="8" ref="npc" refel="1" />
+			<attribute name="faction" type="Ref" ref="faction" refel="1" />
+		</sub>
+		<sub name="kill-pc">
+			<attribute name="faction" type="Ref" ref="faction" refel="1" />
+			<attribute name="race" type="Prop_seq" default="race-none">
+				<case name="race-none" />
+				<case name="건" />
+				<case name="곤" />
+				<case name="린" />
+				<case name="진" />
+				<case name="나쁜몹" />
+				<case name="더나쁜몹" />
+				<case name="무서운몹" />
+				<case name="더무서운몹" />
+				<case name="더더무서운몹" />
+				<case name="고양이" />
+				<case name="강림체" />
+				<case name="악귀" />
+			</attribute>
+			<attribute name="target-job" type="Prop_seq" default="job-none">
+				<case name="job-none" />
+				<case name="검사" />
+				<case name="권사" />
+				<case name="기공사" />
+				<case name="격사" />
+				<case name="역사" />
+				<case name="소환사" />
+				<case name="암살자" />
+				<case name="귀검사" />
+				<case name="주술사" />
+				<case name="기권사" />
+				<case name="투사" />
+				<case name="궁사" />
+				<case name="창술사" />
+				<case name="뇌전술사" />
+				<case name="쌍검사" />
+				<case name="악사" />
+				<case name="pc-max" />
+				<case name="소환수-루키" />
+				<case name="소환수-striker" />
+				<case name="소환수-defender" />
+				<case name="소환수-controller" />
+			</attribute>
+			<attribute name="above-level" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="below-level" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="equip-item-brand-n">
+			<attribute name="item-brand" type="Ref" repeat="8" ref="item-brand" refel="1" />
+			<attribute name="equip-type" type="Seq" repeat="8" default="none">
+				<case name="none" />
+				<case name="weapon" />
+				<case name="costume" />
+				<case name="earring" />
+				<case name="eyeglass" />
+				<case name="hat" />
+				<case name="ring" />
+				<case name="necklace" />
+				<case name="gem-1" />
+				<case name="gem-2" />
+				<case name="gem-3" />
+				<case name="gem-4" />
+				<case name="gem-5" />
+				<case name="gem-6" />
+				<case name="gem-7" />
+				<case name="gem-8" />
+				<case name="attach" />
+				<case name="belt" />
+				<case name="bracelet" />
+				<case name="soul" />
+				<case name="soul-2" />
+				<case name="gloves" />
+				<case name="pet-1" />
+				<case name="pet-2" />
+				<case name="rune-1" />
+				<case name="rune-2" />
+				<case name="nova" />
+				<case name="badge-1-premium" />
+				<case name="badge-2-premium" />
+				<case name="badge-3-premium" />
+				<case name="badge-1-normal" />
+				<case name="badge-2-normal" />
+				<case name="badge-3-normal" />
+				<case name="badge-appearance" />
+				<case name="vehicle" />
+				<case name="normal-state-appearance" />
+				<case name="idle-state-appearance" />
+				<case name="chatting-symbol" />
+				<case name="portrait-appearance" />
+				<case name="hypermove-appearance" />
+				<case name="name-plate-appearance" />
+				<case name="speech-bubble-appearance" />
+				<case name="talk-social" />
+				<case name="armlet-1" />
+				<case name="armlet-2" />
+			</attribute>
+			<attribute name="item-min-level" type="Int8" repeat="8" default="0" min="-128" max="127" />
+			<attribute name="slot-name" type="Ref" repeat="8" ref="text" refel="1" />
+		</sub>
+		<sub name="equip-item-n">
+			<attribute name="item" type="Ref" repeat="8" ref="item" refel="1" />
+			<attribute name="slot-name" type="Ref" repeat="8" ref="text" refel="1" />
+		</sub>
+		<sub name="use-grocery">
+			<attribute name="item" type="Ref" repeat="8" ref="item" refel="1" />
+		</sub>
+		<sub name="use-grocery-n">
+			<attribute name="item" type="Ref" repeat="8" ref="item" refel="1" />
+			<attribute name="slot-name" type="Ref" repeat="8" ref="text" refel="1" />
+		</sub>
+		<sub name="use-grocery-brand-n">
+			<attribute name="item-brand" type="Ref" repeat="8" ref="item-brand" refel="1" />
+			<attribute name="slot-name" type="Ref" repeat="8" ref="text" refel="1" />
+		</sub>
+		<sub name="time" />
+		<sub name="use-skill-to-npc">
+			<attribute name="skill-id" type="Int32" repeat="8" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="npc" type="Ref" repeat="4" ref="npc" refel="1" />
+		</sub>
+		<sub name="defend-npc-skill">
+			<attribute name="npc-skill" type="Ref" required="True" ref="skill3" refel="1" />
+			<attribute name="skill-id" type="Int32" repeat="8" default="0" min="-2147483647" max="2147483647" />
+		</sub>
+		<sub name="pc-exhaustion" />
+		<sub name="pc-dead" />
+		<sub name="use-gadget-to-npc">
+			<attribute name="gadget" type="Ref" required="True" ref="fielditem" refel="1" />
+			<attribute name="npc" type="Ref" required="True" ref="npc" refel="1" />
+		</sub>
+		<sub name="quest-complete">
+			<attribute name="quest" type="Ref" required="True" ref="quest" refel="1" />
+		</sub>
+		<sub name="quest-complete-count">
+			<attribute name="reset-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="daily" />
+				<case name="weekly" />
+				<case name="monthly" />
+			</attribute>
+			<attribute name="reset-by-acquire-time" type="Seq" default="none">
+				<case name="none" />
+				<case name="daily" />
+				<case name="weekly" />
+			</attribute>
+		</sub>
+		<sub name="tendency-quest-complete-count">
+			<attribute name="required-attraction" type="TRef" required="True" />
+			<attribute name="tendency-id" type="Int8" required="True" max="3" />
+		</sub>
+		<sub name="duel-win-count">
+			<attribute name="duel-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="solo" />
+				<case name="team" />
+			</attribute>
+		</sub>
+		<sub name="duel-grade">
+			<attribute name="duel-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="solo" />
+				<case name="team" />
+			</attribute>
+		</sub>
+		<sub name="manipulate-env">
+			<attribute name="env2" type="Ref" repeat="8" ref="zoneenv2" refel="1" />
+			<attribute name="env2-state" type="Seq" repeat="8" default="none">
+				<case name="none" />
+				<case name="open" />
+				<case name="close" />
+				<case name="empty" />
+				<case name="step-1" />
+				<case name="step-2" />
+				<case name="step-3" />
+				<case name="step-4" />
+				<case name="step-5" />
+				<case name="step-6" />
+				<case name="step-7" />
+			</attribute>
+		</sub>
+		<sub name="exchange-faction-score-count">
+			<attribute name="npc" type="Ref" ref="npc" refel="1" />
+			<attribute name="min-exchange-score" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="teleport-count">
+			<attribute name="teleport" type="Ref" ref="teleport" refel="1" />
+		</sub>
+		<sub name="help-restoration" />
+		<sub name="help-resurrect" />
+		<sub name="get-contribution-count">
+			<attribute name="npc" type="Ref" repeat="8" ref="npc" refel="1" />
+		</sub>
+		<sub name="get-contribution-score">
+			<attribute name="npc" type="Ref" repeat="8" ref="npc" refel="1" />
+		</sub>
+		<sub name="give-faction-score-to-refiner" />
+		<sub name="duel-bot-challenge-finished-floor" />
+		<sub name="accumulate-field-play-point-by-simple-tendency-quest" />
+		<sub name="accumulate-faction-score" />
+		<sub name="growth-item">
+			<attribute name="seed-item-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="feed-item-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="seed-item-before-level" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="seed-item-growth-level" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="feed-item-level" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="attach-equip-gem-piece">
+			<attribute name="primary-item-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="secondary-item-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="primary-item-grade" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="secondary-item-grade" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="decompose-item">
+			<attribute name="item-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="item-grade" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="item-level" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="equip-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="weapon" />
+				<case name="costume" />
+				<case name="earring" />
+				<case name="eyeglass" />
+				<case name="hat" />
+				<case name="ring" />
+				<case name="necklace" />
+				<case name="gem-1" />
+				<case name="gem-2" />
+				<case name="gem-3" />
+				<case name="gem-4" />
+				<case name="gem-5" />
+				<case name="gem-6" />
+				<case name="gem-7" />
+				<case name="gem-8" />
+				<case name="attach" />
+				<case name="belt" />
+				<case name="bracelet" />
+				<case name="soul" />
+				<case name="soul-2" />
+				<case name="gloves" />
+				<case name="pet-1" />
+				<case name="pet-2" />
+				<case name="rune-1" />
+				<case name="rune-2" />
+				<case name="nova" />
+				<case name="badge-1-premium" />
+				<case name="badge-2-premium" />
+				<case name="badge-3-premium" />
+				<case name="badge-1-normal" />
+				<case name="badge-2-normal" />
+				<case name="badge-3-normal" />
+				<case name="badge-appearance" />
+				<case name="vehicle" />
+				<case name="normal-state-appearance" />
+				<case name="idle-state-appearance" />
+				<case name="chatting-symbol" />
+				<case name="portrait-appearance" />
+				<case name="hypermove-appearance" />
+				<case name="name-plate-appearance" />
+				<case name="speech-bubble-appearance" />
+				<case name="talk-social" />
+				<case name="armlet-1" />
+				<case name="armlet-2" />
+			</attribute>
+			<attribute name="equip-gem-only" type="Bool" default="n" />
+			<attribute name="weapon-gem-level" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="decompose-item-n">
+			<attribute name="item" type="Ref" repeat="8" ref="item" refel="1" />
+			<attribute name="slot-name" type="Ref" repeat="8" ref="text" refel="1" />
+		</sub>
+		<sub name="decompose-item-equip-type-n">
+			<attribute name="item-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="item-grade" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="item-level" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="equip-type" type="Seq" repeat="8" default="none">
+				<case name="none" />
+				<case name="weapon" />
+				<case name="costume" />
+				<case name="earring" />
+				<case name="eyeglass" />
+				<case name="hat" />
+				<case name="ring" />
+				<case name="necklace" />
+				<case name="gem-1" />
+				<case name="gem-2" />
+				<case name="gem-3" />
+				<case name="gem-4" />
+				<case name="gem-5" />
+				<case name="gem-6" />
+				<case name="gem-7" />
+				<case name="gem-8" />
+				<case name="attach" />
+				<case name="belt" />
+				<case name="bracelet" />
+				<case name="soul" />
+				<case name="soul-2" />
+				<case name="gloves" />
+				<case name="pet-1" />
+				<case name="pet-2" />
+				<case name="rune-1" />
+				<case name="rune-2" />
+				<case name="nova" />
+				<case name="badge-1-premium" />
+				<case name="badge-2-premium" />
+				<case name="badge-3-premium" />
+				<case name="badge-1-normal" />
+				<case name="badge-2-normal" />
+				<case name="badge-3-normal" />
+				<case name="badge-appearance" />
+				<case name="vehicle" />
+				<case name="normal-state-appearance" />
+				<case name="idle-state-appearance" />
+				<case name="chatting-symbol" />
+				<case name="portrait-appearance" />
+				<case name="hypermove-appearance" />
+				<case name="name-plate-appearance" />
+				<case name="speech-bubble-appearance" />
+				<case name="talk-social" />
+				<case name="armlet-1" />
+				<case name="armlet-2" />
+			</attribute>
+			<attribute name="slot-name" type="Ref" repeat="8" ref="text" refel="1" />
+		</sub>
+		<sub name="decompose-item-weapon-gem-level-n">
+			<attribute name="weapon-gem-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="weapon-gem-grade" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="weapon-gem-level" type="Int8" repeat="8" default="0" min="-128" max="127" />
+			<attribute name="slot-name" type="Ref" repeat="8" ref="text" refel="1" />
+		</sub>
+		<sub name="attach-gem-to-weapon">
+			<attribute name="weapon-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="weapon-grade" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="weapon-gem-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="weapon-gem-grade" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="weapon-gem-level" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="attach-gem-to-weapon-n">
+			<attribute name="weapon-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="weapon-grade" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="weapon-gem" type="Ref" repeat="8" ref="item" refel="1" />
+			<attribute name="slot-name" type="Ref" repeat="8" ref="text" refel="1" />
+		</sub>
+		<sub name="awakening-item">
+			<attribute name="item-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="equip-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="weapon" />
+				<case name="costume" />
+				<case name="earring" />
+				<case name="eyeglass" />
+				<case name="hat" />
+				<case name="ring" />
+				<case name="necklace" />
+				<case name="gem-1" />
+				<case name="gem-2" />
+				<case name="gem-3" />
+				<case name="gem-4" />
+				<case name="gem-5" />
+				<case name="gem-6" />
+				<case name="gem-7" />
+				<case name="gem-8" />
+				<case name="attach" />
+				<case name="belt" />
+				<case name="bracelet" />
+				<case name="soul" />
+				<case name="soul-2" />
+				<case name="gloves" />
+				<case name="pet-1" />
+				<case name="pet-2" />
+				<case name="rune-1" />
+				<case name="rune-2" />
+				<case name="nova" />
+				<case name="badge-1-premium" />
+				<case name="badge-2-premium" />
+				<case name="badge-3-premium" />
+				<case name="badge-1-normal" />
+				<case name="badge-2-normal" />
+				<case name="badge-3-normal" />
+				<case name="badge-appearance" />
+				<case name="vehicle" />
+				<case name="normal-state-appearance" />
+				<case name="idle-state-appearance" />
+				<case name="chatting-symbol" />
+				<case name="portrait-appearance" />
+				<case name="hypermove-appearance" />
+				<case name="name-plate-appearance" />
+				<case name="speech-bubble-appearance" />
+				<case name="talk-social" />
+				<case name="armlet-1" />
+				<case name="armlet-2" />
+			</attribute>
+		</sub>
+		<sub name="transform-item-brand">
+			<attribute name="item-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="item-grade" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="equip-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="weapon" />
+				<case name="costume" />
+				<case name="earring" />
+				<case name="eyeglass" />
+				<case name="hat" />
+				<case name="ring" />
+				<case name="necklace" />
+				<case name="gem-1" />
+				<case name="gem-2" />
+				<case name="gem-3" />
+				<case name="gem-4" />
+				<case name="gem-5" />
+				<case name="gem-6" />
+				<case name="gem-7" />
+				<case name="gem-8" />
+				<case name="attach" />
+				<case name="belt" />
+				<case name="bracelet" />
+				<case name="soul" />
+				<case name="soul-2" />
+				<case name="gloves" />
+				<case name="pet-1" />
+				<case name="pet-2" />
+				<case name="rune-1" />
+				<case name="rune-2" />
+				<case name="nova" />
+				<case name="badge-1-premium" />
+				<case name="badge-2-premium" />
+				<case name="badge-3-premium" />
+				<case name="badge-1-normal" />
+				<case name="badge-2-normal" />
+				<case name="badge-3-normal" />
+				<case name="badge-appearance" />
+				<case name="vehicle" />
+				<case name="normal-state-appearance" />
+				<case name="idle-state-appearance" />
+				<case name="chatting-symbol" />
+				<case name="portrait-appearance" />
+				<case name="hypermove-appearance" />
+				<case name="name-plate-appearance" />
+				<case name="speech-bubble-appearance" />
+				<case name="talk-social" />
+				<case name="armlet-1" />
+				<case name="armlet-2" />
+			</attribute>
+			<attribute name="result" type="Seq" default="none">
+				<case name="none" />
+				<case name="blank" />
+				<case name="normal" />
+				<case name="rare" />
+				<case name="premium" />
+			</attribute>
+		</sub>
+		<sub name="transform-item">
+			<attribute name="item" type="Ref" ref="item" refel="1" />
+			<attribute name="result" type="Seq" default="none">
+				<case name="none" />
+				<case name="blank" />
+				<case name="normal" />
+				<case name="rare" />
+				<case name="premium" />
+			</attribute>
+		</sub>
+		<sub name="zero-durability">
+			<attribute name="item-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="item-grade" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="repair-item">
+			<attribute name="item-brand" type="Ref" ref="item-brand" refel="1" />
+			<attribute name="item-grade" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="detach-post-attachment-count" />
+		<sub name="detach-post-attachment-money" />
+		<sub name="detach-post-attachment-item">
+			<attribute name="item" type="Ref" required="True" ref="item" refel="1" />
+		</sub>
+		<sub name="detach-post-attachment-item-n">
+			<attribute name="item" type="Ref" repeat="8" ref="item" refel="1" />
+			<attribute name="slot-name" type="Ref" repeat="8" ref="text" refel="1" />
+		</sub>
+		<sub name="take-craft-count" />
+		<sub name="take-craft-item">
+			<attribute name="item" type="Ref" required="True" ref="item" refel="1" />
+		</sub>
+		<sub name="take-craft-item-n">
+			<attribute name="item" type="Ref" repeat="8" ref="item" refel="1" />
+			<attribute name="slot-name" type="Ref" repeat="8" ref="text" refel="1" />
+		</sub>
+		<sub name="inventory-size" />
+		<sub name="wardrobe-size" />
+		<sub name="depot-size" />
+		<sub name="depository-2-size" />
+		<sub name="pc-level" />
+		<sub name="pc-mastery-level" />
+		<sub name="client-only" />
+		<sub name="party-battle-win-count">
+			<attribute name="party-battle-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="occupation-war" />
+				<case name="capture-the-flag" />
+				<case name="lead-the-ball" />
+			</attribute>
+		</sub>
+		<sub name="party-battle-challenge-count">
+			<attribute name="party-battle-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="occupation-war" />
+				<case name="capture-the-flag" />
+				<case name="lead-the-ball" />
+			</attribute>
+		</sub>
+		<sub name="party-battle-grade">
+			<attribute name="party-battle-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="occupation-war" />
+				<case name="capture-the-flag" />
+				<case name="lead-the-ball" />
+			</attribute>
+		</sub>
+		<sub name="lead-the-ball-goal-in-count" />
+		<sub name="skill-training-subject-complete">
+			<attribute name="skill-training-room-group" type="Ref" ref="skill-training-room-group" refel="1" />
+		</sub>
+		<sub name="dispose-item-buy-price-required-point" />
+		<sub name="acquire-fish-count" />
+		<sub name="acquire-specific-fish-count">
+			<attribute name="fish" type="Ref" required="True" ref="fish" refel="1" />
+		</sub>
+		<sub name="acquire-fish-size-count">
+			<attribute name="fish-size" type="Int32" required="True" min="1" max="100000" />
+		</sub>
+		<sub name="acquire-fish-grade-count">
+			<attribute name="fish-grade" type="Int8" required="True" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="acquire-fish-size-grade-count">
+			<attribute name="fish-size-grade" type="Seq" required="True">
+				<case name="fish-grade-1" />
+				<case name="fish-grade-2" />
+				<case name="fish-grade-3" />
+				<case name="fish-grade-4" />
+				<case name="fish-grade-5" />
+				<case name="fish-grade-6" />
+				<case name="fish-grade-7" />
+				<case name="fish-grade-8" />
+				<case name="fish-grade-9" />
+				<case name="fish-grade-10" />
+			</attribute>
+		</sub>
+		<sub name="accumulate-life-contents-point-by-fishing" />
+		<sub name="hyper-racing-game-participation" />
+		<sub name="hyper-racing-game-finish" />
+		<sub name="hyper-racing-game-record" />
+	</el>
+</table>
