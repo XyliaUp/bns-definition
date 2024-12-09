@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="ranking2-season-schedule" type="302" version="4.1" module="16390">
+<table name="ranking2-season-schedule" type="315" version="6.0" module="16390">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
@@ -11,5 +11,9 @@
 		<attribute name="reward-group" type="Ref" ref="ranking2-reward-group" refel="1" />
 		<attribute name="is-join-reward" type="Bool" default="n" />
 		<attribute name="is-job-reward" type="Bool" default="n" />
+		<attribute name="lucky-reward-count" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="require-tier" type="Int8" default="0" max="20" />
+		<attribute name="lucky-tax-reward-rate" type="Int16" default="0" max="10000" />
+		<attribute name="show-accumurate-reward" type="Bool" default="n" />
 	</el>
 </table>

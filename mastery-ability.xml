@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="mastery-ability" type="244" version="0.12" module="6">
+<table name="mastery-ability" type="253" version="0.12" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="race" type="Prop_seq" key="True" required="True">

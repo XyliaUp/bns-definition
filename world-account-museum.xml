@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="world-account-museum" type="436" version="2.0" module="6" maxid="1000">
+<table name="world-account-museum" type="451" version="2.0" module="6" maxid="1000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="1000" />

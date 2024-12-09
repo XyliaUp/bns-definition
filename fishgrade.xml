@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="fishgrade" type="143" version="0.5" module="262">
+<table name="fishgrade" type="148" version="0.5" module="262">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32767" />

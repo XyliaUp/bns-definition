@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="user-command" type="417" version="0.41" module="4">
+<table name="user-command" type="432" version="0.41" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="text" type="Ref" ref="text" refel="1" />

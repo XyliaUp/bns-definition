@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="jumpingcharacter2" type="228" version="0.1" module="6">
+<table name="jumpingcharacter2" type="235" version="0.1" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="required-level" type="Int16" required="True" max="32767" />

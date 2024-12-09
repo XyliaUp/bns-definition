@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="item-combination" type="188" version="2.0" module="6">
+<table name="item-combination" type="194" version="2.1" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
@@ -12,6 +12,14 @@
 		<attribute name="count" type="Int32" default="0" max="2147483647" />
 		<attribute name="material-group" type="Ref" ref="item-group" refel="1" />
 		<attribute name="material-group-name" type="Ref" ref="text" refel="1" />
+		<attribute name="great-success-probability" type="Int16" default="0" max="10000" />
+		<attribute name="great-success-item-group" type="Ref" ref="item-group" refel="1" />
+		<attribute name="success-probability" type="Int16" default="0" max="10000" />
+		<attribute name="success-item-group" type="Ref" ref="item-group" refel="1" />
+		<attribute name="fail-probability" type="Int16" default="0" max="10000" />
+		<attribute name="fail-item-group" type="Ref" ref="item-group" refel="1" />
+		<attribute name="big-fail-probability" type="Int16" default="0" max="10000" />
+		<attribute name="big-fail-item-group" type="Ref" ref="item-group" refel="1" />
 		<attribute name="item-combination-cost-group" type="Ref" ref="cost-group" refel="1" />
 		<attribute name="reward-group-name" type="Ref" ref="text" refel="1" />
 	</el>

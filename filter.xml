@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="filter" type="141" version="3.1" module="2310">
+<table name="filter" type="146" version="3.1" module="2310">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int64" key="True" required="True" min="-9223372036854775807" max="9223372036854775807" />
@@ -262,6 +262,10 @@
 				<case name="appearance90" />
 				<case name="appearance91" />
 				<case name="appearance92" />
+				<case name="appearance93" />
+				<case name="appearance94" />
+				<case name="appearance95" />
+				<case name="appearance96" />
 				<case name="name" />
 				<case name="geo-zone" />
 				<case name="x" />
@@ -425,6 +429,10 @@
 				<case name="activated-glyph-page" />
 				<case name="enabled-glyph-slot" />
 				<case name="activated-card-collection-page" />
+				<case name="blue-virtual-currency-quota" />
+				<case name="blue-virtual-currency-quota-update-time" />
+				<case name="blue-virtual-currency-additional-quota" />
+				<case name="activated-relic-page" />
 				<case name="max-hp" />
 				<case name="max-hp-equip" />
 				<case name="max-guard-gauge" />
@@ -765,6 +773,10 @@
 				<case name="appearance90" />
 				<case name="appearance91" />
 				<case name="appearance92" />
+				<case name="appearance93" />
+				<case name="appearance94" />
+				<case name="appearance95" />
+				<case name="appearance96" />
 				<case name="name" />
 				<case name="geo-zone" />
 				<case name="x" />
@@ -928,6 +940,10 @@
 				<case name="activated-glyph-page" />
 				<case name="enabled-glyph-slot" />
 				<case name="activated-card-collection-page" />
+				<case name="blue-virtual-currency-quota" />
+				<case name="blue-virtual-currency-quota-update-time" />
+				<case name="blue-virtual-currency-additional-quota" />
+				<case name="activated-relic-page" />
 				<case name="max-hp" />
 				<case name="max-hp-equip" />
 				<case name="max-guard-gauge" />
@@ -1268,6 +1284,10 @@
 				<case name="appearance90" />
 				<case name="appearance91" />
 				<case name="appearance92" />
+				<case name="appearance93" />
+				<case name="appearance94" />
+				<case name="appearance95" />
+				<case name="appearance96" />
 				<case name="name" />
 				<case name="geo-zone" />
 				<case name="x" />
@@ -1431,6 +1451,10 @@
 				<case name="activated-glyph-page" />
 				<case name="enabled-glyph-slot" />
 				<case name="activated-card-collection-page" />
+				<case name="blue-virtual-currency-quota" />
+				<case name="blue-virtual-currency-quota-update-time" />
+				<case name="blue-virtual-currency-additional-quota" />
+				<case name="activated-relic-page" />
 				<case name="max-hp" />
 				<case name="max-hp-equip" />
 				<case name="max-guard-gauge" />

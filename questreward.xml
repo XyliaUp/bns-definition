@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="questreward" type="284" version="5.0" module="6" maxid="31999">
+<table name="questreward" type="295" version="5.0" module="6" maxid="31999">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="31999" />

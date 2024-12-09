@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="contentsjournalrecommenditem" type="71" version="0.3" module="4">
+<table name="contentsjournalrecommenditem" type="72" version="0.3" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="alias" type="String" required="True" max="70" />

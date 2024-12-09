@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="skillattributerule" type="326" version="0.7" module="2054">
+<table name="skillattributerule" type="339" version="0.7" module="2054">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="attribute" type="Seq" key="True" required="True">

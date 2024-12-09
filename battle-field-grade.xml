@@ -34,6 +34,7 @@
 			<case name="solo-dungeon-5-best-record" />
 			<case name="tier-total" />
 			<case name="hyper-racing-game" />
+			<case name="duel-npc-challenge" />
 		</attribute>
 		<attribute name="grade" type="Int8" key="True" required="True" min="1" max="127" />
 		<attribute name="score" type="Int32" required="True" max="2147483647" />

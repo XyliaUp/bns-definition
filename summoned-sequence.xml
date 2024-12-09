@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="summoned-sequence" type="395" version="0.5" module="2052">
+<table name="summoned-sequence" type="410" version="0.5" module="2052">
 	<el name="table" child="summoned-sequence" />
 	<el name="summoned-sequence" child="melee,range,range-sim">
 		<attribute name="alias" type="String" required="True" max="70" />

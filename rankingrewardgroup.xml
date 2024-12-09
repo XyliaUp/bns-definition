@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="rankingrewardgroup" type="306" version="0.6" module="4102">
+<table name="rankingrewardgroup" type="319" version="0.6" module="4102">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="reward-group-id" type="Int16" key="True" required="True" min="-32768" max="32767" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="zonecampfire" type="440" version="0.3" module="14" maxid="20">
+<table name="zonecampfire" type="458" version="0.3" module="14" maxid="20">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="zone" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />

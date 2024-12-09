@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="terrain" type="404" version="0.8" module="14" maxid="30000">
+<table name="terrain" type="419" version="0.11" module="14" maxid="30000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="-32768" max="32767" />
@@ -12,5 +12,7 @@
 		<attribute name="terrain-origin-x" type="Int32" required="True" min="-2147483647" max="2147483647" />
 		<attribute name="terrain-origin-y" type="Int32" required="True" min="-2147483647" max="2147483647" />
 		<attribute name="description" type="String" default="" max="50" />
+		<attribute name="skip-cooking" type="Bool" default="n" />
+		<attribute name="release-contents-group" type="Int16" default="0" max="32767" />
 	</el>
 </table>

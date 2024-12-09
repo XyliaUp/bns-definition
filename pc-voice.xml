@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="pc-voice" type="272" version="0.3" module="4">
+<table name="pc-voice" type="283" version="0.3" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int8" key="True" required="True" min="-128" max="127" />

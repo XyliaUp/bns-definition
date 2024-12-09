@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="ranking2-season" type="300" version="9.3" module="16390">
+<table name="ranking2-season" type="313" version="9.3" module="16390">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />

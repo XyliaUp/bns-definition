@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="achievement-register" type="7" version="3.1" module="262" maxid="10000">
+<table name="achievement-register" type="7" version="5.0" module="262" maxid="10000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="alias" type="String" required="True" max="70" />
@@ -37,7 +37,7 @@
 		<attribute name="register-name" type="Ref" ref="text" refel="1" />
 		<sub name="null" />
 		<sub name="kill-boss-npc">
-			<attribute name="boss-npc" type="Ref" required="True" ref="npc" refel="1" />
+			<attribute name="boss-npc" type="Ref" repeat="8" required="True" ref="npc" refel="1" />
 			<attribute name="first-attacker" type="Bool" default="n" />
 			<attribute name="last-attacker" type="Bool" default="n" />
 			<attribute name="max-level" type="Int8" default="0" min="-128" max="127" />
@@ -538,6 +538,8 @@
 			<attribute name="item-brand" type="Ref" ref="item-brand" refel="1" />
 			<attribute name="item-grade" type="Int8" default="0" min="-128" max="127" />
 		</sub>
+		<sub name="check-combination-count" />
+		<sub name="completition-star-words" />
 		<sub name="detach-post-attachment-count" />
 		<sub name="detach-post-attachment-money" />
 		<sub name="detach-post-attachment-item">
@@ -591,6 +593,7 @@
 			<attribute name="skill-training-room-group" type="Ref" ref="skill-training-room-group" refel="1" />
 		</sub>
 		<sub name="dispose-item-buy-price-required-point" />
+		<sub name="accumulate-party-battle-point-by-party-battle-field" />
 		<sub name="acquire-fish-count" />
 		<sub name="acquire-specific-fish-count">
 			<attribute name="fish" type="Ref" required="True" ref="fish" refel="1" />
@@ -599,7 +602,7 @@
 			<attribute name="fish-size" type="Int32" required="True" min="1" max="100000" />
 		</sub>
 		<sub name="acquire-fish-grade-count">
-			<attribute name="fish-grade" type="Int8" required="True" default="0" min="-128" max="127" />
+			<attribute name="fish-grade" type="Int8" required="True" min="-128" max="127" />
 		</sub>
 		<sub name="acquire-fish-size-grade-count">
 			<attribute name="fish-size-grade" type="Seq" required="True">
@@ -619,5 +622,7 @@
 		<sub name="hyper-racing-game-participation" />
 		<sub name="hyper-racing-game-finish" />
 		<sub name="hyper-racing-game-record" />
+		<sub name="finish-feedback" />
+		<sub name="duel-npc-challenge-finished-floor" />
 	</el>
 </table>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="contextscript" type="74" version="0.49" module="2052" pattern="Skill3_ContextScriptData*.xml">
+<table name="contextscript" type="75" version="0.50" module="2052" pattern="Skill3_ContextScriptData*.xml">
 	<el name="table" child="contextscript" />
 	<el name="contextscript" child="stance">
 		<attribute name="alias" type="String" default="" max="70" />
@@ -409,7 +409,8 @@
 		</attribute>
 	</el>
 	<el name="layer" child="decision">
-		<attribute name="skilltrainbyitemlist-alias" type="String" max="70" />
+		<attribute name="skilltrainbyitemlist-alias" type="String" default="" max="70" />
+		<attribute name="skilltrainbyitem-alias" type="String" default="" max="70" />
 	</el>
 	<el name="decision" child="condition,result" />
 	<el name="condition" child="">
@@ -467,6 +468,7 @@
 			<case name="item-slot4" />
 			<case name="extra-skill-slot5" />
 			<case name="skill-duel-tag" />
+			<case name="skill-duel-npc-challenge" />
 			<case name="toggle-help" />
 			<case name="toggle-dungeon-guide" />
 			<case name="toggle-inventory" />
@@ -624,6 +626,10 @@
 			<case name="toggle-mark-mode" />
 			<case name="toggle-relic-inventory" />
 			<case name="zone-exit" />
+			<case name="toggle-neopass" />
+			<case name="toggle-notification-center" />
+			<case name="toggle-joypad-lock-on" />
+			<case name="joypad-dash-backward" />
 		</attribute>
 		<attribute name="skip-condition-target-check" type="Bool" default="n" />
 		<attribute name="skip-condition-move-check" type="Bool" default="n" />

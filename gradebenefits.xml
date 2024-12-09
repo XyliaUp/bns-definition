@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="gradebenefits" type="158" version="3.0" module="6">
+<table name="gradebenefits" type="162" version="4.1" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="benefit-type" type="Seq" key="True" required="True">
@@ -72,8 +72,11 @@
 			<case name="item-improve-money-cost-discount-rate" />
 			<case name="consume-depository" />
 			<case name="pet-gem-transform-money-cost-discount-rate" />
+			<case name="item-combination-cost-discount-rate" />
+			<case name="draw-option-cost-discount-rate" />
 			<case name="etc-benefits" />
 			<case name="external-daily-membership-mileage" />
+			<case name="fatigability-reduction-rate" />
 		</attribute>
 		<attribute name="level" type="Int8" key="True" required="True" min="1" max="10" />
 		<attribute name="game-grade-key" type="Int32" required="True" min="1" max="10000000" />

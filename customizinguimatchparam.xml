@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="customizinguimatchparam" type="94" version="0.1" module="4">
+<table name="customizinguimatchparam" type="95" version="0.1" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="ui-index" type="Int16" key="True" required="True" min="-32768" max="32767" />

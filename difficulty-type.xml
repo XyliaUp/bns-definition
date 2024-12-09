@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="difficulty-type" type="97" version="0.3" module="326">
+<table name="difficulty-type" type="98" version="0.3" module="326">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Seq" key="True" required="True">

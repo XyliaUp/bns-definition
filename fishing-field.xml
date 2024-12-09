@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="fishing-field" type="144" version="0.9" module="14">
+<table name="fishing-field" type="149" version="0.9" module="14">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32767" />

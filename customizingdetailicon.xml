@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="customizingdetailicon" type="89" version="0.6" module="14">
+<table name="customizingdetailicon" type="90" version="2.0" module="14">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="race" type="Prop_seq" key="True" required="True">
@@ -23,8 +23,8 @@
 			<case name="여" />
 			<case name="중" />
 		</attribute>
-		<attribute name="param-index" type="Int8" key="True" required="True" max="91" />
-		<attribute name="order" type="Int8" key="True" required="True" min="1" max="72" />
+		<attribute name="param-index" type="Int8" key="True" required="True" max="95" />
+		<attribute name="order" type="Int16" key="True" required="True" min="1" max="144" />
 		<attribute name="param-value" type="Int8" required="True" min="-128" max="127" />
 		<attribute name="icon-texture" type="Ref" ref="icontexture" refel="1" />
 		<attribute name="icon-index" type="Int16" default="0" min="-32768" max="32767" />

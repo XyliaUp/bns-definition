@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="npc" type="255" version="3.4" module="270">
+<table name="npc" type="265" version="5.0" module="270">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="alias" type="String" required="True" max="70" />
@@ -540,6 +540,7 @@
 		<attribute name="contribution-peaktime-reward-sat-start-hour" type="Int8" default="-1" min="-1" max="23" />
 		<attribute name="contribution-peaktime-reward-sat-end-hour" type="Int8" default="-1" min="-1" max="24" />
 		<attribute name="personal-dropped-pouch-reward" type="Ref" ref="reward" refel="1" />
+		<attribute name="personal-dropped-pouch-reward-difficulty-type" type="Ref" repeat="3" ref="reward" refel="1" />
 		<attribute name="reward-sealed-dungeon" type="Ref" ref="npc-sealed-dungeon-reward" refel="1" />
 		<attribute name="fielditemdrop" type="Ref" ref="fielditemdrop" refel="1" />
 		<attribute name="deadbody-fielditemdrop" type="Ref" ref="fielditemdrop" refel="1" />
@@ -553,16 +554,16 @@
 		<attribute name="action-name" type="Ref" ref="text" refel="1" />
 		<attribute name="action-desc" type="Ref" ref="text" refel="1" />
 		<attribute name="manipulate-transit-zone" type="Ref" ref="zone" refel="1" />
-		<attribute name="forwarding-types" type="Seq" repeat="80" hidden="True">
+		<attribute name="forwarding-types" type="Seq" repeat="120" hidden="True">
 			<case name="progress-mission" />
 			<case name="acquire-quest" />
 			<case name="skill-target" />
 			<case name="mission-step-rollback" />
 		</attribute>
-		<attribute name="quests" type="Ref" repeat="80" hidden="True" ref="quest" refel="1" />
-		<attribute name="missions" type="Int8" repeat="80" hidden="True" min="-128" max="127" />
-		<attribute name="cases" type="Int8" repeat="80" hidden="True" min="-128" max="127" />
-		<attribute name="case-subtypes" type="Int16" repeat="80" hidden="True" min="-32768" max="32767" />
+		<attribute name="quests" type="Ref" repeat="120" hidden="True" ref="quest" refel="1" />
+		<attribute name="missions" type="Int8" repeat="120" hidden="True" min="-128" max="127" />
+		<attribute name="cases" type="Int8" repeat="120" hidden="True" min="-128" max="127" />
+		<attribute name="case-subtypes" type="Int16" repeat="120" hidden="True" min="-32768" max="32767" />
 		<attribute name="loot-forwarding-types" type="Seq" repeat="8" hidden="True">
 			<case name="progress-mission" />
 			<case name="acquire-quest" />
@@ -704,7 +705,7 @@
 			<case name="npc주시자세3" />
 		</attribute>
 		<attribute name="level" type="Int8" required="True" min="1" max="70" />
-		<attribute name="mastery-level" type="Int8" required="True" max="50" />
+		<attribute name="mastery-level" type="Int8" required="True" max="100" />
 		<attribute name="faction" type="Ref" ref="faction" refel="1" />
 		<attribute name="attackable" type="Bool" default="y" />
 		<attribute name="detect-hiding" type="Bool" default="n" />
@@ -1014,5 +1015,7 @@
 			<case name="attribute11" />
 			<case name="attribute12" />
 		</attribute>
+		<attribute name="fatigability-consume-amount" type="Int32" default="0" max="2147483647" />
+		<attribute name="release-contents-group" type="Int16" default="0" max="32767" />
 	</el>
 </table>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="posetransit" type="278" version="0.7" module="12">
+<table name="posetransit" type="289" version="0.7" module="12">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="before-pose" type="Seq" key="True" required="True">

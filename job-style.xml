@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="job-style" type="225" version="0.15" module="14">
+<table name="job-style" type="232" version="0.15" module="14">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="job" type="Prop_seq" key="True" required="True">

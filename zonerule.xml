@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="zonerule" type="454" version="5.0" module="6">
+<table name="zonerule" type="472" version="7.0" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="zone" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
@@ -20,6 +20,8 @@
 			<case name="duel bot challenge" />
 			<case name="fraud" />
 			<case name="zone rule group" />
+			<case name="party battle field matching" />
+			<case name="duel matching" />
 		</attribute>
 		<attribute name="allow-invite-party-in-arena" type="Bool" default="n" />
 		<attribute name="show-leave-zone-popup-when-no-party-in-arena-enterance" type="Bool" default="y" />

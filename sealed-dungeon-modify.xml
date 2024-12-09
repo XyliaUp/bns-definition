@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="sealed-dungeon-modify" type="316" version="6.3" module="6">
+<table name="sealed-dungeon-modify" type="329" version="6.4" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32767" />
@@ -47,5 +47,6 @@
 		<attribute name="scroll-boss-back-imageset" type="XUnknown2" default="" max="256" />
 		<attribute name="recommend-attack-power-sealed-dungeon" type="Int16" default="0" min="-32768" max="32767" />
 		<attribute name="recommend-alias-sealed-dungeon" type="Ref" ref="contentsjournalrecommenditem" refel="1" />
+		<attribute name="hide-skill-decal" type="Bool" default="n" />
 	</el>
 </table>
