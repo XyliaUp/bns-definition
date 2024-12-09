@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="pc-race-sex-job" type="281" version="0.3" module="14">
+<table name="pc-race-sex-job" type="270" version="0.3" module="14">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="race" type="Prop_seq" key="True" required="True">

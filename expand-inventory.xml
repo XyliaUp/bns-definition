@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="expand-inventory" type="129" version="2.0" module="6">
+<table name="expand-inventory" type="125" version="2.0" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="inventory-type" type="Seq" key="True" required="True">

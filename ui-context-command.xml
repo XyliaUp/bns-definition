@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="ui-context-command" type="429" version="0.44" module="4">
+<table name="ui-context-command" type="414" version="0.43" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="target" type="Seq" key="True" required="True">
@@ -98,7 +98,6 @@
 			<case name="combine-relics" />
 			<case name="enhance-relics" />
 			<case name="disassemble-relics" />
-			<case name="achievement-inspector" />
 		</attribute>
 		<attribute name="command" type="Seq" repeat="30" default="none">
 			<case name="none" />
@@ -223,8 +222,6 @@
 			<case name="remove-item-bookmark" />
 			<case name="attach-starstone" />
 			<case name="show-item-probability" />
-			<case name="open-worldaccount-cardbook" />
-			<case name="achievement-search" />
 		</attribute>
 		<attribute name="default-command" type="Seq" repeat="15" default="none">
 			<case name="none" />
@@ -349,8 +346,6 @@
 			<case name="remove-item-bookmark" />
 			<case name="attach-starstone" />
 			<case name="show-item-probability" />
-			<case name="open-worldaccount-cardbook" />
-			<case name="achievement-search" />
 		</attribute>
 		<attribute name="main-command-count" type="Int8" default="1" min="1" max="20" />
 	</el>

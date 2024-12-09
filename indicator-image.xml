@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="indicator-image" type="184" version="0.30" module="4">
+<table name="indicator-image" type="180" version="0.29" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="indicator" type="Seq16" key="True" required="True">
@@ -177,10 +177,6 @@
 			<case name="quest-epic-replay-start" />
 			<case name="quest-epic-replay-progress" />
 			<case name="quest-epic-replay-complete" />
-			<case name="quest-hidden-can-complete" />
-			<case name="quest-hidden-can-acquire" />
-			<case name="quest-hidden-can-progress" />
-			<case name="quest-hidden-next-acquire" />
 		</attribute>
 		<attribute name="mesh-iconset" type="XUnknown2" default="" max="256" />
 		<attribute name="minimap" type="XUnknown2" default="" max="256" />

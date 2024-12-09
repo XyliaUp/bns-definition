@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="static-chat-channel" type="397" version="1.1" module="14" maxid="30000">
+<table name="static-chat-channel" type="382" version="0.2" module="12">
 	<el name="table" child="record" />
 	<el name="record" child="">
-		<attribute name="id" type="Int32" key="True" required="True" min="-2147483647" max="30000" />
 		<attribute name="alias" type="String" required="True" max="70" />
 		<attribute name="name2" type="Ref" ref="text" refel="1" />
 		<attribute name="partychanneltype" type="Seq" default="none">

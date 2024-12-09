@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="effect" type="115" version="38.0" module="2318" maxid="200000000">
+<table name="effect" type="111" version="35.0" module="2318" maxid="200000000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="200000000" />
@@ -1335,10 +1335,6 @@
 			<case name="appearance90" />
 			<case name="appearance91" />
 			<case name="appearance92" />
-			<case name="appearance93" />
-			<case name="appearance94" />
-			<case name="appearance95" />
-			<case name="appearance96" />
 			<case name="name" />
 			<case name="geo-zone" />
 			<case name="x" />
@@ -1502,10 +1498,6 @@
 			<case name="activated-glyph-page" />
 			<case name="enabled-glyph-slot" />
 			<case name="activated-card-collection-page" />
-			<case name="blue-virtual-currency-quota" />
-			<case name="blue-virtual-currency-quota-update-time" />
-			<case name="blue-virtual-currency-additional-quota" />
-			<case name="activated-relic-page" />
 			<case name="max-hp" />
 			<case name="max-hp-equip" />
 			<case name="max-guard-gauge" />
@@ -2368,7 +2360,6 @@
 		<sub name="recovery-content-quota">
 			<attribute name="content-quota-id" type="Int32" default="0" max="2147483647" />
 			<attribute name="value" type="Int16" default="0" max="32767" />
-			<attribute name="restrict-quota-id" type="Int32" default="0" max="2147483647" />
 		</sub>
 		<sub name="increase-special-skill-gauge">
 			<attribute name="increase-amount" type="Int16" default="0" min="-32768" max="32767" />
@@ -3411,56 +3402,6 @@
 		<sub name="modify-ability-598" />
 		<sub name="modify-ability-599" />
 		<sub name="modify-ability-600" />
-		<sub name="modify-ability-601" />
-		<sub name="modify-ability-602" />
-		<sub name="modify-ability-603" />
-		<sub name="modify-ability-604" />
-		<sub name="modify-ability-605" />
-		<sub name="modify-ability-606" />
-		<sub name="modify-ability-607" />
-		<sub name="modify-ability-608" />
-		<sub name="modify-ability-609" />
-		<sub name="modify-ability-610" />
-		<sub name="modify-ability-611" />
-		<sub name="modify-ability-612" />
-		<sub name="modify-ability-613" />
-		<sub name="modify-ability-614" />
-		<sub name="modify-ability-615" />
-		<sub name="modify-ability-616" />
-		<sub name="modify-ability-617" />
-		<sub name="modify-ability-618" />
-		<sub name="modify-ability-619" />
-		<sub name="modify-ability-620" />
-		<sub name="modify-ability-621" />
-		<sub name="modify-ability-622" />
-		<sub name="modify-ability-623" />
-		<sub name="modify-ability-624" />
-		<sub name="modify-ability-625" />
-		<sub name="modify-ability-626" />
-		<sub name="modify-ability-627" />
-		<sub name="modify-ability-628" />
-		<sub name="modify-ability-629" />
-		<sub name="modify-ability-630" />
-		<sub name="modify-ability-631" />
-		<sub name="modify-ability-632" />
-		<sub name="modify-ability-633" />
-		<sub name="modify-ability-634" />
-		<sub name="modify-ability-635" />
-		<sub name="modify-ability-636" />
-		<sub name="modify-ability-637" />
-		<sub name="modify-ability-638" />
-		<sub name="modify-ability-639" />
-		<sub name="modify-ability-640" />
-		<sub name="modify-ability-641" />
-		<sub name="modify-ability-642" />
-		<sub name="modify-ability-643" />
-		<sub name="modify-ability-644" />
-		<sub name="modify-ability-645" />
-		<sub name="modify-ability-646" />
-		<sub name="modify-ability-647" />
-		<sub name="modify-ability-648" />
-		<sub name="modify-ability-649" />
-		<sub name="modify-ability-650" />
 		<sub name="glyph-condition-event-1" />
 		<sub name="glyph-condition-event-2" />
 		<sub name="glyph-condition-event-3" />
@@ -4081,10 +4022,6 @@
 				<case name="appearance90" />
 				<case name="appearance91" />
 				<case name="appearance92" />
-				<case name="appearance93" />
-				<case name="appearance94" />
-				<case name="appearance95" />
-				<case name="appearance96" />
 				<case name="name" />
 				<case name="geo-zone" />
 				<case name="x" />
@@ -4248,10 +4185,6 @@
 				<case name="activated-glyph-page" />
 				<case name="enabled-glyph-slot" />
 				<case name="activated-card-collection-page" />
-				<case name="blue-virtual-currency-quota" />
-				<case name="blue-virtual-currency-quota-update-time" />
-				<case name="blue-virtual-currency-additional-quota" />
-				<case name="activated-relic-page" />
 				<case name="max-hp" />
 				<case name="max-hp-equip" />
 				<case name="max-guard-gauge" />

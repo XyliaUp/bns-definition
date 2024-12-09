@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="faction" type="135" version="0.20" module="270" maxid="100">
+<table name="faction" type="130" version="0.20" module="270" maxid="100">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int8" key="True" required="True" max="100" />

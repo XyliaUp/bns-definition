@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="vehicle" type="435" version="4.0" module="6" maxid="30000">
+<table name="vehicle" type="420" version="4.0" module="6" maxid="30000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="-2147483647" max="30000" />

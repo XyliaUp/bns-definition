@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="summonedpreset" type="409" version="0.4" module="6">
+<table name="summonedpreset" type="394" version="0.3" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="race" type="Prop_seq" key="True" required="True">
@@ -33,6 +33,6 @@
 		<attribute name="icon-texture" type="Ref" ref="icontexture" refel="1" />
 		<attribute name="icon-index" type="Int16" default="0" min="-32768" max="32767" />
 		<attribute name="desc" type="Ref" ref="text" refel="1" />
-		<attribute name="param8" type="Int8" repeat="96" default="-128" min="-128" max="127" />
+		<attribute name="param8" type="Int8" repeat="92" default="-128" min="-128" max="127" />
 	</el>
 </table>

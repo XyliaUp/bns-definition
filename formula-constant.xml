@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="formula-constant" type="154" version="0.1" module="6">
+<table name="formula-constant" type="149" version="0.1" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="dodge-percent" type="Int16" default="100" max="30000" />

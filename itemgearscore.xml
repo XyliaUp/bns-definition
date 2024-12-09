@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="itemgearscore" type="199" version="0.4" module="4">
+<table name="itemgearscore" type="193" version="0.4" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="level" type="Int8" key="True" required="True" min="-128" max="127" />

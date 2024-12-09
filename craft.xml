@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="craft" type="80" version="0.5" module="4">
+<table name="craft" type="79" version="0.5" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="category" type="Seq" key="True" required="True">

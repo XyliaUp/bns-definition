@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="env-entrance" type="121" version="1.0" module="4">
+<table name="env-entrance" type="117" version="0.4" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
@@ -65,7 +65,6 @@
 			<case name="solo-dungeon-5-best-record" />
 			<case name="tier-total" />
 			<case name="hyper-racing-game" />
-			<case name="duel-npc-challenge" />
 		</attribute>
 	</el>
 </table>

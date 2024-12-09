@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="item-random-option-group" type="212" version="8.1" module="6">
+<table name="item-random-option-group" type="206" version="6.0" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
@@ -33,11 +33,7 @@
 		<attribute name="ability-list-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
 		<attribute name="skill-build-up-group-list" type="Ref" repeat="3" ref="skill-build-up-group-list" refel="1" />
 		<attribute name="skill-build-up-group-list-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
-		<attribute name="skill-train-by-item-list" type="Ref" repeat="6" ref="skill-train-by-item-list" refel="1" />
-		<attribute name="skill-train-by-item-list-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
-		<attribute name="skill-train-by-item-list-select-min" type="Int8" default="0" max="6" />
-		<attribute name="skill-train-by-item-list-select-max" type="Int8" default="0" max="6" />
-		<attribute name="skill-train-by-item-list-title" type="Ref" ref="text" refel="1" />
+		<attribute name="skill-train-by-item-list" type="Ref" ref="skill-train-by-item-list" refel="1" />
 		<attribute name="duplication-enable" type="Bool" default="n" />
 		<attribute name="unlimited-draw" type="Bool" default="y" />
 		<attribute name="draw-enable-count" type="Int8" default="0" min="-128" max="127" />

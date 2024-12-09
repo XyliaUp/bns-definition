@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="zone" type="461" version="9.1" module="526" maxid="30000">
+<table name="zone" type="443" version="7.1" module="526" maxid="30000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="-2147483647" max="30000" />
@@ -33,7 +33,7 @@
 		<attribute name="pc-max" type="Int16" hidden="True" min="50" max="1500" />
 		<attribute name="pc-max-by-main-faction" type="Int16" hidden="True" default="0" max="1500" />
 		<attribute name="recommend-pc-count" type="Int16" required="True" min="24" max="1000" />
-		<attribute name="npc-max" type="Int16" default="64" max="1400" />
+		<attribute name="npc-max" type="Int16" default="64" max="700" />
 		<attribute name="cube-xysize" type="Int16" deprecated="True" default="0" max="32767" />
 		<attribute name="sight-cube" type="Bool" default="y" />
 		<attribute name="terrain" type="Int16" required="True" min="-32768" max="32767" />

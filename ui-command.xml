@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="ui-command" type="428" version="0.59" module="4">
+<table name="ui-command" type="413" version="0.59" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="command" type="Seq" key="True" required="True">
@@ -125,8 +125,6 @@
 			<case name="remove-item-bookmark" />
 			<case name="attach-starstone" />
 			<case name="show-item-probability" />
-			<case name="open-worldaccount-cardbook" />
-			<case name="achievement-search" />
 		</attribute>
 		<attribute name="name2" type="Ref" ref="text" refel="1" />
 		<attribute name="icon" type="String" default="" max="128" />

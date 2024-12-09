@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="dungeon" type="114" version="9.11" module="78" maxid="31999">
+<table name="dungeon" type="110" version="9.11" module="78" maxid="31999">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="31999" />

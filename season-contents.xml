@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="season-contents" type="332" version="0.13" module="4166">
+<table name="season-contents" type="319" version="0.13" module="4166">
 	<el name="table" child="record" />
 	<el name="record" child="" />
 </table>

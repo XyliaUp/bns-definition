@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="item-graph" type="200" version="1.16" module="4">
+<table name="item-graph" type="194" version="1.16" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<sub name="seed">

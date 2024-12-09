@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="key-command" type="238" version="1.2" module="4">
+<table name="key-command" type="231" version="1.3" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="command" type="Seq16" key="True" required="True">
@@ -34,7 +34,6 @@
 			<case name="item-slot4" />
 			<case name="extra-skill-slot5" />
 			<case name="skill-duel-tag" />
-			<case name="skill-duel-npc-challenge" />
 			<case name="toggle-help" />
 			<case name="toggle-dungeon-guide" />
 			<case name="toggle-inventory" />
@@ -192,10 +191,6 @@
 			<case name="toggle-mark-mode" />
 			<case name="toggle-relic-inventory" />
 			<case name="zone-exit" />
-			<case name="toggle-neopass" />
-			<case name="toggle-notification-center" />
-			<case name="toggle-joypad-lock-on" />
-			<case name="joypad-dash-backward" />
 		</attribute>
 		<attribute name="pc-job" type="Prop_seq" key="True" required="True">
 			<case name="job-none" />
@@ -256,6 +251,5 @@
 			<case name="action" />
 		</attribute>
 		<attribute name="joypad-customize-enabled" type="Bool" default="n" />
-		<attribute name="joypad-overlapped-binding-enabled" type="Bool" default="n" />
 	</el>
 </table>

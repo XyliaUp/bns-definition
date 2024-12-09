@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="zonetriggereventstage" type="476" version="0.16" module="6" maxid="200">
+<table name="zonetriggereventstage" type="458" version="0.16" module="6" maxid="200">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="zone" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />

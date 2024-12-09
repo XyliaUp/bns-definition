@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="itemexchange" type="197" version="0.5" module="6">
+<table name="itemexchange" type="191" version="0.5" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="alias" type="String" required="True" max="70" />

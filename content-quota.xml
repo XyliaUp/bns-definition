@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="content-quota" type="67" version="7.0" module="14" maxid="30000">
+<table name="content-quota" type="66" version="5.1" module="14" maxid="30000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="30000" />
@@ -406,8 +406,5 @@
 			</attribute>
 		</sub>
 		<sub name="trade-restrict" />
-		<sub name="market-targeted-sale" />
-		<sub name="fatigability" />
-		<sub name="fatigability-pccafe" />
 	</el>
 </table>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="moveanim" type="261" version="0.4" module="12">
+<table name="moveanim" type="251" version="0.4" module="12">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="weapon" type="Seq" key="True" required="True">

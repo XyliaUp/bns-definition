@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="interdungeonlist" type="188" version="5.0" module="70" maxid="299">
+<table name="interdungeonlist" type="182" version="3.1" module="70" maxid="299">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="-32768" max="32767" />
@@ -10,7 +10,6 @@
 		<attribute name="public-raid" type="Ref" ref="public-raid" refel="1" />
 		<attribute name="battle-royal-field" type="Ref" ref="battle-royal-field" refel="1" />
 		<attribute name="sealed-dungeon" type="Ref" ref="dungeon" refel="1" />
-		<attribute name="duel-npc-challenge" type="Ref" ref="duel-npc-challenge" refel="1" />
 		<attribute name="required-complete-quest" type="Ref" repeat="2" ref="quest" refel="1" />
 		<attribute name="required-complete-quest-check" type="Seq" default="and">
 			<case name="and" />
@@ -24,10 +23,5 @@
 		<attribute name="skip-match-required-member-count" type="Int8" default="2" min="1" max="127" />
 		<attribute name="representative-small-imageset" type="XUnknown2" default="" max="256" />
 		<attribute name="representative-large-imageset" type="XUnknown2" default="" max="256" />
-		<attribute name="first-clear-type" type="Seq" default="none">
-			<case name="none" />
-			<case name="sealed-dungeon" />
-			<case name="duel-npc-challenge" />
-		</attribute>
 	</el>
 </table>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="craft-recipe" type="83" version="0.12" module="38">
+<table name="craft-recipe" type="82" version="0.12" module="38">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int64" key="True" required="True" min="-9223372036854775807" max="9223372036854775807" />

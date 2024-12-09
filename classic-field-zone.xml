@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="classic-field-zone" type="58" version="0.17" module="14" maxid="31999">
+<table name="classic-field-zone" type="57" version="0.17" module="14" maxid="31999">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="31999" />

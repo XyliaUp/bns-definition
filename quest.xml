@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="quest" type="294" version="11.0" module="262" maxid="32001" pattern="Quest\QuestData*.xml">
+<table name="quest" type="283" version="7.1" module="262" maxid="32001" pattern="Quest\QuestData*.xml">
 	<el name="table" child="quest" />
 	<el name="quest" child="acquisition,mission-step,giveup-loss,completion,transit">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32001" />
@@ -141,7 +141,6 @@
 			<case name="party-battle" />
 			<case name="special" />
 			<case name="side-episode" />
-			<case name="hidden" />
 		</attribute>
 		<attribute name="retired" type="Bool" default="n" />
 		<attribute name="progress-difficulty-type" type="Bool" repeat="3" default="y" />
@@ -174,7 +173,6 @@
 		<attribute name="valid-dayofweek-sat" type="Bool" default="n" />
 		<attribute name="replay-check" type="Bool" default="n" />
 		<attribute name="cinema-check" type="Bool" default="n" />
-		<attribute name="fatigability-consume-amount" type="Int32" default="0" max="2147483647" />
 		<attribute name="dungeon2" type="Ref" hidden="True" ref="dungeon" refel="1" />
 		<attribute name="duel-mission-steps" type="Int8" repeat="16" hidden="True" default="0" max="16" />
 		<attribute name="duel-missions" type="Int8" repeat="16" hidden="True" default="0" max="16" />
@@ -444,10 +442,6 @@
 				<case name="appearance90" />
 				<case name="appearance91" />
 				<case name="appearance92" />
-				<case name="appearance93" />
-				<case name="appearance94" />
-				<case name="appearance95" />
-				<case name="appearance96" />
 				<case name="name" />
 				<case name="geo-zone" />
 				<case name="x" />
@@ -611,10 +605,6 @@
 				<case name="activated-glyph-page" />
 				<case name="enabled-glyph-slot" />
 				<case name="activated-card-collection-page" />
-				<case name="blue-virtual-currency-quota" />
-				<case name="blue-virtual-currency-quota-update-time" />
-				<case name="blue-virtual-currency-additional-quota" />
-				<case name="activated-relic-page" />
 				<case name="max-hp" />
 				<case name="max-hp-equip" />
 				<case name="max-guard-gauge" />
@@ -955,10 +945,6 @@
 				<case name="appearance90" />
 				<case name="appearance91" />
 				<case name="appearance92" />
-				<case name="appearance93" />
-				<case name="appearance94" />
-				<case name="appearance95" />
-				<case name="appearance96" />
 				<case name="name" />
 				<case name="geo-zone" />
 				<case name="x" />
@@ -1122,10 +1108,6 @@
 				<case name="activated-glyph-page" />
 				<case name="enabled-glyph-slot" />
 				<case name="activated-card-collection-page" />
-				<case name="blue-virtual-currency-quota" />
-				<case name="blue-virtual-currency-quota-update-time" />
-				<case name="blue-virtual-currency-additional-quota" />
-				<case name="activated-relic-page" />
 				<case name="max-hp" />
 				<case name="max-hp-equip" />
 				<case name="max-guard-gauge" />
@@ -1466,10 +1448,6 @@
 				<case name="appearance90" />
 				<case name="appearance91" />
 				<case name="appearance92" />
-				<case name="appearance93" />
-				<case name="appearance94" />
-				<case name="appearance95" />
-				<case name="appearance96" />
 				<case name="name" />
 				<case name="geo-zone" />
 				<case name="x" />
@@ -1633,10 +1611,6 @@
 				<case name="activated-glyph-page" />
 				<case name="enabled-glyph-slot" />
 				<case name="activated-card-collection-page" />
-				<case name="blue-virtual-currency-quota" />
-				<case name="blue-virtual-currency-quota-update-time" />
-				<case name="blue-virtual-currency-additional-quota" />
-				<case name="activated-relic-page" />
 				<case name="max-hp" />
 				<case name="max-hp-equip" />
 				<case name="max-guard-gauge" />
@@ -2907,10 +2881,6 @@
 			<case name="quest-epic-replay-start" />
 			<case name="quest-epic-replay-progress" />
 			<case name="quest-epic-replay-complete" />
-			<case name="quest-hidden-can-complete" />
-			<case name="quest-hidden-can-acquire" />
-			<case name="quest-hidden-can-progress" />
-			<case name="quest-hidden-next-acquire" />
 		</attribute>
 		<attribute name="show-in-tooltip" type="Bool" default="n" />
 		<attribute name="visible-object" type="Bool" deprecated="True" default="n" />
@@ -3285,40 +3255,6 @@
 			</attribute>
 			<attribute name="item" type="Ref" required="True" ref="item" refel="1" />
 		</sub>
-		<sub name="unequip-item">
-			<attribute name="item-category" type="Seq" default="none">
-				<case name="none" />
-				<case name="weapon" />
-				<case name="accessory" />
-				<case name="dress" />
-				<case name="equip-gem" />
-				<case name="weapon-gem" />
-				<case name="build-up-stone" />
-				<case name="badge" />
-				<case name="relic" />
-				<case name="medicine" />
-				<case name="food" />
-				<case name="tool" />
-				<case name="talisman" />
-				<case name="equip-material" />
-				<case name="union-material" />
-				<case name="dress-material" />
-				<case name="etc-material" />
-				<case name="coin" />
-				<case name="deed" />
-				<case name="quest" />
-				<case name="etc-change" />
-				<case name="weapon-box" />
-				<case name="accessory-box" />
-				<case name="dress-box" />
-				<case name="equip-gem-box" />
-				<case name="weapon-gem-box" />
-				<case name="material-box" />
-				<case name="booty-box" />
-				<case name="etc-box" />
-			</attribute>
-			<attribute name="item" type="Ref" ref="item" refel="1" />
-		</sub>
 		<sub name="use-item">
 			<attribute name="item" type="Ref" required="True" ref="item" refel="1" />
 			<attribute name="expose-combat-ui" type="Bool" default="n" />
@@ -3352,17 +3288,10 @@
 				<case name="cash-shop" />
 				<case name="wardrobe" />
 				<case name="account-contents" />
-				<case name="world-account-expedition" />
-				<case name="world-account-museum" />
-				<case name="glyph" />
-				<case name="item-growth" />
-				<case name="star-words-list" />
-				<case name="world-account-card-collection" />
 			</attribute>
 			<attribute name="window-open-way" type="Seq" default="none">
 				<case name="none" />
 				<case name="by-npc-seller-button" />
-				<case name="by-button" />
 			</attribute>
 		</sub>
 		<sub name="complete-self-revival" />
@@ -3438,19 +3367,6 @@
 		<sub name="teleport-zone">
 			<attribute name="teleport-id" type="Ref" required="True" ref="teleport" refel="1" />
 		</sub>
-		<sub name="weapon-starstone">
-			<attribute name="weapon" type="Ref" required="True" ref="item" refel="1" />
-			<attribute name="starstone" type="Ref" required="True" ref="item" refel="1" />
-		</sub>
-		<sub name="weapon-starwords">
-			<attribute name="weapon" type="Ref" required="True" ref="item" refel="1" />
-			<attribute name="starwords" type="Ref" required="True" ref="star-words" refel="1" />
-		</sub>
-		<sub name="weapon-soulgem">
-			<attribute name="weapon" type="Ref" required="True" ref="item" refel="1" />
-			<attribute name="soulgem" type="Ref" required="True" ref="item" refel="1" />
-		</sub>
-		<sub name="activate-world-account-card-collection" />
 	</el>
 	<el name="completion-loss" child="">
 		<attribute name="faction" type="Ref" ref="faction" refel="1" />

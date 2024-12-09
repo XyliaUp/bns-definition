@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="survey" type="412" version="0.6" module="6" maxid="30">
+<table name="survey" type="397" version="0.6" module="6" maxid="30">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="30" />

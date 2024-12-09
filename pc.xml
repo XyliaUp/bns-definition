@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="pc" type="278" version="2.0" module="14" maxid="128">
+<table name="pc" type="268" version="2.0" module="14" maxid="128">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int64" required="True" max="65500" />

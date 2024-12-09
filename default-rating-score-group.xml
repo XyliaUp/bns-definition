@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="default-rating-score-group" type="96" version="1.0" module="6">
+<table name="default-rating-score-group" type="95" version="1.0" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="season-contents-type" type="Seq" key="True" required="True">
@@ -34,7 +34,6 @@
 			<case name="solo-dungeon-5-best-record" />
 			<case name="tier-total" />
 			<case name="hyper-racing-game" />
-			<case name="duel-npc-challenge" />
 		</attribute>
 		<attribute name="group-id" type="Int16" key="True" required="True" min="1" max="10" />
 		<attribute name="min-rating-score" type="Int32" required="True" min="-2147483647" max="2147483647" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="mapinfo" type="247" version="1.42" module="12">
+<table name="mapinfo" type="240" version="1.41" module="12">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="-32768" max="32767" />
@@ -19,15 +19,15 @@
 		<attribute name="offset-x" type="Int16" deprecated="True" default="0" min="-32768" max="32767" />
 		<attribute name="offset-y" type="Int16" deprecated="True" default="0" min="-32768" max="32767" />
 		<attribute name="image-size" type="Int16" default="1" min="-32768" max="32767" />
-		<attribute name="imageset" type="XUnknown2" default="" max="256" />
-		<attribute name="imageset-alphamap" type="XUnknown2" default="" max="256" />
+		<attribute name="imageset" type="String" default="" max="128" />
+		<attribute name="imageset-alphamap" type="String" default="" max="128" />
 		<attribute name="imageset-condition-category" type="Seq" default="none">
 			<case name="none" />
 			<case name="quest-complete" />
 		</attribute>
 		<attribute name="imageset-condition-value" type="Int64" default="0" min="-9223372036854775807" max="9223372036854775807" />
-		<attribute name="conditional-imageset" type="XUnknown2" default="" max="256" />
-		<attribute name="conditional-imageset-alphamap" type="XUnknown2" default="" max="256" />
+		<attribute name="conditional-imageset" type="String" default="" max="128" />
+		<attribute name="conditional-imageset-alphamap" type="String" default="" max="128" />
 		<attribute name="overlay" type="Ref" repeat="30" ref="mapoverlay" refel="1" />
 		<attribute name="use-pos-in-parent" type="Bool" default="n" />
 		<attribute name="pos-in-parent-x" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />

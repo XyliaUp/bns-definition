@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="charactertoolappea" type="5" version="0.30" module="24">
+<table name="charactertoolappea" type="5" version="0.29" module="24">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="alias" type="String" default="" max="128" />
@@ -87,7 +87,7 @@
 		<attribute name="scalar" type="Float32" repeat="13" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
 		<attribute name="face-image" type="Ref" repeat="8" ref="account-level" refel="1" />
 		<attribute name="face-custom-value" type="Float32" repeat="32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
-		<attribute name="body-custom-value" type="Float32" repeat="30" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="body-custom-value" type="Float32" repeat="27" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
 		<attribute name="scale-value" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
 		<attribute name="guild-factor" type="Int8" repeat="28" default="0" min="-128" max="127" />
 		<attribute name="personal-costume-factor" type="Int8" repeat="13" default="0" min="-128" max="127" />
