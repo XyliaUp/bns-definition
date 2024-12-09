@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="fishgrade" type="148" version="0.5" module="262">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32767" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name" type="Ref" ref="text" refel="1" />
+		<attribute name="grade-symbol" type="String" required="True" max="70" />
+		<attribute name="grade" type="Seq" required="True">
+			<case name="fish-grade-1" />
+			<case name="fish-grade-2" />
+			<case name="fish-grade-3" />
+			<case name="fish-grade-4" />
+			<case name="fish-grade-5" />
+			<case name="fish-grade-6" />
+			<case name="fish-grade-7" />
+			<case name="fish-grade-8" />
+			<case name="fish-grade-9" />
+			<case name="fish-grade-10" />
+		</attribute>
+		<attribute name="boundary-min" type="Int16" required="True" max="100" />
+		<attribute name="rare" type="Bool" required="True" max="100" />
+		<attribute name="cannot-use" type="Bool" required="True" />
+	</el>
+</table>

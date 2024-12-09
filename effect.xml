@@ -1,0 +1,4541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="effect" type="115" version="38.0" module="2318" maxid="200000000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="200000000" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name" type="String" deprecated="True" default="" max="30" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="name3" type="Ref" ref="text" refel="1" />
+		<attribute name="level" type="Int16" default="1" min="1" max="200" />
+		<attribute name="show-icon" type="Bool" default="n" />
+		<attribute name="show-left-time" type="Bool" default="y" />
+		<attribute name="show-linkbar" type="Bool" default="n" />
+		<attribute name="target-indicator-icon" type="XUnknown2" default="" max="256" />
+		<attribute name="target-indicator-show" type="Bool" default="n" />
+		<attribute name="show-job-indicator" type="Bool" default="n" />
+		<attribute name="save-db" type="Bool" default="n" />
+		<attribute name="miss-probability" type="Int8" default="0" max="100" />
+		<attribute name="passive-duration" type="Msec" default="0" max="36000000" />
+		<attribute name="passive-interval" type="Msec" default="0" max="60000" />
+		<attribute name="expiration-duration-sec" type="Int32" default="0" max="10000000" />
+		<attribute name="stack-amount" type="Int8" default="0" max="127" />
+		<attribute name="stack-count" type="Int8" default="1" min="-127" max="127" />
+		<attribute name="reattach-effect-after-changing-stack-count" type="Bool" default="y" />
+		<attribute name="transform-effect" type="Ref" ref="effect" refel="1" />
+		<attribute name="buff-type" type="Seq" required="True">
+			<case name="instant" />
+			<case name="buff" />
+			<case name="debuff" />
+			<case name="binding-skill-step" />
+			<case name="faction-score" />
+			<case name="static-count-buff" />
+			<case name="soul-mask" />
+		</attribute>
+		<attribute name="binding-skill-step-type" type="Seq" default="execute">
+			<case name="execute" />
+			<case name="skill" />
+		</attribute>
+		<attribute name="immune-breaker-attribute" type="Seq16" default="none">
+			<case name="none" />
+			<case name="회복" />
+			<case name="진드기" />
+			<case name="불" />
+			<case name="은사" />
+			<case name="거미줄" />
+			<case name="독" />
+			<case name="은신" />
+			<case name="투명" />
+			<case name="광기" />
+			<case name="얼음감옥" />
+			<case name="독나방" />
+			<case name="가젯드랍" />
+			<case name="다운" />
+			<case name="넉백대시" />
+			<case name="방어불가" />
+			<case name="도발" />
+			<case name="도망" />
+			<case name="이동불가" />
+			<case name="대시불가" />
+			<case name="감속" />
+			<case name="기절" />
+			<case name="얼어붙음" />
+			<case name="행동불가" />
+			<case name="출혈" />
+			<case name="치유" />
+			<case name="얼음" />
+			<case name="맹독" />
+			<case name="막기" />
+			<case name="속박" />
+			<case name="제압" />
+			<case name="위치바꾸기" />
+			<case name="장악연계" />
+			<case name="무적" />
+			<case name="멍해짐" />
+			<case name="앞차기" />
+			<case name="혼절" />
+			<case name="광폭해짐" />
+			<case name="공중" />
+			<case name="그로기" />
+			<case name="난무" />
+			<case name="넉백" />
+			<case name="흡공" />
+			<case name="퀘스트-1" />
+			<case name="퀘스트-2" />
+			<case name="퀘스트-3" />
+			<case name="퀘스트-4" />
+			<case name="퀘스트-5" />
+			<case name="대상공중" />
+			<case name="보스-1" />
+			<case name="보스-2" />
+			<case name="보스-3" />
+			<case name="보스대쉬" />
+			<case name="그림자" />
+			<case name="중첩불가1" />
+			<case name="중첩불가2" />
+			<case name="조건만족" />
+			<case name="소환사독" />
+			<case name="탱킹장판" />
+			<case name="검막" />
+			<case name="비트" />
+			<case name="홍옥" />
+			<case name="녹주석" />
+			<case name="보스저항-1" />
+			<case name="보스저항-2" />
+			<case name="보스저항-3" />
+			<case name="보스저항-4" />
+			<case name="보스저항-5" />
+			<case name="낙인저항-1" />
+			<case name="낙인저항-2" />
+			<case name="낙인저항-3" />
+			<case name="낙인저항-4" />
+			<case name="마성-1" />
+			<case name="마성-2" />
+			<case name="마성-3" />
+			<case name="마성-4" />
+			<case name="주술체" />
+			<case name="소울" />
+			<case name="부적" />
+			<case name="환마" />
+			<case name="반사" />
+			<case name="NPC-1" />
+			<case name="NPC-2" />
+			<case name="NPC-3" />
+			<case name="NPC-4" />
+			<case name="NPC-5" />
+			<case name="NPC-6" />
+			<case name="NPC-7" />
+			<case name="NPC-8" />
+			<case name="NPC-9" />
+			<case name="NPC-10" />
+			<case name="낙인저항-5" />
+			<case name="낙인저항-6" />
+			<case name="낙인저항-7" />
+			<case name="낙인저항-8" />
+			<case name="클래스-1" />
+			<case name="클래스-2" />
+			<case name="클래스-3" />
+			<case name="클래스-4" />
+			<case name="클래스-5" />
+			<case name="클래스-6" />
+			<case name="클래스-7" />
+			<case name="클래스-8" />
+			<case name="클래스-9" />
+			<case name="클래스-10" />
+			<case name="클래스-11" />
+			<case name="클래스-12" />
+			<case name="클래스-13" />
+			<case name="클래스-14" />
+			<case name="클래스-15" />
+			<case name="클래스-16" />
+			<case name="클래스-17" />
+			<case name="클래스-18" />
+			<case name="클래스-19" />
+			<case name="클래스-20" />
+			<case name="클래스-21" />
+			<case name="클래스-22" />
+			<case name="클래스-23" />
+			<case name="클래스-24" />
+			<case name="클래스-25" />
+			<case name="클래스-26" />
+			<case name="클래스-27" />
+			<case name="클래스-28" />
+			<case name="클래스-29" />
+			<case name="클래스-30" />
+			<case name="클래스-31" />
+			<case name="클래스-32" />
+			<case name="클래스-33" />
+			<case name="클래스-34" />
+			<case name="클래스-35" />
+			<case name="클래스-36" />
+			<case name="클래스-37" />
+			<case name="클래스-38" />
+			<case name="클래스-39" />
+			<case name="클래스-40" />
+			<case name="클래스-41" />
+			<case name="클래스-42" />
+			<case name="클래스-43" />
+			<case name="클래스-44" />
+			<case name="클래스-45" />
+			<case name="클래스-46" />
+			<case name="클래스-47" />
+			<case name="클래스-48" />
+			<case name="클래스-49" />
+			<case name="클래스-50" />
+			<case name="클래스-51" />
+			<case name="클래스-52" />
+			<case name="클래스-53" />
+			<case name="클래스-54" />
+			<case name="클래스-55" />
+			<case name="클래스-56" />
+			<case name="클래스-57" />
+			<case name="클래스-58" />
+			<case name="클래스-59" />
+			<case name="클래스-60" />
+			<case name="아이템조건-1" />
+			<case name="어택글라이드" />
+			<case name="문양-1" />
+			<case name="문양-2" />
+			<case name="문양-3" />
+			<case name="문양-4" />
+			<case name="문양-5" />
+			<case name="문양-6" />
+			<case name="문양-7" />
+			<case name="문양-8" />
+			<case name="문양-9" />
+			<case name="문양-10" />
+			<case name="문양-11" />
+			<case name="문양-12" />
+			<case name="문양-13" />
+			<case name="문양-14" />
+			<case name="문양-15" />
+			<case name="문양-16" />
+			<case name="문양-17" />
+			<case name="문양-18" />
+			<case name="문양-19" />
+			<case name="문양-20" />
+			<case name="기믹-1" />
+			<case name="기믹-2" />
+			<case name="기믹-3" />
+			<case name="기믹-4" />
+			<case name="기믹-5" />
+			<case name="던전보스-1" />
+			<case name="기믹-6" />
+			<case name="기믹-7" />
+			<case name="기믹-8" />
+			<case name="기믹-9" />
+			<case name="기믹-10" />
+			<case name="중첩불가3" />
+		</attribute>
+		<attribute name="attribute" type="Seq16" repeat="8" default="none">
+			<case name="none" />
+			<case name="회복" />
+			<case name="진드기" />
+			<case name="불" />
+			<case name="은사" />
+			<case name="거미줄" />
+			<case name="독" />
+			<case name="은신" />
+			<case name="투명" />
+			<case name="광기" />
+			<case name="얼음감옥" />
+			<case name="독나방" />
+			<case name="가젯드랍" />
+			<case name="다운" />
+			<case name="넉백대시" />
+			<case name="방어불가" />
+			<case name="도발" />
+			<case name="도망" />
+			<case name="이동불가" />
+			<case name="대시불가" />
+			<case name="감속" />
+			<case name="기절" />
+			<case name="얼어붙음" />
+			<case name="행동불가" />
+			<case name="출혈" />
+			<case name="치유" />
+			<case name="얼음" />
+			<case name="맹독" />
+			<case name="막기" />
+			<case name="속박" />
+			<case name="제압" />
+			<case name="위치바꾸기" />
+			<case name="장악연계" />
+			<case name="무적" />
+			<case name="멍해짐" />
+			<case name="앞차기" />
+			<case name="혼절" />
+			<case name="광폭해짐" />
+			<case name="공중" />
+			<case name="그로기" />
+			<case name="난무" />
+			<case name="넉백" />
+			<case name="흡공" />
+			<case name="퀘스트-1" />
+			<case name="퀘스트-2" />
+			<case name="퀘스트-3" />
+			<case name="퀘스트-4" />
+			<case name="퀘스트-5" />
+			<case name="대상공중" />
+			<case name="보스-1" />
+			<case name="보스-2" />
+			<case name="보스-3" />
+			<case name="보스대쉬" />
+			<case name="그림자" />
+			<case name="중첩불가1" />
+			<case name="중첩불가2" />
+			<case name="조건만족" />
+			<case name="소환사독" />
+			<case name="탱킹장판" />
+			<case name="검막" />
+			<case name="비트" />
+			<case name="홍옥" />
+			<case name="녹주석" />
+			<case name="보스저항-1" />
+			<case name="보스저항-2" />
+			<case name="보스저항-3" />
+			<case name="보스저항-4" />
+			<case name="보스저항-5" />
+			<case name="낙인저항-1" />
+			<case name="낙인저항-2" />
+			<case name="낙인저항-3" />
+			<case name="낙인저항-4" />
+			<case name="마성-1" />
+			<case name="마성-2" />
+			<case name="마성-3" />
+			<case name="마성-4" />
+			<case name="주술체" />
+			<case name="소울" />
+			<case name="부적" />
+			<case name="환마" />
+			<case name="반사" />
+			<case name="NPC-1" />
+			<case name="NPC-2" />
+			<case name="NPC-3" />
+			<case name="NPC-4" />
+			<case name="NPC-5" />
+			<case name="NPC-6" />
+			<case name="NPC-7" />
+			<case name="NPC-8" />
+			<case name="NPC-9" />
+			<case name="NPC-10" />
+			<case name="낙인저항-5" />
+			<case name="낙인저항-6" />
+			<case name="낙인저항-7" />
+			<case name="낙인저항-8" />
+			<case name="클래스-1" />
+			<case name="클래스-2" />
+			<case name="클래스-3" />
+			<case name="클래스-4" />
+			<case name="클래스-5" />
+			<case name="클래스-6" />
+			<case name="클래스-7" />
+			<case name="클래스-8" />
+			<case name="클래스-9" />
+			<case name="클래스-10" />
+			<case name="클래스-11" />
+			<case name="클래스-12" />
+			<case name="클래스-13" />
+			<case name="클래스-14" />
+			<case name="클래스-15" />
+			<case name="클래스-16" />
+			<case name="클래스-17" />
+			<case name="클래스-18" />
+			<case name="클래스-19" />
+			<case name="클래스-20" />
+			<case name="클래스-21" />
+			<case name="클래스-22" />
+			<case name="클래스-23" />
+			<case name="클래스-24" />
+			<case name="클래스-25" />
+			<case name="클래스-26" />
+			<case name="클래스-27" />
+			<case name="클래스-28" />
+			<case name="클래스-29" />
+			<case name="클래스-30" />
+			<case name="클래스-31" />
+			<case name="클래스-32" />
+			<case name="클래스-33" />
+			<case name="클래스-34" />
+			<case name="클래스-35" />
+			<case name="클래스-36" />
+			<case name="클래스-37" />
+			<case name="클래스-38" />
+			<case name="클래스-39" />
+			<case name="클래스-40" />
+			<case name="클래스-41" />
+			<case name="클래스-42" />
+			<case name="클래스-43" />
+			<case name="클래스-44" />
+			<case name="클래스-45" />
+			<case name="클래스-46" />
+			<case name="클래스-47" />
+			<case name="클래스-48" />
+			<case name="클래스-49" />
+			<case name="클래스-50" />
+			<case name="클래스-51" />
+			<case name="클래스-52" />
+			<case name="클래스-53" />
+			<case name="클래스-54" />
+			<case name="클래스-55" />
+			<case name="클래스-56" />
+			<case name="클래스-57" />
+			<case name="클래스-58" />
+			<case name="클래스-59" />
+			<case name="클래스-60" />
+			<case name="아이템조건-1" />
+			<case name="어택글라이드" />
+			<case name="문양-1" />
+			<case name="문양-2" />
+			<case name="문양-3" />
+			<case name="문양-4" />
+			<case name="문양-5" />
+			<case name="문양-6" />
+			<case name="문양-7" />
+			<case name="문양-8" />
+			<case name="문양-9" />
+			<case name="문양-10" />
+			<case name="문양-11" />
+			<case name="문양-12" />
+			<case name="문양-13" />
+			<case name="문양-14" />
+			<case name="문양-15" />
+			<case name="문양-16" />
+			<case name="문양-17" />
+			<case name="문양-18" />
+			<case name="문양-19" />
+			<case name="문양-20" />
+			<case name="기믹-1" />
+			<case name="기믹-2" />
+			<case name="기믹-3" />
+			<case name="기믹-4" />
+			<case name="기믹-5" />
+			<case name="던전보스-1" />
+			<case name="기믹-6" />
+			<case name="기믹-7" />
+			<case name="기믹-8" />
+			<case name="기믹-9" />
+			<case name="기믹-10" />
+			<case name="중첩불가3" />
+		</attribute>
+		<attribute name="attribute-value" type="Int64" hidden="True" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="attribute-value-2" type="Int64" hidden="True" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="attribute-value-3" type="Int64" hidden="True" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="immune-attribute" type="Seq16" repeat="8" default="none">
+			<case name="none" />
+			<case name="회복" />
+			<case name="진드기" />
+			<case name="불" />
+			<case name="은사" />
+			<case name="거미줄" />
+			<case name="독" />
+			<case name="은신" />
+			<case name="투명" />
+			<case name="광기" />
+			<case name="얼음감옥" />
+			<case name="독나방" />
+			<case name="가젯드랍" />
+			<case name="다운" />
+			<case name="넉백대시" />
+			<case name="방어불가" />
+			<case name="도발" />
+			<case name="도망" />
+			<case name="이동불가" />
+			<case name="대시불가" />
+			<case name="감속" />
+			<case name="기절" />
+			<case name="얼어붙음" />
+			<case name="행동불가" />
+			<case name="출혈" />
+			<case name="치유" />
+			<case name="얼음" />
+			<case name="맹독" />
+			<case name="막기" />
+			<case name="속박" />
+			<case name="제압" />
+			<case name="위치바꾸기" />
+			<case name="장악연계" />
+			<case name="무적" />
+			<case name="멍해짐" />
+			<case name="앞차기" />
+			<case name="혼절" />
+			<case name="광폭해짐" />
+			<case name="공중" />
+			<case name="그로기" />
+			<case name="난무" />
+			<case name="넉백" />
+			<case name="흡공" />
+			<case name="퀘스트-1" />
+			<case name="퀘스트-2" />
+			<case name="퀘스트-3" />
+			<case name="퀘스트-4" />
+			<case name="퀘스트-5" />
+			<case name="대상공중" />
+			<case name="보스-1" />
+			<case name="보스-2" />
+			<case name="보스-3" />
+			<case name="보스대쉬" />
+			<case name="그림자" />
+			<case name="중첩불가1" />
+			<case name="중첩불가2" />
+			<case name="조건만족" />
+			<case name="소환사독" />
+			<case name="탱킹장판" />
+			<case name="검막" />
+			<case name="비트" />
+			<case name="홍옥" />
+			<case name="녹주석" />
+			<case name="보스저항-1" />
+			<case name="보스저항-2" />
+			<case name="보스저항-3" />
+			<case name="보스저항-4" />
+			<case name="보스저항-5" />
+			<case name="낙인저항-1" />
+			<case name="낙인저항-2" />
+			<case name="낙인저항-3" />
+			<case name="낙인저항-4" />
+			<case name="마성-1" />
+			<case name="마성-2" />
+			<case name="마성-3" />
+			<case name="마성-4" />
+			<case name="주술체" />
+			<case name="소울" />
+			<case name="부적" />
+			<case name="환마" />
+			<case name="반사" />
+			<case name="NPC-1" />
+			<case name="NPC-2" />
+			<case name="NPC-3" />
+			<case name="NPC-4" />
+			<case name="NPC-5" />
+			<case name="NPC-6" />
+			<case name="NPC-7" />
+			<case name="NPC-8" />
+			<case name="NPC-9" />
+			<case name="NPC-10" />
+			<case name="낙인저항-5" />
+			<case name="낙인저항-6" />
+			<case name="낙인저항-7" />
+			<case name="낙인저항-8" />
+			<case name="클래스-1" />
+			<case name="클래스-2" />
+			<case name="클래스-3" />
+			<case name="클래스-4" />
+			<case name="클래스-5" />
+			<case name="클래스-6" />
+			<case name="클래스-7" />
+			<case name="클래스-8" />
+			<case name="클래스-9" />
+			<case name="클래스-10" />
+			<case name="클래스-11" />
+			<case name="클래스-12" />
+			<case name="클래스-13" />
+			<case name="클래스-14" />
+			<case name="클래스-15" />
+			<case name="클래스-16" />
+			<case name="클래스-17" />
+			<case name="클래스-18" />
+			<case name="클래스-19" />
+			<case name="클래스-20" />
+			<case name="클래스-21" />
+			<case name="클래스-22" />
+			<case name="클래스-23" />
+			<case name="클래스-24" />
+			<case name="클래스-25" />
+			<case name="클래스-26" />
+			<case name="클래스-27" />
+			<case name="클래스-28" />
+			<case name="클래스-29" />
+			<case name="클래스-30" />
+			<case name="클래스-31" />
+			<case name="클래스-32" />
+			<case name="클래스-33" />
+			<case name="클래스-34" />
+			<case name="클래스-35" />
+			<case name="클래스-36" />
+			<case name="클래스-37" />
+			<case name="클래스-38" />
+			<case name="클래스-39" />
+			<case name="클래스-40" />
+			<case name="클래스-41" />
+			<case name="클래스-42" />
+			<case name="클래스-43" />
+			<case name="클래스-44" />
+			<case name="클래스-45" />
+			<case name="클래스-46" />
+			<case name="클래스-47" />
+			<case name="클래스-48" />
+			<case name="클래스-49" />
+			<case name="클래스-50" />
+			<case name="클래스-51" />
+			<case name="클래스-52" />
+			<case name="클래스-53" />
+			<case name="클래스-54" />
+			<case name="클래스-55" />
+			<case name="클래스-56" />
+			<case name="클래스-57" />
+			<case name="클래스-58" />
+			<case name="클래스-59" />
+			<case name="클래스-60" />
+			<case name="아이템조건-1" />
+			<case name="어택글라이드" />
+			<case name="문양-1" />
+			<case name="문양-2" />
+			<case name="문양-3" />
+			<case name="문양-4" />
+			<case name="문양-5" />
+			<case name="문양-6" />
+			<case name="문양-7" />
+			<case name="문양-8" />
+			<case name="문양-9" />
+			<case name="문양-10" />
+			<case name="문양-11" />
+			<case name="문양-12" />
+			<case name="문양-13" />
+			<case name="문양-14" />
+			<case name="문양-15" />
+			<case name="문양-16" />
+			<case name="문양-17" />
+			<case name="문양-18" />
+			<case name="문양-19" />
+			<case name="문양-20" />
+			<case name="기믹-1" />
+			<case name="기믹-2" />
+			<case name="기믹-3" />
+			<case name="기믹-4" />
+			<case name="기믹-5" />
+			<case name="던전보스-1" />
+			<case name="기믹-6" />
+			<case name="기믹-7" />
+			<case name="기믹-8" />
+			<case name="기믹-9" />
+			<case name="기믹-10" />
+			<case name="중첩불가3" />
+		</attribute>
+		<attribute name="immune-attribute-value" type="Int64" hidden="True" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="immune-attribute-value-2" type="Int64" hidden="True" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="immune-attribute-value-3" type="Int64" hidden="True" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="flag" type="Seq16" repeat="4" default="none">
+			<case name="none" />
+			<case name="stun" />
+			<case name="airdash" />
+			<case name="knockback" />
+			<case name="bind-phantom" />
+			<case name="link" />
+			<case name="detection" />
+			<case name="internal-injury" />
+			<case name="immediately-exec" />
+			<case name="concentration" />
+			<case name="infinity-shot" />
+			<case name="down" />
+			<case name="swoon" />
+			<case name="defence" />
+			<case name="kneel" />
+			<case name="provocation" />
+			<case name="midair-1" />
+			<case name="midair-2" />
+			<case name="midair-3" />
+			<case name="frostbite" />
+			<case name="magnetic-seal" />
+			<case name="fast-freezing" />
+			<case name="rupture" />
+			<case name="impregnability" />
+			<case name="prickblood" />
+			<case name="wildfire-1" />
+			<case name="wildfire-2" />
+			<case name="wildfire-3" />
+			<case name="hide" />
+			<case name="burrow" />
+			<case name="smokescreen" />
+			<case name="embers" />
+			<case name="poison" />
+			<case name="applied-poison" />
+			<case name="spider-web" />
+			<case name="time-bomb" />
+			<case name="defence-block" />
+			<case name="dash-block" />
+			<case name="dexterity" />
+			<case name="soulblade-1" />
+			<case name="soulblade-2" />
+			<case name="soulblade-3" />
+			<case name="joint" />
+			<case name="flydragon" />
+			<case name="landdragon" />
+			<case name="silverweb-1" />
+			<case name="silverweb-2" />
+			<case name="justguard" />
+			<case name="force-flag-1" />
+			<case name="force-flag-2" />
+			<case name="force-flag-3" />
+			<case name="catchshield" />
+			<case name="poundshort" />
+			<case name="axechopshort" />
+			<case name="swingstrikeshort" />
+			<case name="chilblain" />
+			<case name="frontdown" />
+			<case name="bleeding" />
+			<case name="npc-state-1" />
+			<case name="npc-state-2" />
+			<case name="npc-state-3" />
+			<case name="npc-state-4" />
+			<case name="npc-state-5" />
+			<case name="npc-state-6" />
+			<case name="npc-state-7" />
+			<case name="npc-state-8" />
+			<case name="hardwall-break" />
+			<case name="react-link" />
+			<case name="counter" />
+			<case name="Shadow" />
+			<case name="Shuriken" />
+			<case name="Instantkick" />
+			<case name="Hyperkick" />
+			<case name="Saver" />
+			<case name="HeartStab" />
+			<case name="LeafDodge" />
+			<case name="DragonKick" />
+			<case name="BurstBlow" />
+			<case name="Blood" />
+			<case name="BloodFullStack" />
+			<case name="Poison2" />
+			<case name="Poison2FullStack" />
+			<case name="TankingDrain" />
+			<case name="EmberFullStack" />
+			<case name="PoisonFullStack" />
+			<case name="FireBit" />
+			<case name="FireBitFullStack" />
+			<case name="IceBit" />
+			<case name="Hole" />
+			<case name="HoleFullStack" />
+			<case name="Bubble" />
+			<case name="Swallow" />
+			<case name="FireBit2" />
+			<case name="IceBit2" />
+			<case name="IceBitFullStack" />
+			<case name="FireWall1" />
+			<case name="FireWall2" />
+			<case name="FireWall3" />
+			<case name="FireWall4" />
+			<case name="HighKick" />
+			<case name="Abdomen" />
+			<case name="ShortBurst" />
+			<case name="MartialFullHit" />
+			<case name="Smash" />
+			<case name="Hole1" />
+			<case name="Hole2" />
+			<case name="Hole3" />
+			<case name="TargetHole1" />
+			<case name="TargetHole2" />
+			<case name="TargetHole3" />
+			<case name="Hornet" />
+			<case name="MorningGlory" />
+			<case name="cannot-resurrect" />
+			<case name="enable-guild-battle-field" />
+			<case name="Immune-link" />
+			<case name="GhostX0" />
+			<case name="GhostX1" />
+			<case name="GhostX2" />
+			<case name="GhostX3" />
+			<case name="Thornbus" />
+			<case name="BloodBurst" />
+			<case name="AdventMark1" />
+			<case name="AdventMark2" />
+			<case name="HyperMove" />
+			<case name="Talisman" />
+			<case name="Spector01" />
+			<case name="Spector02" />
+			<case name="Spector03" />
+			<case name="Phantomsoul" />
+			<case name="BlueSky" />
+			<case name="EgoAutoParry" />
+			<case name="Pierce" />
+			<case name="burn" />
+			<case name="AttackGlide" />
+			<case name="SecondGaugeStopped" />
+			<case name="BigBossJump" />
+			<case name="BigBossState-1" />
+			<case name="JobSkillFlag-1" />
+			<case name="JobSkillFlag-2" />
+			<case name="JobSkillFlag-3" />
+			<case name="JobSkillFlag-4" />
+			<case name="JobSkillFlag-5" />
+			<case name="JobSkillFlag-6" />
+			<case name="JobSkillFlag-7" />
+			<case name="JobSkillFlag-8" />
+			<case name="JobSkillFlag-9" />
+			<case name="JobSkillFlag-10" />
+			<case name="JobSkillFlag-11" />
+			<case name="JobSkillFlag-12" />
+			<case name="JobSkillFlag-13" />
+			<case name="JobSkillFlag-14" />
+			<case name="JobSkillFlag-15" />
+			<case name="JobSkillFlag-16" />
+			<case name="JobSkillFlag-17" />
+			<case name="JobSkillFlag-18" />
+			<case name="JobSkillFlag-19" />
+			<case name="JobSkillFlag-20" />
+			<case name="JobSkillFlag-21" />
+			<case name="JobSkillFlag-22" />
+			<case name="JobSkillFlag-23" />
+			<case name="JobSkillFlag-24" />
+			<case name="JobSkillFlag-25" />
+			<case name="JobSkillFlag-26" />
+			<case name="JobSkillFlag-27" />
+			<case name="JobSkillFlag-28" />
+			<case name="JobSkillFlag-29" />
+			<case name="JobSkillFlag-30" />
+			<case name="JobSkillFlag-31" />
+			<case name="JobSkillFlag-32" />
+			<case name="JobSkillFlag-33" />
+			<case name="JobSkillFlag-34" />
+			<case name="JobSkillFlag-35" />
+			<case name="JobSkillFlag-36" />
+			<case name="JobSkillFlag-37" />
+			<case name="JobSkillFlag-38" />
+			<case name="JobSkillFlag-39" />
+			<case name="JobSkillFlag-40" />
+			<case name="JobSkillFlag-41" />
+			<case name="JobSkillFlag-42" />
+			<case name="JobSkillFlag-43" />
+			<case name="JobSkillFlag-44" />
+			<case name="JobSkillFlag-45" />
+			<case name="JobSkillFlag-46" />
+			<case name="JobSkillFlag-47" />
+			<case name="JobSkillFlag-48" />
+			<case name="JobSkillFlag-49" />
+			<case name="JobSkillFlag-50" />
+			<case name="JobSkillFlag-51" />
+			<case name="JobSkillFlag-52" />
+			<case name="JobSkillFlag-53" />
+			<case name="JobSkillFlag-54" />
+			<case name="JobSkillFlag-55" />
+			<case name="JobSkillFlag-56" />
+			<case name="npc-skill-1" />
+			<case name="npc-skill-2" />
+			<case name="npc-skill-3" />
+			<case name="npc-skill-4" />
+			<case name="npc-skill-5" />
+			<case name="npc-skill-6" />
+			<case name="npc-skill-7" />
+			<case name="npc-skill-8" />
+			<case name="npc-skill-9" />
+			<case name="npc-skill-10" />
+			<case name="npc-skill-11" />
+			<case name="npc-skill-12" />
+			<case name="stun-miss" />
+			<case name="down-miss" />
+			<case name="Struggle" />
+			<case name="boutiquefree" />
+			<case name="tumbling-block" />
+			<case name="PeaceArea" />
+			<case name="perfect-dodged" />
+			<case name="kneel-miss" />
+			<case name="glyph-1" />
+			<case name="glyph-2" />
+			<case name="glyph-3" />
+			<case name="glyph-4" />
+			<case name="glyph-5" />
+			<case name="glyph-6" />
+			<case name="glyph-7" />
+			<case name="glyph-8" />
+			<case name="glyph-9" />
+			<case name="glyph-10" />
+			<case name="glyph-11" />
+			<case name="glyph-12" />
+			<case name="glyph-13" />
+			<case name="glyph-14" />
+			<case name="glyph-15" />
+			<case name="glyph-16" />
+			<case name="glyph-17" />
+			<case name="glyph-18" />
+			<case name="glyph-19" />
+			<case name="glyph-20" />
+			<case name="Break-1" />
+			<case name="Break-2" />
+			<case name="Break-3" />
+			<case name="condition-event-1" />
+			<case name="condition-event-2" />
+			<case name="condition-event-3" />
+			<case name="condition-event-4" />
+			<case name="condition-event-5" />
+			<case name="condition-event-6" />
+			<case name="condition-event-7" />
+			<case name="condition-event-8" />
+			<case name="condition-event-9" />
+			<case name="condition-event-10" />
+			<case name="linked" />
+		</attribute>
+		<attribute name="max-stack-flag" type="Seq16" default="none">
+			<case name="none" />
+			<case name="stun" />
+			<case name="airdash" />
+			<case name="knockback" />
+			<case name="bind-phantom" />
+			<case name="link" />
+			<case name="detection" />
+			<case name="internal-injury" />
+			<case name="immediately-exec" />
+			<case name="concentration" />
+			<case name="infinity-shot" />
+			<case name="down" />
+			<case name="swoon" />
+			<case name="defence" />
+			<case name="kneel" />
+			<case name="provocation" />
+			<case name="midair-1" />
+			<case name="midair-2" />
+			<case name="midair-3" />
+			<case name="frostbite" />
+			<case name="magnetic-seal" />
+			<case name="fast-freezing" />
+			<case name="rupture" />
+			<case name="impregnability" />
+			<case name="prickblood" />
+			<case name="wildfire-1" />
+			<case name="wildfire-2" />
+			<case name="wildfire-3" />
+			<case name="hide" />
+			<case name="burrow" />
+			<case name="smokescreen" />
+			<case name="embers" />
+			<case name="poison" />
+			<case name="applied-poison" />
+			<case name="spider-web" />
+			<case name="time-bomb" />
+			<case name="defence-block" />
+			<case name="dash-block" />
+			<case name="dexterity" />
+			<case name="soulblade-1" />
+			<case name="soulblade-2" />
+			<case name="soulblade-3" />
+			<case name="joint" />
+			<case name="flydragon" />
+			<case name="landdragon" />
+			<case name="silverweb-1" />
+			<case name="silverweb-2" />
+			<case name="justguard" />
+			<case name="force-flag-1" />
+			<case name="force-flag-2" />
+			<case name="force-flag-3" />
+			<case name="catchshield" />
+			<case name="poundshort" />
+			<case name="axechopshort" />
+			<case name="swingstrikeshort" />
+			<case name="chilblain" />
+			<case name="frontdown" />
+			<case name="bleeding" />
+			<case name="npc-state-1" />
+			<case name="npc-state-2" />
+			<case name="npc-state-3" />
+			<case name="npc-state-4" />
+			<case name="npc-state-5" />
+			<case name="npc-state-6" />
+			<case name="npc-state-7" />
+			<case name="npc-state-8" />
+			<case name="hardwall-break" />
+			<case name="react-link" />
+			<case name="counter" />
+			<case name="Shadow" />
+			<case name="Shuriken" />
+			<case name="Instantkick" />
+			<case name="Hyperkick" />
+			<case name="Saver" />
+			<case name="HeartStab" />
+			<case name="LeafDodge" />
+			<case name="DragonKick" />
+			<case name="BurstBlow" />
+			<case name="Blood" />
+			<case name="BloodFullStack" />
+			<case name="Poison2" />
+			<case name="Poison2FullStack" />
+			<case name="TankingDrain" />
+			<case name="EmberFullStack" />
+			<case name="PoisonFullStack" />
+			<case name="FireBit" />
+			<case name="FireBitFullStack" />
+			<case name="IceBit" />
+			<case name="Hole" />
+			<case name="HoleFullStack" />
+			<case name="Bubble" />
+			<case name="Swallow" />
+			<case name="FireBit2" />
+			<case name="IceBit2" />
+			<case name="IceBitFullStack" />
+			<case name="FireWall1" />
+			<case name="FireWall2" />
+			<case name="FireWall3" />
+			<case name="FireWall4" />
+			<case name="HighKick" />
+			<case name="Abdomen" />
+			<case name="ShortBurst" />
+			<case name="MartialFullHit" />
+			<case name="Smash" />
+			<case name="Hole1" />
+			<case name="Hole2" />
+			<case name="Hole3" />
+			<case name="TargetHole1" />
+			<case name="TargetHole2" />
+			<case name="TargetHole3" />
+			<case name="Hornet" />
+			<case name="MorningGlory" />
+			<case name="cannot-resurrect" />
+			<case name="enable-guild-battle-field" />
+			<case name="Immune-link" />
+			<case name="GhostX0" />
+			<case name="GhostX1" />
+			<case name="GhostX2" />
+			<case name="GhostX3" />
+			<case name="Thornbus" />
+			<case name="BloodBurst" />
+			<case name="AdventMark1" />
+			<case name="AdventMark2" />
+			<case name="HyperMove" />
+			<case name="Talisman" />
+			<case name="Spector01" />
+			<case name="Spector02" />
+			<case name="Spector03" />
+			<case name="Phantomsoul" />
+			<case name="BlueSky" />
+			<case name="EgoAutoParry" />
+			<case name="Pierce" />
+			<case name="burn" />
+			<case name="AttackGlide" />
+			<case name="SecondGaugeStopped" />
+			<case name="BigBossJump" />
+			<case name="BigBossState-1" />
+			<case name="JobSkillFlag-1" />
+			<case name="JobSkillFlag-2" />
+			<case name="JobSkillFlag-3" />
+			<case name="JobSkillFlag-4" />
+			<case name="JobSkillFlag-5" />
+			<case name="JobSkillFlag-6" />
+			<case name="JobSkillFlag-7" />
+			<case name="JobSkillFlag-8" />
+			<case name="JobSkillFlag-9" />
+			<case name="JobSkillFlag-10" />
+			<case name="JobSkillFlag-11" />
+			<case name="JobSkillFlag-12" />
+			<case name="JobSkillFlag-13" />
+			<case name="JobSkillFlag-14" />
+			<case name="JobSkillFlag-15" />
+			<case name="JobSkillFlag-16" />
+			<case name="JobSkillFlag-17" />
+			<case name="JobSkillFlag-18" />
+			<case name="JobSkillFlag-19" />
+			<case name="JobSkillFlag-20" />
+			<case name="JobSkillFlag-21" />
+			<case name="JobSkillFlag-22" />
+			<case name="JobSkillFlag-23" />
+			<case name="JobSkillFlag-24" />
+			<case name="JobSkillFlag-25" />
+			<case name="JobSkillFlag-26" />
+			<case name="JobSkillFlag-27" />
+			<case name="JobSkillFlag-28" />
+			<case name="JobSkillFlag-29" />
+			<case name="JobSkillFlag-30" />
+			<case name="JobSkillFlag-31" />
+			<case name="JobSkillFlag-32" />
+			<case name="JobSkillFlag-33" />
+			<case name="JobSkillFlag-34" />
+			<case name="JobSkillFlag-35" />
+			<case name="JobSkillFlag-36" />
+			<case name="JobSkillFlag-37" />
+			<case name="JobSkillFlag-38" />
+			<case name="JobSkillFlag-39" />
+			<case name="JobSkillFlag-40" />
+			<case name="JobSkillFlag-41" />
+			<case name="JobSkillFlag-42" />
+			<case name="JobSkillFlag-43" />
+			<case name="JobSkillFlag-44" />
+			<case name="JobSkillFlag-45" />
+			<case name="JobSkillFlag-46" />
+			<case name="JobSkillFlag-47" />
+			<case name="JobSkillFlag-48" />
+			<case name="JobSkillFlag-49" />
+			<case name="JobSkillFlag-50" />
+			<case name="JobSkillFlag-51" />
+			<case name="JobSkillFlag-52" />
+			<case name="JobSkillFlag-53" />
+			<case name="JobSkillFlag-54" />
+			<case name="JobSkillFlag-55" />
+			<case name="JobSkillFlag-56" />
+			<case name="npc-skill-1" />
+			<case name="npc-skill-2" />
+			<case name="npc-skill-3" />
+			<case name="npc-skill-4" />
+			<case name="npc-skill-5" />
+			<case name="npc-skill-6" />
+			<case name="npc-skill-7" />
+			<case name="npc-skill-8" />
+			<case name="npc-skill-9" />
+			<case name="npc-skill-10" />
+			<case name="npc-skill-11" />
+			<case name="npc-skill-12" />
+			<case name="stun-miss" />
+			<case name="down-miss" />
+			<case name="Struggle" />
+			<case name="boutiquefree" />
+			<case name="tumbling-block" />
+			<case name="PeaceArea" />
+			<case name="perfect-dodged" />
+			<case name="kneel-miss" />
+			<case name="glyph-1" />
+			<case name="glyph-2" />
+			<case name="glyph-3" />
+			<case name="glyph-4" />
+			<case name="glyph-5" />
+			<case name="glyph-6" />
+			<case name="glyph-7" />
+			<case name="glyph-8" />
+			<case name="glyph-9" />
+			<case name="glyph-10" />
+			<case name="glyph-11" />
+			<case name="glyph-12" />
+			<case name="glyph-13" />
+			<case name="glyph-14" />
+			<case name="glyph-15" />
+			<case name="glyph-16" />
+			<case name="glyph-17" />
+			<case name="glyph-18" />
+			<case name="glyph-19" />
+			<case name="glyph-20" />
+			<case name="Break-1" />
+			<case name="Break-2" />
+			<case name="Break-3" />
+			<case name="condition-event-1" />
+			<case name="condition-event-2" />
+			<case name="condition-event-3" />
+			<case name="condition-event-4" />
+			<case name="condition-event-5" />
+			<case name="condition-event-6" />
+			<case name="condition-event-7" />
+			<case name="condition-event-8" />
+			<case name="condition-event-9" />
+			<case name="condition-event-10" />
+			<case name="linked" />
+		</attribute>
+		<attribute name="function-block-move" type="Bool" deprecated="True" hidden="True" default="n" />
+		<attribute name="function" type="Seq" repeat="10" default="none">
+			<case name="none" />
+			<case name="block-move" />
+			<case name="block-rotate" />
+			<case name="block-skill" />
+			<case name="block-physical-skill" />
+			<case name="block-force-skill" />
+			<case name="immune-damage" />
+			<case name="immune-death" />
+			<case name="immune-debuff" />
+			<case name="immune-casting-delay" />
+			<case name="block-dodge" />
+			<case name="block-bounce" />
+			<case name="block-parry" />
+			<case name="block-perfect-parry" />
+			<case name="block-jump" />
+			<case name="block-hyper" />
+			<case name="front-perfect-parry" />
+			<case name="back-perfect-parry" />
+			<case name="front-bounce" />
+			<case name="back-bounce" />
+		</attribute>
+		<attribute name="drop-field-item" type="Bool" default="n" />
+		<attribute name="drop-weapon-field-item" type="Bool" default="n" />
+		<attribute name="detach-count" type="Int8" default="0" max="200" />
+		<attribute name="detach-slot" type="Seq" repeat="4" default="none">
+			<case name="none" />
+			<case name="other" />
+			<case name="attack-hit" />
+			<case name="attack-miss" />
+			<case name="attack-dodge" />
+			<case name="attack-parry" />
+			<case name="attack-perfect-parry" />
+			<case name="attack-bounce" />
+			<case name="attack-critical" />
+			<case name="attack-counter" />
+			<case name="attacked-hit" />
+			<case name="attacked-miss" />
+			<case name="attacked-dodge" />
+			<case name="attacked-parry" />
+			<case name="attacked-perfect-parry" />
+			<case name="attacked-bounce" />
+			<case name="attacked-critical" />
+			<case name="attacked-counter" />
+			<case name="casting-start" />
+			<case name="casting-end" />
+			<case name="attack-perfect-dodge" />
+			<case name="attacked-perfect-dodge" />
+		</attribute>
+		<attribute name="apply-duration-formula" type="Bool" default="n" />
+		<attribute name="change-default-stance-by-detach-timeout" type="Bool" default="n" />
+		<attribute name="combat-mode-counting" type="Bool" deprecated="True" default="n" />
+		<attribute name="target-combat-mode" type="Bool" default="n" />
+		<attribute name="aoe-damage" type="Bool" default="n" />
+		<attribute name="attack-attribute-coefficient-percent" type="Int16" default="0" max="1000" />
+		<attribute name="inhalation-linker" type="Seq" default="attach">
+			<case name="attach" />
+			<case name="not-attach" />
+			<case name="dispel" />
+		</attribute>
+		<attribute name="inhalation-linked" type="Seq" default="attach">
+			<case name="attach" />
+			<case name="not-attach" />
+			<case name="dispel" />
+		</attribute>
+		<attribute name="mount-linker" type="Seq" default="attach">
+			<case name="attach" />
+			<case name="not-attach" />
+			<case name="dispel" />
+		</attribute>
+		<attribute name="mount-linked" type="Seq" default="attach">
+			<case name="attach" />
+			<case name="not-attach" />
+			<case name="dispel" />
+		</attribute>
+		<attribute name="catch-linker" type="Seq" default="attach">
+			<case name="attach" />
+			<case name="not-attach" />
+			<case name="dispel" />
+		</attribute>
+		<attribute name="catch-linked" type="Seq" default="attach">
+			<case name="attach" />
+			<case name="not-attach" />
+			<case name="dispel" />
+		</attribute>
+		<attribute name="faction-score-min" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="faction-score-max" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="leave-zone-detach" type="Bool" default="n" />
+		<attribute name="not-dead-to-exhaustion-detach" type="Bool" default="y" />
+		<attribute name="effect-region-leaved-detach" type="Bool" default="n" />
+		<attribute name="invoked-by-effect" type="Bool" hidden="True" default="n" />
+		<attribute name="event-effect-target" type="Seq" repeat="4" default="none">
+			<case name="none" />
+			<case name="effect-owner" />
+			<case name="effect-eventer" />
+			<case name="effect-giver" />
+			<case name="skill-target" />
+		</attribute>
+		<attribute name="event-effect" type="Ref" repeat="4" ref="effect" refel="1" />
+		<attribute name="second-slot-event-effect-target" type="Seq" repeat="4" default="none">
+			<case name="none" />
+			<case name="effect-owner" />
+			<case name="effect-eventer" />
+			<case name="effect-giver" />
+			<case name="skill-target" />
+		</attribute>
+		<attribute name="second-slot-event-effect" type="Ref" repeat="4" ref="effect" refel="1" />
+		<attribute name="third-slot-event-effect-target" type="Seq" repeat="4" default="none">
+			<case name="none" />
+			<case name="effect-owner" />
+			<case name="effect-eventer" />
+			<case name="effect-giver" />
+			<case name="skill-target" />
+		</attribute>
+		<attribute name="third-slot-event-effect" type="Ref" repeat="4" ref="effect" refel="1" />
+		<attribute name="fourth-slot-event-effect-target" type="Seq" repeat="4" default="none">
+			<case name="none" />
+			<case name="effect-owner" />
+			<case name="effect-eventer" />
+			<case name="effect-giver" />
+			<case name="skill-target" />
+		</attribute>
+		<attribute name="fourth-slot-event-effect" type="Ref" repeat="4" ref="effect" refel="1" />
+		<attribute name="modify-ability" type="Prop_field" repeat="8" default="creature_field_none">
+			<case name="creature_field_none" />
+			<case name="world-id" />
+			<case name="race" />
+			<case name="sex" />
+			<case name="job" />
+			<case name="appearance1" />
+			<case name="appearance2" />
+			<case name="appearance3" />
+			<case name="appearance4" />
+			<case name="appearance5" />
+			<case name="appearance6" />
+			<case name="appearance7" />
+			<case name="appearance8" />
+			<case name="appearance9" />
+			<case name="appearance10" />
+			<case name="appearance11" />
+			<case name="appearance12" />
+			<case name="appearance13" />
+			<case name="appearance14" />
+			<case name="appearance15" />
+			<case name="appearance16" />
+			<case name="appearance17" />
+			<case name="appearance18" />
+			<case name="appearance19" />
+			<case name="appearance20" />
+			<case name="appearance21" />
+			<case name="appearance22" />
+			<case name="appearance23" />
+			<case name="appearance24" />
+			<case name="appearance25" />
+			<case name="appearance26" />
+			<case name="appearance27" />
+			<case name="appearance28" />
+			<case name="appearance29" />
+			<case name="appearance30" />
+			<case name="appearance31" />
+			<case name="appearance32" />
+			<case name="appearance33" />
+			<case name="appearance34" />
+			<case name="appearance35" />
+			<case name="appearance36" />
+			<case name="appearance37" />
+			<case name="appearance38" />
+			<case name="appearance39" />
+			<case name="appearance40" />
+			<case name="appearance41" />
+			<case name="appearance42" />
+			<case name="appearance43" />
+			<case name="appearance44" />
+			<case name="appearance45" />
+			<case name="appearance46" />
+			<case name="appearance47" />
+			<case name="appearance48" />
+			<case name="appearance49" />
+			<case name="appearance50" />
+			<case name="appearance51" />
+			<case name="appearance52" />
+			<case name="appearance53" />
+			<case name="appearance54" />
+			<case name="appearance55" />
+			<case name="appearance56" />
+			<case name="appearance57" />
+			<case name="appearance58" />
+			<case name="appearance59" />
+			<case name="appearance60" />
+			<case name="appearance61" />
+			<case name="appearance62" />
+			<case name="appearance63" />
+			<case name="appearance64" />
+			<case name="appearance65" />
+			<case name="appearance66" />
+			<case name="appearance67" />
+			<case name="appearance68" />
+			<case name="appearance69" />
+			<case name="appearance70" />
+			<case name="appearance71" />
+			<case name="appearance72" />
+			<case name="appearance73" />
+			<case name="appearance74" />
+			<case name="appearance75" />
+			<case name="appearance76" />
+			<case name="appearance77" />
+			<case name="appearance78" />
+			<case name="appearance79" />
+			<case name="appearance80" />
+			<case name="appearance81" />
+			<case name="appearance82" />
+			<case name="appearance83" />
+			<case name="appearance84" />
+			<case name="appearance85" />
+			<case name="appearance86" />
+			<case name="appearance87" />
+			<case name="appearance88" />
+			<case name="appearance89" />
+			<case name="appearance90" />
+			<case name="appearance91" />
+			<case name="appearance92" />
+			<case name="appearance93" />
+			<case name="appearance94" />
+			<case name="appearance95" />
+			<case name="appearance96" />
+			<case name="name" />
+			<case name="geo-zone" />
+			<case name="x" />
+			<case name="y" />
+			<case name="z" />
+			<case name="yaw" />
+			<case name="level" />
+			<case name="exp" />
+			<case name="mastery-level" />
+			<case name="mastery-exp" />
+			<case name="hp" />
+			<case name="guard-gauge" />
+			<case name="money" />
+			<case name="money-diff" />
+			<case name="faction" />
+			<case name="faction2" />
+			<case name="guild-id" />
+			<case name="activated-faction" />
+			<case name="faction-reputation" />
+			<case name="achievement-id" />
+			<case name="achievement-step" />
+			<case name="ability-achievement-id" />
+			<case name="ability-achievement-step" />
+			<case name="sp" />
+			<case name="sp2" />
+			<case name="stance" />
+			<case name="link-target" />
+			<case name="link-type" />
+			<case name="link-state" />
+			<case name="link-stage" />
+			<case name="target" />
+			<case name="action-type" />
+			<case name="action-target" />
+			<case name="additional-hp" />
+			<case name="additional-hp2" />
+			<case name="additional-hp3" />
+			<case name="effect-attribute" />
+			<case name="effect-attribute-2" />
+			<case name="effect-attribute-3" />
+			<case name="immune-effect-attribute" />
+			<case name="immune-effect-attribute-2" />
+			<case name="immune-effect-attribute-3" />
+			<case name="effect-flag" />
+			<case name="effect-flag-2" />
+			<case name="effect-flag-3" />
+			<case name="effect-flag-4" />
+			<case name="field-item" />
+			<case name="summoned" />
+			<case name="convoy-id" />
+			<case name="top-contribution-group-id" />
+			<case name="inventory-size" />
+			<case name="depository-size" />
+			<case name="depository-2-size" />
+			<case name="wardrobe-size" />
+			<case name="premium-depository-size" />
+			<case name="builder-right" />
+			<case name="survey" />
+			<case name="style-score" />
+			<case name="immune-breaker-attribute" />
+			<case name="immune-breaker-count" />
+			<case name="faction-score" />
+			<case name="faction-killed-count" />
+			<case name="combat-side" />
+			<case name="duel-point" />
+			<case name="party-battle-point" />
+			<case name="field-play-point" />
+			<case name="life-contents-point" />
+			<case name="duel-grade" />
+			<case name="duel-grade-type" />
+			<case name="dead" />
+			<case name="gm-mode" />
+			<case name="grade-level" />
+			<case name="grade-broadcast-benefit-1" />
+			<case name="grade-broadcast-benefit-2" />
+			<case name="grade-broadcast-benefit-3" />
+			<case name="grade-broadcast-benefit-4" />
+			<case name="grade-broadcast-benefit-5" />
+			<case name="grade-broadcast-benefit-6" />
+			<case name="grade-broadcast-benefit-7" />
+			<case name="grade-broadcast-benefit-8" />
+			<case name="logout-time" />
+			<case name="instant-heart-count" />
+			<case name="heart-count" />
+			<case name="skill-score" />
+			<case name="bound-raid-dungeon-id-1" />
+			<case name="bound-raid-dungeon-id-2" />
+			<case name="bound-raid-dungeon-id-3" />
+			<case name="bound-raid-dungeon-id-4" />
+			<case name="bound-raid-dungeon-id-5" />
+			<case name="bound-raid-dungeon-id-6" />
+			<case name="bound-raid-dungeon-id-7" />
+			<case name="bound-raid-dungeon-id-8" />
+			<case name="bound-raid-dungeon-id-9" />
+			<case name="bound-raid-dungeon-id-10" />
+			<case name="bound-raid-dungeon-id-11" />
+			<case name="bound-raid-dungeon-id-12" />
+			<case name="bound-raid-dungeon-id-13" />
+			<case name="bound-raid-dungeon-id-14" />
+			<case name="bound-raid-dungeon-id-15" />
+			<case name="bound-raid-dungeon-id-16" />
+			<case name="bound-raid-dungeon-id-17" />
+			<case name="boss-second-gauge" />
+			<case name="accumulated-damage-slot-tao" />
+			<case name="accumulated-damage-slot-1" />
+			<case name="accumulated-damage-slot-2" />
+			<case name="accumulated-damage-slot-3" />
+			<case name="skill-skin-id" />
+			<case name="pvp-mode-cooltime" />
+			<case name="ghost-type" />
+			<case name="challenge-party-id" />
+			<case name="challenge-party-out-time" />
+			<case name="acquired-skill-build-up-point" />
+			<case name="usable-skill-build-up-point" />
+			<case name="job-style" />
+			<case name="account-exp-to-add" />
+			<case name="account-exp-added" />
+			<case name="account-exp-added-time" />
+			<case name="account-exp-by-pc" />
+			<case name="account-level" />
+			<case name="account-exp" />
+			<case name="account-exp-quota-per-day" />
+			<case name="account-exp-last-update-time" />
+			<case name="activated-badge-page" />
+			<case name="equip-badge-gear-score" />
+			<case name="combat-mode" />
+			<case name="falling" />
+			<case name="convoy" />
+			<case name="attackable" />
+			<case name="casting" />
+			<case name="immune-breaker-disable" />
+			<case name="npc-interactive" />
+			<case name="npc-talkable" />
+			<case name="special-skill-gauge-full" />
+			<case name="pvp-mode" />
+			<case name="break-state" />
+			<case name="break-gauge-block-state" />
+			<case name="public-reserve-5" />
+			<case name="public-reserve-6" />
+			<case name="public-reserve-7" />
+			<case name="public-reserve-8" />
+			<case name="detect-hiding" />
+			<case name="guild-invitation-refusal" />
+			<case name="pvp-safe-area" />
+			<case name="zone-move-state" />
+			<case name="private-reserve-5" />
+			<case name="private-reserve-6" />
+			<case name="private-reserve-7" />
+			<case name="private-reserve-8" />
+			<case name="slate-page" />
+			<case name="guild-point" />
+			<case name="activated-vehicle-id" />
+			<case name="break-gauge" />
+			<case name="break-state-count" />
+			<case name="personal-raid-dungeon-1-progress-step" />
+			<case name="personal-raid-dungeon-1-expiration-time" />
+			<case name="personal-raid-dungeon-2-progress-step" />
+			<case name="personal-raid-dungeon-2-expiration-time" />
+			<case name="personal-raid-dungeon-3-progress-step" />
+			<case name="personal-raid-dungeon-3-expiration-time" />
+			<case name="login-reset-time" />
+			<case name="activated-glyph-page" />
+			<case name="enabled-glyph-slot" />
+			<case name="activated-card-collection-page" />
+			<case name="blue-virtual-currency-quota" />
+			<case name="blue-virtual-currency-quota-update-time" />
+			<case name="blue-virtual-currency-additional-quota" />
+			<case name="activated-relic-page" />
+			<case name="max-hp" />
+			<case name="max-hp-equip" />
+			<case name="max-guard-gauge" />
+			<case name="max-guard-gauge-equip" />
+			<case name="max-sp" />
+			<case name="max-sp2" />
+			<case name="speed" />
+			<case name="vehicle-speed" />
+			<case name="modify-cast-speed-percent" />
+			<case name="hp-regen" />
+			<case name="hp-regen-equip" />
+			<case name="hp-regen-combat" />
+			<case name="hp-regen-combat-equip" />
+			<case name="attack-hit-base-percent" />
+			<case name="attack-hit-value" />
+			<case name="attack-hit-value-equip" />
+			<case name="attack-pierce-base-percent" />
+			<case name="attack-parry-pierce-percent" />
+			<case name="attack-pierce-value" />
+			<case name="attack-pierce-value-equip" />
+			<case name="attack-critical-base-percent" />
+			<case name="attack-critical-damage-percent" />
+			<case name="attack-critical-value" />
+			<case name="attack-critical-value-equip" />
+			<case name="attack-critical-damage-value" />
+			<case name="attack-critical-damage-value-equip" />
+			<case name="defend-critical-base-percent" />
+			<case name="defend-critical-damage-percent" />
+			<case name="defend-critical-value" />
+			<case name="defend-critical-value-equip" />
+			<case name="defend-bounce-percent" />
+			<case name="defend-dodge-base-percent" />
+			<case name="defend-dodge-value" />
+			<case name="defend-dodge-value-equip" />
+			<case name="defend-parry-base-percent" />
+			<case name="defend-parry-value" />
+			<case name="defend-parry-value-equip" />
+			<case name="defend-parry-reduce-percent" />
+			<case name="defend-parry-reduce-diff" />
+			<case name="defend-perfect-parry-base-percent" />
+			<case name="defend-immune-base-percent" />
+			<case name="attack-power-creature-min" />
+			<case name="attack-power-creature-max" />
+			<case name="attack-power-equip-min" />
+			<case name="attack-power-equip-max" />
+			<case name="defend-power-creature-value" />
+			<case name="defend-power-equip-value" />
+			<case name="defend-resist-power-creature-value" />
+			<case name="defend-resist-power-equip-value" />
+			<case name="defend-physical-damage-reduce-percent" />
+			<case name="defend-force-damage-reduce-percent" />
+			<case name="attack-damage-modify-percent" />
+			<case name="attack-damage-modify-diff" />
+			<case name="defend-damage-modify-percent" />
+			<case name="defend-damage-modify-diff" />
+			<case name="defend-miss-base-percent" />
+			<case name="attack-stiff-duration-base-percent" />
+			<case name="attack-stiff-duration-value" />
+			<case name="defend-stiff-duration-base-percent" />
+			<case name="defend-stiff-duration-value" />
+			<case name="cast-duration-base-percent" />
+			<case name="cast-duration-value" />
+			<case name="attack-concentrate-value" />
+			<case name="attack-concentrate-value-equip" />
+			<case name="defend-perfect-parry-reduce-percent" />
+			<case name="defend-counter-reduce-percent" />
+			<case name="pve-boss-level-npc-attack-power-creature-min" />
+			<case name="pve-boss-level-npc-attack-power-creature-max" />
+			<case name="pve-boss-level-npc-attack-power-equip-min" />
+			<case name="pve-boss-level-npc-attack-power-equip-max" />
+			<case name="pve-boss-level-npc-defend-power-creature-value" />
+			<case name="pve-boss-level-npc-defend-power-equip-value" />
+			<case name="pvp-attack-power-creature-min" />
+			<case name="pvp-attack-power-creature-max" />
+			<case name="pvp-attack-power-equip-min" />
+			<case name="pvp-attack-power-equip-max" />
+			<case name="pvp-defend-power-creature-value" />
+			<case name="pvp-defend-power-equip-value" />
+			<case name="job-ability-1" />
+			<case name="job-ability-2" />
+			<case name="heal-power-base-percent" />
+			<case name="heal-power-value" />
+			<case name="heal-power-diff" />
+			<case name="aoe-defend-base-percent" />
+			<case name="aoe-defend-power-value" />
+			<case name="abnormal-attack-base-percent" />
+			<case name="abnormal-attack-power-value" />
+			<case name="abnormal-attack-power-value-equip" />
+			<case name="abnormal-defend-base-percent" />
+			<case name="abnormal-defend-power-value" />
+			<case name="hate-base-percent" />
+			<case name="hate-power-creature-value" />
+			<case name="hate-power-equip-value" />
+			<case name="additional-exp-diff-by-kill" />
+			<case name="additional-exp-percent-by-kill" />
+			<case name="additional-mastery-exp-diff-by-kill" />
+			<case name="additional-mastery-exp-percent-by-kill" />
+			<case name="additional-faction-score-max-percent" />
+			<case name="additional-sealed-dungeon-exp-diff-by-kill" />
+			<case name="additional-sealed-dungeon-exp-percent-by-kill" />
+			<case name="attack-attribute-value" />
+			<case name="attack-attribute-value-equip" />
+			<case name="attack-attribute-base-percent" />
+			<case name="defend-difficulty-type-damage-reduce-percent" />
+			<case name="race-type-1-attack-damage-modify-percent" />
+			<case name="race-type-2-attack-damage-modify-percent" />
+			<case name="race-type-3-attack-damage-modify-percent" />
+			<case name="race-type-4-attack-damage-modify-percent" />
+			<case name="race-type-5-attack-damage-modify-percent" />
+			<case name="race-type-6-attack-damage-modify-percent" />
+			<case name="race-type-7-attack-damage-modify-percent" />
+			<case name="race-type-1-defend-damage-modify-percent" />
+			<case name="race-type-2-defend-damage-modify-percent" />
+			<case name="race-type-3-defend-damage-modify-percent" />
+			<case name="race-type-4-defend-damage-modify-percent" />
+			<case name="race-type-5-defend-damage-modify-percent" />
+			<case name="race-type-6-defend-damage-modify-percent" />
+			<case name="race-type-7-defend-damage-modify-percent" />
+			<case name="attribute-type-1-attack-damage-modify-percent" />
+			<case name="attribute-type-2-attack-damage-modify-percent" />
+			<case name="attribute-type-3-attack-damage-modify-percent" />
+			<case name="attribute-type-4-attack-damage-modify-percent" />
+			<case name="attribute-type-5-attack-damage-modify-percent" />
+			<case name="attribute-type-6-attack-damage-modify-percent" />
+			<case name="attribute-type-7-attack-damage-modify-percent" />
+			<case name="attribute-type-8-attack-damage-modify-percent" />
+			<case name="attribute-type-9-attack-damage-modify-percent" />
+			<case name="attribute-type-10-attack-damage-modify-percent" />
+			<case name="attribute-type-11-attack-damage-modify-percent" />
+			<case name="attribute-type-12-attack-damage-modify-percent" />
+			<case name="attribute-type-1-defend-damage-modify-percent" />
+			<case name="attribute-type-2-defend-damage-modify-percent" />
+			<case name="attribute-type-3-defend-damage-modify-percent" />
+			<case name="attribute-type-4-defend-damage-modify-percent" />
+			<case name="attribute-type-5-defend-damage-modify-percent" />
+			<case name="attribute-type-6-defend-damage-modify-percent" />
+			<case name="attribute-type-7-defend-damage-modify-percent" />
+			<case name="attribute-type-8-defend-damage-modify-percent" />
+			<case name="attribute-type-9-defend-damage-modify-percent" />
+			<case name="attribute-type-10-defend-damage-modify-percent" />
+			<case name="attribute-type-11-defend-damage-modify-percent" />
+			<case name="attribute-type-12-defend-damage-modify-percent" />
+			<case name="defend-critical-damage-value" />
+			<case name="defend-critical-damage-value-equip" />
+			<case name="invisible" />
+			<case name="block-move" />
+			<case name="block-skill" />
+			<case name="block-physical-skill" />
+			<case name="block-force-skill" />
+			<case name="immune-damage" />
+			<case name="immune-death" />
+			<case name="immune-debuff" />
+			<case name="exception-target" />
+			<case name="exception-detect" />
+			<case name="exception-hostile-target" />
+			<case name="immune-casting-delay" />
+			<case name="block-dodge" />
+			<case name="block-bounce" />
+			<case name="block-parry" />
+			<case name="block-perfect-parry" />
+			<case name="front-perfect-parry" />
+			<case name="back-perfect-parry" />
+			<case name="front-bounce" />
+			<case name="back-bounce" />
+			<case name="debug-invincible" />
+			<case name="debug-invisible" />
+			<case name="abnormality-reserve-7" />
+			<case name="abnormality-reserve-8" />
+			<case name="equip-hand" />
+			<case name="equip-hand-level" />
+			<case name="equip-hand-appearance-item" />
+			<case name="equip-hand-appearance-item-level" />
+			<case name="equip-hand-alt" />
+			<case name="equip-body" />
+			<case name="equip-body-guild-id" />
+			<case name="equip-body-custom1" />
+			<case name="equip-body-custom2" />
+			<case name="equip-body-custom3" />
+			<case name="equip-body-custom4" />
+			<case name="equip-body-custom5" />
+			<case name="equip-body-custom6" />
+			<case name="equip-body-custom7" />
+			<case name="equip-body-custom8" />
+			<case name="equip-ear" />
+			<case name="equip-eye" />
+			<case name="equip-eye-custom1" />
+			<case name="equip-eye-custom2" />
+			<case name="equip-eye-custom3" />
+			<case name="equip-head" />
+			<case name="equip-head-custom1" />
+			<case name="equip-head-custom2" />
+			<case name="equip-head-custom3" />
+			<case name="equip-body-attach" />
+			<case name="equip-body-attach-custom1" />
+			<case name="equip-body-attach-custom2" />
+			<case name="equip-body-attach-custom3" />
+			<case name="equip-weapon-gem" />
+			<case name="equip-pet-1" />
+			<case name="equip-pet-1-appearance-item" />
+			<case name="equip-pet-2" />
+			<case name="equip-pet-2-appearance-item" />
+			<case name="equip-badge-appearance-item" />
+			<case name="equip-normal-state-appearance" />
+			<case name="equip-idle-state-appearance" />
+			<case name="equip-hypermove-appearance" />
+			<case name="equip-name-plate-appearance" />
+			<case name="equip-speech-bubble-appearance" />
+			<case name="equip-talk-social-item" />
+			<case name="equip-soul-gem" />
+			<case name="attack-stiff-duration-equip-value" />
+			<case name="defend-stiff-duration-equip-value" />
+			<case name="aoe-defend-power-value-equip" />
+			<case name="heal-power-equip-value" />
+			<case name="defend-strength-creature-value" />
+			<case name="defend-strength-equip-value" />
+			<case name="attack-precise-creature-value" />
+			<case name="attack-precise-equip-value" />
+			<case name="attack-aoe-pierce-value" />
+			<case name="attack-aoe-pierce-value-equip" />
+			<case name="attack-abnormal-hit-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="attack-abnormal-hit-equip-value" />
+			<case name="defend-abnormal-dodge-base-percent" />
+			<case name="defend-abnormal-dodge-value" />
+			<case name="defend-abnormal-dodge-equip-value" />
+			<case name="support-power-base-percent" />
+			<case name="support-power-value" />
+			<case name="support-power-equip-value" />
+			<case name="hypermove-power-value" />
+			<case name="hypermove-power-equip-value" />
+		</attribute>
+		<attribute name="modify-ability-diff" type="Int64" repeat="8" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="modify-ability-percent" type="Int16" repeat="8" default="0" min="-32768" max="32767" />
+		<attribute name="passive-moveanim-idle" type="Seq" default="normal">
+			<case name="normal" />
+			<case name="dead" />
+			<case name="dead-hide" />
+			<case name="dead-back" />
+			<case name="dead-front" />
+			<case name="dead-swim-area" />
+			<case name="exhaustion" />
+			<case name="mount-linker" />
+			<case name="mount-linkee" />
+			<case name="inhalation_linker" />
+			<case name="inhalation_linkee" />
+			<case name="stun" />
+			<case name="stagger" />
+			<case name="down" />
+			<case name="block" />
+			<case name="air" />
+			<case name="air2" />
+			<case name="air3" />
+			<case name="kneel" />
+			<case name="magnetic" />
+			<case name="stiff" />
+			<case name="front_down" />
+			<case name="block2" />
+			<case name="flee" />
+			<case name="knockback-stand" />
+			<case name="knockback-kneel" />
+			<case name="knockback-frontdown" />
+			<case name="knockback-down" />
+			<case name="picking" />
+			<case name="fast-freezing" />
+			<case name="impregnability" />
+			<case name="hide" />
+			<case name="burrow" />
+			<case name="restoration" />
+			<case name="block3" />
+			<case name="landing-shock" />
+			<case name="catch" />
+			<case name="catched" />
+			<case name="catch-none-human" />
+			<case name="catched-none-human" />
+			<case name="catch-friend" />
+			<case name="catched-friend" />
+			<case name="catch-inhalation" />
+			<case name="catched-inhalation" />
+			<case name="npc-block" />
+			<case name="sit-down" />
+			<case name="silver-wep" />
+			<case name="ironfotess" />
+			<case name="presentation-linke" />
+			<case name="spider-web" />
+			<case name="state-social" />
+			<case name="block4" />
+			<case name="dead-duel" />
+		</attribute>
+		<attribute name="passive-moveanim" type="Ref" deprecated="True" />
+		<attribute name="pause-auto-targeting" type="Bool" default="n" />
+		<attribute name="not-targetable" type="Bool" default="n" />
+		<attribute name="is-dot-effect" type="Bool" default="n" />
+		<attribute name="no-critical-hit" type="Bool" default="n" />
+		<attribute name="party-broadcast" type="Bool" default="n" />
+		<attribute name="ui-slot" type="Seq" default="none">
+			<case name="none" />
+			<case name="buff" />
+			<case name="debuff" />
+			<case name="system" />
+			<case name="long-term" />
+			<case name="buff-disable" />
+		</attribute>
+		<attribute name="ui-category" type="Seq" default="none">
+			<case name="none" />
+			<case name="attraction" />
+			<case name="item-event" />
+			<case name="combat-common" />
+			<case name="combat-class" />
+			<case name="skill" />
+		</attribute>
+		<attribute name="use-extra-skill-stack-count" type="Bool" hidden="True" default="false" />
+		<attribute name="combat-job" type="Prop_seq" repeat="2" default="job-none">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="ui-difficult" type="Bool" default="n" />
+		<attribute name="is-transform-effect" type="Bool" default="n" />
+		<attribute name="is-reuse-standby-effect" type="Bool" default="n" />
+		<attribute name="item-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="soul" />
+			<case name="weapon" />
+			<case name="bracelet" />
+			<case name="nova" />
+			<case name="soul2" />
+			<case name="guardian-attack" />
+			<case name="guardian-defend" />
+			<case name="ring" />
+			<case name="earring" />
+			<case name="necklace" />
+			<case name="glove" />
+			<case name="belt" />
+		</attribute>
+		<attribute name="is-powergauge-effect" type="Bool" default="n" />
+		<attribute name="ignore-hide-buff-graph-effect" type="Bool" default="y" />
+		<attribute name="is-battle-royal-field-pc-info" type="Bool" default="n" />
+		<attribute name="battle-royal-field-effect-pouch-group" type="Seq" default="none">
+			<case name="none" />
+			<case name="1" />
+			<case name="2" />
+			<case name="3" />
+			<case name="4" />
+			<case name="5" />
+		</attribute>
+		<attribute name="grocery-effect-type" type="Seq" default="etc">
+			<case name="heal-potion" />
+			<case name="sp-potion" />
+			<case name="buff-item-01" />
+			<case name="buff-item-02" />
+			<case name="buff-item-03" />
+			<case name="buff-item-04" />
+			<case name="buff-item-05" />
+			<case name="buff-item-06" />
+			<case name="buff-item-07" />
+			<case name="buff-item-08" />
+			<case name="buff-item-09" />
+			<case name="buff-item-10" />
+			<case name="buff-item-11" />
+			<case name="buff-item-12" />
+			<case name="buff-item-13" />
+			<case name="buff-item-14" />
+			<case name="buff-item-15" />
+			<case name="buff-item-16" />
+			<case name="buff-item-17" />
+			<case name="buff-item-18" />
+			<case name="buff-item-19" />
+			<case name="buff-item-20" />
+			<case name="etc" />
+		</attribute>
+		<attribute name="grocery-effect-level" type="Int16" default="0" max="1000" />
+		<attribute name="knockback-jump" type="Bool" default="n" />
+		<attribute name="idleanimpriority" type="Int8" default="0" max="100" />
+		<attribute name="normal-component" type="XUnknown2" default="" max="256" />
+		<attribute name="critical-component" type="XUnknown2" default="" max="256" />
+		<attribute name="back-normal-component" type="XUnknown2" default="" max="256" />
+		<attribute name="back-critical-component" type="XUnknown2" default="" max="256" />
+		<attribute name="buff-continuance-component" type="XUnknown2" default="" max="256" />
+		<attribute name="immune-buff-component" type="XUnknown2" default="" max="256" />
+		<attribute name="detach-show" type="XUnknown2" default="" max="256" />
+		<attribute name="dispel-show" type="XUnknown2" default="" max="256" />
+		<attribute name="play-detach-show-hide" type="Bool" default="n" />
+		<attribute name="die-show" type="XUnknown2" default="" max="256" />
+		<attribute name="additional-die-show" type="XUnknown2" default="" max="256" />
+		<attribute name="exhaustion-show" type="XUnknown2" default="" max="256" />
+		<attribute name="immuned-show" type="XUnknown2" default="" max="256" />
+		<attribute name="caster-show" type="XUnknown2" default="" max="256" />
+		<attribute name="fire-show" type="XUnknown2" default="" max="256" />
+		<attribute name="animation-freeze" type="Bool" default="n" />
+		<attribute name="icon-texture" type="Ref" ref="icontexture" refel="1" />
+		<attribute name="icon-index" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="icon" type="Icon" max="32767" />
+		<attribute name="description" type="String" deprecated="True" default="" max="50" />
+		<attribute name="description2" type="Ref" ref="text" refel="1" />
+		<attribute name="description3" type="Ref" ref="text" refel="1" />
+		<attribute name="description4" type="Ref" ref="text" refel="1" />
+		<attribute name="description5" type="Ref" ref="text" refel="1" />
+		<attribute name="description-constellation" type="Ref" ref="text" refel="1" />
+		<attribute name="description2-arg-type" type="Seq" repeat="4" default="none">
+			<case name="none" />
+			<case name="r-integer-percent" />
+			<case name="r-integer-diff" />
+			<case name="r-support-percent" />
+			<case name="r-support-diff" />
+		</attribute>
+		<attribute name="description2-arg-value" type="String" repeat="4" default="" max="70" />
+		<attribute name="mount-attach-duration" type="Msec" default="0" max="1800000" />
+		<attribute name="mount-detach-duration" type="Msec" default="0" max="1800000" />
+		<attribute name="linker-abnormal" type="Ref" ref="linkmoveanim" refel="1" />
+		<attribute name="linkee-abnormal" type="Ref" ref="linkmoveanim" refel="1" />
+		<attribute name="link-attach-duration" type="Msec" default="0" max="1800000" />
+		<attribute name="link-detach-duration" type="Msec" default="0" max="1800000" />
+		<attribute name="catch-legs-physics" type="Bool" default="n" />
+		<attribute name="catch-arms-physics" type="Bool" default="n" />
+		<attribute name="catch-body-physics" type="Bool" default="n" />
+		<attribute name="camera-block" type="Bool" default="n" />
+		<attribute name="message-type" type="Seq" deprecated="True" default="no-message">
+			<case name="all" />
+			<case name="not-detach" />
+			<case name="no-message" />
+		</attribute>
+		<attribute name="battle-message-type" type="Seq" default="all-message">
+			<case name="no-all-message" />
+			<case name="attach" />
+			<case name="interval" />
+			<case name="attach-interval" />
+			<case name="detach" />
+			<case name="attach-detach" />
+			<case name="interval-detach" />
+			<case name="all-message" />
+		</attribute>
+		<attribute name="flash-sound-mode" type="String" default="" max="80" />
+		<attribute name="skillresultpriority" type="Int8" default="0" max="100" />
+		<attribute name="hit-show" type="XUnknown2" default="" max="256" />
+		<attribute name="miss-show" type="XUnknown2" default="" max="256" />
+		<attribute name="dodge-show" type="XUnknown2" default="" max="256" />
+		<attribute name="parry-show" type="XUnknown2" default="" max="256" />
+		<attribute name="perfect-parry-show" type="XUnknown2" default="" max="256" />
+		<attribute name="bounce-show" type="XUnknown2" default="" max="256" />
+		<attribute name="conter-show" type="XUnknown2" default="" max="256" />
+		<attribute name="critical-hit-show" type="XUnknown2" default="" max="256" />
+		<attribute name="damagesignal" type="Bool" default="n" />
+		<attribute name="play-despawn-show" type="Bool" default="n" />
+		<attribute name="play-transit" type="Bool" default="n" />
+		<attribute name="transit-time" type="Msec" default="0" max="1800000" />
+		<attribute name="duel-warp" type="Seq" default="none">
+			<case name="none" />
+			<case name="wait-zone" />
+			<case name="battle-zone" />
+		</attribute>
+		<attribute name="attach-notify-message" type="Ref" ref="game-message" refel="1" />
+		<attribute name="description-item-random-option" type="Ref" ref="text" refel="1" />
+		<sub name="none" />
+		<sub name="accumulated-damage-to-anyone">
+			<attribute name="max-accumulate-damage" type="Int64" default="0" max="9223372036854775807" />
+		</sub>
+		<sub name="accumulated-damage-from-1">
+			<attribute name="max-accumulate-damage" type="Int64" default="0" max="9223372036854775807" />
+		</sub>
+		<sub name="accumulated-damage-from-2">
+			<attribute name="max-accumulate-damage" type="Int64" default="0" max="9223372036854775807" />
+		</sub>
+		<sub name="accumulated-damage-from-3">
+			<attribute name="max-accumulate-damage" type="Int64" default="0" max="9223372036854775807" />
+		</sub>
+		<sub name="melee-physical-attack" />
+		<sub name="melee-physical-attack-hate">
+			<attribute name="hate-multiply-value" type="Int8" default="1" max="3" />
+			<attribute name="hate-diff-value" type="Int32" default="0" max="2147483647" />
+		</sub>
+		<sub name="melee-physical-attack-drain" />
+		<sub name="force-attack-hp-drain" />
+		<sub name="force-attack-sp-drain" />
+		<sub name="melee-physical-attack-sp-drain" />
+		<sub name="melee-physical-attack-hp-sp-drain" />
+		<sub name="force-attack-hp-sp-drain" />
+		<sub name="range-physical-attack" />
+		<sub name="force-attack" />
+		<sub name="force-attack-hate">
+			<attribute name="hate-multiply-value" type="Int8" default="1" max="3" />
+			<attribute name="hate-diff-value" type="Int32" default="0" max="2147483647" />
+		</sub>
+		<sub name="speed-physical-attack" />
+		<sub name="part-attack">
+			<attribute name="head-effect" type="Ref" repeat="2" ref="effect" refel="1" />
+			<attribute name="body-effect" type="Ref" repeat="2" ref="effect" refel="1" />
+			<attribute name="arm-effect" type="Ref" repeat="2" ref="effect" refel="1" />
+			<attribute name="leg-effect" type="Ref" repeat="2" ref="effect" refel="1" />
+		</sub>
+		<sub name="stance">
+			<attribute name="stance" type="Prop_seq" required="True">
+				<case name="stance-none" />
+				<case name="npc기본자세" />
+				<case name="천검세" />
+				<case name="검령세" />
+				<case name="단타" />
+				<case name="연계" />
+				<case name="체술" />
+				<case name="납도" />
+				<case name="경기공" />
+				<case name="연기공" />
+				<case name="강기공" />
+				<case name="권총모드" />
+				<case name="런처모드" />
+				<case name="파괴" />
+				<case name="보호" />
+				<case name="철벽" />
+				<case name="소환" />
+				<case name="교란" />
+				<case name="은신" />
+				<case name="암살" />
+				<case name="검술" />
+				<case name="어검" />
+				<case name="발도" />
+				<case name="npc자세1" />
+				<case name="npc자세2" />
+				<case name="npc자세3" />
+				<case name="소환수-follow" />
+				<case name="소환수-command-1" />
+				<case name="소환수-flying" />
+				<case name="주술" />
+				<case name="강림" />
+				<case name="유권" />
+				<case name="기공" />
+				<case name="냉정" />
+				<case name="광기" />
+				<case name="장궁" />
+				<case name="정령궁" />
+				<case name="찌르기" />
+				<case name="베기" />
+				<case name="청뢰" />
+				<case name="혈뢰" />
+				<case name="어검세" />
+				<case name="정수" />
+				<case name="역수" />
+				<case name="한손역수" />
+				<case name="간이연주" />
+				<case name="우퍼" />
+				<case name="연주" />
+				<case name="쌍월" />
+				<case name="뇌신" />
+				<case name="침식" />
+				<case name="염제" />
+				<case name="npc주시자세1" />
+				<case name="npc주시자세2" />
+				<case name="npc주시자세3" />
+			</attribute>
+		</sub>
+		<sub name="hp-heal">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="hp-heal-attack-power" />
+		<sub name="hp-damage">
+			<attribute name="hp-diff" type="Int64" default="0" min="-500000000000" max="9223372036854775807" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="pve-boss-level-npc-hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="pve-boss-level-npc-hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="pvp-hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="pvp-hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="hp-set-fixed-value" />
+		<sub name="hp-set-max-hp-fixed-percent" />
+		<sub name="guard-gauge-heal">
+			<attribute name="guard-gauge-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="guard-gauge-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="guard-gauge-damage">
+			<attribute name="guard-gauge-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="guard-gauge-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="food-interval-hp-heal">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="set-immune-breaker">
+			<attribute name="immune-breaker-attribute" type="Seq16" default="none">
+				<case name="none" />
+				<case name="회복" />
+				<case name="진드기" />
+				<case name="불" />
+				<case name="은사" />
+				<case name="거미줄" />
+				<case name="독" />
+				<case name="은신" />
+				<case name="투명" />
+				<case name="광기" />
+				<case name="얼음감옥" />
+				<case name="독나방" />
+				<case name="가젯드랍" />
+				<case name="다운" />
+				<case name="넉백대시" />
+				<case name="방어불가" />
+				<case name="도발" />
+				<case name="도망" />
+				<case name="이동불가" />
+				<case name="대시불가" />
+				<case name="감속" />
+				<case name="기절" />
+				<case name="얼어붙음" />
+				<case name="행동불가" />
+				<case name="출혈" />
+				<case name="치유" />
+				<case name="얼음" />
+				<case name="맹독" />
+				<case name="막기" />
+				<case name="속박" />
+				<case name="제압" />
+				<case name="위치바꾸기" />
+				<case name="장악연계" />
+				<case name="무적" />
+				<case name="멍해짐" />
+				<case name="앞차기" />
+				<case name="혼절" />
+				<case name="광폭해짐" />
+				<case name="공중" />
+				<case name="그로기" />
+				<case name="난무" />
+				<case name="넉백" />
+				<case name="흡공" />
+				<case name="퀘스트-1" />
+				<case name="퀘스트-2" />
+				<case name="퀘스트-3" />
+				<case name="퀘스트-4" />
+				<case name="퀘스트-5" />
+				<case name="대상공중" />
+				<case name="보스-1" />
+				<case name="보스-2" />
+				<case name="보스-3" />
+				<case name="보스대쉬" />
+				<case name="그림자" />
+				<case name="중첩불가1" />
+				<case name="중첩불가2" />
+				<case name="조건만족" />
+				<case name="소환사독" />
+				<case name="탱킹장판" />
+				<case name="검막" />
+				<case name="비트" />
+				<case name="홍옥" />
+				<case name="녹주석" />
+				<case name="보스저항-1" />
+				<case name="보스저항-2" />
+				<case name="보스저항-3" />
+				<case name="보스저항-4" />
+				<case name="보스저항-5" />
+				<case name="낙인저항-1" />
+				<case name="낙인저항-2" />
+				<case name="낙인저항-3" />
+				<case name="낙인저항-4" />
+				<case name="마성-1" />
+				<case name="마성-2" />
+				<case name="마성-3" />
+				<case name="마성-4" />
+				<case name="주술체" />
+				<case name="소울" />
+				<case name="부적" />
+				<case name="환마" />
+				<case name="반사" />
+				<case name="NPC-1" />
+				<case name="NPC-2" />
+				<case name="NPC-3" />
+				<case name="NPC-4" />
+				<case name="NPC-5" />
+				<case name="NPC-6" />
+				<case name="NPC-7" />
+				<case name="NPC-8" />
+				<case name="NPC-9" />
+				<case name="NPC-10" />
+				<case name="낙인저항-5" />
+				<case name="낙인저항-6" />
+				<case name="낙인저항-7" />
+				<case name="낙인저항-8" />
+				<case name="클래스-1" />
+				<case name="클래스-2" />
+				<case name="클래스-3" />
+				<case name="클래스-4" />
+				<case name="클래스-5" />
+				<case name="클래스-6" />
+				<case name="클래스-7" />
+				<case name="클래스-8" />
+				<case name="클래스-9" />
+				<case name="클래스-10" />
+				<case name="클래스-11" />
+				<case name="클래스-12" />
+				<case name="클래스-13" />
+				<case name="클래스-14" />
+				<case name="클래스-15" />
+				<case name="클래스-16" />
+				<case name="클래스-17" />
+				<case name="클래스-18" />
+				<case name="클래스-19" />
+				<case name="클래스-20" />
+				<case name="클래스-21" />
+				<case name="클래스-22" />
+				<case name="클래스-23" />
+				<case name="클래스-24" />
+				<case name="클래스-25" />
+				<case name="클래스-26" />
+				<case name="클래스-27" />
+				<case name="클래스-28" />
+				<case name="클래스-29" />
+				<case name="클래스-30" />
+				<case name="클래스-31" />
+				<case name="클래스-32" />
+				<case name="클래스-33" />
+				<case name="클래스-34" />
+				<case name="클래스-35" />
+				<case name="클래스-36" />
+				<case name="클래스-37" />
+				<case name="클래스-38" />
+				<case name="클래스-39" />
+				<case name="클래스-40" />
+				<case name="클래스-41" />
+				<case name="클래스-42" />
+				<case name="클래스-43" />
+				<case name="클래스-44" />
+				<case name="클래스-45" />
+				<case name="클래스-46" />
+				<case name="클래스-47" />
+				<case name="클래스-48" />
+				<case name="클래스-49" />
+				<case name="클래스-50" />
+				<case name="클래스-51" />
+				<case name="클래스-52" />
+				<case name="클래스-53" />
+				<case name="클래스-54" />
+				<case name="클래스-55" />
+				<case name="클래스-56" />
+				<case name="클래스-57" />
+				<case name="클래스-58" />
+				<case name="클래스-59" />
+				<case name="클래스-60" />
+				<case name="아이템조건-1" />
+				<case name="어택글라이드" />
+				<case name="문양-1" />
+				<case name="문양-2" />
+				<case name="문양-3" />
+				<case name="문양-4" />
+				<case name="문양-5" />
+				<case name="문양-6" />
+				<case name="문양-7" />
+				<case name="문양-8" />
+				<case name="문양-9" />
+				<case name="문양-10" />
+				<case name="문양-11" />
+				<case name="문양-12" />
+				<case name="문양-13" />
+				<case name="문양-14" />
+				<case name="문양-15" />
+				<case name="문양-16" />
+				<case name="문양-17" />
+				<case name="문양-18" />
+				<case name="문양-19" />
+				<case name="문양-20" />
+				<case name="기믹-1" />
+				<case name="기믹-2" />
+				<case name="기믹-3" />
+				<case name="기믹-4" />
+				<case name="기믹-5" />
+				<case name="던전보스-1" />
+				<case name="기믹-6" />
+				<case name="기믹-7" />
+				<case name="기믹-8" />
+				<case name="기믹-9" />
+				<case name="기믹-10" />
+				<case name="중첩불가3" />
+			</attribute>
+			<attribute name="immune-breaker-count" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="immune-breaker-duration" type="Msec" default="0" min="-2147483647" max="2147483647" />
+		</sub>
+		<sub name="sp-heal" />
+		<sub name="sp-damage" />
+		<sub name="desire-increase">
+			<attribute name="hate-diff" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="desire-attack-normal-diff" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="set-min-hate" />
+		<sub name="set-max-hate" />
+		<sub name="ruin-phantom" />
+		<sub name="shout-physical-attack">
+			<attribute name="shout-power-percent" type="Int16" default="0" max="5000" />
+		</sub>
+		<sub name="resurrection">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="hp-drain">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="pve-boss-level-npc-hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="pve-boss-level-npc-hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="pvp-hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="pvp-hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="hp-transfer">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="limit-hp-min" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="cast-cancel" />
+		<sub name="unlink" />
+		<sub name="extend-link">
+			<attribute name="extend-duration" type="Msec" required="True" max="60000" />
+		</sub>
+		<sub name="extend-effect">
+			<attribute name="effect-type" type="Sub" required="True" ref="effect" refel="1" />
+			<attribute name="extend-duration" type="Msec" required="True" max="60000" />
+		</sub>
+		<sub name="fluctuation-time-effect">
+			<attribute name="effect-type" type="Sub" required="True" ref="effect" refel="1" />
+			<attribute name="fluctuation-time-effect-duration" type="Msec" required="True" min="-2147483647" max="36000000" />
+			<attribute name="effect-duration-fluctuation-max" type="Msec" required="True" min="-2147483647" max="36000000" />
+		</sub>
+		<sub name="dispel-type" />
+		<sub name="dispel-attribute" />
+		<sub name="dispel-buff" />
+		<sub name="dispel-debuff" />
+		<sub name="transit">
+			<attribute name="zone-id" type="Int32" required="True" max="65535" />
+			<attribute name="pc-spawn" type="Int8" default="0" max="127" />
+		</sub>
+		<sub name="return" />
+		<sub name="return-to-basecamp">
+			<attribute name="basecamp" type="Ref" required="True" ref="zonebasecamp" refel="1" />
+		</sub>
+		<sub name="return-sim-skill">
+			<attribute name="skill" type="Ref" required="True" ref="skill" refel="1" />
+			<attribute name="skill3" type="Ref" required="True" ref="skill3" refel="1" />
+			<attribute name="finish" type="Bool" default="n" />
+		</sub>
+		<sub name="instantaneous-death">
+			<attribute name="death-probability" type="Int8" default="0" max="100" />
+			<attribute name="exhaustion" type="Bool" default="n" />
+		</sub>
+		<sub name="internal-force-attack">
+			<attribute name="additional-power-probability" type="Int8" default="100" max="100" />
+			<attribute name="additional-power-percent" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="additional-power-diff" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="refill-vitality" />
+		<sub name="recovery-content-quota">
+			<attribute name="content-quota-id" type="Int32" default="0" max="2147483647" />
+			<attribute name="value" type="Int16" default="0" max="32767" />
+			<attribute name="restrict-quota-id" type="Int32" default="0" max="2147483647" />
+		</sub>
+		<sub name="increase-special-skill-gauge">
+			<attribute name="increase-amount" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="increase-caster-special-skill-gauge">
+			<attribute name="increase-amount" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="modify-break-gauge" />
+		<sub name="additional-hp-heal" />
+		<sub name="bound" />
+		<sub name="link">
+			<attribute name="link-type" type="Seq" required="True">
+				<case name="none" />
+				<case name="mount" />
+				<case name="inhalation" />
+				<case name="slugfest" />
+				<case name="catch" />
+				<case name="catch-none-human" />
+				<case name="catch-friend" />
+				<case name="inhalation-catch" />
+				<case name="range-catch" />
+			</attribute>
+			<attribute name="link-stage" type="Seq" required="True">
+				<case name="none" />
+				<case name="stage-1" />
+				<case name="stage-2" />
+			</attribute>
+			<attribute name="catch-caster-effect" type="Ref" ref="effect" refel="1" />
+			<attribute name="catch-target-effect" type="Ref" ref="effect" refel="1" />
+			<attribute name="detach-effect" type="Ref" ref="effect" refel="1" />
+			<attribute name="detach-angle-by-dispeled" type="Seq" default="0">
+				<case name="0" />
+				<case name="45" />
+				<case name="90" />
+				<case name="135" />
+				<case name="180" />
+				<case name="225" />
+				<case name="270" />
+				<case name="315" />
+			</attribute>
+			<attribute name="detach-margin-by-dispeled" type="Distance" default="0" min="-32768" max="32767" />
+			<attribute name="detach-angle-by-timeout" type="Seq" default="0">
+				<case name="0" />
+				<case name="45" />
+				<case name="90" />
+				<case name="135" />
+				<case name="180" />
+				<case name="225" />
+				<case name="270" />
+				<case name="315" />
+			</attribute>
+			<attribute name="detach-margin-by-timeout" type="Distance" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="knockback">
+			<attribute name="knockback-speed" type="Velocity" required="True" max="80000" />
+			<attribute name="caster-dash" type="Bool" default="n" />
+			<attribute name="knockback-direction" type="Seq" default="push">
+				<case name="push" />
+				<case name="pull" />
+				<case name="left" />
+				<case name="right" />
+			</attribute>
+			<attribute name="knockback-type" type="Seq" default="throw">
+				<case name="throw" />
+				<case name="roll" />
+			</attribute>
+			<attribute name="target-yaw-to-caster" type="Bool" default="n" />
+			<attribute name="do-not-apply-block-move" type="Bool" default="n" />
+		</sub>
+		<sub name="tumbling">
+			<attribute name="tumbling-speed" type="Velocity" required="True" max="80000" />
+			<attribute name="tumbling-direction" type="Seq" required="True">
+				<case name="front" />
+				<case name="back" />
+				<case name="left" />
+				<case name="right" />
+				<case name="front-right" />
+				<case name="front-left" />
+				<case name="back-right" />
+				<case name="back-left" />
+			</attribute>
+			<attribute name="target-yaw-to-back" type="Bool" default="n" />
+		</sub>
+		<sub name="detection" />
+		<sub name="put-in-sword">
+			<attribute name="speed-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="bind-phantom" />
+		<sub name="bleeding">
+			<attribute name="hp-diff" type="Int64" default="0" min="-500000000000" max="9223372036854775807" />
+			<attribute name="bleeding-max-hp-percent" type="Int32" default="0" min="-2147483647" max="100000" />
+		</sub>
+		<sub name="buff-max-hp">
+			<attribute name="max-hp-diff" type="Int32" default="0" max="2147483647" />
+			<attribute name="buff-max-hp-percent" type="Int16" default="0" max="1000" />
+		</sub>
+		<sub name="buff-max-sp" />
+		<sub name="additional-hp">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="1000000" />
+			<attribute name="additional-max-hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="absorb-last-damage" type="Bool" default="n" />
+			<attribute name="ref-target-max-hp" type="Bool" default="y" />
+			<attribute name="use-additional-max-hp-percent-max" type="Bool" default="n" />
+			<attribute name="additional-max-hp-percent-max" type="Int32" default="0" max="100" />
+		</sub>
+		<sub name="additional-hp2">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="1000000" />
+			<attribute name="additional-max-hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="absorb-last-damage" type="Bool" default="n" />
+			<attribute name="ref-target-max-hp" type="Bool" default="y" />
+			<attribute name="use-additional-max-hp-percent-max" type="Bool" default="n" />
+			<attribute name="additional-max-hp-percent-max" type="Int32" default="0" max="100" />
+		</sub>
+		<sub name="additional-hp3">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="1000000" />
+			<attribute name="additional-max-hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="absorb-last-damage" type="Bool" default="n" />
+			<attribute name="ref-target-max-hp" type="Bool" default="y" />
+			<attribute name="use-additional-max-hp-percent-max" type="Bool" default="n" />
+			<attribute name="additional-max-hp-percent-max" type="Int32" default="0" max="100" />
+		</sub>
+		<sub name="stun" />
+		<sub name="immune-attribute">
+			<attribute name="immune-attribute" type="Seq16" repeat="4" default="none">
+				<case name="none" />
+				<case name="회복" />
+				<case name="진드기" />
+				<case name="불" />
+				<case name="은사" />
+				<case name="거미줄" />
+				<case name="독" />
+				<case name="은신" />
+				<case name="투명" />
+				<case name="광기" />
+				<case name="얼음감옥" />
+				<case name="독나방" />
+				<case name="가젯드랍" />
+				<case name="다운" />
+				<case name="넉백대시" />
+				<case name="방어불가" />
+				<case name="도발" />
+				<case name="도망" />
+				<case name="이동불가" />
+				<case name="대시불가" />
+				<case name="감속" />
+				<case name="기절" />
+				<case name="얼어붙음" />
+				<case name="행동불가" />
+				<case name="출혈" />
+				<case name="치유" />
+				<case name="얼음" />
+				<case name="맹독" />
+				<case name="막기" />
+				<case name="속박" />
+				<case name="제압" />
+				<case name="위치바꾸기" />
+				<case name="장악연계" />
+				<case name="무적" />
+				<case name="멍해짐" />
+				<case name="앞차기" />
+				<case name="혼절" />
+				<case name="광폭해짐" />
+				<case name="공중" />
+				<case name="그로기" />
+				<case name="난무" />
+				<case name="넉백" />
+				<case name="흡공" />
+				<case name="퀘스트-1" />
+				<case name="퀘스트-2" />
+				<case name="퀘스트-3" />
+				<case name="퀘스트-4" />
+				<case name="퀘스트-5" />
+				<case name="대상공중" />
+				<case name="보스-1" />
+				<case name="보스-2" />
+				<case name="보스-3" />
+				<case name="보스대쉬" />
+				<case name="그림자" />
+				<case name="중첩불가1" />
+				<case name="중첩불가2" />
+				<case name="조건만족" />
+				<case name="소환사독" />
+				<case name="탱킹장판" />
+				<case name="검막" />
+				<case name="비트" />
+				<case name="홍옥" />
+				<case name="녹주석" />
+				<case name="보스저항-1" />
+				<case name="보스저항-2" />
+				<case name="보스저항-3" />
+				<case name="보스저항-4" />
+				<case name="보스저항-5" />
+				<case name="낙인저항-1" />
+				<case name="낙인저항-2" />
+				<case name="낙인저항-3" />
+				<case name="낙인저항-4" />
+				<case name="마성-1" />
+				<case name="마성-2" />
+				<case name="마성-3" />
+				<case name="마성-4" />
+				<case name="주술체" />
+				<case name="소울" />
+				<case name="부적" />
+				<case name="환마" />
+				<case name="반사" />
+				<case name="NPC-1" />
+				<case name="NPC-2" />
+				<case name="NPC-3" />
+				<case name="NPC-4" />
+				<case name="NPC-5" />
+				<case name="NPC-6" />
+				<case name="NPC-7" />
+				<case name="NPC-8" />
+				<case name="NPC-9" />
+				<case name="NPC-10" />
+				<case name="낙인저항-5" />
+				<case name="낙인저항-6" />
+				<case name="낙인저항-7" />
+				<case name="낙인저항-8" />
+				<case name="클래스-1" />
+				<case name="클래스-2" />
+				<case name="클래스-3" />
+				<case name="클래스-4" />
+				<case name="클래스-5" />
+				<case name="클래스-6" />
+				<case name="클래스-7" />
+				<case name="클래스-8" />
+				<case name="클래스-9" />
+				<case name="클래스-10" />
+				<case name="클래스-11" />
+				<case name="클래스-12" />
+				<case name="클래스-13" />
+				<case name="클래스-14" />
+				<case name="클래스-15" />
+				<case name="클래스-16" />
+				<case name="클래스-17" />
+				<case name="클래스-18" />
+				<case name="클래스-19" />
+				<case name="클래스-20" />
+				<case name="클래스-21" />
+				<case name="클래스-22" />
+				<case name="클래스-23" />
+				<case name="클래스-24" />
+				<case name="클래스-25" />
+				<case name="클래스-26" />
+				<case name="클래스-27" />
+				<case name="클래스-28" />
+				<case name="클래스-29" />
+				<case name="클래스-30" />
+				<case name="클래스-31" />
+				<case name="클래스-32" />
+				<case name="클래스-33" />
+				<case name="클래스-34" />
+				<case name="클래스-35" />
+				<case name="클래스-36" />
+				<case name="클래스-37" />
+				<case name="클래스-38" />
+				<case name="클래스-39" />
+				<case name="클래스-40" />
+				<case name="클래스-41" />
+				<case name="클래스-42" />
+				<case name="클래스-43" />
+				<case name="클래스-44" />
+				<case name="클래스-45" />
+				<case name="클래스-46" />
+				<case name="클래스-47" />
+				<case name="클래스-48" />
+				<case name="클래스-49" />
+				<case name="클래스-50" />
+				<case name="클래스-51" />
+				<case name="클래스-52" />
+				<case name="클래스-53" />
+				<case name="클래스-54" />
+				<case name="클래스-55" />
+				<case name="클래스-56" />
+				<case name="클래스-57" />
+				<case name="클래스-58" />
+				<case name="클래스-59" />
+				<case name="클래스-60" />
+				<case name="아이템조건-1" />
+				<case name="어택글라이드" />
+				<case name="문양-1" />
+				<case name="문양-2" />
+				<case name="문양-3" />
+				<case name="문양-4" />
+				<case name="문양-5" />
+				<case name="문양-6" />
+				<case name="문양-7" />
+				<case name="문양-8" />
+				<case name="문양-9" />
+				<case name="문양-10" />
+				<case name="문양-11" />
+				<case name="문양-12" />
+				<case name="문양-13" />
+				<case name="문양-14" />
+				<case name="문양-15" />
+				<case name="문양-16" />
+				<case name="문양-17" />
+				<case name="문양-18" />
+				<case name="문양-19" />
+				<case name="문양-20" />
+				<case name="기믹-1" />
+				<case name="기믹-2" />
+				<case name="기믹-3" />
+				<case name="기믹-4" />
+				<case name="기믹-5" />
+				<case name="던전보스-1" />
+				<case name="기믹-6" />
+				<case name="기믹-7" />
+				<case name="기믹-8" />
+				<case name="기믹-9" />
+				<case name="기믹-10" />
+				<case name="중첩불가3" />
+			</attribute>
+			<attribute name="immune-attribute-value" type="Int64" hidden="True" default="0" min="-9223372036854775807" max="9223372036854775807" />
+			<attribute name="immune-attribute-value-2" type="Int64" hidden="True" default="0" min="-9223372036854775807" max="9223372036854775807" />
+			<attribute name="immune-attribute-value-3" type="Int64" hidden="True" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		</sub>
+		<sub name="immune-debuff" />
+		<sub name="invincible" />
+		<sub name="silent" />
+		<sub name="seal-military-arts" />
+		<sub name="provocation" />
+		<sub name="increase-defence-power" />
+		<sub name="interval-hp-heal">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="interval-hp-heal-2">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="interval-hp-heal-3">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="item-interval-hp-heal">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="item-interval-hp-heal-2">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="item-interval-hp-heal-3">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="interval-hp-damage">
+			<attribute name="hp-diff" type="Int64" default="0" min="-500000000000" max="9223372036854775807" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="interval-hp-damage-2">
+			<attribute name="hp-diff" type="Int64" default="0" min="-500000000000" max="9223372036854775807" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="interval-hp-damage-3">
+			<attribute name="hp-diff" type="Int64" default="0" min="-500000000000" max="9223372036854775807" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="interval-sp-heal" />
+		<sub name="interval-sp-heal-2" />
+		<sub name="interval-sp-heal-3" />
+		<sub name="interval-sp-heal-4" />
+		<sub name="item-interval-sp-heal-1" />
+		<sub name="item-interval-sp-heal-2" />
+		<sub name="item-interval-sp-heal-3" />
+		<sub name="item-interval-sp-heal-4" />
+		<sub name="interval-sp-damage" />
+		<sub name="interval-guard-gauge-heal">
+			<attribute name="guard-gauge-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="guard-gauge-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="stagger">
+			<attribute name="speed-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="flash" />
+		<sub name="internal-injury">
+			<attribute name="ability-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="midair-1" />
+		<sub name="midair-2" />
+		<sub name="midair-3" />
+		<sub name="down" />
+		<sub name="swoon">
+			<attribute name="heal-hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="heal-hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="kneel" />
+		<sub name="knob-attack" />
+		<sub name="buff-parry" />
+		<sub name="buff-bounce" />
+		<sub name="opening-eyes" />
+		<sub name="immediately-exec" />
+		<sub name="increase-force-damage" />
+		<sub name="increase-heal">
+			<attribute name="additional-heal-percent" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="additional-heal-diff" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="force-amplification">
+			<attribute name="ability-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="concentration" />
+		<sub name="special-deification" />
+		<sub name="marking">
+			<attribute name="speed-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="vital-attacked">
+			<attribute name="ability-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="infinity-shot" />
+		<sub name="external-injury" />
+		<sub name="external-injury-damage" />
+		<sub name="embers">
+			<attribute name="additional-power-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="embers-explosion" />
+		<sub name="force-seed" />
+		<sub name="frostbite" />
+		<sub name="frostbite-drain" />
+		<sub name="magnetic-seal" />
+		<sub name="fast-freezing" />
+		<sub name="rupture" />
+		<sub name="impregnability" />
+		<sub name="prickblood" />
+		<sub name="defence" />
+		<sub name="wildfire-1" />
+		<sub name="wildfire-2" />
+		<sub name="wildfire-3" />
+		<sub name="wildfire-1-explosion" />
+		<sub name="wildfire-2-explosion" />
+		<sub name="wildfire-3-explosion" />
+		<sub name="hide" />
+		<sub name="burrow" />
+		<sub name="burrow-scan" />
+		<sub name="smokescreen" />
+		<sub name="detect-hiding" />
+		<sub name="poison-fog">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="struggle" />
+		<sub name="modify-ability-1" />
+		<sub name="modify-ability-2" />
+		<sub name="modify-ability-3" />
+		<sub name="modify-ability-4" />
+		<sub name="modify-ability-5" />
+		<sub name="modify-ability-6" />
+		<sub name="modify-ability-7" />
+		<sub name="modify-ability-8" />
+		<sub name="modify-ability-9" />
+		<sub name="modify-ability-10" />
+		<sub name="modify-ability-11" />
+		<sub name="modify-ability-12" />
+		<sub name="modify-ability-13" />
+		<sub name="modify-ability-14" />
+		<sub name="modify-ability-15" />
+		<sub name="modify-ability-16" />
+		<sub name="modify-ability-17" />
+		<sub name="modify-ability-18" />
+		<sub name="modify-ability-19" />
+		<sub name="modify-ability-20" />
+		<sub name="modify-ability-21" />
+		<sub name="modify-ability-22" />
+		<sub name="modify-ability-23" />
+		<sub name="modify-ability-24" />
+		<sub name="modify-ability-25" />
+		<sub name="modify-ability-26" />
+		<sub name="modify-ability-27" />
+		<sub name="modify-ability-28" />
+		<sub name="modify-ability-29" />
+		<sub name="modify-ability-30" />
+		<sub name="modify-ability-31" />
+		<sub name="modify-ability-32" />
+		<sub name="modify-ability-33" />
+		<sub name="modify-ability-34" />
+		<sub name="modify-ability-35" />
+		<sub name="modify-ability-36" />
+		<sub name="modify-ability-37" />
+		<sub name="modify-ability-38" />
+		<sub name="modify-ability-39" />
+		<sub name="modify-ability-40" />
+		<sub name="modify-ability-41" />
+		<sub name="modify-ability-42" />
+		<sub name="modify-ability-43" />
+		<sub name="modify-ability-44" />
+		<sub name="modify-ability-45" />
+		<sub name="modify-ability-46" />
+		<sub name="modify-ability-47" />
+		<sub name="modify-ability-48" />
+		<sub name="modify-ability-49" />
+		<sub name="modify-ability-50" />
+		<sub name="modify-ability-51" />
+		<sub name="modify-ability-52" />
+		<sub name="modify-ability-53" />
+		<sub name="modify-ability-54" />
+		<sub name="modify-ability-55" />
+		<sub name="modify-ability-56" />
+		<sub name="modify-ability-57" />
+		<sub name="modify-ability-58" />
+		<sub name="modify-ability-59" />
+		<sub name="modify-ability-60" />
+		<sub name="modify-ability-61" />
+		<sub name="modify-ability-62" />
+		<sub name="modify-ability-63" />
+		<sub name="modify-ability-64" />
+		<sub name="modify-ability-65" />
+		<sub name="modify-ability-66" />
+		<sub name="modify-ability-67" />
+		<sub name="modify-ability-68" />
+		<sub name="modify-ability-69" />
+		<sub name="modify-ability-70" />
+		<sub name="modify-ability-71" />
+		<sub name="modify-ability-72" />
+		<sub name="modify-ability-73" />
+		<sub name="modify-ability-74" />
+		<sub name="modify-ability-75" />
+		<sub name="modify-ability-76" />
+		<sub name="modify-ability-77" />
+		<sub name="modify-ability-78" />
+		<sub name="modify-ability-79" />
+		<sub name="modify-ability-80" />
+		<sub name="modify-ability-81" />
+		<sub name="modify-ability-82" />
+		<sub name="modify-ability-83" />
+		<sub name="modify-ability-84" />
+		<sub name="modify-ability-85" />
+		<sub name="modify-ability-86" />
+		<sub name="modify-ability-87" />
+		<sub name="modify-ability-88" />
+		<sub name="modify-ability-89" />
+		<sub name="modify-ability-90" />
+		<sub name="modify-ability-91" />
+		<sub name="modify-ability-92" />
+		<sub name="modify-ability-93" />
+		<sub name="modify-ability-94" />
+		<sub name="modify-ability-95" />
+		<sub name="modify-ability-96" />
+		<sub name="modify-ability-97" />
+		<sub name="modify-ability-98" />
+		<sub name="modify-ability-99" />
+		<sub name="modify-ability-100" />
+		<sub name="modify-ability-101" />
+		<sub name="modify-ability-102" />
+		<sub name="modify-ability-103" />
+		<sub name="modify-ability-104" />
+		<sub name="modify-ability-105" />
+		<sub name="modify-ability-106" />
+		<sub name="modify-ability-107" />
+		<sub name="modify-ability-108" />
+		<sub name="modify-ability-109" />
+		<sub name="modify-ability-110" />
+		<sub name="modify-ability-111" />
+		<sub name="modify-ability-112" />
+		<sub name="modify-ability-113" />
+		<sub name="modify-ability-114" />
+		<sub name="modify-ability-115" />
+		<sub name="modify-ability-116" />
+		<sub name="modify-ability-117" />
+		<sub name="modify-ability-118" />
+		<sub name="modify-ability-119" />
+		<sub name="modify-ability-120" />
+		<sub name="modify-ability-121" />
+		<sub name="modify-ability-122" />
+		<sub name="modify-ability-123" />
+		<sub name="modify-ability-124" />
+		<sub name="modify-ability-125" />
+		<sub name="modify-ability-126" />
+		<sub name="modify-ability-127" />
+		<sub name="modify-ability-128" />
+		<sub name="modify-ability-129" />
+		<sub name="modify-ability-130" />
+		<sub name="modify-ability-131" />
+		<sub name="modify-ability-132" />
+		<sub name="modify-ability-133" />
+		<sub name="modify-ability-134" />
+		<sub name="modify-ability-135" />
+		<sub name="modify-ability-136" />
+		<sub name="modify-ability-137" />
+		<sub name="modify-ability-138" />
+		<sub name="modify-ability-139" />
+		<sub name="modify-ability-140" />
+		<sub name="modify-ability-141" />
+		<sub name="modify-ability-142" />
+		<sub name="modify-ability-143" />
+		<sub name="modify-ability-144" />
+		<sub name="modify-ability-145" />
+		<sub name="modify-ability-146" />
+		<sub name="modify-ability-147" />
+		<sub name="modify-ability-148" />
+		<sub name="modify-ability-149" />
+		<sub name="modify-ability-150" />
+		<sub name="modify-ability-151" />
+		<sub name="modify-ability-152" />
+		<sub name="modify-ability-153" />
+		<sub name="modify-ability-154" />
+		<sub name="modify-ability-155" />
+		<sub name="modify-ability-156" />
+		<sub name="modify-ability-157" />
+		<sub name="modify-ability-158" />
+		<sub name="modify-ability-159" />
+		<sub name="modify-ability-160" />
+		<sub name="modify-ability-161" />
+		<sub name="modify-ability-162" />
+		<sub name="modify-ability-163" />
+		<sub name="modify-ability-164" />
+		<sub name="modify-ability-165" />
+		<sub name="modify-ability-166" />
+		<sub name="modify-ability-167" />
+		<sub name="modify-ability-168" />
+		<sub name="modify-ability-169" />
+		<sub name="modify-ability-170" />
+		<sub name="modify-ability-171" />
+		<sub name="modify-ability-172" />
+		<sub name="modify-ability-173" />
+		<sub name="modify-ability-174" />
+		<sub name="modify-ability-175" />
+		<sub name="modify-ability-176" />
+		<sub name="modify-ability-177" />
+		<sub name="modify-ability-178" />
+		<sub name="modify-ability-179" />
+		<sub name="modify-ability-180" />
+		<sub name="modify-ability-181" />
+		<sub name="modify-ability-182" />
+		<sub name="modify-ability-183" />
+		<sub name="modify-ability-184" />
+		<sub name="modify-ability-185" />
+		<sub name="modify-ability-186" />
+		<sub name="modify-ability-187" />
+		<sub name="modify-ability-188" />
+		<sub name="modify-ability-189" />
+		<sub name="modify-ability-190" />
+		<sub name="modify-ability-191" />
+		<sub name="modify-ability-192" />
+		<sub name="modify-ability-193" />
+		<sub name="modify-ability-194" />
+		<sub name="modify-ability-195" />
+		<sub name="modify-ability-196" />
+		<sub name="modify-ability-197" />
+		<sub name="modify-ability-198" />
+		<sub name="modify-ability-199" />
+		<sub name="modify-ability-200" />
+		<sub name="modify-ability-201" />
+		<sub name="modify-ability-202" />
+		<sub name="modify-ability-203" />
+		<sub name="modify-ability-204" />
+		<sub name="modify-ability-205" />
+		<sub name="modify-ability-206" />
+		<sub name="modify-ability-207" />
+		<sub name="modify-ability-208" />
+		<sub name="modify-ability-209" />
+		<sub name="modify-ability-210" />
+		<sub name="modify-ability-211" />
+		<sub name="modify-ability-212" />
+		<sub name="modify-ability-213" />
+		<sub name="modify-ability-214" />
+		<sub name="modify-ability-215" />
+		<sub name="modify-ability-216" />
+		<sub name="modify-ability-217" />
+		<sub name="modify-ability-218" />
+		<sub name="modify-ability-219" />
+		<sub name="modify-ability-220" />
+		<sub name="modify-ability-221" />
+		<sub name="modify-ability-222" />
+		<sub name="modify-ability-223" />
+		<sub name="modify-ability-224" />
+		<sub name="modify-ability-225" />
+		<sub name="modify-ability-226" />
+		<sub name="modify-ability-227" />
+		<sub name="modify-ability-228" />
+		<sub name="modify-ability-229" />
+		<sub name="modify-ability-230" />
+		<sub name="modify-ability-231" />
+		<sub name="modify-ability-232" />
+		<sub name="modify-ability-233" />
+		<sub name="modify-ability-234" />
+		<sub name="modify-ability-235" />
+		<sub name="modify-ability-236" />
+		<sub name="modify-ability-237" />
+		<sub name="modify-ability-238" />
+		<sub name="modify-ability-239" />
+		<sub name="modify-ability-240" />
+		<sub name="modify-ability-241" />
+		<sub name="modify-ability-242" />
+		<sub name="modify-ability-243" />
+		<sub name="modify-ability-244" />
+		<sub name="modify-ability-245" />
+		<sub name="modify-ability-246" />
+		<sub name="modify-ability-247" />
+		<sub name="modify-ability-248" />
+		<sub name="modify-ability-249" />
+		<sub name="modify-ability-250" />
+		<sub name="modify-ability-251" />
+		<sub name="modify-ability-252" />
+		<sub name="modify-ability-253" />
+		<sub name="modify-ability-254" />
+		<sub name="modify-ability-255" />
+		<sub name="modify-ability-256" />
+		<sub name="modify-ability-257" />
+		<sub name="modify-ability-258" />
+		<sub name="modify-ability-259" />
+		<sub name="modify-ability-260" />
+		<sub name="modify-ability-261" />
+		<sub name="modify-ability-262" />
+		<sub name="modify-ability-263" />
+		<sub name="modify-ability-264" />
+		<sub name="modify-ability-265" />
+		<sub name="modify-ability-266" />
+		<sub name="modify-ability-267" />
+		<sub name="modify-ability-268" />
+		<sub name="modify-ability-269" />
+		<sub name="modify-ability-270" />
+		<sub name="modify-ability-271" />
+		<sub name="modify-ability-272" />
+		<sub name="modify-ability-273" />
+		<sub name="modify-ability-274" />
+		<sub name="modify-ability-275" />
+		<sub name="modify-ability-276" />
+		<sub name="modify-ability-277" />
+		<sub name="modify-ability-278" />
+		<sub name="modify-ability-279" />
+		<sub name="modify-ability-280" />
+		<sub name="modify-ability-281" />
+		<sub name="modify-ability-282" />
+		<sub name="modify-ability-283" />
+		<sub name="modify-ability-284" />
+		<sub name="modify-ability-285" />
+		<sub name="modify-ability-286" />
+		<sub name="modify-ability-287" />
+		<sub name="modify-ability-288" />
+		<sub name="modify-ability-289" />
+		<sub name="modify-ability-290" />
+		<sub name="modify-ability-291" />
+		<sub name="modify-ability-292" />
+		<sub name="modify-ability-293" />
+		<sub name="modify-ability-294" />
+		<sub name="modify-ability-295" />
+		<sub name="modify-ability-296" />
+		<sub name="modify-ability-297" />
+		<sub name="modify-ability-298" />
+		<sub name="modify-ability-299" />
+		<sub name="modify-ability-300" />
+		<sub name="modify-ability-301" />
+		<sub name="modify-ability-302" />
+		<sub name="modify-ability-303" />
+		<sub name="modify-ability-304" />
+		<sub name="modify-ability-305" />
+		<sub name="modify-ability-306" />
+		<sub name="modify-ability-307" />
+		<sub name="modify-ability-308" />
+		<sub name="modify-ability-309" />
+		<sub name="modify-ability-310" />
+		<sub name="modify-ability-311" />
+		<sub name="modify-ability-312" />
+		<sub name="modify-ability-313" />
+		<sub name="modify-ability-314" />
+		<sub name="modify-ability-315" />
+		<sub name="modify-ability-316" />
+		<sub name="modify-ability-317" />
+		<sub name="modify-ability-318" />
+		<sub name="modify-ability-319" />
+		<sub name="modify-ability-320" />
+		<sub name="modify-ability-321" />
+		<sub name="modify-ability-322" />
+		<sub name="modify-ability-323" />
+		<sub name="modify-ability-324" />
+		<sub name="modify-ability-325" />
+		<sub name="modify-ability-326" />
+		<sub name="modify-ability-327" />
+		<sub name="modify-ability-328" />
+		<sub name="modify-ability-329" />
+		<sub name="modify-ability-330" />
+		<sub name="modify-ability-331" />
+		<sub name="modify-ability-332" />
+		<sub name="modify-ability-333" />
+		<sub name="modify-ability-334" />
+		<sub name="modify-ability-335" />
+		<sub name="modify-ability-336" />
+		<sub name="modify-ability-337" />
+		<sub name="modify-ability-338" />
+		<sub name="modify-ability-339" />
+		<sub name="modify-ability-340" />
+		<sub name="modify-ability-341" />
+		<sub name="modify-ability-342" />
+		<sub name="modify-ability-343" />
+		<sub name="modify-ability-344" />
+		<sub name="modify-ability-345" />
+		<sub name="modify-ability-346" />
+		<sub name="modify-ability-347" />
+		<sub name="modify-ability-348" />
+		<sub name="modify-ability-349" />
+		<sub name="modify-ability-350" />
+		<sub name="modify-ability-351" />
+		<sub name="modify-ability-352" />
+		<sub name="modify-ability-353" />
+		<sub name="modify-ability-354" />
+		<sub name="modify-ability-355" />
+		<sub name="modify-ability-356" />
+		<sub name="modify-ability-357" />
+		<sub name="modify-ability-358" />
+		<sub name="modify-ability-359" />
+		<sub name="modify-ability-360" />
+		<sub name="modify-ability-361" />
+		<sub name="modify-ability-362" />
+		<sub name="modify-ability-363" />
+		<sub name="modify-ability-364" />
+		<sub name="modify-ability-365" />
+		<sub name="modify-ability-366" />
+		<sub name="modify-ability-367" />
+		<sub name="modify-ability-368" />
+		<sub name="modify-ability-369" />
+		<sub name="modify-ability-370" />
+		<sub name="modify-ability-371" />
+		<sub name="modify-ability-372" />
+		<sub name="modify-ability-373" />
+		<sub name="modify-ability-374" />
+		<sub name="modify-ability-375" />
+		<sub name="modify-ability-376" />
+		<sub name="modify-ability-377" />
+		<sub name="modify-ability-378" />
+		<sub name="modify-ability-379" />
+		<sub name="modify-ability-380" />
+		<sub name="modify-ability-381" />
+		<sub name="modify-ability-382" />
+		<sub name="modify-ability-383" />
+		<sub name="modify-ability-384" />
+		<sub name="modify-ability-385" />
+		<sub name="modify-ability-386" />
+		<sub name="modify-ability-387" />
+		<sub name="modify-ability-388" />
+		<sub name="modify-ability-389" />
+		<sub name="modify-ability-390" />
+		<sub name="modify-ability-391" />
+		<sub name="modify-ability-392" />
+		<sub name="modify-ability-393" />
+		<sub name="modify-ability-394" />
+		<sub name="modify-ability-395" />
+		<sub name="modify-ability-396" />
+		<sub name="modify-ability-397" />
+		<sub name="modify-ability-398" />
+		<sub name="modify-ability-399" />
+		<sub name="modify-ability-400" />
+		<sub name="modify-ability-401" />
+		<sub name="modify-ability-402" />
+		<sub name="modify-ability-403" />
+		<sub name="modify-ability-404" />
+		<sub name="modify-ability-405" />
+		<sub name="modify-ability-406" />
+		<sub name="modify-ability-407" />
+		<sub name="modify-ability-408" />
+		<sub name="modify-ability-409" />
+		<sub name="modify-ability-410" />
+		<sub name="modify-ability-411" />
+		<sub name="modify-ability-412" />
+		<sub name="modify-ability-413" />
+		<sub name="modify-ability-414" />
+		<sub name="modify-ability-415" />
+		<sub name="modify-ability-416" />
+		<sub name="modify-ability-417" />
+		<sub name="modify-ability-418" />
+		<sub name="modify-ability-419" />
+		<sub name="modify-ability-420" />
+		<sub name="modify-ability-421" />
+		<sub name="modify-ability-422" />
+		<sub name="modify-ability-423" />
+		<sub name="modify-ability-424" />
+		<sub name="modify-ability-425" />
+		<sub name="modify-ability-426" />
+		<sub name="modify-ability-427" />
+		<sub name="modify-ability-428" />
+		<sub name="modify-ability-429" />
+		<sub name="modify-ability-430" />
+		<sub name="modify-ability-431" />
+		<sub name="modify-ability-432" />
+		<sub name="modify-ability-433" />
+		<sub name="modify-ability-434" />
+		<sub name="modify-ability-435" />
+		<sub name="modify-ability-436" />
+		<sub name="modify-ability-437" />
+		<sub name="modify-ability-438" />
+		<sub name="modify-ability-439" />
+		<sub name="modify-ability-440" />
+		<sub name="modify-ability-441" />
+		<sub name="modify-ability-442" />
+		<sub name="modify-ability-443" />
+		<sub name="modify-ability-444" />
+		<sub name="modify-ability-445" />
+		<sub name="modify-ability-446" />
+		<sub name="modify-ability-447" />
+		<sub name="modify-ability-448" />
+		<sub name="modify-ability-449" />
+		<sub name="modify-ability-450" />
+		<sub name="modify-ability-451" />
+		<sub name="modify-ability-452" />
+		<sub name="modify-ability-453" />
+		<sub name="modify-ability-454" />
+		<sub name="modify-ability-455" />
+		<sub name="modify-ability-456" />
+		<sub name="modify-ability-457" />
+		<sub name="modify-ability-458" />
+		<sub name="modify-ability-459" />
+		<sub name="modify-ability-460" />
+		<sub name="modify-ability-461" />
+		<sub name="modify-ability-462" />
+		<sub name="modify-ability-463" />
+		<sub name="modify-ability-464" />
+		<sub name="modify-ability-465" />
+		<sub name="modify-ability-466" />
+		<sub name="modify-ability-467" />
+		<sub name="modify-ability-468" />
+		<sub name="modify-ability-469" />
+		<sub name="modify-ability-470" />
+		<sub name="modify-ability-471" />
+		<sub name="modify-ability-472" />
+		<sub name="modify-ability-473" />
+		<sub name="modify-ability-474" />
+		<sub name="modify-ability-475" />
+		<sub name="modify-ability-476" />
+		<sub name="modify-ability-477" />
+		<sub name="modify-ability-478" />
+		<sub name="modify-ability-479" />
+		<sub name="modify-ability-480" />
+		<sub name="modify-ability-481" />
+		<sub name="modify-ability-482" />
+		<sub name="modify-ability-483" />
+		<sub name="modify-ability-484" />
+		<sub name="modify-ability-485" />
+		<sub name="modify-ability-486" />
+		<sub name="modify-ability-487" />
+		<sub name="modify-ability-488" />
+		<sub name="modify-ability-489" />
+		<sub name="modify-ability-490" />
+		<sub name="modify-ability-491" />
+		<sub name="modify-ability-492" />
+		<sub name="modify-ability-493" />
+		<sub name="modify-ability-494" />
+		<sub name="modify-ability-495" />
+		<sub name="modify-ability-496" />
+		<sub name="modify-ability-497" />
+		<sub name="modify-ability-498" />
+		<sub name="modify-ability-499" />
+		<sub name="modify-ability-500" />
+		<sub name="modify-ability-501" />
+		<sub name="modify-ability-502" />
+		<sub name="modify-ability-503" />
+		<sub name="modify-ability-504" />
+		<sub name="modify-ability-505" />
+		<sub name="modify-ability-506" />
+		<sub name="modify-ability-507" />
+		<sub name="modify-ability-508" />
+		<sub name="modify-ability-509" />
+		<sub name="modify-ability-510" />
+		<sub name="modify-ability-511" />
+		<sub name="modify-ability-512" />
+		<sub name="modify-ability-513" />
+		<sub name="modify-ability-514" />
+		<sub name="modify-ability-515" />
+		<sub name="modify-ability-516" />
+		<sub name="modify-ability-517" />
+		<sub name="modify-ability-518" />
+		<sub name="modify-ability-519" />
+		<sub name="modify-ability-520" />
+		<sub name="modify-ability-521" />
+		<sub name="modify-ability-522" />
+		<sub name="modify-ability-523" />
+		<sub name="modify-ability-524" />
+		<sub name="modify-ability-525" />
+		<sub name="modify-ability-526" />
+		<sub name="modify-ability-527" />
+		<sub name="modify-ability-528" />
+		<sub name="modify-ability-529" />
+		<sub name="modify-ability-530" />
+		<sub name="modify-ability-531" />
+		<sub name="modify-ability-532" />
+		<sub name="modify-ability-533" />
+		<sub name="modify-ability-534" />
+		<sub name="modify-ability-535" />
+		<sub name="modify-ability-536" />
+		<sub name="modify-ability-537" />
+		<sub name="modify-ability-538" />
+		<sub name="modify-ability-539" />
+		<sub name="modify-ability-540" />
+		<sub name="modify-ability-541" />
+		<sub name="modify-ability-542" />
+		<sub name="modify-ability-543" />
+		<sub name="modify-ability-544" />
+		<sub name="modify-ability-545" />
+		<sub name="modify-ability-546" />
+		<sub name="modify-ability-547" />
+		<sub name="modify-ability-548" />
+		<sub name="modify-ability-549" />
+		<sub name="modify-ability-550" />
+		<sub name="modify-ability-551" />
+		<sub name="modify-ability-552" />
+		<sub name="modify-ability-553" />
+		<sub name="modify-ability-554" />
+		<sub name="modify-ability-555" />
+		<sub name="modify-ability-556" />
+		<sub name="modify-ability-557" />
+		<sub name="modify-ability-558" />
+		<sub name="modify-ability-559" />
+		<sub name="modify-ability-560" />
+		<sub name="modify-ability-561" />
+		<sub name="modify-ability-562" />
+		<sub name="modify-ability-563" />
+		<sub name="modify-ability-564" />
+		<sub name="modify-ability-565" />
+		<sub name="modify-ability-566" />
+		<sub name="modify-ability-567" />
+		<sub name="modify-ability-568" />
+		<sub name="modify-ability-569" />
+		<sub name="modify-ability-570" />
+		<sub name="modify-ability-571" />
+		<sub name="modify-ability-572" />
+		<sub name="modify-ability-573" />
+		<sub name="modify-ability-574" />
+		<sub name="modify-ability-575" />
+		<sub name="modify-ability-576" />
+		<sub name="modify-ability-577" />
+		<sub name="modify-ability-578" />
+		<sub name="modify-ability-579" />
+		<sub name="modify-ability-580" />
+		<sub name="modify-ability-581" />
+		<sub name="modify-ability-582" />
+		<sub name="modify-ability-583" />
+		<sub name="modify-ability-584" />
+		<sub name="modify-ability-585" />
+		<sub name="modify-ability-586" />
+		<sub name="modify-ability-587" />
+		<sub name="modify-ability-588" />
+		<sub name="modify-ability-589" />
+		<sub name="modify-ability-590" />
+		<sub name="modify-ability-591" />
+		<sub name="modify-ability-592" />
+		<sub name="modify-ability-593" />
+		<sub name="modify-ability-594" />
+		<sub name="modify-ability-595" />
+		<sub name="modify-ability-596" />
+		<sub name="modify-ability-597" />
+		<sub name="modify-ability-598" />
+		<sub name="modify-ability-599" />
+		<sub name="modify-ability-600" />
+		<sub name="modify-ability-601" />
+		<sub name="modify-ability-602" />
+		<sub name="modify-ability-603" />
+		<sub name="modify-ability-604" />
+		<sub name="modify-ability-605" />
+		<sub name="modify-ability-606" />
+		<sub name="modify-ability-607" />
+		<sub name="modify-ability-608" />
+		<sub name="modify-ability-609" />
+		<sub name="modify-ability-610" />
+		<sub name="modify-ability-611" />
+		<sub name="modify-ability-612" />
+		<sub name="modify-ability-613" />
+		<sub name="modify-ability-614" />
+		<sub name="modify-ability-615" />
+		<sub name="modify-ability-616" />
+		<sub name="modify-ability-617" />
+		<sub name="modify-ability-618" />
+		<sub name="modify-ability-619" />
+		<sub name="modify-ability-620" />
+		<sub name="modify-ability-621" />
+		<sub name="modify-ability-622" />
+		<sub name="modify-ability-623" />
+		<sub name="modify-ability-624" />
+		<sub name="modify-ability-625" />
+		<sub name="modify-ability-626" />
+		<sub name="modify-ability-627" />
+		<sub name="modify-ability-628" />
+		<sub name="modify-ability-629" />
+		<sub name="modify-ability-630" />
+		<sub name="modify-ability-631" />
+		<sub name="modify-ability-632" />
+		<sub name="modify-ability-633" />
+		<sub name="modify-ability-634" />
+		<sub name="modify-ability-635" />
+		<sub name="modify-ability-636" />
+		<sub name="modify-ability-637" />
+		<sub name="modify-ability-638" />
+		<sub name="modify-ability-639" />
+		<sub name="modify-ability-640" />
+		<sub name="modify-ability-641" />
+		<sub name="modify-ability-642" />
+		<sub name="modify-ability-643" />
+		<sub name="modify-ability-644" />
+		<sub name="modify-ability-645" />
+		<sub name="modify-ability-646" />
+		<sub name="modify-ability-647" />
+		<sub name="modify-ability-648" />
+		<sub name="modify-ability-649" />
+		<sub name="modify-ability-650" />
+		<sub name="glyph-condition-event-1" />
+		<sub name="glyph-condition-event-2" />
+		<sub name="glyph-condition-event-3" />
+		<sub name="glyph-condition-event-4" />
+		<sub name="glyph-condition-event-5" />
+		<sub name="glyph-condition-event-6" />
+		<sub name="glyph-condition-event-7" />
+		<sub name="glyph-condition-event-8" />
+		<sub name="glyph-condition-event-9" />
+		<sub name="glyph-condition-event-10" />
+		<sub name="glyph-condition-event-11" />
+		<sub name="glyph-condition-event-12" />
+		<sub name="glyph-condition-event-13" />
+		<sub name="glyph-condition-event-14" />
+		<sub name="glyph-condition-event-15" />
+		<sub name="glyph-condition-event-16" />
+		<sub name="glyph-condition-event-17" />
+		<sub name="glyph-condition-event-18" />
+		<sub name="glyph-condition-event-19" />
+		<sub name="glyph-condition-event-20" />
+		<sub name="glyph-condition-event-21" />
+		<sub name="glyph-condition-event-22" />
+		<sub name="glyph-condition-event-23" />
+		<sub name="glyph-condition-event-24" />
+		<sub name="glyph-condition-event-25" />
+		<sub name="glyph-condition-event-26" />
+		<sub name="glyph-condition-event-27" />
+		<sub name="glyph-condition-event-28" />
+		<sub name="glyph-condition-event-29" />
+		<sub name="glyph-condition-event-30" />
+		<sub name="glyph-condition-event-31" />
+		<sub name="glyph-condition-event-32" />
+		<sub name="glyph-condition-event-33" />
+		<sub name="glyph-condition-event-34" />
+		<sub name="glyph-condition-event-35" />
+		<sub name="glyph-condition-event-36" />
+		<sub name="glyph-condition-event-37" />
+		<sub name="glyph-condition-event-38" />
+		<sub name="glyph-condition-event-39" />
+		<sub name="glyph-condition-event-40" />
+		<sub name="glyph-condition-event-41" />
+		<sub name="glyph-condition-event-42" />
+		<sub name="glyph-condition-event-43" />
+		<sub name="glyph-condition-event-44" />
+		<sub name="glyph-condition-event-45" />
+		<sub name="glyph-condition-event-46" />
+		<sub name="glyph-condition-event-47" />
+		<sub name="glyph-condition-event-48" />
+		<sub name="glyph-condition-event-49" />
+		<sub name="glyph-condition-event-50" />
+		<sub name="glyph-condition-event-51" />
+		<sub name="glyph-condition-event-52" />
+		<sub name="glyph-condition-event-53" />
+		<sub name="glyph-condition-event-54" />
+		<sub name="glyph-condition-event-55" />
+		<sub name="glyph-condition-event-56" />
+		<sub name="glyph-condition-event-57" />
+		<sub name="glyph-condition-event-58" />
+		<sub name="glyph-condition-event-59" />
+		<sub name="glyph-condition-event-60" />
+		<sub name="glyph-condition-event-61" />
+		<sub name="glyph-condition-event-62" />
+		<sub name="glyph-condition-event-63" />
+		<sub name="glyph-condition-event-64" />
+		<sub name="glyph-condition-event-65" />
+		<sub name="glyph-condition-event-66" />
+		<sub name="glyph-condition-event-67" />
+		<sub name="glyph-condition-event-68" />
+		<sub name="glyph-condition-event-69" />
+		<sub name="glyph-condition-event-70" />
+		<sub name="glyph-condition-event-71" />
+		<sub name="glyph-condition-event-72" />
+		<sub name="glyph-condition-event-73" />
+		<sub name="glyph-condition-event-74" />
+		<sub name="glyph-condition-event-75" />
+		<sub name="glyph-condition-event-76" />
+		<sub name="glyph-condition-event-77" />
+		<sub name="glyph-condition-event-78" />
+		<sub name="glyph-condition-event-79" />
+		<sub name="glyph-condition-event-80" />
+		<sub name="glyph-condition-event-81" />
+		<sub name="glyph-condition-event-82" />
+		<sub name="glyph-condition-event-83" />
+		<sub name="glyph-condition-event-84" />
+		<sub name="glyph-condition-event-85" />
+		<sub name="glyph-condition-event-86" />
+		<sub name="glyph-condition-event-87" />
+		<sub name="glyph-condition-event-88" />
+		<sub name="glyph-condition-event-89" />
+		<sub name="glyph-condition-event-90" />
+		<sub name="glyph-condition-event-91" />
+		<sub name="glyph-condition-event-92" />
+		<sub name="glyph-condition-event-93" />
+		<sub name="glyph-condition-event-94" />
+		<sub name="glyph-condition-event-95" />
+		<sub name="glyph-condition-event-96" />
+		<sub name="glyph-condition-event-97" />
+		<sub name="glyph-condition-event-98" />
+		<sub name="glyph-condition-event-99" />
+		<sub name="glyph-condition-event-100" />
+		<sub name="common-condition-event-1" />
+		<sub name="common-condition-event-2" />
+		<sub name="common-condition-event-3" />
+		<sub name="common-condition-event-4" />
+		<sub name="common-condition-event-5" />
+		<sub name="common-condition-event-6" />
+		<sub name="common-condition-event-7" />
+		<sub name="common-condition-event-8" />
+		<sub name="common-condition-event-9" />
+		<sub name="common-condition-event-10" />
+		<sub name="common-condition-event-11" />
+		<sub name="common-condition-event-12" />
+		<sub name="common-condition-event-13" />
+		<sub name="common-condition-event-14" />
+		<sub name="common-condition-event-15" />
+		<sub name="common-condition-event-16" />
+		<sub name="common-condition-event-17" />
+		<sub name="common-condition-event-18" />
+		<sub name="common-condition-event-19" />
+		<sub name="common-condition-event-20" />
+		<sub name="equip" />
+		<sub name="modify-move-speed">
+			<attribute name="speed-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="modify-cast-speed">
+			<attribute name="cast-speed-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="dull">
+			<attribute name="move-speed-percent" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="cast-speed-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="initialize-recycle-group">
+			<attribute name="initialize-recycle-group" type="Seq" repeat="2" default="none">
+				<case name="none" />
+				<case name="class" />
+				<case name="item-1" />
+				<case name="item-2" />
+				<case name="class-2" />
+				<case name="db" />
+				<case name="gadget" />
+			</attribute>
+			<attribute name="initialize-recycle-group-id" type="Int8" repeat="2" default="0" max="65" />
+		</sub>
+		<sub name="modify-recycle-time">
+			<attribute name="recycle-group" type="Seq" repeat="2" default="none">
+				<case name="none" />
+				<case name="class" />
+				<case name="item-1" />
+				<case name="item-2" />
+				<case name="class-2" />
+				<case name="db" />
+				<case name="gadget" />
+			</attribute>
+			<attribute name="recycle-group-id" type="Int8" repeat="2" default="0" max="65" />
+			<attribute name="recycle-group-modify-time" type="Msec" repeat="2" default="0" min="-2147483647" max="2147483647" />
+		</sub>
+		<sub name="set-recycle-time">
+			<attribute name="recycle-group" type="Seq" repeat="2" default="none">
+				<case name="none" />
+				<case name="class" />
+				<case name="item-1" />
+				<case name="item-2" />
+				<case name="class-2" />
+				<case name="db" />
+				<case name="gadget" />
+			</attribute>
+			<attribute name="recycle-group-id" type="Int8" repeat="2" default="0" max="65" />
+			<attribute name="recycle-group-set-time" type="Msec" repeat="2" default="0" max="2147483647" />
+		</sub>
+		<sub name="initialize-condition-event-recycle-group" />
+		<sub name="interval-melee-physical-damage" />
+		<sub name="interval-range-physical-damage" />
+		<sub name="interval-force-damage" />
+		<sub name="burn" />
+		<sub name="binding-skill-step" />
+		<sub name="recall-to-caster" />
+		<sub name="recall-to-position" />
+		<sub name="embers-explosion-timer" />
+		<sub name="replace-position" />
+		<sub name="poison" />
+		<sub name="poison2" />
+		<sub name="poison-explosion" />
+		<sub name="poison2-explosion" />
+		<sub name="applied-poison" />
+		<sub name="spider-web" />
+		<sub name="time-bomb">
+			<attribute name="dispel-attribute" type="Seq16" repeat="4" default="none">
+				<case name="none" />
+				<case name="회복" />
+				<case name="진드기" />
+				<case name="불" />
+				<case name="은사" />
+				<case name="거미줄" />
+				<case name="독" />
+				<case name="은신" />
+				<case name="투명" />
+				<case name="광기" />
+				<case name="얼음감옥" />
+				<case name="독나방" />
+				<case name="가젯드랍" />
+				<case name="다운" />
+				<case name="넉백대시" />
+				<case name="방어불가" />
+				<case name="도발" />
+				<case name="도망" />
+				<case name="이동불가" />
+				<case name="대시불가" />
+				<case name="감속" />
+				<case name="기절" />
+				<case name="얼어붙음" />
+				<case name="행동불가" />
+				<case name="출혈" />
+				<case name="치유" />
+				<case name="얼음" />
+				<case name="맹독" />
+				<case name="막기" />
+				<case name="속박" />
+				<case name="제압" />
+				<case name="위치바꾸기" />
+				<case name="장악연계" />
+				<case name="무적" />
+				<case name="멍해짐" />
+				<case name="앞차기" />
+				<case name="혼절" />
+				<case name="광폭해짐" />
+				<case name="공중" />
+				<case name="그로기" />
+				<case name="난무" />
+				<case name="넉백" />
+				<case name="흡공" />
+				<case name="퀘스트-1" />
+				<case name="퀘스트-2" />
+				<case name="퀘스트-3" />
+				<case name="퀘스트-4" />
+				<case name="퀘스트-5" />
+				<case name="대상공중" />
+				<case name="보스-1" />
+				<case name="보스-2" />
+				<case name="보스-3" />
+				<case name="보스대쉬" />
+				<case name="그림자" />
+				<case name="중첩불가1" />
+				<case name="중첩불가2" />
+				<case name="조건만족" />
+				<case name="소환사독" />
+				<case name="탱킹장판" />
+				<case name="검막" />
+				<case name="비트" />
+				<case name="홍옥" />
+				<case name="녹주석" />
+				<case name="보스저항-1" />
+				<case name="보스저항-2" />
+				<case name="보스저항-3" />
+				<case name="보스저항-4" />
+				<case name="보스저항-5" />
+				<case name="낙인저항-1" />
+				<case name="낙인저항-2" />
+				<case name="낙인저항-3" />
+				<case name="낙인저항-4" />
+				<case name="마성-1" />
+				<case name="마성-2" />
+				<case name="마성-3" />
+				<case name="마성-4" />
+				<case name="주술체" />
+				<case name="소울" />
+				<case name="부적" />
+				<case name="환마" />
+				<case name="반사" />
+				<case name="NPC-1" />
+				<case name="NPC-2" />
+				<case name="NPC-3" />
+				<case name="NPC-4" />
+				<case name="NPC-5" />
+				<case name="NPC-6" />
+				<case name="NPC-7" />
+				<case name="NPC-8" />
+				<case name="NPC-9" />
+				<case name="NPC-10" />
+				<case name="낙인저항-5" />
+				<case name="낙인저항-6" />
+				<case name="낙인저항-7" />
+				<case name="낙인저항-8" />
+				<case name="클래스-1" />
+				<case name="클래스-2" />
+				<case name="클래스-3" />
+				<case name="클래스-4" />
+				<case name="클래스-5" />
+				<case name="클래스-6" />
+				<case name="클래스-7" />
+				<case name="클래스-8" />
+				<case name="클래스-9" />
+				<case name="클래스-10" />
+				<case name="클래스-11" />
+				<case name="클래스-12" />
+				<case name="클래스-13" />
+				<case name="클래스-14" />
+				<case name="클래스-15" />
+				<case name="클래스-16" />
+				<case name="클래스-17" />
+				<case name="클래스-18" />
+				<case name="클래스-19" />
+				<case name="클래스-20" />
+				<case name="클래스-21" />
+				<case name="클래스-22" />
+				<case name="클래스-23" />
+				<case name="클래스-24" />
+				<case name="클래스-25" />
+				<case name="클래스-26" />
+				<case name="클래스-27" />
+				<case name="클래스-28" />
+				<case name="클래스-29" />
+				<case name="클래스-30" />
+				<case name="클래스-31" />
+				<case name="클래스-32" />
+				<case name="클래스-33" />
+				<case name="클래스-34" />
+				<case name="클래스-35" />
+				<case name="클래스-36" />
+				<case name="클래스-37" />
+				<case name="클래스-38" />
+				<case name="클래스-39" />
+				<case name="클래스-40" />
+				<case name="클래스-41" />
+				<case name="클래스-42" />
+				<case name="클래스-43" />
+				<case name="클래스-44" />
+				<case name="클래스-45" />
+				<case name="클래스-46" />
+				<case name="클래스-47" />
+				<case name="클래스-48" />
+				<case name="클래스-49" />
+				<case name="클래스-50" />
+				<case name="클래스-51" />
+				<case name="클래스-52" />
+				<case name="클래스-53" />
+				<case name="클래스-54" />
+				<case name="클래스-55" />
+				<case name="클래스-56" />
+				<case name="클래스-57" />
+				<case name="클래스-58" />
+				<case name="클래스-59" />
+				<case name="클래스-60" />
+				<case name="아이템조건-1" />
+				<case name="어택글라이드" />
+				<case name="문양-1" />
+				<case name="문양-2" />
+				<case name="문양-3" />
+				<case name="문양-4" />
+				<case name="문양-5" />
+				<case name="문양-6" />
+				<case name="문양-7" />
+				<case name="문양-8" />
+				<case name="문양-9" />
+				<case name="문양-10" />
+				<case name="문양-11" />
+				<case name="문양-12" />
+				<case name="문양-13" />
+				<case name="문양-14" />
+				<case name="문양-15" />
+				<case name="문양-16" />
+				<case name="문양-17" />
+				<case name="문양-18" />
+				<case name="문양-19" />
+				<case name="문양-20" />
+				<case name="기믹-1" />
+				<case name="기믹-2" />
+				<case name="기믹-3" />
+				<case name="기믹-4" />
+				<case name="기믹-5" />
+				<case name="던전보스-1" />
+				<case name="기믹-6" />
+				<case name="기믹-7" />
+				<case name="기믹-8" />
+				<case name="기믹-9" />
+				<case name="기믹-10" />
+				<case name="중첩불가3" />
+			</attribute>
+			<attribute name="dispel-attribute-value" type="Int64" hidden="True" default="0" min="-9223372036854775807" max="9223372036854775807" />
+			<attribute name="dispel-attribute-value-2" type="Int64" hidden="True" default="0" min="-9223372036854775807" max="9223372036854775807" />
+			<attribute name="dispel-attribute-value-3" type="Int64" hidden="True" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		</sub>
+		<sub name="defence-block" />
+		<sub name="dash-block" />
+		<sub name="dexterity" />
+		<sub name="help-restoration" />
+		<sub name="grade" />
+		<sub name="recharge-heart-count">
+			<attribute name="instant-heart-count" type="Int8" default="0" min="-128" max="127" />
+			<attribute name="heart-count" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="safety-area" />
+		<sub name="recharge-guild-battle-field">
+			<attribute name="enable-duration" type="Msec" default="0" min="-2147483647" max="2147483647" />
+		</sub>
+		<sub name="enable-guild-battle-field" />
+		<sub name="debuff-guild-battle-field">
+			<attribute name="hp-diff" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="hp-percent" type="Int16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="duel-interference" />
+		<sub name="break-state" />
+		<sub name="break-gauge-block" />
+		<sub name="modify-damage-systematization">
+			<attribute name="systematization" type="Ref" ref="skillsystematization" refel="1" />
+			<attribute name="damage-rate" type="Int16" default="0" min="-900" max="1000" />
+		</sub>
+		<sub name="dash" />
+		<sub name="fall-damage" />
+		<sub name="airdash" />
+		<sub name="exhaustion" />
+		<sub name="revive-except-rule" />
+		<sub name="use-heart-count" />
+		<sub name="item-ability">
+			<attribute name="attack-power-equip-min" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="attack-power-equip-max" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-power-equip-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-resist-power-equip-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="attack-hit-base-percent" type="Int16" hidden="True" default="0" min="-1000" max="1000" />
+			<attribute name="attack-hit-value" type="Int16" hidden="True" default="0" min="-30000" max="30000" />
+			<attribute name="attack-hit-value-equip" type="Int16" hidden="True" default="0" min="-30000" max="30000" />
+			<attribute name="attack-pierce-base-percent" type="Int16" default="0" max="1000" />
+			<attribute name="attack-parry-pierce-percent" type="Int16" default="0" max="1000" />
+			<attribute name="attack-pierce-value" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attack-pierce-value-equip" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attack-critical-base-percent" type="Int16" hidden="True" default="0" max="1000" />
+			<attribute name="attack-critical-damage-percent" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="attack-critical-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="attack-critical-value-equip" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="attack-critical-damage-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="attack-critical-damage-value-equip" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-critical-base-percent" type="Int16" hidden="True" default="0" max="1000" />
+			<attribute name="defend-critical-damage-percent" type="Int16" default="0" max="10000" />
+			<attribute name="defend-critical-value" type="Int32" hidden="True" default="0" max="300000" />
+			<attribute name="defend-critical-value-equip" type="Int32" hidden="True" default="0" max="300000" />
+			<attribute name="defend-dodge-base-percent" type="Int16" hidden="True" default="0" max="1000" />
+			<attribute name="defend-dodge-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-dodge-value-equip" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-parry-base-percent" type="Int16" hidden="True" default="0" max="1000" />
+			<attribute name="defend-parry-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-parry-value-equip" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="attack-stiff-duration-base-percent" type="Int16" hidden="True" default="0" min="-1000" max="10000" />
+			<attribute name="attack-stiff-duration-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-stiff-duration-base-percent" type="Int16" hidden="True" default="0" max="1000" />
+			<attribute name="defend-stiff-duration-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="cast-duration-base-percent" type="Int16" hidden="True" default="0" min="-10000" max="1000" />
+			<attribute name="cast-duration-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-physical-damage-reduce-percent" type="Int16" hidden="True" default="0" min="-10000" max="1000" />
+			<attribute name="defend-force-damage-reduce-percent" type="Int16" hidden="True" default="0" min="-10000" max="1000" />
+			<attribute name="attack-damage-modify-percent" type="Int16" hidden="True" default="0" min="-1000" max="10000" />
+			<attribute name="attack-damage-modify-diff" type="Int16" hidden="True" default="0" min="-30000" max="30000" />
+			<attribute name="defend-damage-modify-percent" type="Int16" hidden="True" default="0" min="-10000" max="1000" />
+			<attribute name="defend-damage-modify-diff" type="Int16" hidden="True" default="0" min="-30000" max="30000" />
+			<attribute name="max-hp" type="Int32" hidden="True" default="0" max="2000000000" />
+			<attribute name="max-hp-equip" type="Int32" hidden="True" default="0" max="2000000000" />
+			<attribute name="max-guard-gauge" type="Int32" hidden="True" default="0" max="2000000000" />
+			<attribute name="max-guard-gauge-equip" type="Int32" hidden="True" default="0" max="2000000000" />
+			<attribute name="hp-regen" type="Int32" hidden="True" default="0" max="2000000000" />
+			<attribute name="hp-regen-equip" type="Int32" hidden="True" default="0" max="2000000000" />
+			<attribute name="hp-regen-combat" type="Int32" hidden="True" default="0" max="2000000000" />
+			<attribute name="hp-regen-combat-equip" type="Int32" hidden="True" default="0" max="2000000000" />
+			<attribute name="job-ability-1" type="Int32" hidden="True" default="0" max="100000" />
+			<attribute name="job-ability-2" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="heal-power-base-percent" type="Int16" hidden="True" max="10000" />
+			<attribute name="heal-power-value" type="Int16" hidden="True" max="30000" />
+			<attribute name="heal-power-diff" type="Int32" hidden="True" max="2000000000" />
+			<attribute name="aoe-defend-base-percent" type="Int16" hidden="True" max="10000" />
+			<attribute name="aoe-defend-power-value" type="Int16" hidden="True" max="30000" />
+			<attribute name="abnormal-attack-base-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="abnormal-attack-power-value" type="Int32" hidden="True" default="0" max="300000" />
+			<attribute name="abnormal-attack-power-value-equip" type="Int32" hidden="True" default="0" max="300000" />
+			<attribute name="abnormal-defend-base-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="abnormal-defend-power-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="hate-power-equip-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="additional-exp-diff-by-kill" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="additional-exp-percent-by-kill" type="Int16" hidden="True" default="0" max="1000" />
+			<attribute name="attack-concentrate-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="attack-concentrate-value-equip" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-perfect-parry-reduce-percent" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-counter-reduce-percent" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="attack-attribute-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="attack-attribute-value-equip" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="attack-attribute-base-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="pve-boss-level-npc-attack-power-equip-min" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="pve-boss-level-npc-attack-power-equip-max" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="pve-boss-level-npc-defend-power-equip-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="pvp-attack-power-equip-min" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="pvp-attack-power-equip-max" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="pvp-defend-power-equip-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="r-attack-stiff-duration-equip-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="r-defend-stiff-duration-equip-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="r-aoe-defend-power-value-equip" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="r-heal-power-equip-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="r-defend-strength-equip-value" type="Int32" hidden="True" default="0" max="300000" />
+			<attribute name="r-attack-precise-equip-value" type="Int32" hidden="True" default="0" max="300000" />
+			<attribute name="r-attack-aoe-pierce-value-equip" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="r-attack-abnormal-hit-equip-value" type="Int16" hidden="True" default="0" min="-30000" max="30000" />
+			<attribute name="r-defend-abnormal-dodge-equip-value" type="Int16" hidden="True" default="0" min="-30000" max="30000" />
+			<attribute name="r-support-power-equip-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="r-hypermove-power-equip-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-difficulty-type-damage-reduce-percent" type="Int16" hidden="True" default="0" max="1000" />
+		</sub>
+		<sub name="achievement-ability">
+			<attribute name="attack-power-creature-min" type="Int32" hidden="True" default="0" max="1000000" />
+			<attribute name="attack-power-creature-max" type="Int32" hidden="True" default="0" max="1000000" />
+			<attribute name="attack-hit-value" type="Int16" hidden="True" default="0" min="-30000" max="30000" />
+			<attribute name="attack-pierce-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="attack-damage-modify-diff" type="Int16" hidden="True" default="0" min="-30000" max="30000" />
+			<attribute name="max-hp" type="Int32" hidden="True" default="0" max="2000000000" />
+			<attribute name="defend-power-creature-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-dodge-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-parry-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="defend-damage-modify-diff" type="Int16" hidden="True" default="0" min="-30000" max="30000" />
+		</sub>
+		<sub name="completed-achievement" />
+		<sub name="changed-property" />
+		<sub name="oceanic" />
+		<sub name="fall-death" />
+		<sub name="air-knockback" />
+		<sub name="set-ghost-type" />
+		<sub name="duel-fighter-change" />
+		<sub name="duel-fighter-time-limit" />
+		<sub name="mastery-stat-equip">
+			<attribute name="modify-ability-for-mastery" type="Prop_field" repeat="16" default="creature_field_none">
+				<case name="creature_field_none" />
+				<case name="world-id" />
+				<case name="race" />
+				<case name="sex" />
+				<case name="job" />
+				<case name="appearance1" />
+				<case name="appearance2" />
+				<case name="appearance3" />
+				<case name="appearance4" />
+				<case name="appearance5" />
+				<case name="appearance6" />
+				<case name="appearance7" />
+				<case name="appearance8" />
+				<case name="appearance9" />
+				<case name="appearance10" />
+				<case name="appearance11" />
+				<case name="appearance12" />
+				<case name="appearance13" />
+				<case name="appearance14" />
+				<case name="appearance15" />
+				<case name="appearance16" />
+				<case name="appearance17" />
+				<case name="appearance18" />
+				<case name="appearance19" />
+				<case name="appearance20" />
+				<case name="appearance21" />
+				<case name="appearance22" />
+				<case name="appearance23" />
+				<case name="appearance24" />
+				<case name="appearance25" />
+				<case name="appearance26" />
+				<case name="appearance27" />
+				<case name="appearance28" />
+				<case name="appearance29" />
+				<case name="appearance30" />
+				<case name="appearance31" />
+				<case name="appearance32" />
+				<case name="appearance33" />
+				<case name="appearance34" />
+				<case name="appearance35" />
+				<case name="appearance36" />
+				<case name="appearance37" />
+				<case name="appearance38" />
+				<case name="appearance39" />
+				<case name="appearance40" />
+				<case name="appearance41" />
+				<case name="appearance42" />
+				<case name="appearance43" />
+				<case name="appearance44" />
+				<case name="appearance45" />
+				<case name="appearance46" />
+				<case name="appearance47" />
+				<case name="appearance48" />
+				<case name="appearance49" />
+				<case name="appearance50" />
+				<case name="appearance51" />
+				<case name="appearance52" />
+				<case name="appearance53" />
+				<case name="appearance54" />
+				<case name="appearance55" />
+				<case name="appearance56" />
+				<case name="appearance57" />
+				<case name="appearance58" />
+				<case name="appearance59" />
+				<case name="appearance60" />
+				<case name="appearance61" />
+				<case name="appearance62" />
+				<case name="appearance63" />
+				<case name="appearance64" />
+				<case name="appearance65" />
+				<case name="appearance66" />
+				<case name="appearance67" />
+				<case name="appearance68" />
+				<case name="appearance69" />
+				<case name="appearance70" />
+				<case name="appearance71" />
+				<case name="appearance72" />
+				<case name="appearance73" />
+				<case name="appearance74" />
+				<case name="appearance75" />
+				<case name="appearance76" />
+				<case name="appearance77" />
+				<case name="appearance78" />
+				<case name="appearance79" />
+				<case name="appearance80" />
+				<case name="appearance81" />
+				<case name="appearance82" />
+				<case name="appearance83" />
+				<case name="appearance84" />
+				<case name="appearance85" />
+				<case name="appearance86" />
+				<case name="appearance87" />
+				<case name="appearance88" />
+				<case name="appearance89" />
+				<case name="appearance90" />
+				<case name="appearance91" />
+				<case name="appearance92" />
+				<case name="appearance93" />
+				<case name="appearance94" />
+				<case name="appearance95" />
+				<case name="appearance96" />
+				<case name="name" />
+				<case name="geo-zone" />
+				<case name="x" />
+				<case name="y" />
+				<case name="z" />
+				<case name="yaw" />
+				<case name="level" />
+				<case name="exp" />
+				<case name="mastery-level" />
+				<case name="mastery-exp" />
+				<case name="hp" />
+				<case name="guard-gauge" />
+				<case name="money" />
+				<case name="money-diff" />
+				<case name="faction" />
+				<case name="faction2" />
+				<case name="guild-id" />
+				<case name="activated-faction" />
+				<case name="faction-reputation" />
+				<case name="achievement-id" />
+				<case name="achievement-step" />
+				<case name="ability-achievement-id" />
+				<case name="ability-achievement-step" />
+				<case name="sp" />
+				<case name="sp2" />
+				<case name="stance" />
+				<case name="link-target" />
+				<case name="link-type" />
+				<case name="link-state" />
+				<case name="link-stage" />
+				<case name="target" />
+				<case name="action-type" />
+				<case name="action-target" />
+				<case name="additional-hp" />
+				<case name="additional-hp2" />
+				<case name="additional-hp3" />
+				<case name="effect-attribute" />
+				<case name="effect-attribute-2" />
+				<case name="effect-attribute-3" />
+				<case name="immune-effect-attribute" />
+				<case name="immune-effect-attribute-2" />
+				<case name="immune-effect-attribute-3" />
+				<case name="effect-flag" />
+				<case name="effect-flag-2" />
+				<case name="effect-flag-3" />
+				<case name="effect-flag-4" />
+				<case name="field-item" />
+				<case name="summoned" />
+				<case name="convoy-id" />
+				<case name="top-contribution-group-id" />
+				<case name="inventory-size" />
+				<case name="depository-size" />
+				<case name="depository-2-size" />
+				<case name="wardrobe-size" />
+				<case name="premium-depository-size" />
+				<case name="builder-right" />
+				<case name="survey" />
+				<case name="style-score" />
+				<case name="immune-breaker-attribute" />
+				<case name="immune-breaker-count" />
+				<case name="faction-score" />
+				<case name="faction-killed-count" />
+				<case name="combat-side" />
+				<case name="duel-point" />
+				<case name="party-battle-point" />
+				<case name="field-play-point" />
+				<case name="life-contents-point" />
+				<case name="duel-grade" />
+				<case name="duel-grade-type" />
+				<case name="dead" />
+				<case name="gm-mode" />
+				<case name="grade-level" />
+				<case name="grade-broadcast-benefit-1" />
+				<case name="grade-broadcast-benefit-2" />
+				<case name="grade-broadcast-benefit-3" />
+				<case name="grade-broadcast-benefit-4" />
+				<case name="grade-broadcast-benefit-5" />
+				<case name="grade-broadcast-benefit-6" />
+				<case name="grade-broadcast-benefit-7" />
+				<case name="grade-broadcast-benefit-8" />
+				<case name="logout-time" />
+				<case name="instant-heart-count" />
+				<case name="heart-count" />
+				<case name="skill-score" />
+				<case name="bound-raid-dungeon-id-1" />
+				<case name="bound-raid-dungeon-id-2" />
+				<case name="bound-raid-dungeon-id-3" />
+				<case name="bound-raid-dungeon-id-4" />
+				<case name="bound-raid-dungeon-id-5" />
+				<case name="bound-raid-dungeon-id-6" />
+				<case name="bound-raid-dungeon-id-7" />
+				<case name="bound-raid-dungeon-id-8" />
+				<case name="bound-raid-dungeon-id-9" />
+				<case name="bound-raid-dungeon-id-10" />
+				<case name="bound-raid-dungeon-id-11" />
+				<case name="bound-raid-dungeon-id-12" />
+				<case name="bound-raid-dungeon-id-13" />
+				<case name="bound-raid-dungeon-id-14" />
+				<case name="bound-raid-dungeon-id-15" />
+				<case name="bound-raid-dungeon-id-16" />
+				<case name="bound-raid-dungeon-id-17" />
+				<case name="boss-second-gauge" />
+				<case name="accumulated-damage-slot-tao" />
+				<case name="accumulated-damage-slot-1" />
+				<case name="accumulated-damage-slot-2" />
+				<case name="accumulated-damage-slot-3" />
+				<case name="skill-skin-id" />
+				<case name="pvp-mode-cooltime" />
+				<case name="ghost-type" />
+				<case name="challenge-party-id" />
+				<case name="challenge-party-out-time" />
+				<case name="acquired-skill-build-up-point" />
+				<case name="usable-skill-build-up-point" />
+				<case name="job-style" />
+				<case name="account-exp-to-add" />
+				<case name="account-exp-added" />
+				<case name="account-exp-added-time" />
+				<case name="account-exp-by-pc" />
+				<case name="account-level" />
+				<case name="account-exp" />
+				<case name="account-exp-quota-per-day" />
+				<case name="account-exp-last-update-time" />
+				<case name="activated-badge-page" />
+				<case name="equip-badge-gear-score" />
+				<case name="combat-mode" />
+				<case name="falling" />
+				<case name="convoy" />
+				<case name="attackable" />
+				<case name="casting" />
+				<case name="immune-breaker-disable" />
+				<case name="npc-interactive" />
+				<case name="npc-talkable" />
+				<case name="special-skill-gauge-full" />
+				<case name="pvp-mode" />
+				<case name="break-state" />
+				<case name="break-gauge-block-state" />
+				<case name="public-reserve-5" />
+				<case name="public-reserve-6" />
+				<case name="public-reserve-7" />
+				<case name="public-reserve-8" />
+				<case name="detect-hiding" />
+				<case name="guild-invitation-refusal" />
+				<case name="pvp-safe-area" />
+				<case name="zone-move-state" />
+				<case name="private-reserve-5" />
+				<case name="private-reserve-6" />
+				<case name="private-reserve-7" />
+				<case name="private-reserve-8" />
+				<case name="slate-page" />
+				<case name="guild-point" />
+				<case name="activated-vehicle-id" />
+				<case name="break-gauge" />
+				<case name="break-state-count" />
+				<case name="personal-raid-dungeon-1-progress-step" />
+				<case name="personal-raid-dungeon-1-expiration-time" />
+				<case name="personal-raid-dungeon-2-progress-step" />
+				<case name="personal-raid-dungeon-2-expiration-time" />
+				<case name="personal-raid-dungeon-3-progress-step" />
+				<case name="personal-raid-dungeon-3-expiration-time" />
+				<case name="login-reset-time" />
+				<case name="activated-glyph-page" />
+				<case name="enabled-glyph-slot" />
+				<case name="activated-card-collection-page" />
+				<case name="blue-virtual-currency-quota" />
+				<case name="blue-virtual-currency-quota-update-time" />
+				<case name="blue-virtual-currency-additional-quota" />
+				<case name="activated-relic-page" />
+				<case name="max-hp" />
+				<case name="max-hp-equip" />
+				<case name="max-guard-gauge" />
+				<case name="max-guard-gauge-equip" />
+				<case name="max-sp" />
+				<case name="max-sp2" />
+				<case name="speed" />
+				<case name="vehicle-speed" />
+				<case name="modify-cast-speed-percent" />
+				<case name="hp-regen" />
+				<case name="hp-regen-equip" />
+				<case name="hp-regen-combat" />
+				<case name="hp-regen-combat-equip" />
+				<case name="attack-hit-base-percent" />
+				<case name="attack-hit-value" />
+				<case name="attack-hit-value-equip" />
+				<case name="attack-pierce-base-percent" />
+				<case name="attack-parry-pierce-percent" />
+				<case name="attack-pierce-value" />
+				<case name="attack-pierce-value-equip" />
+				<case name="attack-critical-base-percent" />
+				<case name="attack-critical-damage-percent" />
+				<case name="attack-critical-value" />
+				<case name="attack-critical-value-equip" />
+				<case name="attack-critical-damage-value" />
+				<case name="attack-critical-damage-value-equip" />
+				<case name="defend-critical-base-percent" />
+				<case name="defend-critical-damage-percent" />
+				<case name="defend-critical-value" />
+				<case name="defend-critical-value-equip" />
+				<case name="defend-bounce-percent" />
+				<case name="defend-dodge-base-percent" />
+				<case name="defend-dodge-value" />
+				<case name="defend-dodge-value-equip" />
+				<case name="defend-parry-base-percent" />
+				<case name="defend-parry-value" />
+				<case name="defend-parry-value-equip" />
+				<case name="defend-parry-reduce-percent" />
+				<case name="defend-parry-reduce-diff" />
+				<case name="defend-perfect-parry-base-percent" />
+				<case name="defend-immune-base-percent" />
+				<case name="attack-power-creature-min" />
+				<case name="attack-power-creature-max" />
+				<case name="attack-power-equip-min" />
+				<case name="attack-power-equip-max" />
+				<case name="defend-power-creature-value" />
+				<case name="defend-power-equip-value" />
+				<case name="defend-resist-power-creature-value" />
+				<case name="defend-resist-power-equip-value" />
+				<case name="defend-physical-damage-reduce-percent" />
+				<case name="defend-force-damage-reduce-percent" />
+				<case name="attack-damage-modify-percent" />
+				<case name="attack-damage-modify-diff" />
+				<case name="defend-damage-modify-percent" />
+				<case name="defend-damage-modify-diff" />
+				<case name="defend-miss-base-percent" />
+				<case name="attack-stiff-duration-base-percent" />
+				<case name="attack-stiff-duration-value" />
+				<case name="defend-stiff-duration-base-percent" />
+				<case name="defend-stiff-duration-value" />
+				<case name="cast-duration-base-percent" />
+				<case name="cast-duration-value" />
+				<case name="attack-concentrate-value" />
+				<case name="attack-concentrate-value-equip" />
+				<case name="defend-perfect-parry-reduce-percent" />
+				<case name="defend-counter-reduce-percent" />
+				<case name="pve-boss-level-npc-attack-power-creature-min" />
+				<case name="pve-boss-level-npc-attack-power-creature-max" />
+				<case name="pve-boss-level-npc-attack-power-equip-min" />
+				<case name="pve-boss-level-npc-attack-power-equip-max" />
+				<case name="pve-boss-level-npc-defend-power-creature-value" />
+				<case name="pve-boss-level-npc-defend-power-equip-value" />
+				<case name="pvp-attack-power-creature-min" />
+				<case name="pvp-attack-power-creature-max" />
+				<case name="pvp-attack-power-equip-min" />
+				<case name="pvp-attack-power-equip-max" />
+				<case name="pvp-defend-power-creature-value" />
+				<case name="pvp-defend-power-equip-value" />
+				<case name="job-ability-1" />
+				<case name="job-ability-2" />
+				<case name="heal-power-base-percent" />
+				<case name="heal-power-value" />
+				<case name="heal-power-diff" />
+				<case name="aoe-defend-base-percent" />
+				<case name="aoe-defend-power-value" />
+				<case name="abnormal-attack-base-percent" />
+				<case name="abnormal-attack-power-value" />
+				<case name="abnormal-attack-power-value-equip" />
+				<case name="abnormal-defend-base-percent" />
+				<case name="abnormal-defend-power-value" />
+				<case name="hate-base-percent" />
+				<case name="hate-power-creature-value" />
+				<case name="hate-power-equip-value" />
+				<case name="additional-exp-diff-by-kill" />
+				<case name="additional-exp-percent-by-kill" />
+				<case name="additional-mastery-exp-diff-by-kill" />
+				<case name="additional-mastery-exp-percent-by-kill" />
+				<case name="additional-faction-score-max-percent" />
+				<case name="additional-sealed-dungeon-exp-diff-by-kill" />
+				<case name="additional-sealed-dungeon-exp-percent-by-kill" />
+				<case name="attack-attribute-value" />
+				<case name="attack-attribute-value-equip" />
+				<case name="attack-attribute-base-percent" />
+				<case name="defend-difficulty-type-damage-reduce-percent" />
+				<case name="race-type-1-attack-damage-modify-percent" />
+				<case name="race-type-2-attack-damage-modify-percent" />
+				<case name="race-type-3-attack-damage-modify-percent" />
+				<case name="race-type-4-attack-damage-modify-percent" />
+				<case name="race-type-5-attack-damage-modify-percent" />
+				<case name="race-type-6-attack-damage-modify-percent" />
+				<case name="race-type-7-attack-damage-modify-percent" />
+				<case name="race-type-1-defend-damage-modify-percent" />
+				<case name="race-type-2-defend-damage-modify-percent" />
+				<case name="race-type-3-defend-damage-modify-percent" />
+				<case name="race-type-4-defend-damage-modify-percent" />
+				<case name="race-type-5-defend-damage-modify-percent" />
+				<case name="race-type-6-defend-damage-modify-percent" />
+				<case name="race-type-7-defend-damage-modify-percent" />
+				<case name="attribute-type-1-attack-damage-modify-percent" />
+				<case name="attribute-type-2-attack-damage-modify-percent" />
+				<case name="attribute-type-3-attack-damage-modify-percent" />
+				<case name="attribute-type-4-attack-damage-modify-percent" />
+				<case name="attribute-type-5-attack-damage-modify-percent" />
+				<case name="attribute-type-6-attack-damage-modify-percent" />
+				<case name="attribute-type-7-attack-damage-modify-percent" />
+				<case name="attribute-type-8-attack-damage-modify-percent" />
+				<case name="attribute-type-9-attack-damage-modify-percent" />
+				<case name="attribute-type-10-attack-damage-modify-percent" />
+				<case name="attribute-type-11-attack-damage-modify-percent" />
+				<case name="attribute-type-12-attack-damage-modify-percent" />
+				<case name="attribute-type-1-defend-damage-modify-percent" />
+				<case name="attribute-type-2-defend-damage-modify-percent" />
+				<case name="attribute-type-3-defend-damage-modify-percent" />
+				<case name="attribute-type-4-defend-damage-modify-percent" />
+				<case name="attribute-type-5-defend-damage-modify-percent" />
+				<case name="attribute-type-6-defend-damage-modify-percent" />
+				<case name="attribute-type-7-defend-damage-modify-percent" />
+				<case name="attribute-type-8-defend-damage-modify-percent" />
+				<case name="attribute-type-9-defend-damage-modify-percent" />
+				<case name="attribute-type-10-defend-damage-modify-percent" />
+				<case name="attribute-type-11-defend-damage-modify-percent" />
+				<case name="attribute-type-12-defend-damage-modify-percent" />
+				<case name="defend-critical-damage-value" />
+				<case name="defend-critical-damage-value-equip" />
+				<case name="invisible" />
+				<case name="block-move" />
+				<case name="block-skill" />
+				<case name="block-physical-skill" />
+				<case name="block-force-skill" />
+				<case name="immune-damage" />
+				<case name="immune-death" />
+				<case name="immune-debuff" />
+				<case name="exception-target" />
+				<case name="exception-detect" />
+				<case name="exception-hostile-target" />
+				<case name="immune-casting-delay" />
+				<case name="block-dodge" />
+				<case name="block-bounce" />
+				<case name="block-parry" />
+				<case name="block-perfect-parry" />
+				<case name="front-perfect-parry" />
+				<case name="back-perfect-parry" />
+				<case name="front-bounce" />
+				<case name="back-bounce" />
+				<case name="debug-invincible" />
+				<case name="debug-invisible" />
+				<case name="abnormality-reserve-7" />
+				<case name="abnormality-reserve-8" />
+				<case name="equip-hand" />
+				<case name="equip-hand-level" />
+				<case name="equip-hand-appearance-item" />
+				<case name="equip-hand-appearance-item-level" />
+				<case name="equip-hand-alt" />
+				<case name="equip-body" />
+				<case name="equip-body-guild-id" />
+				<case name="equip-body-custom1" />
+				<case name="equip-body-custom2" />
+				<case name="equip-body-custom3" />
+				<case name="equip-body-custom4" />
+				<case name="equip-body-custom5" />
+				<case name="equip-body-custom6" />
+				<case name="equip-body-custom7" />
+				<case name="equip-body-custom8" />
+				<case name="equip-ear" />
+				<case name="equip-eye" />
+				<case name="equip-eye-custom1" />
+				<case name="equip-eye-custom2" />
+				<case name="equip-eye-custom3" />
+				<case name="equip-head" />
+				<case name="equip-head-custom1" />
+				<case name="equip-head-custom2" />
+				<case name="equip-head-custom3" />
+				<case name="equip-body-attach" />
+				<case name="equip-body-attach-custom1" />
+				<case name="equip-body-attach-custom2" />
+				<case name="equip-body-attach-custom3" />
+				<case name="equip-weapon-gem" />
+				<case name="equip-pet-1" />
+				<case name="equip-pet-1-appearance-item" />
+				<case name="equip-pet-2" />
+				<case name="equip-pet-2-appearance-item" />
+				<case name="equip-badge-appearance-item" />
+				<case name="equip-normal-state-appearance" />
+				<case name="equip-idle-state-appearance" />
+				<case name="equip-hypermove-appearance" />
+				<case name="equip-name-plate-appearance" />
+				<case name="equip-speech-bubble-appearance" />
+				<case name="equip-talk-social-item" />
+				<case name="equip-soul-gem" />
+				<case name="attack-stiff-duration-equip-value" />
+				<case name="defend-stiff-duration-equip-value" />
+				<case name="aoe-defend-power-value-equip" />
+				<case name="heal-power-equip-value" />
+				<case name="defend-strength-creature-value" />
+				<case name="defend-strength-equip-value" />
+				<case name="attack-precise-creature-value" />
+				<case name="attack-precise-equip-value" />
+				<case name="attack-aoe-pierce-value" />
+				<case name="attack-aoe-pierce-value-equip" />
+				<case name="attack-abnormal-hit-base-percent" />
+				<case name="attack-abnormal-hit-value" />
+				<case name="attack-abnormal-hit-equip-value" />
+				<case name="defend-abnormal-dodge-base-percent" />
+				<case name="defend-abnormal-dodge-value" />
+				<case name="defend-abnormal-dodge-equip-value" />
+				<case name="support-power-base-percent" />
+				<case name="support-power-value" />
+				<case name="support-power-equip-value" />
+				<case name="hypermove-power-value" />
+				<case name="hypermove-power-equip-value" />
+			</attribute>
+			<attribute name="modify-ability-diff-for-mastery" type="Int64" repeat="16" default="0" min="-9223372036854775807" max="9223372036854775807" />
+			<attribute name="modify-ability-percent-for-mastery" type="Int16" repeat="16" default="0" min="-32768" max="32767" />
+		</sub>
+		<sub name="shooter-lock-on">
+			<attribute name="lock-on-target-id" type="Int64" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		</sub>
+		<sub name="attack-glide" />
+		<sub name="second-gauge-point">
+			<attribute name="gp-diff" type="Int16" default="0" min="-1000" max="1000" />
+		</sub>
+		<sub name="interval-second-gauge-point">
+			<attribute name="gp-diff" type="Int16" default="0" min="-1000" max="1000" />
+		</sub>
+		<sub name="stop-second-gauge-point" />
+		<sub name="set-second-gauge-point">
+			<attribute name="gp-fix" type="Int16" default="0" min="-1000" max="1000" />
+		</sub>
+		<sub name="particle-socket">
+			<attribute name="effect-particle" type="XUnknown2" default="" max="256" />
+			<attribute name="effect-particle2" type="XUnknown2" default="" max="256" />
+			<attribute name="effect-particle3" type="XUnknown2" default="" max="256" />
+			<attribute name="effect-particle4" type="XUnknown2" default="" max="256" />
+			<attribute name="effect-particle5" type="XUnknown2" default="" max="256" />
+			<attribute name="effect-particle-followup-time-min" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+			<attribute name="effect-particle-followup-time-max" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+			<attribute name="spawn-show" type="XUnknown2" default="" max="256" />
+			<attribute name="spawn-show2" type="XUnknown2" default="" max="256" />
+			<attribute name="spawn-show3" type="XUnknown2" default="" max="256" />
+			<attribute name="spawn-show4" type="XUnknown2" default="" max="256" />
+			<attribute name="spawn-show5" type="XUnknown2" default="" max="256" />
+			<attribute name="despawn-show" type="XUnknown2" default="" max="256" />
+			<attribute name="despawn-show2" type="XUnknown2" default="" max="256" />
+			<attribute name="despawn-show3" type="XUnknown2" default="" max="256" />
+			<attribute name="despawn-show4" type="XUnknown2" default="" max="256" />
+			<attribute name="despawn-show5" type="XUnknown2" default="" max="256" />
+		</sub>
+		<sub name="set-appearance" />
+		<sub name="boutique-free" />
+		<sub name="difficulty-type-dispel-attribute-hp-damage" />
+		<sub name="sealed-dungeon-dispel-attribute-hp-damage" />
+		<sub name="soul-mask-1">
+			<attribute name="soul-mask-id" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="soul-mask-2">
+			<attribute name="soul-mask-id" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="npc-change-appearance">
+			<attribute name="npc" type="Ref" ref="npc" refel="1" />
+			<attribute name="weapon" type="Ref" ref="item" refel="1" />
+		</sub>
+		<sub name="modify-hyper-energy">
+			<attribute name="diff-hyper-energy" type="Int32" default="0" min="-60000" max="60000" />
+		</sub>
+		<sub name="modify-ability-by-caster" />
+	</el>
+</table>

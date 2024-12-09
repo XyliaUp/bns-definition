@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="sealed-dungeon-gimmick" type="327" version="1.1" module="6" maxid="30000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="30000" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name" type="String" deprecated="True" default="" max="30" />
+		<attribute name="icon-name" type="Ref" ref="text" refel="1" />
+		<attribute name="icon-tooltip" type="Ref" ref="text" refel="1" />
+		<attribute name="icon-texture" type="Ref" ref="icontexture" refel="1" />
+		<attribute name="icon-index" type="Int16" default="0" min="-32768" max="32767" />
+	</el>
+</table>

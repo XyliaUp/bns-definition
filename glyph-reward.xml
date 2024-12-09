@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="glyph-reward" type="159" version="4.0" module="6" maxid="30000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="30000" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name" type="Ref" ref="text" refel="1" />
+		<attribute name="shuffle-reward-icon" type="Icon" max="32767" />
+		<attribute name="shuffle-reward-tooltip" type="Ref" ref="text" refel="1" />
+		<attribute name="upgrade-reward-preview" type="Seq" default="fixed-score">
+			<case name="fixed-score" />
+			<case name="random-score" />
+		</attribute>
+		<attribute name="upgrade-reward-warning-message" type="Bool" default="n" />
+		<attribute name="reward-type" type="Seq" required="True">
+			<case name="acquire" />
+			<case name="upgrade" />
+			<case name="shuffle" />
+		</attribute>
+		<attribute name="grade" type="Int8" default="1" min="1" max="8" />
+		<attribute name="color" type="Seq" default="none">
+			<case name="none" />
+			<case name="red" />
+			<case name="yellow" />
+			<case name="blue" />
+		</attribute>
+		<attribute name="glyph-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="normal" />
+			<case name="special" />
+			<case name="material" />
+		</attribute>
+		<attribute name="cost-money" type="Int32" default="0" max="2147483647" />
+		<attribute name="cost-item" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="cost-item-count" type="Int16" repeat="4" default="0" max="30000" />
+		<attribute name="tier-pick-probability" type="Int8" default="100" max="100" />
+		<attribute name="additional-glyph-pick-probability" type="Int8" default="0" max="100" />
+		<attribute name="grade-prob-weight" type="Int16" repeat="8" default="0" max="10000" />
+		<attribute name="grade-prob-weight-total" type="Int16" hidden="True" default="0" max="10000" />
+		<attribute name="tier-prob-weight" type="Int16" repeat="8" default="0" max="10000" />
+		<attribute name="tier-prob-weight-total" type="Int16" hidden="True" default="0" max="10000" />
+		<attribute name="result-glyph-prob-weight" type="Int16" repeat="30" default="0" max="10000" />
+		<attribute name="result-glyph-prob-weight-total" type="Int16" hidden="True" default="0" max="10000" />
+		<attribute name="result-glyph" type="Ref" repeat="30" ref="glyph" refel="1" />
+		<attribute name="additional-glyph-prob-weight" type="Int16" repeat="10" default="0" max="10000" />
+		<attribute name="additional-glyph-prob-weight-total" type="Int16" hidden="True" default="0" max="10000" />
+		<attribute name="additional-glyph" type="Ref" repeat="10" ref="glyph" refel="1" />
+		<attribute name="cost-group-id" type="Int16" repeat="8" default="0" max="10000" />
+		<attribute name="result-group-id" type="Int16" repeat="8" default="0" max="10000" />
+		<attribute name="group-prob-weight" type="Int16" repeat="8" default="0" max="10000" />
+		<attribute name="group-prob-weight-total" type="Int16" hidden="True" default="0" max="10000" />
+	</el>
+</table>

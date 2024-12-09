@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="summonedstandidle" type="411" version="0.3" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="skip-time" type="Msec" default="20000" max="600000" />
+		<attribute name="event-time" type="Msec" default="20000" max="600000" />
+		<attribute name="idle-event-ani-1" type="String" repeat="4" default="" max="60" />
+		<attribute name="idle-event-ani-rate-1" type="Int16" repeat="4" default="" min="-32768" max="32767" />
+		<attribute name="lobby-idle-event-ani-rate-1" type="Int16" repeat="4" default="" min="-32768" max="32767" />
+		<attribute name="idle-event-type-1" type="Seq" repeat="4" default="animation">
+			<case name="animation" />
+			<case name="show" />
+		</attribute>
+		<attribute name="second-idle" type="String" default="" max="60" />
+		<attribute name="idle-event-ani-2" type="String" repeat="4" default="" max="60" />
+		<attribute name="idle-event-ani-rate-2" type="Int16" repeat="4" default="" min="-32768" max="32767" />
+		<attribute name="lobby-idle-event-ani-rate-2" type="Int16" repeat="4" default="" min="-32768" max="32767" />
+		<attribute name="idle-event-type-2" type="Seq" repeat="4" default="animation">
+			<case name="animation" />
+			<case name="show" />
+		</attribute>
+		<attribute name="hp-idle-rate" type="Int16" default="" min="-32768" max="32767" />
+		<attribute name="hp-idle" type="String" default="" max="60" />
+	</el>
+</table>

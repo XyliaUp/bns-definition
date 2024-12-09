@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="ranking2-contents" type="309" version="10.0" module="16454">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="contents-type" type="Seq" required="True">
+			<case name="invalid" />
+			<case name="duel-death-match-1vs1" />
+			<case name="duel-death-match-3vs3" />
+			<case name="duel-tag-match-3vs3" />
+			<case name="party-battle-occupation-war" />
+			<case name="solo-dungeon-1-best-record" />
+			<case name="infinite-tower-best-record" />
+			<case name="party-battle-capture-the-flag" />
+			<case name="guild-combat" />
+			<case name="solo-dungeon-2-best-record" />
+			<case name="ingame-championship-duel-death-match-1vs1" />
+			<case name="ingame-championship-duel-tag-match-3vs3" />
+			<case name="party-battle-lead-the-ball" />
+			<case name="challenge-party-best-record" />
+			<case name="battle-royal-free-for-all" />
+			<case name="battle-royal-free-for-all-party" />
+			<case name="mastery-exp-best-record" />
+			<case name="sealed-dungeon-total" />
+			<case name="sealed-dungeon-1" />
+			<case name="sealed-dungeon-2" />
+			<case name="sealed-dungeon-3" />
+			<case name="sealed-dungeon-4" />
+			<case name="sealed-dungeon-5" />
+			<case name="sealed-dungeon-6" />
+			<case name="wave-dungeon-1" />
+			<case name="wave-dungeon-2" />
+			<case name="solo-dungeon-3-best-record" />
+			<case name="solo-dungeon-4-best-record" />
+			<case name="solo-dungeon-5-best-record" />
+			<case name="tier-total" />
+			<case name="hyper-racing-game" />
+			<case name="duel-npc-challenge" />
+		</attribute>
+		<attribute name="player-type" type="Seq" required="True">
+			<case name="invalid" />
+			<case name="pc" />
+			<case name="guild" />
+			<case name="challenge-party" />
+		</attribute>
+		<attribute name="score-type" type="Seq" required="True">
+			<case name="invalid" />
+			<case name="update" />
+			<case name="best-update" />
+		</attribute>
+		<attribute name="minimum-score" type="Int32" default="1" min="1" max="2147483647" />
+		<attribute name="contents-banner-img" type="XUnknown2" default="" max="256" />
+		<attribute name="contents-name" type="Ref" ref="text" refel="1" />
+		<attribute name="sort-number" type="Int8" default="1" min="-128" max="127" />
+	</el>
+</table>

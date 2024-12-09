@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="vehicle-appearance" type="434" version="0.8" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="128" />
+		<attribute name="anim-set-name" type="XUnknown2" default="" max="256" />
+		<attribute name="rider-anim-set-name" type="XUnknown2" default="" max="256" />
+		<attribute name="anim-tree-name" type="XUnknown2" default="" max="256" />
+		<attribute name="mesh-name" type="XUnknown2" default="" max="256" />
+		<attribute name="material-name" type="XUnknown2" repeat="5" default="" max="256" />
+		<attribute name="physic-asset" type="XUnknown2" default="" max="256" />
+		<attribute name="ride-show-name" type="XUnknown2" default="" max="256" />
+		<attribute name="getoff-show-name" type="XUnknown2" default="" max="256" />
+		<attribute name="cancel-show-name" type="XUnknown2" default="" max="256" />
+		<attribute name="move-vehicle-idle" type="String" default="" max="60" />
+		<attribute name="attach-rider-bone" type="String" default="" max="60" />
+		<attribute name="attach-vehicle-socket" type="String" default="" max="60" />
+		<attribute name="stand-idle" type="Ref" ref="standidle" refel="1" />
+		<attribute name="effect-show" type="XUnknown2" default="" max="256" />
+		<attribute name="foot-print-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="two-legged" />
+			<case name="four-legged" />
+		</attribute>
+		<attribute name="preview-mesh-zoom-out-value" type="Float32" default="2" fmin="1" fmax="3.40282347E+38" />
+		<attribute name="preview-mesh-light-brightness" type="Float32" default="60" fmin="1" fmax="160" />
+	</el>
+</table>

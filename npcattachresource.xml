@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="npcattachresource" type="10" version="0.5" module="24">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="data-version" type="Int16" default="1" min="-32768" max="32767" />
+		<attribute name="resource-name" type="XUnknown2" default="" max="256" />
+	</el>
+</table>

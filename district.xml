@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="district" type="101" version="0.3" module="14">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="talk-to-self-quests" type="Ref" repeat="64" hidden="True" ref="quest" refel="1" />
+	</el>
+</table>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="itemexchange" type="197" version="0.5" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="rule-usage" type="Seq" default="antique-exchange">
+			<case name="antique-exchange" />
+			<case name="crystallization" />
+		</attribute>
+		<attribute name="required-item" type="TRef" repeat="4" />
+		<attribute name="required-item-min-level" type="Int8" repeat="4" default="1" min="1" max="100" />
+		<attribute name="required-item-stack-count" type="Int16" repeat="4" default="0" max="1000" />
+		<attribute name="normal-item" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="normal-item-stack-count" type="Int16" repeat="4" default="0" max="1000" />
+	</el>
+</table>

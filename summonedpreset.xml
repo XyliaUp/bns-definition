@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="summonedpreset" type="409" version="0.4" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="race" type="Prop_seq" key="True" required="True">
+			<case name="race-none" />
+			<case name="건" />
+			<case name="곤" />
+			<case name="린" />
+			<case name="진" />
+			<case name="나쁜몹" />
+			<case name="더나쁜몹" />
+			<case name="무서운몹" />
+			<case name="더무서운몹" />
+			<case name="더더무서운몹" />
+			<case name="고양이" />
+			<case name="강림체" />
+			<case name="악귀" />
+		</attribute>
+		<attribute name="part-type" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="face" />
+			<case name="body" />
+			<case name="eye-color" />
+			<case name="eye" />
+			<case name="body-color" />
+			<case name="body-shape" />
+			<case name="decal" />
+		</attribute>
+		<attribute name="part-value" type="Int8" key="True" required="True" min="1" max="50" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="price" type="Int32" default="0" max="2147483647" />
+		<attribute name="icon-texture" type="Ref" ref="icontexture" refel="1" />
+		<attribute name="icon-index" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="desc" type="Ref" ref="text" refel="1" />
+		<attribute name="param8" type="Int8" repeat="96" default="-128" min="-128" max="127" />
+	</el>
+</table>

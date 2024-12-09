@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="level" type="239" version="0.17" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="level" type="Int8" key="True" required="True" min="1" max="60" />
+		<attribute name="exp" type="Int32" required="True" max="100000000" />
+		<attribute name="exp-boost" type="Int32" repeat="3" default="0" max="100000000" />
+		<attribute name="exp-boost-recharge-time" type="Int32" repeat="3" default="0" max="2147483647" />
+		<attribute name="default-faction-score-acquire-level" type="Int8" required="True" min="1" max="60" />
+		<attribute name="half-faction-score-acquire-level" type="Int8" required="True" min="1" max="60" />
+		<attribute name="duel-death-match-1vs1-win-exp" type="Int32" default="0" max="2147483647" />
+		<attribute name="duel-death-match-1vs1-lose-draw-exp" type="Int32" default="0" max="2147483647" />
+		<attribute name="duel-death-match-1vs1-win-duel-point" type="Int32" default="0" max="2147483647" />
+		<attribute name="duel-death-match-1vs1-lose-draw-duel-point" type="Int32" default="0" max="2147483647" />
+		<attribute name="duel-tag-match-3vs3-win-exp" type="Int32" default="0" max="2147483647" />
+		<attribute name="duel-tag-match-3vs3-lose-draw-exp" type="Int32" default="0" max="2147483647" />
+		<attribute name="duel-tag-match-3vs3-win-duel-point" type="Int32" default="0" max="2147483647" />
+		<attribute name="duel-tag-match-3vs3-lose-draw-duel-point" type="Int32" default="0" max="2147483647" />
+		<attribute name="party-battle-occupation-war-win-exp" type="Int32" default="0" max="2147483647" />
+		<attribute name="party-battle-occupation-war-lose-draw-exp" type="Int32" default="0" max="2147483647" />
+		<attribute name="party-battle-occupation-war-win-party-battle-point" type="Int32" default="0" max="2147483647" />
+		<attribute name="party-battle-occupation-war-lose-draw-party-battle-point" type="Int32" default="0" max="2147483647" />
+		<attribute name="party-battle-capture-the-flag-win-exp" type="Int32" default="0" max="2147483647" />
+		<attribute name="party-battle-capture-the-flag-lose-draw-exp" type="Int32" default="0" max="2147483647" />
+		<attribute name="party-battle-capture-the-flag-win-party-battle-point" type="Int32" default="0" max="2147483647" />
+		<attribute name="party-battle-capture-the-flag-lose-draw-party-battle-point" type="Int32" default="0" max="2147483647" />
+		<attribute name="party-battle-lead-the-ball-win-exp" type="Int32" default="0" max="2147483647" />
+		<attribute name="party-battle-lead-the-ball-lose-draw-exp" type="Int32" default="0" max="2147483647" />
+		<attribute name="party-battle-lead-the-ball-win-party-battle-point" type="Int32" default="0" max="2147483647" />
+		<attribute name="party-battle-lead-the-ball-lose-draw-party-battle-point" type="Int32" default="0" max="2147483647" />
+		<attribute name="exp-boost-sum" type="Int32" repeat="3" hidden="True" default="0" max="100000000" />
+		<attribute name="express-cost" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="tencent-vitality-max" type="Int32" repeat="4" default="0" max="100000000" />
+		<attribute name="level-guide-path" type="String" default="" max="100" />
+		<attribute name="exceed-level-quest" type="Ref" ref="quest" refel="1" />
+		<attribute name="exceed-level-next-level" type="Int8" default="0" min="-128" max="127" />
+	</el>
+</table>

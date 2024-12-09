@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="item-random-ability-section" type="210" version="0.3" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="variation-value-min" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="variation-value-max" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="variation-value-with-special-item-min" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="variation-value-with-special-item-max" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="distribution-type" type="Ref" ref="random-distribution" refel="1" />
+	</el>
+</table>

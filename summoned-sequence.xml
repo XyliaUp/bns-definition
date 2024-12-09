@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="summoned-sequence" type="410" version="0.5" module="2052">
+	<el name="table" child="summoned-sequence" />
+	<el name="summoned-sequence" child="melee,range,range-sim">
+		<attribute name="alias" type="String" required="True" max="70" />
+	</el>
+	<el name="action" child="">
+		<attribute name="line" type="Int32" hidden="True" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="prob" type="Int8" default="100" min="-128" max="127" />
+		<sub name="use-indexed-skill">
+			<attribute name="skill" type="Int8" required="True" min="1" max="10" />
+		</sub>
+		<sub name="stay">
+			<attribute name="duration" type="Msec" default="2000" min="1000" max="3600000" />
+		</sub>
+		<sub name="select" />
+	</el>
+	<el name="melee" child="action">
+		<attribute name="margin" type="Distance" default="40" min="-32768" max="32767" />
+	</el>
+	<el name="range" child="action">
+		<attribute name="margin" type="Distance" default="160" min="-32768" max="32767" />
+	</el>
+	<el name="range-sim" child="action">
+		<attribute name="margin" type="Distance" default="160" min="-32768" max="32767" />
+	</el>
+</table>

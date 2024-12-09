@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="feedback-boss-npc" type="137" version="1.2" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="npc" type="Ref" required="True" ref="npc" refel="1" />
+		<attribute name="skill-score" type="Ref" repeat="8" ref="feedback-skill-score" refel="1" />
+	</el>
+</table>

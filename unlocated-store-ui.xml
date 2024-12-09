@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="unlocated-store-ui" type="431" version="0.1" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="unlocated-store-type" type="Seq" key="True" required="True">
+			<case name="unlocated-none" />
+			<case name="unlocated-store" />
+			<case name="account-store" />
+			<case name="soul-boost-store-1" />
+			<case name="soul-boost-store-2" />
+			<case name="soul-boost-store-3" />
+			<case name="soul-boost-store-4" />
+			<case name="soul-boost-store-5" />
+			<case name="soul-boost-store-6" />
+			<case name="event-store" />
+		</attribute>
+		<attribute name="title-icon" type="String" required="True" max="50" />
+		<attribute name="title-text" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="button-icon" type="String" default="" max="50" />
+		<attribute name="button-text" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

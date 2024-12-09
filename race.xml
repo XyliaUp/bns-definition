@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="race" type="299" version="0.9" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="race" type="Prop_seq" key="True" required="True">
+			<case name="race-none" />
+			<case name="건" />
+			<case name="곤" />
+			<case name="린" />
+			<case name="진" />
+			<case name="나쁜몹" />
+			<case name="더나쁜몹" />
+			<case name="무서운몹" />
+			<case name="더무서운몹" />
+			<case name="더더무서운몹" />
+			<case name="고양이" />
+			<case name="강림체" />
+			<case name="악귀" />
+		</attribute>
+		<attribute name="name" type="String" deprecated="True" default="" max="10" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="lobby-race-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="character-info-race-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="desc" type="Ref" ref="text" refel="1" />
+		<attribute name="male-customize-zoomcamera-add-height" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="female-customize-zoomcamera-add-height" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="lobby-race-bgm" type="XUnknown2" default="" max="256" />
+	</el>
+</table>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="surveyquestions" type="413" version="0.1" module="4" pattern="SurveyQuestions*.x16">
+	<el name="table" child="surveyquestion" />
+	<el name="surveyquestion" child="question,questionexample">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="title" type="String" default="" max="256" />
+		<attribute name="greeting" type="String" default="" max="256" />
+	</el>
+	<el name="question" child="">
+		<attribute name="num" type="Int8" required="True" min="1" max="20" />
+		<attribute name="question-type" type="Seq" default="single-selection-question">
+			<case name="single-selection-question" />
+			<case name="multiple-selection-question" />
+			<case name="subjective-question" />
+		</attribute>
+		<attribute name="desc" type="String" default="" max="256" />
+	</el>
+	<el name="questionexample" child="">
+		<attribute name="num" type="Int8" required="True" min="1" max="9" />
+		<attribute name="desc" type="String" default="" max="256" />
+		<attribute name="gotoquestionnum" type="Int8" default="0" min="-128" max="127" />
+	</el>
+</table>

@@ -1,0 +1,1527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="skill3" type="337" version="10.5" module="2318" maxid="200000000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="200000000" />
+		<attribute name="variation-id" type="Int8" key="True" required="True" min="-128" max="127" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="revised-event-probability-in-exec" type="Int16" repeat="5" default="100" max="10000" />
+		<attribute name="skill-modify-limit" type="Ref" ref="skillmodifylimit" refel="1" />
+		<attribute name="is-ego-skill" type="Bool" default="n" />
+		<attribute name="use-ego-skill-training-sequence" type="Bool" default="y" />
+		<attribute name="systematization" type="Ref" repeat="16" ref="skillsystematization" refel="1" />
+		<attribute name="damage-rate-pvp" type="Int16" default="1000" max="10000" />
+		<attribute name="damage-rate-standard-stats" type="Int16" default="1000" max="10000" />
+		<attribute name="quest" type="Ref" hidden="True" ref="quest" refel="1" />
+		<attribute name="mission" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="caseindex" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="forwardingtype" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="name" type="String" default="" max="70" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="ui-stance" type="Prop_seq" repeat="3" default="stance-none">
+			<case name="stance-none" />
+			<case name="npc기본자세" />
+			<case name="천검세" />
+			<case name="검령세" />
+			<case name="단타" />
+			<case name="연계" />
+			<case name="체술" />
+			<case name="납도" />
+			<case name="경기공" />
+			<case name="연기공" />
+			<case name="강기공" />
+			<case name="권총모드" />
+			<case name="런처모드" />
+			<case name="파괴" />
+			<case name="보호" />
+			<case name="철벽" />
+			<case name="소환" />
+			<case name="교란" />
+			<case name="은신" />
+			<case name="암살" />
+			<case name="검술" />
+			<case name="어검" />
+			<case name="발도" />
+			<case name="npc자세1" />
+			<case name="npc자세2" />
+			<case name="npc자세3" />
+			<case name="소환수-follow" />
+			<case name="소환수-command-1" />
+			<case name="소환수-flying" />
+			<case name="주술" />
+			<case name="강림" />
+			<case name="유권" />
+			<case name="기공" />
+			<case name="냉정" />
+			<case name="광기" />
+			<case name="장궁" />
+			<case name="정령궁" />
+			<case name="찌르기" />
+			<case name="베기" />
+			<case name="청뢰" />
+			<case name="혈뢰" />
+			<case name="어검세" />
+			<case name="정수" />
+			<case name="역수" />
+			<case name="한손역수" />
+			<case name="간이연주" />
+			<case name="우퍼" />
+			<case name="연주" />
+			<case name="쌍월" />
+			<case name="뇌신" />
+			<case name="침식" />
+			<case name="염제" />
+			<case name="npc주시자세1" />
+			<case name="npc주시자세2" />
+			<case name="npc주시자세3" />
+		</attribute>
+		<attribute name="short-cut-key" type="Seq16" default="none">
+			<case name="none" />
+			<case name="action1" />
+			<case name="action2" />
+			<case name="action3" />
+			<case name="classic-action1" />
+			<case name="classic-action2" />
+			<case name="classic-action3" />
+			<case name="skill-recommend" />
+			<case name="skill-stance" />
+			<case name="skill-slot1" />
+			<case name="skill-slot2" />
+			<case name="skill-slot3" />
+			<case name="skill-slot4" />
+			<case name="skill-slot5" />
+			<case name="skill-slot6" />
+			<case name="skill-slot7" />
+			<case name="skill-slot8" />
+			<case name="skill-slot9" />
+			<case name="skill-slot10" />
+			<case name="skill-slot11" />
+			<case name="skill-slot12" />
+			<case name="skill-q" />
+			<case name="skill-e" />
+			<case name="skill-special-1" />
+			<case name="skill-special-2" />
+			<case name="item-slot1" />
+			<case name="item-slot2" />
+			<case name="item-slot3" />
+			<case name="item-slot4" />
+			<case name="extra-skill-slot5" />
+			<case name="skill-duel-tag" />
+			<case name="skill-duel-npc-challenge" />
+			<case name="toggle-help" />
+			<case name="toggle-dungeon-guide" />
+			<case name="toggle-inventory" />
+			<case name="toggle-gem" />
+			<case name="toggle-equipped" />
+			<case name="toggle-skill-book" />
+			<case name="toggle-quest-journal" />
+			<case name="toggle-minimap-scale" />
+			<case name="toggle-minimap-visible" />
+			<case name="toggle-quest-quick-slot" />
+			<case name="toggle-collect-manufacture" />
+			<case name="toggle-petition" />
+			<case name="toggle-option" />
+			<case name="toggle-minimap-alpha" />
+			<case name="toggle-party-panel" />
+			<case name="toggle-party-mark" />
+			<case name="toggle-party-search" />
+			<case name="toggle-hud-customize" />
+			<case name="party-match" />
+			<case name="manual-targeting" />
+			<case name="strafe-left" />
+			<case name="strafe-right" />
+			<case name="dash-forward" />
+			<case name="move-forward" />
+			<case name="move-backward" />
+			<case name="turn-left" />
+			<case name="turn-right" />
+			<case name="jump-up" />
+			<case name="toggle-walk-run" />
+			<case name="social-action1" />
+			<case name="social-action2" />
+			<case name="social-action3" />
+			<case name="social-action4" />
+			<case name="social-action5" />
+			<case name="social-action6" />
+			<case name="social-action7" />
+			<case name="social-action8" />
+			<case name="social-action9" />
+			<case name="social-action10" />
+			<case name="toggle-auto-move-forward" />
+			<case name="enter-slash-chatting" />
+			<case name="enter-normal-chatting" />
+			<case name="enter-party-chatting" />
+			<case name="enter-local-chatting" />
+			<case name="enter-private-chatting" />
+			<case name="toggle-hud" />
+			<case name="toggle-light-hud-mode" />
+			<case name="camera-up" />
+			<case name="camera-down" />
+			<case name="camera-zoomin" />
+			<case name="camera-zoomout" />
+			<case name="toggle-voice-chat-option" />
+			<case name="mark1" />
+			<case name="mark2" />
+			<case name="mark3" />
+			<case name="mark4" />
+			<case name="mark5" />
+			<case name="mark6" />
+			<case name="mark7" />
+			<case name="mark8" />
+			<case name="mark-timer" />
+			<case name="mark-timer-immune-break-down" />
+			<case name="mark-timer-immune-break-kneel" />
+			<case name="mark-timer-immune-break-stun" />
+			<case name="mark-timer-immune-break-knockback" />
+			<case name="unmark" />
+			<case name="headline-start-timer" />
+			<case name="minimap-depth-plus" />
+			<case name="minimap-depth-minus" />
+			<case name="rotate-camera" />
+			<case name="rotate-player" />
+			<case name="reset-camera" />
+			<case name="toggle-bns" />
+			<case name="notification-accept" />
+			<case name="notification-decline" />
+			<case name="toggle-joypad-ui-mode" />
+			<case name="close-floating-panels" />
+			<case name="joypad-esc" />
+			<case name="joypad-set-mouse-position" />
+			<case name="joypad-toggle-rotate-type" />
+			<case name="turn-on-social-mode" />
+			<case name="enter-party-search-channel-in-party-match" />
+			<case name="toggle-sns" />
+			<case name="toggle-powerbook" />
+			<case name="toggle-skill-powerbook" />
+			<case name="toggle-nshop" />
+			<case name="toggle-character-info" />
+			<case name="toggle-market" />
+			<case name="toggle-money-market" />
+			<case name="toggle-postbox" />
+			<case name="toggle-tencent-in-game-shop" />
+			<case name="toggle-tencent-cross" />
+			<case name="toggle-second-password" />
+			<case name="toggle-achievement" />
+			<case name="toggle-pc-filter-hidden" />
+			<case name="toggle-guild2" />
+			<case name="toggle-economy-communication" />
+			<case name="cancel-order" />
+			<case name="invite-party" />
+			<case name="duel-start" />
+			<case name="toggle-friend" />
+			<case name="toggle-wardrobe" />
+			<case name="toggle-dragon-jade-shop" />
+			<case name="toggle-ranking" />
+			<case name="toggle-ingame-notice" />
+			<case name="change-item-bar-page" />
+			<case name="duel-tag-order-first" />
+			<case name="duel-tag-order-random" />
+			<case name="leave-arena-square" />
+			<case name="quick-turn" />
+			<case name="joypad-special-function1" />
+			<case name="joypad-special-function2" />
+			<case name="accelerate-mouse-cursor-speed" />
+			<case name="joypad-mouse-left-button" />
+			<case name="joypad-mouse-right-button" />
+			<case name="change-pet-filter-hidden" />
+			<case name="toggle-damage-meter" />
+			<case name="duel-camera-fitpawn-new" />
+			<case name="duel-camera-free-new" />
+			<case name="duel-camera-quater-new" />
+			<case name="duel-camera-alpha-new" />
+			<case name="duel-camera-beta-new" />
+			<case name="duel-camera-free-up-new" />
+			<case name="duel-camera-free-down-new" />
+			<case name="toggle-goods-store" />
+			<case name="enter-skill-training-room" />
+			<case name="toggle-arena-entrance" />
+			<case name="toggle-appearance-pictorial" />
+			<case name="toggle-hybrid-mode" />
+			<case name="toggle-personal-customize" />
+			<case name="toggle-context-simple-mode" />
+			<case name="toggle-mentoring" />
+			<case name="toggle-pvp-enable" />
+			<case name="nova-equip-skill-quick-slot" />
+			<case name="toggle-account-contents" />
+			<case name="toggle-contents-journal-2" />
+			<case name="toggle-fish-collecting" />
+			<case name="toggle-slate" />
+			<case name="toggle-auto-mode" />
+			<case name="toggle-auto-mode-option" />
+			<case name="toggle-auto-mode-enable-item-support" />
+			<case name="toggle-pvp-data" />
+			<case name="toggle-ride-vehicle" />
+			<case name="toggle-museum" />
+			<case name="equip-spare-item" />
+			<case name="toggle-chat-minimize" />
+			<case name="toggle-ranking2" />
+			<case name="toggle-glyph-inventory" />
+			<case name="toggle-constellation" />
+			<case name="toggle-sealed-scroll" />
+			<case name="toggle-inter-battle-field" />
+			<case name="toggle-wanted-mission" />
+			<case name="toggle-expedition" />
+			<case name="toggle-game-information" />
+			<case name="toggle-mark-mode" />
+			<case name="toggle-relic-inventory" />
+			<case name="zone-exit" />
+			<case name="toggle-neopass" />
+			<case name="toggle-notification-center" />
+			<case name="toggle-joypad-lock-on" />
+			<case name="joypad-dash-backward" />
+		</attribute>
+		<attribute name="short-cut-key-classic" type="Seq16" default="none">
+			<case name="none" />
+			<case name="action1" />
+			<case name="action2" />
+			<case name="action3" />
+			<case name="classic-action1" />
+			<case name="classic-action2" />
+			<case name="classic-action3" />
+			<case name="skill-recommend" />
+			<case name="skill-stance" />
+			<case name="skill-slot1" />
+			<case name="skill-slot2" />
+			<case name="skill-slot3" />
+			<case name="skill-slot4" />
+			<case name="skill-slot5" />
+			<case name="skill-slot6" />
+			<case name="skill-slot7" />
+			<case name="skill-slot8" />
+			<case name="skill-slot9" />
+			<case name="skill-slot10" />
+			<case name="skill-slot11" />
+			<case name="skill-slot12" />
+			<case name="skill-q" />
+			<case name="skill-e" />
+			<case name="skill-special-1" />
+			<case name="skill-special-2" />
+			<case name="item-slot1" />
+			<case name="item-slot2" />
+			<case name="item-slot3" />
+			<case name="item-slot4" />
+			<case name="extra-skill-slot5" />
+			<case name="skill-duel-tag" />
+			<case name="skill-duel-npc-challenge" />
+			<case name="toggle-help" />
+			<case name="toggle-dungeon-guide" />
+			<case name="toggle-inventory" />
+			<case name="toggle-gem" />
+			<case name="toggle-equipped" />
+			<case name="toggle-skill-book" />
+			<case name="toggle-quest-journal" />
+			<case name="toggle-minimap-scale" />
+			<case name="toggle-minimap-visible" />
+			<case name="toggle-quest-quick-slot" />
+			<case name="toggle-collect-manufacture" />
+			<case name="toggle-petition" />
+			<case name="toggle-option" />
+			<case name="toggle-minimap-alpha" />
+			<case name="toggle-party-panel" />
+			<case name="toggle-party-mark" />
+			<case name="toggle-party-search" />
+			<case name="toggle-hud-customize" />
+			<case name="party-match" />
+			<case name="manual-targeting" />
+			<case name="strafe-left" />
+			<case name="strafe-right" />
+			<case name="dash-forward" />
+			<case name="move-forward" />
+			<case name="move-backward" />
+			<case name="turn-left" />
+			<case name="turn-right" />
+			<case name="jump-up" />
+			<case name="toggle-walk-run" />
+			<case name="social-action1" />
+			<case name="social-action2" />
+			<case name="social-action3" />
+			<case name="social-action4" />
+			<case name="social-action5" />
+			<case name="social-action6" />
+			<case name="social-action7" />
+			<case name="social-action8" />
+			<case name="social-action9" />
+			<case name="social-action10" />
+			<case name="toggle-auto-move-forward" />
+			<case name="enter-slash-chatting" />
+			<case name="enter-normal-chatting" />
+			<case name="enter-party-chatting" />
+			<case name="enter-local-chatting" />
+			<case name="enter-private-chatting" />
+			<case name="toggle-hud" />
+			<case name="toggle-light-hud-mode" />
+			<case name="camera-up" />
+			<case name="camera-down" />
+			<case name="camera-zoomin" />
+			<case name="camera-zoomout" />
+			<case name="toggle-voice-chat-option" />
+			<case name="mark1" />
+			<case name="mark2" />
+			<case name="mark3" />
+			<case name="mark4" />
+			<case name="mark5" />
+			<case name="mark6" />
+			<case name="mark7" />
+			<case name="mark8" />
+			<case name="mark-timer" />
+			<case name="mark-timer-immune-break-down" />
+			<case name="mark-timer-immune-break-kneel" />
+			<case name="mark-timer-immune-break-stun" />
+			<case name="mark-timer-immune-break-knockback" />
+			<case name="unmark" />
+			<case name="headline-start-timer" />
+			<case name="minimap-depth-plus" />
+			<case name="minimap-depth-minus" />
+			<case name="rotate-camera" />
+			<case name="rotate-player" />
+			<case name="reset-camera" />
+			<case name="toggle-bns" />
+			<case name="notification-accept" />
+			<case name="notification-decline" />
+			<case name="toggle-joypad-ui-mode" />
+			<case name="close-floating-panels" />
+			<case name="joypad-esc" />
+			<case name="joypad-set-mouse-position" />
+			<case name="joypad-toggle-rotate-type" />
+			<case name="turn-on-social-mode" />
+			<case name="enter-party-search-channel-in-party-match" />
+			<case name="toggle-sns" />
+			<case name="toggle-powerbook" />
+			<case name="toggle-skill-powerbook" />
+			<case name="toggle-nshop" />
+			<case name="toggle-character-info" />
+			<case name="toggle-market" />
+			<case name="toggle-money-market" />
+			<case name="toggle-postbox" />
+			<case name="toggle-tencent-in-game-shop" />
+			<case name="toggle-tencent-cross" />
+			<case name="toggle-second-password" />
+			<case name="toggle-achievement" />
+			<case name="toggle-pc-filter-hidden" />
+			<case name="toggle-guild2" />
+			<case name="toggle-economy-communication" />
+			<case name="cancel-order" />
+			<case name="invite-party" />
+			<case name="duel-start" />
+			<case name="toggle-friend" />
+			<case name="toggle-wardrobe" />
+			<case name="toggle-dragon-jade-shop" />
+			<case name="toggle-ranking" />
+			<case name="toggle-ingame-notice" />
+			<case name="change-item-bar-page" />
+			<case name="duel-tag-order-first" />
+			<case name="duel-tag-order-random" />
+			<case name="leave-arena-square" />
+			<case name="quick-turn" />
+			<case name="joypad-special-function1" />
+			<case name="joypad-special-function2" />
+			<case name="accelerate-mouse-cursor-speed" />
+			<case name="joypad-mouse-left-button" />
+			<case name="joypad-mouse-right-button" />
+			<case name="change-pet-filter-hidden" />
+			<case name="toggle-damage-meter" />
+			<case name="duel-camera-fitpawn-new" />
+			<case name="duel-camera-free-new" />
+			<case name="duel-camera-quater-new" />
+			<case name="duel-camera-alpha-new" />
+			<case name="duel-camera-beta-new" />
+			<case name="duel-camera-free-up-new" />
+			<case name="duel-camera-free-down-new" />
+			<case name="toggle-goods-store" />
+			<case name="enter-skill-training-room" />
+			<case name="toggle-arena-entrance" />
+			<case name="toggle-appearance-pictorial" />
+			<case name="toggle-hybrid-mode" />
+			<case name="toggle-personal-customize" />
+			<case name="toggle-context-simple-mode" />
+			<case name="toggle-mentoring" />
+			<case name="toggle-pvp-enable" />
+			<case name="nova-equip-skill-quick-slot" />
+			<case name="toggle-account-contents" />
+			<case name="toggle-contents-journal-2" />
+			<case name="toggle-fish-collecting" />
+			<case name="toggle-slate" />
+			<case name="toggle-auto-mode" />
+			<case name="toggle-auto-mode-option" />
+			<case name="toggle-auto-mode-enable-item-support" />
+			<case name="toggle-pvp-data" />
+			<case name="toggle-ride-vehicle" />
+			<case name="toggle-museum" />
+			<case name="equip-spare-item" />
+			<case name="toggle-chat-minimize" />
+			<case name="toggle-ranking2" />
+			<case name="toggle-glyph-inventory" />
+			<case name="toggle-constellation" />
+			<case name="toggle-sealed-scroll" />
+			<case name="toggle-inter-battle-field" />
+			<case name="toggle-wanted-mission" />
+			<case name="toggle-expedition" />
+			<case name="toggle-game-information" />
+			<case name="toggle-mark-mode" />
+			<case name="toggle-relic-inventory" />
+			<case name="zone-exit" />
+			<case name="toggle-neopass" />
+			<case name="toggle-notification-center" />
+			<case name="toggle-joypad-lock-on" />
+			<case name="joypad-dash-backward" />
+		</attribute>
+		<attribute name="short-cut-key-bns-simple-context" type="Seq16" default="none">
+			<case name="none" />
+			<case name="action1" />
+			<case name="action2" />
+			<case name="action3" />
+			<case name="classic-action1" />
+			<case name="classic-action2" />
+			<case name="classic-action3" />
+			<case name="skill-recommend" />
+			<case name="skill-stance" />
+			<case name="skill-slot1" />
+			<case name="skill-slot2" />
+			<case name="skill-slot3" />
+			<case name="skill-slot4" />
+			<case name="skill-slot5" />
+			<case name="skill-slot6" />
+			<case name="skill-slot7" />
+			<case name="skill-slot8" />
+			<case name="skill-slot9" />
+			<case name="skill-slot10" />
+			<case name="skill-slot11" />
+			<case name="skill-slot12" />
+			<case name="skill-q" />
+			<case name="skill-e" />
+			<case name="skill-special-1" />
+			<case name="skill-special-2" />
+			<case name="item-slot1" />
+			<case name="item-slot2" />
+			<case name="item-slot3" />
+			<case name="item-slot4" />
+			<case name="extra-skill-slot5" />
+			<case name="skill-duel-tag" />
+			<case name="skill-duel-npc-challenge" />
+			<case name="toggle-help" />
+			<case name="toggle-dungeon-guide" />
+			<case name="toggle-inventory" />
+			<case name="toggle-gem" />
+			<case name="toggle-equipped" />
+			<case name="toggle-skill-book" />
+			<case name="toggle-quest-journal" />
+			<case name="toggle-minimap-scale" />
+			<case name="toggle-minimap-visible" />
+			<case name="toggle-quest-quick-slot" />
+			<case name="toggle-collect-manufacture" />
+			<case name="toggle-petition" />
+			<case name="toggle-option" />
+			<case name="toggle-minimap-alpha" />
+			<case name="toggle-party-panel" />
+			<case name="toggle-party-mark" />
+			<case name="toggle-party-search" />
+			<case name="toggle-hud-customize" />
+			<case name="party-match" />
+			<case name="manual-targeting" />
+			<case name="strafe-left" />
+			<case name="strafe-right" />
+			<case name="dash-forward" />
+			<case name="move-forward" />
+			<case name="move-backward" />
+			<case name="turn-left" />
+			<case name="turn-right" />
+			<case name="jump-up" />
+			<case name="toggle-walk-run" />
+			<case name="social-action1" />
+			<case name="social-action2" />
+			<case name="social-action3" />
+			<case name="social-action4" />
+			<case name="social-action5" />
+			<case name="social-action6" />
+			<case name="social-action7" />
+			<case name="social-action8" />
+			<case name="social-action9" />
+			<case name="social-action10" />
+			<case name="toggle-auto-move-forward" />
+			<case name="enter-slash-chatting" />
+			<case name="enter-normal-chatting" />
+			<case name="enter-party-chatting" />
+			<case name="enter-local-chatting" />
+			<case name="enter-private-chatting" />
+			<case name="toggle-hud" />
+			<case name="toggle-light-hud-mode" />
+			<case name="camera-up" />
+			<case name="camera-down" />
+			<case name="camera-zoomin" />
+			<case name="camera-zoomout" />
+			<case name="toggle-voice-chat-option" />
+			<case name="mark1" />
+			<case name="mark2" />
+			<case name="mark3" />
+			<case name="mark4" />
+			<case name="mark5" />
+			<case name="mark6" />
+			<case name="mark7" />
+			<case name="mark8" />
+			<case name="mark-timer" />
+			<case name="mark-timer-immune-break-down" />
+			<case name="mark-timer-immune-break-kneel" />
+			<case name="mark-timer-immune-break-stun" />
+			<case name="mark-timer-immune-break-knockback" />
+			<case name="unmark" />
+			<case name="headline-start-timer" />
+			<case name="minimap-depth-plus" />
+			<case name="minimap-depth-minus" />
+			<case name="rotate-camera" />
+			<case name="rotate-player" />
+			<case name="reset-camera" />
+			<case name="toggle-bns" />
+			<case name="notification-accept" />
+			<case name="notification-decline" />
+			<case name="toggle-joypad-ui-mode" />
+			<case name="close-floating-panels" />
+			<case name="joypad-esc" />
+			<case name="joypad-set-mouse-position" />
+			<case name="joypad-toggle-rotate-type" />
+			<case name="turn-on-social-mode" />
+			<case name="enter-party-search-channel-in-party-match" />
+			<case name="toggle-sns" />
+			<case name="toggle-powerbook" />
+			<case name="toggle-skill-powerbook" />
+			<case name="toggle-nshop" />
+			<case name="toggle-character-info" />
+			<case name="toggle-market" />
+			<case name="toggle-money-market" />
+			<case name="toggle-postbox" />
+			<case name="toggle-tencent-in-game-shop" />
+			<case name="toggle-tencent-cross" />
+			<case name="toggle-second-password" />
+			<case name="toggle-achievement" />
+			<case name="toggle-pc-filter-hidden" />
+			<case name="toggle-guild2" />
+			<case name="toggle-economy-communication" />
+			<case name="cancel-order" />
+			<case name="invite-party" />
+			<case name="duel-start" />
+			<case name="toggle-friend" />
+			<case name="toggle-wardrobe" />
+			<case name="toggle-dragon-jade-shop" />
+			<case name="toggle-ranking" />
+			<case name="toggle-ingame-notice" />
+			<case name="change-item-bar-page" />
+			<case name="duel-tag-order-first" />
+			<case name="duel-tag-order-random" />
+			<case name="leave-arena-square" />
+			<case name="quick-turn" />
+			<case name="joypad-special-function1" />
+			<case name="joypad-special-function2" />
+			<case name="accelerate-mouse-cursor-speed" />
+			<case name="joypad-mouse-left-button" />
+			<case name="joypad-mouse-right-button" />
+			<case name="change-pet-filter-hidden" />
+			<case name="toggle-damage-meter" />
+			<case name="duel-camera-fitpawn-new" />
+			<case name="duel-camera-free-new" />
+			<case name="duel-camera-quater-new" />
+			<case name="duel-camera-alpha-new" />
+			<case name="duel-camera-beta-new" />
+			<case name="duel-camera-free-up-new" />
+			<case name="duel-camera-free-down-new" />
+			<case name="toggle-goods-store" />
+			<case name="enter-skill-training-room" />
+			<case name="toggle-arena-entrance" />
+			<case name="toggle-appearance-pictorial" />
+			<case name="toggle-hybrid-mode" />
+			<case name="toggle-personal-customize" />
+			<case name="toggle-context-simple-mode" />
+			<case name="toggle-mentoring" />
+			<case name="toggle-pvp-enable" />
+			<case name="nova-equip-skill-quick-slot" />
+			<case name="toggle-account-contents" />
+			<case name="toggle-contents-journal-2" />
+			<case name="toggle-fish-collecting" />
+			<case name="toggle-slate" />
+			<case name="toggle-auto-mode" />
+			<case name="toggle-auto-mode-option" />
+			<case name="toggle-auto-mode-enable-item-support" />
+			<case name="toggle-pvp-data" />
+			<case name="toggle-ride-vehicle" />
+			<case name="toggle-museum" />
+			<case name="equip-spare-item" />
+			<case name="toggle-chat-minimize" />
+			<case name="toggle-ranking2" />
+			<case name="toggle-glyph-inventory" />
+			<case name="toggle-constellation" />
+			<case name="toggle-sealed-scroll" />
+			<case name="toggle-inter-battle-field" />
+			<case name="toggle-wanted-mission" />
+			<case name="toggle-expedition" />
+			<case name="toggle-game-information" />
+			<case name="toggle-mark-mode" />
+			<case name="toggle-relic-inventory" />
+			<case name="zone-exit" />
+			<case name="toggle-neopass" />
+			<case name="toggle-notification-center" />
+			<case name="toggle-joypad-lock-on" />
+			<case name="joypad-dash-backward" />
+		</attribute>
+		<attribute name="ui-category" type="Seq" required="True">
+			<case name="default" />
+			<case name="target-near" />
+			<case name="target-far" />
+			<case name="target-down" />
+			<case name="target-disabled" />
+			<case name="target-in-the-air" />
+			<case name="target-dodge" />
+			<case name="target-carrying" />
+			<case name="takedown" />
+			<case name="dodge-by-counter" />
+			<case name="parry-by-steelbody" />
+			<case name="hit-with-heavyattack" />
+			<case name="cast-magnetic-energy" />
+			<case name="parry-by-blocking" />
+			<case name="airdash" />
+		</attribute>
+		<attribute name="ui-is-show-context-combo" type="Bool" default="y" />
+		<attribute name="ui-is-show-context-key-change" type="Bool" default="y" />
+		<attribute name="ui-is-show-context-immune-break" type="Bool" default="y" />
+		<attribute name="ui-is-show-context-combo-highlight" type="Bool" default="y" />
+		<attribute name="use-duel-observer-history" type="Bool" default="y" />
+		<attribute name="cast-decal-component" type="XUnknown2" default="" max="256" />
+		<attribute name="decal-component" type="XUnknown2" default="" max="256" />
+		<attribute name="invoke-fx-msg" type="Bool" default="n" />
+		<attribute name="stop-exec-show" type="Bool" default="n" />
+		<attribute name="weapon-property" type="Bool" default="n" />
+		<attribute name="auto-casting" type="Bool" default="n" />
+		<attribute name="icon-texture" type="Ref" ref="icontexture" refel="1" />
+		<attribute name="icon-index" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="icon" type="Icon" max="32767" />
+		<attribute name="main-info1" type="Ref" ref="text" refel="1" />
+		<attribute name="main-info2" type="Ref" ref="text" refel="1" />
+		<attribute name="sub-info" type="Ref" ref="text" refel="1" />
+		<attribute name="main-info1-diff" type="Ref" ref="text" refel="1" />
+		<attribute name="main-info2-diff" type="Ref" ref="text" refel="1" />
+		<attribute name="sub-info-diff" type="Ref" ref="text" refel="1" />
+		<attribute name="main-tooltip-1" type="Ref" repeat="5" hidden="True" ref="skilltooltip" refel="1" />
+		<attribute name="main-tooltip-2" type="Ref" repeat="5" hidden="True" ref="skilltooltip" refel="1" />
+		<attribute name="sub-tooltip" type="Ref" repeat="15" hidden="True" ref="skilltooltip" refel="1" />
+		<attribute name="stance-tooltip" type="Ref" repeat="5" hidden="True" ref="skilltooltip" refel="1" />
+		<attribute name="condition-tooltip" type="Ref" repeat="5" hidden="True" ref="skilltooltip" refel="1" />
+		<attribute name="ui-combo" type="Ref" ref="skill-combo-2" refel="1" />
+		<attribute name="ui-category-display-type" type="Seq" default="main">
+			<case name="main" />
+			<case name="sub" />
+		</attribute>
+		<attribute name="ui-main-buff" type="Ref" ref="effect" refel="1" />
+		<attribute name="show-cast-bar" type="Bool" default="y" />
+		<attribute name="show-exec-bar" type="Bool" default="y" />
+		<attribute name="show-repeat-bar" type="Bool" default="n" />
+		<attribute name="skill-attack-power-min" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="skill-attack-power-max" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="skill-attack-sub-power-min" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="skill-attack-sub-power-max" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="ignore-parent-tooltip" type="Bool" default="n" />
+		<attribute name="die-knockback" type="Bool" default="y" />
+		<attribute name="cast-last-anim-pause" type="Bool" default="n" />
+		<attribute name="filter-group-1" type="Bool" default="n" />
+		<attribute name="filter-group-2" type="Bool" default="n" />
+		<attribute name="filter-group-3" type="Bool" default="n" />
+		<attribute name="play-extra-sound" type="Bool" default="n" />
+		<attribute name="extra-sound-show" type="XUnknown2" default="" max="256" />
+		<attribute name="extra-sound-show-lmittime" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="bullet-effect-start-skill-flow" type="Seq" default="none">
+			<case name="none" />
+			<case name="cast" />
+			<case name="fire-1" />
+			<case name="exec-1" />
+			<case name="fire-2" />
+			<case name="exec-2" />
+			<case name="fire-3" />
+			<case name="exec-3" />
+			<case name="fire-4" />
+			<case name="exec-4" />
+			<case name="fire-5" />
+			<case name="exec-5" />
+			<case name="finish" />
+		</attribute>
+		<attribute name="bullet-effect-show-offset" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="bullet-effect-duration" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="description-weapon-soul-gem" type="Ref" ref="text" refel="1" />
+		<attribute name="skill-style" type="Ref" ref="skillstyle" refel="1" />
+		<sub name="active-skill">
+			<attribute name="attribute" type="Seq" repeat="4" default="none">
+				<case name="none" />
+				<case name="막기" />
+				<case name="반격" />
+				<case name="튕기기" />
+				<case name="방어행동" />
+				<case name="대쉬" />
+				<case name="이동" />
+				<case name="회피" />
+				<case name="다운" />
+				<case name="넉백" />
+				<case name="기절" />
+				<case name="그로기" />
+				<case name="공중" />
+				<case name="행동불가" />
+				<case name="이동불가" />
+				<case name="다운대응" />
+				<case name="막기조건" />
+				<case name="회피조건" />
+				<case name="치명타조건" />
+				<case name="연계기" />
+				<case name="스탠스" />
+				<case name="회복" />
+				<case name="게이지회복" />
+				<case name="부활" />
+				<case name="지원" />
+				<case name="즉시시전" />
+				<case name="캐스팅" />
+				<case name="가드브레이크" />
+				<case name="발사체" />
+				<case name="발사체2" />
+				<case name="제압" />
+				<case name="관절기" />
+				<case name="장악" />
+				<case name="비인간장악" />
+				<case name="흡공" />
+				<case name="제압대응" />
+				<case name="장악대응" />
+				<case name="흡공대응" />
+				<case name="해제" />
+				<case name="독" />
+				<case name="쿨타임" />
+				<case name="불" />
+				<case name="얼음" />
+				<case name="전기" />
+				<case name="기공" />
+				<case name="트리거" />
+				<case name="워프" />
+				<case name="근거리" />
+				<case name="원거리" />
+				<case name="광역" />
+				<case name="이동가능" />
+				<case name="데미지존" />
+				<case name="상태면역" />
+				<case name="위치바꾸기" />
+				<case name="은사" />
+				<case name="도발" />
+			</attribute>
+			<attribute name="category" type="Seq" required="True">
+				<case name="melee-physical" />
+				<case name="range-physical" />
+				<case name="force" />
+			</attribute>
+			<attribute name="flowtype" type="Seq" required="True">
+				<case name="keep-mainslot" />
+				<case name="leave-caster" />
+				<case name="transfer-simslot" />
+				<case name="directly-simslot" />
+			</attribute>
+			<attribute name="skill-type" type="Seq" required="True">
+				<case name="caster" />
+				<case name="target" />
+				<case name="ground" />
+				<case name="chain" />
+				<case name="none-target" />
+				<case name="summon" />
+				<case name="boss-rush" />
+				<case name="boss-multiground" />
+				<case name="boss-linklaser" />
+				<case name="make-campfire" />
+				<case name="succession" />
+				<case name="ground-succession" />
+				<case name="duel-tag" />
+				<case name="duel-interference" />
+			</attribute>
+			<attribute name="campfire" type="Ref" ref="campfire" refel="1" />
+			<attribute name="dash-attribute" type="Ref" required="True" ref="skilldashattribute3" refel="1" />
+			<attribute name="sit-down" type="Bool" default="n" />
+			<attribute name="hostile-type" type="Seq" default="hostile">
+				<case name="none" />
+				<case name="hostile" />
+				<case name="support" />
+			</attribute>
+			<attribute name="target-filter" type="Ref" ref="skilltargetfilter3" refel="1" />
+			<attribute name="gather-range" type="Ref" required="True" ref="skillgatherrange3" refel="1" />
+			<attribute name="hate" type="Int16" default="0" max="10000" />
+			<attribute name="toggle" type="Seq" default="none">
+				<case name="none" />
+				<case name="on" />
+				<case name="off" />
+			</attribute>
+			<attribute name="switch-off-id" type="Ref" ref="skill3" refel="1" />
+			<attribute name="passive-effect" type="Ref" repeat="8" ref="effect" refel="1" />
+			<attribute name="result-controll" type="Ref" required="True" ref="skillresultcontroll3" refel="1" />
+			<attribute name="skill-result-rule" type="Seq" default="decide-each">
+				<case name="decide-execute" />
+				<case name="decide-execute-finish-each" />
+				<case name="decide-each" />
+				<case name="decide-each-finish-execute" />
+				<case name="decide-each-finish-all-hit" />
+				<case name="decide-each-finish-last-result" />
+			</attribute>
+			<attribute name="auto-skill-result" type="Seq" default="none">
+				<case name="none" />
+				<case name="hit" />
+				<case name="miss" />
+				<case name="dodge" />
+				<case name="parry" />
+				<case name="perfect-parry" />
+				<case name="bounce" />
+				<case name="counter" />
+				<case name="critical-hit" />
+				<case name="hit-critical-hit" />
+				<case name="back-hit-critical-hit" />
+				<case name="not-hit" />
+				<case name="all" />
+				<case name="hit-critical-hit-parry" />
+				<case name="parry-perfect-parry" />
+				<case name="front-hit-critical-hit" />
+				<case name="parry-perfect-parry-counter" />
+				<case name="parry-perfect-parry-dodge" />
+				<case name="parry-dodge" />
+			</attribute>
+			<attribute name="cancel-by-override-skill" type="Seq" default="none">
+				<case name="none" />
+				<case name="override-skill" />
+				<case name="all-skill" />
+			</attribute>
+			<attribute name="combo-duration" type="Msec" default="3000" max="600000" />
+			<attribute name="save-combo" type="Bool" default="y" />
+			<attribute name="children-skill" type="Ref" repeat="4" ref="skill3" refel="1" />
+			<attribute name="children-skill-yaw-plus-angle" type="Int16" repeat="4" default="0" max="359" />
+			<attribute name="cast-condition" type="Ref" ref="skillcastcondition3" refel="1" />
+			<attribute name="cast-duration" type="Msec" required="True" max="60000" />
+			<attribute name="cast-effect" type="Ref" repeat="6" ref="effect" refel="1" />
+			<attribute name="cast-effect-to-my-summoned-summoner" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="throw-link-target" type="Bool" default="n" />
+			<attribute name="casting-delay" type="Bool" default="y" />
+			<attribute name="fire-miss" type="Bool" default="n" />
+			<attribute name="is-condition-event-skill" type="Bool" default="n" />
+			<attribute name="global-recycle-group" type="Int8" required="True" min="1" max="20" />
+			<attribute name="global-recycle-group-duration" type="Msec" default="0" max="6000000" />
+			<attribute name="recycle-group" type="Seq" required="True">
+				<case name="none" />
+				<case name="class" />
+				<case name="item-1" />
+				<case name="item-2" />
+				<case name="class-2" />
+				<case name="db" />
+				<case name="gadget" />
+			</attribute>
+			<attribute name="recycle-group-id" type="Int8" required="True" min="1" max="65" />
+			<attribute name="recycle-group-duration" type="Msec" default="0" max="86400000" />
+			<attribute name="bound-recycle-group" type="Seq" required="True">
+				<case name="none" />
+				<case name="class" />
+				<case name="item-1" />
+				<case name="item-2" />
+				<case name="class-2" />
+				<case name="db" />
+				<case name="gadget" />
+			</attribute>
+			<attribute name="bound-recycle-group-id" type="Int8" required="True" min="1" max="65" />
+			<attribute name="consume-hp-value" type="Int16" default="0" max="32767" />
+			<attribute name="consume-hp-type" type="Seq" default="point">
+				<case name="point" />
+				<case name="point-below" />
+				<case name="point-above" />
+				<case name="base-max-percent" />
+				<case name="total-max-percent" />
+				<case name="current-percent" />
+			</attribute>
+			<attribute name="consume-sp-value" type="Int16" repeat="2" default="0" max="32767" />
+			<attribute name="consume-sp-type" type="Seq" repeat="2" default="point">
+				<case name="point" />
+				<case name="point-below" />
+				<case name="point-above" />
+				<case name="base-max-percent" />
+				<case name="total-max-percent" />
+				<case name="current-percent" />
+			</attribute>
+			<attribute name="consume-summoned-hp-value" type="Int16" default="0" max="32767" />
+			<attribute name="consume-summoned-hp-type" type="Seq" default="point">
+				<case name="point" />
+				<case name="point-below" />
+				<case name="point-above" />
+				<case name="base-max-percent" />
+				<case name="total-max-percent" />
+				<case name="current-percent" />
+			</attribute>
+			<attribute name="target-kill-effect" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="gain-style-score" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="max-style-score" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="style-duration" type="Msec" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="clear-style-score" type="Bool" default="n" />
+			<attribute name="replace-target" type="Seq" default="none">
+				<case name="none" />
+				<case name="targets-target" />
+				<case name="my-summoned" />
+				<case name="my-summoneds-target" />
+				<case name="link-target" />
+				<case name="my-master" />
+				<case name="my-masters-link-target" />
+			</attribute>
+			<attribute name="flow-repeat" type="Int8" default="1" min="1" max="5" />
+			<attribute name="expanded-flow-repeat-count" type="Int8" default="0" max="20" />
+			<attribute name="expanded-flow-repeat-start-flow-step" type="Int8" default="1" min="1" max="5" />
+			<attribute name="cancel-flow-repeat-next-skill" type="Ref" ref="skill3" refel="1" />
+			<attribute name="occurrence-event-in-exec" type="Bool" repeat="5" default="y" />
+			<attribute name="occurrence-event-in-triggered" type="Bool" default="y" />
+			<attribute name="occurrence-ui-skill-combo-event-in-exec" type="Bool" repeat="5" default="n" />
+			<attribute name="swing-caster-effect-1" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="swing-caster-effect-2" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="swing-caster-effect-3" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="swing-caster-effect-4" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="swing-caster-effect-5" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="exec-caster-effect-1" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="exec-caster-effect-2" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="exec-caster-effect-3" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="exec-caster-effect-4" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="exec-caster-effect-5" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="exec-caster-effect-trigger" type="Ref" repeat="4" ref="effect" refel="1" />
+			<attribute name="exec-caster-effect-skill-result-1" type="Seq" repeat="4" default="all">
+				<case name="none" />
+				<case name="hit" />
+				<case name="miss" />
+				<case name="dodge" />
+				<case name="parry" />
+				<case name="perfect-parry" />
+				<case name="bounce" />
+				<case name="counter" />
+				<case name="critical-hit" />
+				<case name="hit-critical-hit" />
+				<case name="back-hit-critical-hit" />
+				<case name="not-hit" />
+				<case name="all" />
+				<case name="hit-critical-hit-parry" />
+				<case name="parry-perfect-parry" />
+				<case name="front-hit-critical-hit" />
+				<case name="parry-perfect-parry-counter" />
+				<case name="parry-perfect-parry-dodge" />
+				<case name="parry-dodge" />
+			</attribute>
+			<attribute name="exec-caster-effect-skill-result-2" type="Seq" repeat="4" default="all">
+				<case name="none" />
+				<case name="hit" />
+				<case name="miss" />
+				<case name="dodge" />
+				<case name="parry" />
+				<case name="perfect-parry" />
+				<case name="bounce" />
+				<case name="counter" />
+				<case name="critical-hit" />
+				<case name="hit-critical-hit" />
+				<case name="back-hit-critical-hit" />
+				<case name="not-hit" />
+				<case name="all" />
+				<case name="hit-critical-hit-parry" />
+				<case name="parry-perfect-parry" />
+				<case name="front-hit-critical-hit" />
+				<case name="parry-perfect-parry-counter" />
+				<case name="parry-perfect-parry-dodge" />
+				<case name="parry-dodge" />
+			</attribute>
+			<attribute name="exec-caster-effect-skill-result-3" type="Seq" repeat="4" default="all">
+				<case name="none" />
+				<case name="hit" />
+				<case name="miss" />
+				<case name="dodge" />
+				<case name="parry" />
+				<case name="perfect-parry" />
+				<case name="bounce" />
+				<case name="counter" />
+				<case name="critical-hit" />
+				<case name="hit-critical-hit" />
+				<case name="back-hit-critical-hit" />
+				<case name="not-hit" />
+				<case name="all" />
+				<case name="hit-critical-hit-parry" />
+				<case name="parry-perfect-parry" />
+				<case name="front-hit-critical-hit" />
+				<case name="parry-perfect-parry-counter" />
+				<case name="parry-perfect-parry-dodge" />
+				<case name="parry-dodge" />
+			</attribute>
+			<attribute name="exec-caster-effect-skill-result-4" type="Seq" repeat="4" default="all">
+				<case name="none" />
+				<case name="hit" />
+				<case name="miss" />
+				<case name="dodge" />
+				<case name="parry" />
+				<case name="perfect-parry" />
+				<case name="bounce" />
+				<case name="counter" />
+				<case name="critical-hit" />
+				<case name="hit-critical-hit" />
+				<case name="back-hit-critical-hit" />
+				<case name="not-hit" />
+				<case name="all" />
+				<case name="hit-critical-hit-parry" />
+				<case name="parry-perfect-parry" />
+				<case name="front-hit-critical-hit" />
+				<case name="parry-perfect-parry-counter" />
+				<case name="parry-perfect-parry-dodge" />
+				<case name="parry-dodge" />
+			</attribute>
+			<attribute name="exec-caster-effect-skill-result-5" type="Seq" repeat="4" default="all">
+				<case name="none" />
+				<case name="hit" />
+				<case name="miss" />
+				<case name="dodge" />
+				<case name="parry" />
+				<case name="perfect-parry" />
+				<case name="bounce" />
+				<case name="counter" />
+				<case name="critical-hit" />
+				<case name="hit-critical-hit" />
+				<case name="back-hit-critical-hit" />
+				<case name="not-hit" />
+				<case name="all" />
+				<case name="hit-critical-hit-parry" />
+				<case name="parry-perfect-parry" />
+				<case name="front-hit-critical-hit" />
+				<case name="parry-perfect-parry-counter" />
+				<case name="parry-perfect-parry-dodge" />
+				<case name="parry-dodge" />
+			</attribute>
+			<attribute name="exec-caster-effect-skill-result-trigger" type="Seq" repeat="4" default="all">
+				<case name="none" />
+				<case name="hit" />
+				<case name="miss" />
+				<case name="dodge" />
+				<case name="parry" />
+				<case name="perfect-parry" />
+				<case name="bounce" />
+				<case name="counter" />
+				<case name="critical-hit" />
+				<case name="hit-critical-hit" />
+				<case name="back-hit-critical-hit" />
+				<case name="not-hit" />
+				<case name="all" />
+				<case name="hit-critical-hit-parry" />
+				<case name="parry-perfect-parry" />
+				<case name="front-hit-critical-hit" />
+				<case name="parry-perfect-parry-counter" />
+				<case name="parry-perfect-parry-dodge" />
+				<case name="parry-dodge" />
+			</attribute>
+			<attribute name="stop-skill-event-on-result" type="Bool" default="y" />
+			<attribute name="stop-skill-result-critical-hit" type="Bool" default="n" />
+			<attribute name="stop-next-skill-critical-hit" type="Ref" ref="skill3" refel="1" />
+			<attribute name="stop-skill-result-hit" type="Bool" default="n" />
+			<attribute name="stop-next-skill-hit" type="Ref" ref="skill3" refel="1" />
+			<attribute name="stop-skill-result-parry" type="Bool" default="n" />
+			<attribute name="stop-next-skill-parry" type="Ref" ref="skill3" refel="1" />
+			<attribute name="stop-skill-result-perfect-parry" type="Bool" default="n" />
+			<attribute name="stop-next-skill-perfect-parry" type="Ref" ref="skill3" refel="1" />
+			<attribute name="stop-skill-result-counter" type="Bool" default="n" />
+			<attribute name="stop-next-skill-counter" type="Ref" ref="skill3" refel="1" />
+			<attribute name="stop-skill-result-bounce" type="Bool" default="n" />
+			<attribute name="stop-next-skill-bounce" type="Ref" ref="skill3" refel="1" />
+			<attribute name="stop-skill-result-miss" type="Bool" default="n" />
+			<attribute name="stop-next-skill-miss" type="Ref" ref="skill3" refel="1" />
+			<attribute name="stop-skill-result-dodge" type="Bool" default="n" />
+			<attribute name="stop-next-skill-dodge" type="Ref" ref="skill3" refel="1" />
+			<attribute name="perfect-dodge" type="Seq" default="none">
+				<case name="none" />
+				<case name="attack" />
+				<case name="dodge" />
+			</attribute>
+			<attribute name="perfect-dodge-gather-range" type="Ref" ref="skillgatherrange3" refel="1" />
+			<attribute name="perfect-dodge-valid-duration" type="Msec" repeat="5" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="perfect-dodge-success-effect" type="Ref" ref="effect" refel="1" />
+			<attribute name="swing-duration-1" type="Msec" default="0" max="60000" />
+			<attribute name="fly-speed-1" type="Velocity" default="0" max="80000" />
+			<attribute name="exec-duration-1" type="Msec" default="0" max="360000" />
+			<attribute name="exec-gather-type-1" type="Seq" default="target">
+				<case name="target" />
+				<case name="target-360" />
+				<case name="target-front-180" />
+				<case name="target-back-180" />
+				<case name="target-front-90" />
+				<case name="target-back-90" />
+				<case name="target-front-15" />
+				<case name="target-front-30" />
+				<case name="target-front-45" />
+				<case name="target-front-60" />
+				<case name="target-front-120" />
+				<case name="target-front-270" />
+				<case name="laser" />
+				<case name="target-and-link-target" />
+				<case name="shifting-laser" />
+			</attribute>
+			<attribute name="exec-negation-dir-gather-1" type="Bool" default="n" />
+			<attribute name="exec-target-angle-1" type="Int16" default="0" max="359" />
+			<attribute name="exec-target-offset-angle-1" type="Int16" default="0" max="359" />
+			<attribute name="exec-target-offset-distance-1" type="Distance" default="0" min="-32768" max="32767" />
+			<attribute name="exec-effect-1" type="Ref" repeat="8" ref="effect-group" refel="1" />
+			<attribute name="return-speed-1" type="Velocity" default="0" max="80000" />
+			<attribute name="return-duration-1" type="Msec" default="0" max="60000" />
+			<attribute name="swing-duration-2" type="Msec" default="0" max="60000" />
+			<attribute name="fly-speed-2" type="Velocity" default="0" max="80000" />
+			<attribute name="exec-duration-2" type="Msec" default="0" max="360000" />
+			<attribute name="exec-gather-type-2" type="Seq" default="target">
+				<case name="target" />
+				<case name="target-360" />
+				<case name="target-front-180" />
+				<case name="target-back-180" />
+				<case name="target-front-90" />
+				<case name="target-back-90" />
+				<case name="target-front-15" />
+				<case name="target-front-30" />
+				<case name="target-front-45" />
+				<case name="target-front-60" />
+				<case name="target-front-120" />
+				<case name="target-front-270" />
+				<case name="laser" />
+				<case name="target-and-link-target" />
+				<case name="shifting-laser" />
+			</attribute>
+			<attribute name="exec-negation-dir-gather-2" type="Bool" default="n" />
+			<attribute name="exec-target-angle-2" type="Int16" default="0" max="359" />
+			<attribute name="exec-target-offset-angle-2" type="Int16" default="0" max="359" />
+			<attribute name="exec-target-offset-distance-2" type="Distance" default="0" min="-32768" max="32767" />
+			<attribute name="exec-effect-2" type="Ref" repeat="8" ref="effect-group" refel="1" />
+			<attribute name="return-speed-2" type="Velocity" default="0" max="80000" />
+			<attribute name="return-duration-2" type="Msec" default="0" max="60000" />
+			<attribute name="swing-duration-3" type="Msec" default="0" max="60000" />
+			<attribute name="fly-speed-3" type="Velocity" default="0" max="80000" />
+			<attribute name="exec-duration-3" type="Msec" default="0" max="360000" />
+			<attribute name="exec-gather-type-3" type="Seq" default="target">
+				<case name="target" />
+				<case name="target-360" />
+				<case name="target-front-180" />
+				<case name="target-back-180" />
+				<case name="target-front-90" />
+				<case name="target-back-90" />
+				<case name="target-front-15" />
+				<case name="target-front-30" />
+				<case name="target-front-45" />
+				<case name="target-front-60" />
+				<case name="target-front-120" />
+				<case name="target-front-270" />
+				<case name="laser" />
+				<case name="target-and-link-target" />
+				<case name="shifting-laser" />
+			</attribute>
+			<attribute name="exec-negation-dir-gather-3" type="Bool" default="n" />
+			<attribute name="exec-target-angle-3" type="Int16" default="0" max="359" />
+			<attribute name="exec-target-offset-angle-3" type="Int16" default="0" max="359" />
+			<attribute name="exec-target-offset-distance-3" type="Distance" default="0" min="-32768" max="32767" />
+			<attribute name="exec-effect-3" type="Ref" repeat="8" ref="effect-group" refel="1" />
+			<attribute name="return-speed-3" type="Velocity" default="0" max="80000" />
+			<attribute name="return-duration-3" type="Msec" default="0" max="60000" />
+			<attribute name="swing-duration-4" type="Msec" default="0" max="60000" />
+			<attribute name="fly-speed-4" type="Velocity" default="0" max="80000" />
+			<attribute name="exec-duration-4" type="Msec" default="0" max="360000" />
+			<attribute name="exec-gather-type-4" type="Seq" default="target">
+				<case name="target" />
+				<case name="target-360" />
+				<case name="target-front-180" />
+				<case name="target-back-180" />
+				<case name="target-front-90" />
+				<case name="target-back-90" />
+				<case name="target-front-15" />
+				<case name="target-front-30" />
+				<case name="target-front-45" />
+				<case name="target-front-60" />
+				<case name="target-front-120" />
+				<case name="target-front-270" />
+				<case name="laser" />
+				<case name="target-and-link-target" />
+				<case name="shifting-laser" />
+			</attribute>
+			<attribute name="exec-negation-dir-gather-4" type="Bool" default="n" />
+			<attribute name="exec-target-angle-4" type="Int16" default="0" max="359" />
+			<attribute name="exec-target-offset-angle-4" type="Int16" default="0" max="359" />
+			<attribute name="exec-target-offset-distance-4" type="Distance" default="0" min="-32768" max="32767" />
+			<attribute name="exec-effect-4" type="Ref" repeat="8" ref="effect-group" refel="1" />
+			<attribute name="return-speed-4" type="Velocity" default="0" max="80000" />
+			<attribute name="return-duration-4" type="Msec" default="0" max="60000" />
+			<attribute name="swing-duration-5" type="Msec" default="0" max="60000" />
+			<attribute name="fly-speed-5" type="Velocity" default="0" max="80000" />
+			<attribute name="exec-duration-5" type="Msec" default="0" max="360000" />
+			<attribute name="exec-gather-type-5" type="Seq" default="target">
+				<case name="target" />
+				<case name="target-360" />
+				<case name="target-front-180" />
+				<case name="target-back-180" />
+				<case name="target-front-90" />
+				<case name="target-back-90" />
+				<case name="target-front-15" />
+				<case name="target-front-30" />
+				<case name="target-front-45" />
+				<case name="target-front-60" />
+				<case name="target-front-120" />
+				<case name="target-front-270" />
+				<case name="laser" />
+				<case name="target-and-link-target" />
+				<case name="shifting-laser" />
+			</attribute>
+			<attribute name="exec-negation-dir-gather-5" type="Bool" default="n" />
+			<attribute name="exec-target-angle-5" type="Int16" default="0" max="359" />
+			<attribute name="exec-target-offset-angle-5" type="Int16" default="0" max="359" />
+			<attribute name="exec-target-offset-distance-5" type="Distance" default="0" min="-32768" max="32767" />
+			<attribute name="exec-effect-5" type="Ref" repeat="8" ref="effect-group" refel="1" />
+			<attribute name="return-speed-5" type="Velocity" default="0" max="80000" />
+			<attribute name="return-duration-5" type="Msec" default="0" max="60000" />
+			<attribute name="trigger-gather-type" type="Seq" default="target">
+				<case name="target" />
+				<case name="target-360" />
+				<case name="target-front-180" />
+				<case name="target-back-180" />
+				<case name="target-front-90" />
+				<case name="target-back-90" />
+				<case name="target-front-15" />
+				<case name="target-front-30" />
+				<case name="target-front-45" />
+				<case name="target-front-60" />
+				<case name="target-front-120" />
+				<case name="target-front-270" />
+				<case name="laser" />
+				<case name="target-and-link-target" />
+				<case name="shifting-laser" />
+			</attribute>
+			<attribute name="trigger-negation-dir-gather" type="Bool" default="n" />
+			<attribute name="trigger-effect" type="Ref" repeat="8" ref="effect-group" refel="1" />
+			<attribute name="trigger-prev-skill" type="Ref" ref="skill3" refel="1" />
+			<attribute name="trigger-prev-skill-id" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="succession-prev-skill" type="Ref" ref="skill3" refel="1" />
+			<attribute name="succession-prev-skill-id" type="Int32" default="0" min="-2147483647" max="2147483647" />
+			<attribute name="apply-sealed-dungeon-skill-duration" type="Bool" default="n" />
+			<attribute name="simultaneous-group" type="Seq" required="True">
+				<case name="none" />
+				<case name="phantom" />
+			</attribute>
+			<attribute name="unnecessary-acquired" type="Bool" default="n" />
+			<attribute name="gather-view-index" type="Int8" default="1" min="1" max="5" />
+			<attribute name="recommend-priority" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="recommend-distance" type="Distance" default="0" min="-32768" max="32767" />
+			<attribute name="recommend-distance-min" type="Distance" default="0" min="-32768" max="32767" />
+			<attribute name="recommend-distance-max" type="Distance" default="0" min="-32768" max="32767" />
+			<attribute name="boss-resistible-skill-type" type="Seq" repeat="5" default="none">
+				<case name="none" />
+				<case name="immune-party-all" />
+				<case name="immune-party-projectile" />
+				<case name="immune-caster-target-long" />
+				<case name="immune-caster-target-short" />
+				<case name="immune-caster-nontarget-move" />
+			</attribute>
+			<attribute name="boss-resistible-skill-message" type="Ref" ref="text" refel="1" />
+			<attribute name="boss-resistance-skill-cast" type="Seq" default="none">
+				<case name="none" />
+				<case name="cast" />
+				<case name="fire-1" />
+				<case name="exec-1" />
+				<case name="fire-2" />
+				<case name="exec-2" />
+				<case name="fire-3" />
+				<case name="exec-3" />
+				<case name="fire-4" />
+				<case name="exec-4" />
+				<case name="fire-5" />
+				<case name="exec-5" />
+				<case name="finish" />
+			</attribute>
+			<attribute name="boss-resistance-skill-exec" type="Seq" default="none">
+				<case name="none" />
+				<case name="cast" />
+				<case name="fire-1" />
+				<case name="exec-1" />
+				<case name="fire-2" />
+				<case name="exec-2" />
+				<case name="fire-3" />
+				<case name="exec-3" />
+				<case name="fire-4" />
+				<case name="exec-4" />
+				<case name="fire-5" />
+				<case name="exec-5" />
+				<case name="finish" />
+			</attribute>
+			<attribute name="boss-resistance-skill-finish" type="Seq" default="none">
+				<case name="none" />
+				<case name="cast" />
+				<case name="fire-1" />
+				<case name="exec-1" />
+				<case name="fire-2" />
+				<case name="exec-2" />
+				<case name="fire-3" />
+				<case name="exec-3" />
+				<case name="fire-4" />
+				<case name="exec-4" />
+				<case name="fire-5" />
+				<case name="exec-5" />
+				<case name="finish" />
+			</attribute>
+			<attribute name="boss-resistance-skill-time-offset" type="Msec" default="0" max="600000" />
+			<attribute name="reset-boss-resistance-skill" type="Bool" default="y" />
+			<attribute name="resistance-skill-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="immune-party-all" />
+				<case name="immune-party-projectile" />
+				<case name="immune-caster-target-long" />
+				<case name="immune-caster-target-short" />
+				<case name="immune-caster-nontarget-move" />
+			</attribute>
+			<attribute name="resistance-skill-priority" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="auto-combat-approach-skill" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="auto-combat-cannot-override" type="Bool" default="n" />
+			<attribute name="auto-combat-npc-resistible-skill-type" type="Seq" repeat="5" default="none">
+				<case name="none" />
+				<case name="parry-counter" />
+				<case name="move" />
+				<case name="immune-type-1" />
+				<case name="immune-type-2" />
+				<case name="immune-type-3" />
+			</attribute>
+			<attribute name="auto-combat-npc-resistance-skill-exec" type="Seq" default="none">
+				<case name="none" />
+				<case name="cast" />
+				<case name="fire-1" />
+				<case name="exec-1" />
+				<case name="fire-2" />
+				<case name="exec-2" />
+				<case name="fire-3" />
+				<case name="exec-3" />
+				<case name="fire-4" />
+				<case name="exec-4" />
+				<case name="fire-5" />
+				<case name="exec-5" />
+				<case name="finish" />
+			</attribute>
+			<attribute name="auto-combat-npc-resistance-skill-time-offset" type="Msec" default="0" max="600000" />
+			<attribute name="auto-combat-resistance-skill-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="parry-counter" />
+				<case name="move" />
+				<case name="immune-type-1" />
+				<case name="immune-type-2" />
+				<case name="immune-type-3" />
+			</attribute>
+			<attribute name="auto-combat-resistance-skill-priority" type="Int16" default="0" min="-32768" max="32767" />
+			<attribute name="deactive-on-skill-fail" type="Bool" default="n" />
+			<attribute name="deactive-on-skill-fail-duration" type="Msec" default="1000" min="1000" max="5000" />
+			<attribute name="skip-damage-split" type="Bool" default="n" />
+			<attribute name="catch-casting-target-anim" type="XUnknown2" default="" max="256" />
+			<attribute name="catch-attach-caster-anim" type="XUnknown2" default="" max="256" />
+			<attribute name="catch-attach-target-anim" type="XUnknown2" default="" max="256" />
+			<attribute name="catch-detach-caster-anim" type="XUnknown2" default="" max="256" />
+			<attribute name="catch-detach-target-anim" type="XUnknown2" default="" max="256" />
+			<attribute name="catch-detach-target-landing-anim" type="XUnknown2" default="" max="256" />
+			<attribute name="phantom-end-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="exec-end" />
+				<case name="finish-end" />
+			</attribute>
+			<attribute name="summoned-weapon-type" type="Seq" default="summoned-none">
+				<case name="summoned-none" />
+				<case name="summoned-sword" />
+				<case name="summoned-glove" />
+				<case name="summoned-hammer" />
+				<case name="summoned-gun" />
+			</attribute>
+			<attribute name="override-skill" type="Bool" default="y" />
+			<attribute name="ground-type" type="Seq" default="ground">
+				<case name="ground" />
+				<case name="target" />
+			</attribute>
+			<attribute name="ui-show-force-instant-recycle" type="Bool" default="n" />
+			<attribute name="ui-show-recycle" type="Bool" default="n" />
+			<attribute name="ui-show-recycle-simple-context-mode" type="Bool" default="n" />
+			<attribute name="ui-recycle-icon" type="Icon" max="32767" />
+			<attribute name="ui-recycle-name" type="Ref" ref="text" refel="1" />
+			<attribute name="ui-recycle-description" type="Ref" ref="text" refel="1" />
+			<attribute name="ui-sp-heal-value" type="Int16" default="0" max="32767" />
+			<attribute name="ui-sp-heal-type" type="Seq" default="point">
+				<case name="point" />
+				<case name="point-below" />
+				<case name="point-above" />
+				<case name="base-max-percent" />
+				<case name="total-max-percent" />
+				<case name="current-percent" />
+			</attribute>
+			<attribute name="casting-target" type="Seq" default="none">
+				<case name="none" />
+				<case name="self" />
+				<case name="target" />
+				<case name="wide" />
+				<case name="wide-laser" />
+				<case name="ground" />
+				<case name="ground-target" />
+				<case name="mount" />
+				<case name="catch" />
+				<case name="inhalation" />
+				<case name="silverstring" />
+			</attribute>
+			<attribute name="attach-bone-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="to-caster" />
+				<case name="mount" />
+				<case name="to-target" />
+				<case name="to-caster-pos-only" />
+				<case name="to-target-pos-only" />
+			</attribute>
+			<attribute name="caster-attach-bone" type="String" default="" max="100" />
+			<attribute name="target-attach-bone" type="String" default="" max="100" />
+			<attribute name="attach-bone-exec-step" type="Int8" default="0" max="5" />
+			<attribute name="detach-bone-exec-step" type="Int8" default="0" max="5" />
+			<attribute name="mesh-hide-exec-step" type="Int8" default="-1" min="-1" max="5" />
+			<attribute name="ui-next-combo" type="Int32" hidden="True" min="1" max="200000000" />
+			<attribute name="combo-start-point-flag" type="Int8" hidden="True" default="0" min="-128" max="127" />
+			<attribute name="summoned-attack" type="Bool" default="y" />
+			<attribute name="summoned-is-recall" type="Bool" default="n" />
+			<attribute name="summoned-is-target-change" type="Bool" default="n" />
+			<attribute name="summoned-is-target-swoon" type="Bool" default="n" />
+			<attribute name="ui-show-effect-stack" type="Ref" ref="effect" refel="1" />
+			<attribute name="use-skill-message" type="Bool" hidden="True" default="false" />
+			<attribute name="override-level" type="Int8" default="0" max="127" />
+			<attribute name="override-available-level" type="Int8" default="0" max="127" />
+			<attribute name="override-group" type="Int8" repeat="5" default="0" max="10" />
+			<attribute name="override-group-bit-flags" type="Int32" hidden="True" default="0" max="2147483647" />
+			<attribute name="force-hit-show-play" type="Bool" default="n" />
+		</sub>
+		<sub name="passive-skill">
+			<attribute name="passive-effect" type="Ref" repeat="8" ref="effect" refel="1" />
+			<attribute name="summoned-job" type="Prop_seq" default="job-none">
+				<case name="job-none" />
+				<case name="검사" />
+				<case name="권사" />
+				<case name="기공사" />
+				<case name="격사" />
+				<case name="역사" />
+				<case name="소환사" />
+				<case name="암살자" />
+				<case name="귀검사" />
+				<case name="주술사" />
+				<case name="기권사" />
+				<case name="투사" />
+				<case name="궁사" />
+				<case name="창술사" />
+				<case name="뇌전술사" />
+				<case name="쌍검사" />
+				<case name="악사" />
+				<case name="pc-max" />
+				<case name="소환수-루키" />
+				<case name="소환수-striker" />
+				<case name="소환수-defender" />
+				<case name="소환수-controller" />
+			</attribute>
+			<attribute name="summoned-use-only" type="Bool" default="n" />
+		</sub>
+		<sub name="action">
+			<attribute name="action-type" type="Seq" required="True">
+				<case name="airdash" />
+				<case name="pickup-deadbody" />
+				<case name="putdown-deadbody" />
+				<case name="sprint" />
+				<case name="drift" />
+				<case name="boost" />
+				<case name="dive" />
+				<case name="wall-move" />
+				<case name="glide" />
+				<case name="event-jump" />
+				<case name="rocket-start" />
+				<case name="hyper-move" />
+			</attribute>
+			<attribute name="max-hyper-energy-point" type="Int32" default="0" max="60000" />
+			<attribute name="consume-hyper-energy-point" type="Int16" required="True" max="100" />
+		</sub>
+	</el>
+</table>

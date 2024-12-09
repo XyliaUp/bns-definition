@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="guild-member-grade-authority" type="173" version="0.11" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="authority" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="change-guildmember-grade-by-permission" />
+			<case name="banish-guildmember" />
+			<case name="change-guildmember-grade" />
+			<case name="edit-guild-notification-message" />
+			<case name="invite-guildmember" />
+			<case name="guild-level-up" />
+			<case name="control-small-craft" />
+			<case name="control-big-craft" />
+			<case name="warp-to-guildmember" />
+			<case name="call-guildmember" />
+			<case name="officer-chat" />
+			<case name="voice-chat-1" />
+			<case name="voice-chat-2" />
+			<case name="uniform-designer" />
+			<case name="edit-flag-bearer" />
+			<case name="guild-pr" />
+			<case name="accept-guildmember" />
+			<case name="purchase-guild-benefit" />
+		</attribute>
+		<attribute name="guild-type" type="Int8" key="True" required="True" min="1" max="2" />
+		<attribute name="editable" type="Bool" repeat="5" default="n" />
+		<attribute name="initial-value" type="Bool" repeat="5" default="n" />
+	</el>
+</table>

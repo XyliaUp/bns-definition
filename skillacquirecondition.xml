@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="skillacquirecondition" type="338" version="0.13" module="12" maxid="200000000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="200000000" />
+		<attribute name="variation-index" type="Int8" key="True" required="True" max="4" />
+		<attribute name="variation-level" type="Int8" key="True" required="True" max="250" />
+		<attribute name="pc-level" type="Int16" default="1" min="1" max="70" />
+		<attribute name="pc-job" type="Prop_seq" default="job-none">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="training-name" type="Ref" ref="text" refel="1" />
+		<attribute name="training-icon" type="Icon" max="32767" />
+		<attribute name="training-description" type="Ref" deprecated="True" ref="text" refel="1" />
+		<attribute name="main-info" type="Ref" ref="text" refel="1" />
+		<attribute name="sub-info" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

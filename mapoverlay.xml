@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="mapoverlay" type="248" version="0.8" module="12">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="mapid" type="Int32" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="position-x" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="position-y" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="size-x" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="size-y" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="opacity" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="imageset" type="String" default="" max="128" />
+		<attribute name="mask-imageset" type="String" default="" max="128" />
+		<attribute name="area" type="Ref" ref="discovery-area" refel="1" />
+	</el>
+</table>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="constellation-star" type="65" version="2.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32767" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="description" type="Ref" ref="text" refel="1" />
+		<attribute name="constellation" type="Ref" required="True" ref="constellation" refel="1" />
+		<attribute name="star-type" type="Int8" default="0" max="1" />
+		<attribute name="order" type="Int8" required="True" min="1" max="127" />
+		<attribute name="required-pc-level" type="Int8" default="0" max="127" />
+		<attribute name="required-pc-mastery-level" type="Int8" default="0" max="127" />
+		<attribute name="required-quest" type="Ref" ref="quest" refel="1" />
+		<attribute name="required-achievement-id" type="Int16" default="0" max="32767" />
+		<attribute name="required-achievement-step" type="Int16" default="0" max="32767" />
+		<attribute name="activate-probability" type="Int16" default="0" max="10000" />
+		<attribute name="activate-cost-money" type="Int32" default="0" max="2147483647" />
+		<attribute name="activate-cost-item" type="Ref" repeat="6" ref="item" refel="1" />
+		<attribute name="activate-cost-item-count" type="Int16" repeat="6" default="0" max="32767" />
+		<attribute name="draw-enable" type="Bool" default="true" />
+		<attribute name="draw-option-cost-money" type="Int32" default="0" max="2147483647" />
+		<attribute name="draw-option-cost-item" type="Ref" repeat="6" ref="item" refel="1" />
+		<attribute name="draw-option-cost-item-count" type="Int16" repeat="6" default="0" max="32767" />
+		<attribute name="option-select-count" type="Int8" default="0" max="3" />
+		<attribute name="option" type="Ref" repeat="50" ref="constellation-star-option" refel="1" />
+		<attribute name="option-weight" type="Int16" repeat="50" default="0" max="30000" />
+		<attribute name="option-weight-total" type="Int32" hidden="True" default="0" min="-2147483647" max="2147483647" />
+	</el>
+</table>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="world-achievement-season" type="453" version="1.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="season-name" type="String" required="True" max="70" />
+		<attribute name="start-time" type="Time64" default="" />
+		<attribute name="end-time" type="Time64" default="" />
+		<attribute name="world-achievement" type="Int32" required="True" min="1" max="1000000" />
+	</el>
+</table>

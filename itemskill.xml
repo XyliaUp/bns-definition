@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="itemskill" type="215" version="0.13" module="2054">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="skill-id" type="Int32" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="skill-variation-id" type="Int8" repeat="8" default="0" min="-128" max="127" />
+		<attribute name="include-inheritance-skill" type="Bool" default="n" />
+		<attribute name="item-sim-skill" type="Ref" ref="skill3" refel="1" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="description2" type="Ref" ref="text" refel="1" />
+		<attribute name="item-skill-tooltip" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

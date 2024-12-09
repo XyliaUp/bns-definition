@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="mastery-stat-point-pick" type="257" version="0.5" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="stat-point-pick-attribute" type="Seq" key="True" required="True">
+			<case name="slot1" />
+			<case name="slot2" />
+			<case name="slot3" />
+			<case name="slot4" />
+			<case name="slot5" />
+		</attribute>
+		<attribute name="stat-point-tier" type="Int8" key="True" required="True" max="100" />
+		<attribute name="stat-point-job" type="Prop_seq" key="True" required="True">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="required-stat-point" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="effect" type="Ref" ref="effect" refel="1" />
+		<attribute name="description" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

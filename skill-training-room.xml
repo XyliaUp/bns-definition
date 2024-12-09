@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="skill-training-room" type="370" version="0.9" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="zone" type="Ref" required="True" ref="zone" refel="1" />
+		<attribute name="required-level" type="Int8" default="0" max="100" />
+		<attribute name="required-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="required-preceding-quest" type="Ref" repeat="3" ref="quest" refel="1" />
+		<attribute name="required-preceding-quest-check" type="Seq" default="and">
+			<case name="and" />
+			<case name="or" />
+		</attribute>
+		<attribute name="jumping-character-quest-for-back-to-world" type="Ref" repeat="3" ref="quest" refel="1" />
+		<attribute name="group" type="Ref" ref="attraction-group" refel="1" />
+		<attribute name="skill-training-room-name2" type="Ref" ref="text" refel="1" />
+		<attribute name="start-default-kismet-name" type="String" repeat="2" default="" max="50" />
+		<attribute name="end-default-kismet-name" type="String" repeat="2" default="" max="50" />
+		<attribute name="stage-change-show" type="String" default="" max="50" />
+	</el>
+</table>

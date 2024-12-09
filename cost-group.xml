@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="cost-group" type="77" version="0.3" module="262">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="item" type="Ref" repeat="8" ref="item" refel="1" />
+		<attribute name="item-amount" type="Int16" repeat="8" default="0" min="-32768" max="32767" />
+		<attribute name="money" type="Int64" default="0" min="-9223372036854775807" max="9223372036854775807" />
+	</el>
+</table>

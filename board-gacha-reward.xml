@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="board-gacha-reward" type="41" version="0.1" module="8198">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="reward-type" type="Seq" required="True">
+			<case name="none" />
+			<case name="rank" />
+			<case name="line" />
+			<case name="lucky" />
+			<case name="participation" />
+		</attribute>
+		<attribute name="rank-min" type="Int16" default="0" max="32767" />
+		<attribute name="rank-max" type="Int16" default="0" max="32767" />
+		<attribute name="participation-count" type="Int16" default="0" max="32767" />
+		<attribute name="reward-item" type="Ref" ref="item" refel="1" />
+		<attribute name="reward-item-count" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="lucky-reward-item" type="Ref" repeat="5" ref="item" refel="1" />
+		<attribute name="lucky-reward-item-count" type="Int16" repeat="5" default="0" min="-32768" max="32767" />
+		<attribute name="lucky-reward-represent-item" type="Ref" ref="item" refel="1" />
+	</el>
+</table>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="public-raid" type="290" version="5.3" module="70">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="zone" type="Ref" required="True" ref="zone" refel="1" />
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="max-pc-count" type="Int8" required="True" min="6" max="100" />
+		<attribute name="max-party-count" type="Int8" default="2" min="2" max="30" />
+		<attribute name="round-id" type="Int8" required="True" max="5" />
+		<attribute name="required-level" type="Int8" default="0" max="100" />
+		<attribute name="required-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="required-preceding-quest" type="Ref" repeat="3" ref="quest" refel="1" />
+		<attribute name="required-preceding-quest-check" type="Seq" default="and">
+			<case name="and" />
+			<case name="or" />
+		</attribute>
+		<attribute name="required-available-weekly-time" type="Ref" ref="weeklytimetable" refel="1" />
+		<attribute name="start-weekly-time" type="Ref" ref="weeklytimetable" refel="1" />
+		<attribute name="stand-by-duration-second" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="group" type="Ref" ref="attraction-group" refel="1" />
+		<attribute name="arena-entrance-zone" type="Ref" ref="zone" refel="1" />
+		<attribute name="enter-pc-spawn" type="Ref" required="True" ref="zonepcspawn" refel="1" />
+		<attribute name="publicraid-name2" type="Ref" ref="text" refel="1" />
+		<attribute name="publicraid-desc" type="Ref" ref="text" refel="1" />
+		<attribute name="reward-summary" type="Ref" ref="attractionrewardsummary" refel="1" />
+		<attribute name="publicraid-icon" type="XUnknown2" default="" max="256" />
+		<attribute name="publicraid-image" type="XUnknown2" default="" max="256" />
+		<attribute name="enable-reset-combat-mode" type="Bool" default="n" />
+		<attribute name="reset-combat-mode-recycle-duration" type="Msec" default="0" max="600000" />
+		<attribute name="public-raid-kismet-name" type="String" repeat="30" default="" max="100" />
+		<attribute name="public-raid-npc-for-kismet" type="Ref" repeat="30" ref="npc" refel="1" />
+		<attribute name="enable-custom-pouch-drop-position" type="Bool" default="n" />
+		<attribute name="pouch-pos-x" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="pouch-pos-y" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="pouch-pos-z" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="end-by-duration-second" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="exit-env-name" type="String" default="" max="100" />
+		<attribute name="boss-npc-alias" type="Ref" repeat="8" ref="npc" refel="1" />
+		<attribute name="boss-npc-section" type="Ref" repeat="8" ref="text" refel="1" />
+		<sub name="public-raid-1">
+			<attribute name="enable-public-raid-event" type="Bool" default="n" />
+		</sub>
+		<sub name="public-raid-2" />
+		<sub name="public-raid-3" />
+		<sub name="public-raid-4">
+			<attribute name="raid-dungeon" type="Ref" ref="raid-dungeon" refel="1" />
+		</sub>
+		<sub name="public-raid-5" />
+		<sub name="inter-battle-field">
+			<attribute name="portal-ticket-item-info" type="Ref" ref="item" refel="1" />
+			<attribute name="entrance-quota" type="Ref" ref="content-quota" refel="1" />
+			<attribute name="arena-portal" type="Ref" ref="arenaportal" refel="1" />
+			<attribute name="arena-move-max-party-member-count" type="Int8" default="1" min="1" max="6" />
+		</sub>
+		<sub name="guerrilla-event">
+			<attribute name="system-menu-icon" type="XUnknown2" default="" max="256" />
+			<attribute name="hud-notification-menu-name" type="Ref" ref="text" refel="1" />
+			<attribute name="arena-portal" type="Ref" ref="arenaportal" refel="1" />
+		</sub>
+	</el>
+</table>

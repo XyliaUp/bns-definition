@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="store-by-item" type="399" version="0.4" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int64" key="True" required="True" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="acquire-item" type="Ref" repeat="100" ref="item" refel="1" />
+		<attribute name="dispose-item" type="Ref" repeat="100" ref="item" refel="1" />
+		<attribute name="dispose-item-count" type="Int16" repeat="100" default="0" max="10000" />
+	</el>
+</table>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="item-event" type="196" version="0.2" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="event-expiration-time" type="Time64" default="" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

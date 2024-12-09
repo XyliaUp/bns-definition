@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="skill-train-by-item" type="366" version="1.1" module="6" maxid="30000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="30000" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="origin-skill" type="Ref" repeat="6" ref="skill3" refel="1" />
+		<attribute name="change-skill" type="Ref" repeat="6" ref="skill3" refel="1" />
+		<attribute name="icon" type="Icon" max="32767" />
+		<attribute name="description" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

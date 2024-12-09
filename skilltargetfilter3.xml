@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="skilltargetfilter3" type="363" version="0.3" module="2062">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="fire-filter-target" type="Ref" repeat="8" ref="filter" refel="1" />
+		<attribute name="exec-filter-target" type="Ref" repeat="8" ref="filter" refel="1" />
+	</el>
+</table>

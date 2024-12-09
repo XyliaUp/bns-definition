@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="faction-battle-field-zone" type="134" version="2.0" module="14" maxid="31999">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="31999" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="zone" type="Ref" required="True" ref="zone" refel="1" />
+		<attribute name="group" type="Ref" ref="attraction-group" refel="1" />
+		<attribute name="ui-filter-attraction-quest-only" type="Bool" default="n" />
+		<attribute name="respawn-confirm-text" type="Ref" ref="text" refel="1" />
+		<attribute name="attraction-quest" type="Ref" repeat="10" hidden="True" ref="quest" refel="1" />
+		<attribute name="required-level" type="Int8" default="0" max="100" />
+		<attribute name="required-faction-level" type="Int8" default="0" max="100" />
+		<attribute name="faction-battle-field-zone-name2" type="Ref" ref="text" refel="1" />
+		<attribute name="faction-battle-field-zone-desc" type="Ref" ref="text" refel="1" />
+		<attribute name="thumbnail-image" type="String" default="" max="70" />
+		<attribute name="reward-summary" type="Ref" ref="attractionrewardsummary" refel="1" />
+		<attribute name="entrance-quota" type="Ref" ref="content-quota" refel="1" />
+	</el>
+</table>

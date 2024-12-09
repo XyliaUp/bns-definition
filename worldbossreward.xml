@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="worldbossreward" type="454" version="2.3" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="auction-price-contribution-rate" type="Int32" repeat="20" default="0" max="2147483647" />
+		<attribute name="auction-price-contribution-rank-top" type="Int32" repeat="20" default="0" max="2147483647" />
+		<attribute name="auction-price-contribution-rank-bottom" type="Int32" repeat="20" default="0" max="2147483647" />
+	</el>
+</table>

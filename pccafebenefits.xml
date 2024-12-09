@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="pccafebenefits" type="276" version="1.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="code" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="ncsoft-korea" />
+			<case name="ncsoft-japan" />
+			<case name="tencent-gold" />
+			<case name="tencent-silver" />
+			<case name="tencent-bronze" />
+			<case name="tencent-platinum" />
+			<case name="garena" />
+			<case name="rncs" />
+			<case name="rtx-gold" />
+			<case name="rtx-silver" />
+			<case name="rtx-bronze" />
+			<case name="rtx-platinum" />
+			<case name="zncs" />
+			<case name="ztx-gold" />
+			<case name="ztx-silver" />
+			<case name="ztx-bronze" />
+			<case name="ztx-platinum" />
+		</attribute>
+		<attribute name="job" type="Prop_seq" key="True" required="True">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="effect" type="Ref" ref="effect" refel="1" />
+		<attribute name="duel-effect" type="Ref" ref="effect" refel="1" />
+		<attribute name="party-battle-point-bonus-percent" type="Int32" default="0" max="100" />
+		<attribute name="party-battle-exp-bonus-percent" type="Int32" default="0" max="100" />
+		<attribute name="duel-point-bonus-percent" type="Int32" default="0" max="100" />
+		<attribute name="duel-exp-bonus-percent" type="Int32" default="0" max="100" />
+		<attribute name="field-play-point-bonus-percent" type="Int32" default="0" max="100" />
+		<attribute name="npc-looting-money-reward-percent" type="Int32" default="0" max="200" />
+		<attribute name="weapon-accessory-transform-money-cost-discount-rate" type="Int8" default="0" max="100" />
+		<attribute name="weapon-gem-transform-money-cost-discount-rate" type="Int8" default="0" max="100" />
+		<attribute name="item-awakening-money-cost-discount-rate" type="Int8" default="0" max="100" />
+		<attribute name="detach-weapon-gem-money-cost-discount-rate" type="Int8" default="0" max="100" />
+		<attribute name="purify-item-discount-rate" type="Int8" default="0" max="100" />
+		<attribute name="market-register-amount-tax-discount-rate" type="Int8" default="0" max="100" />
+		<attribute name="unlocated-warehouse" type="Bool" default="n" />
+		<attribute name="quest-reward" type="Bool" default="n" />
+		<attribute name="quest-reward-account-exp-bonus-percent" type="Int32" default="0" max="1000" />
+		<attribute name="tendency-quest-reward-account-exp-bonus-percent" type="Int32" default="0" max="1000" />
+		<attribute name="challenge-reward-account-exp-bonus-percent" type="Int32" default="0" max="1000" />
+		<attribute name="pet-gem-transform-money-cost-discount-rate" type="Int8" default="0" max="100" />
+	</el>
+</table>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="stance" type="392" version="0.295" module="14">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="stance-type" type="Prop_seq" key="True" required="True">
+			<case name="stance-none" />
+			<case name="npc기본자세" />
+			<case name="천검세" />
+			<case name="검령세" />
+			<case name="단타" />
+			<case name="연계" />
+			<case name="체술" />
+			<case name="납도" />
+			<case name="경기공" />
+			<case name="연기공" />
+			<case name="강기공" />
+			<case name="권총모드" />
+			<case name="런처모드" />
+			<case name="파괴" />
+			<case name="보호" />
+			<case name="철벽" />
+			<case name="소환" />
+			<case name="교란" />
+			<case name="은신" />
+			<case name="암살" />
+			<case name="검술" />
+			<case name="어검" />
+			<case name="발도" />
+			<case name="npc자세1" />
+			<case name="npc자세2" />
+			<case name="npc자세3" />
+			<case name="소환수-follow" />
+			<case name="소환수-command-1" />
+			<case name="소환수-flying" />
+			<case name="주술" />
+			<case name="강림" />
+			<case name="유권" />
+			<case name="기공" />
+			<case name="냉정" />
+			<case name="광기" />
+			<case name="장궁" />
+			<case name="정령궁" />
+			<case name="찌르기" />
+			<case name="베기" />
+			<case name="청뢰" />
+			<case name="혈뢰" />
+			<case name="어검세" />
+			<case name="정수" />
+			<case name="역수" />
+			<case name="한손역수" />
+			<case name="간이연주" />
+			<case name="우퍼" />
+			<case name="연주" />
+			<case name="쌍월" />
+			<case name="뇌신" />
+			<case name="침식" />
+			<case name="염제" />
+			<case name="npc주시자세1" />
+			<case name="npc주시자세2" />
+			<case name="npc주시자세3" />
+		</attribute>
+		<attribute name="name" type="String" required="True" deprecated="True" max="50" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="initialize" type="Bool" default="y" />
+		<attribute name="default-sp" type="Int16" default="0" max="200" />
+		<attribute name="max-sp" type="Int16" default="0" max="200" />
+		<attribute name="effect" type="Ref" repeat="4" ref="effect" refel="1" />
+		<attribute name="impossible-equip" type="Bool" default="n" />
+		<attribute name="hide-weapon" type="Bool" default="n" />
+		<attribute name="clone-weapon-appearance-to-left" type="Bool" default="n" />
+		<attribute name="target-angle" type="Float32" repeat="4" default="16" fmax="360" />
+		<attribute name="target-beam-width" type="Float32" repeat="4" default="1.4" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="target-band-first" type="Float32" repeat="4" default="5.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="target-band-second" type="Float32" repeat="4" default="15.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="band-check-limit" type="Int16" repeat="4" default="3" min="1" max="3" />
+		<attribute name="target-change-delay" type="Float32" repeat="4" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="threshold-min" type="Float32" repeat="4" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="threshold-max" type="Float32" repeat="4" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="empty-delay" type="Float32" repeat="4" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="target-gather-angle" type="Float32" default="30" fmax="360" />
+		<attribute name="stun-delay" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="kneel-delay" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="down-delay" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="mid-air-delay" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="swoon-delay" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="secondgauge-name" type="Seq" default="none">
+			<case name="none" />
+			<case name="blade" />
+			<case name="soul" />
+			<case name="fighting-spirit" />
+			<case name="force-energy" />
+			<case name="fury" />
+			<case name="chakra" />
+		</attribute>
+		<attribute name="secondgauge-use-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="use-sp" />
+			<case name="use-fp" />
+		</attribute>
+		<attribute name="combat-mode-particle" type="XUnknown2" default="" max="256" />
+		<attribute name="combat-mode-particle-followup-time-min" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="combat-mode-particle-followup-time-max" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="combat-mode-particle-release-show" type="XUnknown2" default="" max="256" />
+		<attribute name="soul-fighter-weapon-particle" type="XUnknown2" default="" max="256" />
+		<attribute name="soul-fighter-weapon-particle-followup-time-min" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="soul-fighter-weapon-particle-followup-time-max" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="soul-fighter-weapon-buff-particle" type="XUnknown2" default="" max="256" />
+		<attribute name="soul-fighter-weapon-buff-particle-followup-time-min" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="soul-fighter-weapon-buff-particle-followup-time-max" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="soul-fighter-weapon-particle-release-show" type="XUnknown2" default="" max="256" />
+		<attribute name="phantom-not-combat-mode-particle" type="XUnknown2" default="" max="256" />
+		<attribute name="phantom-not-combat-mode-particle-followup-time-min" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="phantom-not-combat-mode-particle-followup-time-max" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="phantom-not-combat-mode-particle-release-show" type="XUnknown2" default="" max="256" />
+		<attribute name="kungfu-fighter-weapon-mesh-id" type="XUnknown2" default="" max="256" />
+		<attribute name="kungfu-fighter-weapon-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="kungfu-fighter-weapon-particle" type="XUnknown2" default="" max="256" />
+		<attribute name="kungfu-fighter-weapon-particle-followup-time-min" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="kungfu-fighter-weapon-particle-followup-time-max" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="kungfu-fighter-weapon-particle-release-show" type="XUnknown2" default="" max="256" />
+		<attribute name="sp-gauge-style" type="Seq" default="none">
+			<case name="none" />
+			<case name="ball" />
+			<case name="bar-1" />
+			<case name="bar-2" />
+		</attribute>
+		<attribute name="sp-gauge-numeric-visible" type="Bool" default="n" />
+		<attribute name="sp-gauge-full-particle-ref" type="XUnknown2" default="" max="256" />
+		<attribute name="sp-gauge-full-particle-scale" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="sp-gauge-charge-particle-ref" type="XUnknown2" default="" max="256" />
+		<attribute name="sp-gauge-charge-particle-scale" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="sp-gauge-consume-particle-ref" type="XUnknown2" default="" max="256" />
+		<attribute name="sp-gauge-consume-particle-scale" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="sp-gauge-charge-observer-particle-ref" type="XUnknown2" default="" max="256" />
+		<attribute name="sp-gauge-charge-observer-particle-scale" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="sp-gauge-consume-observer-particle-ref" type="XUnknown2" default="" max="256" />
+		<attribute name="sp-gauge-consume-observer-particle-scale" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="idle_key" type="String" deprecated="True" default="" max="30" />
+		<attribute name="turn_left_key" type="String" deprecated="True" default="" max="30" />
+		<attribute name="turn_right_key" type="String" deprecated="True" default="" max="30" />
+		<attribute name="gauge_type" type="Seq" deprecated="True" default="gauge-none">
+			<case name="none" />
+			<case name="speed-gauge" />
+			<case name="sword-spirit-gauge" />
+			<case name="angry-gauge" />
+			<case name="force-master-gauge" />
+			<case name="shooter-gauge" />
+		</attribute>
+		<attribute name="next-stanceid-1" type="Prop_seq" deprecated="True" default="gauge-none">
+			<case name="stance-none" />
+			<case name="npc기본자세" />
+			<case name="천검세" />
+			<case name="검령세" />
+			<case name="단타" />
+			<case name="연계" />
+			<case name="체술" />
+			<case name="납도" />
+			<case name="경기공" />
+			<case name="연기공" />
+			<case name="강기공" />
+			<case name="권총모드" />
+			<case name="런처모드" />
+			<case name="파괴" />
+			<case name="보호" />
+			<case name="철벽" />
+			<case name="소환" />
+			<case name="교란" />
+			<case name="은신" />
+			<case name="암살" />
+			<case name="검술" />
+			<case name="어검" />
+			<case name="발도" />
+			<case name="npc자세1" />
+			<case name="npc자세2" />
+			<case name="npc자세3" />
+			<case name="소환수-follow" />
+			<case name="소환수-command-1" />
+			<case name="소환수-flying" />
+			<case name="주술" />
+			<case name="강림" />
+			<case name="유권" />
+			<case name="기공" />
+			<case name="냉정" />
+			<case name="광기" />
+			<case name="장궁" />
+			<case name="정령궁" />
+			<case name="찌르기" />
+			<case name="베기" />
+			<case name="청뢰" />
+			<case name="혈뢰" />
+			<case name="어검세" />
+			<case name="정수" />
+			<case name="역수" />
+			<case name="한손역수" />
+			<case name="간이연주" />
+			<case name="우퍼" />
+			<case name="연주" />
+			<case name="쌍월" />
+			<case name="뇌신" />
+			<case name="침식" />
+			<case name="염제" />
+			<case name="npc주시자세1" />
+			<case name="npc주시자세2" />
+			<case name="npc주시자세3" />
+		</attribute>
+		<attribute name="next-stanceid-2" type="Prop_seq" deprecated="True" default="gauge-none">
+			<case name="stance-none" />
+			<case name="npc기본자세" />
+			<case name="천검세" />
+			<case name="검령세" />
+			<case name="단타" />
+			<case name="연계" />
+			<case name="체술" />
+			<case name="납도" />
+			<case name="경기공" />
+			<case name="연기공" />
+			<case name="강기공" />
+			<case name="권총모드" />
+			<case name="런처모드" />
+			<case name="파괴" />
+			<case name="보호" />
+			<case name="철벽" />
+			<case name="소환" />
+			<case name="교란" />
+			<case name="은신" />
+			<case name="암살" />
+			<case name="검술" />
+			<case name="어검" />
+			<case name="발도" />
+			<case name="npc자세1" />
+			<case name="npc자세2" />
+			<case name="npc자세3" />
+			<case name="소환수-follow" />
+			<case name="소환수-command-1" />
+			<case name="소환수-flying" />
+			<case name="주술" />
+			<case name="강림" />
+			<case name="유권" />
+			<case name="기공" />
+			<case name="냉정" />
+			<case name="광기" />
+			<case name="장궁" />
+			<case name="정령궁" />
+			<case name="찌르기" />
+			<case name="베기" />
+			<case name="청뢰" />
+			<case name="혈뢰" />
+			<case name="어검세" />
+			<case name="정수" />
+			<case name="역수" />
+			<case name="한손역수" />
+			<case name="간이연주" />
+			<case name="우퍼" />
+			<case name="연주" />
+			<case name="쌍월" />
+			<case name="뇌신" />
+			<case name="침식" />
+			<case name="염제" />
+			<case name="npc주시자세1" />
+			<case name="npc주시자세2" />
+			<case name="npc주시자세3" />
+		</attribute>
+		<attribute name="next-stanceid-3" type="Prop_seq" deprecated="True" default="gauge-none">
+			<case name="stance-none" />
+			<case name="npc기본자세" />
+			<case name="천검세" />
+			<case name="검령세" />
+			<case name="단타" />
+			<case name="연계" />
+			<case name="체술" />
+			<case name="납도" />
+			<case name="경기공" />
+			<case name="연기공" />
+			<case name="강기공" />
+			<case name="권총모드" />
+			<case name="런처모드" />
+			<case name="파괴" />
+			<case name="보호" />
+			<case name="철벽" />
+			<case name="소환" />
+			<case name="교란" />
+			<case name="은신" />
+			<case name="암살" />
+			<case name="검술" />
+			<case name="어검" />
+			<case name="발도" />
+			<case name="npc자세1" />
+			<case name="npc자세2" />
+			<case name="npc자세3" />
+			<case name="소환수-follow" />
+			<case name="소환수-command-1" />
+			<case name="소환수-flying" />
+			<case name="주술" />
+			<case name="강림" />
+			<case name="유권" />
+			<case name="기공" />
+			<case name="냉정" />
+			<case name="광기" />
+			<case name="장궁" />
+			<case name="정령궁" />
+			<case name="찌르기" />
+			<case name="베기" />
+			<case name="청뢰" />
+			<case name="혈뢰" />
+			<case name="어검세" />
+			<case name="정수" />
+			<case name="역수" />
+			<case name="한손역수" />
+			<case name="간이연주" />
+			<case name="우퍼" />
+			<case name="연주" />
+			<case name="쌍월" />
+			<case name="뇌신" />
+			<case name="침식" />
+			<case name="염제" />
+			<case name="npc주시자세1" />
+			<case name="npc주시자세2" />
+			<case name="npc주시자세3" />
+		</attribute>
+		<attribute name="next-skillid-1" type="Int32" deprecated="True" default="0" max="2000000" />
+		<attribute name="next-skillid-2" type="Int32" deprecated="True" default="0" max="2000000" />
+		<attribute name="next-skillid-3" type="Int32" deprecated="True" default="0" max="2000000" />
+		<attribute name="iconindex" type="Int32" deprecated="True" default="0" max="2000000" />
+		<attribute name="upper-mov-anim-walkfront" type="String" deprecated="True" default="" max="30" />
+		<attribute name="upper-mov-anim-walkback" type="String" deprecated="True" default="" max="30" />
+		<attribute name="upper-mov-anim-walkleft" type="String" deprecated="True" default="" max="30" />
+		<attribute name="upper-mov-anim-walkright" type="String" deprecated="True" default="" max="30" />
+		<attribute name="upper-mov-anim-walkleftback" type="String" deprecated="True" default="" max="30" />
+		<attribute name="upper-mov-anim-walkrightback" type="String" deprecated="True" default="" max="30" />
+		<attribute name="lower-mov-anim-walkfront" type="String" deprecated="True" default="" max="30" />
+		<attribute name="lower-mov-anim-walkback" type="String" deprecated="True" default="" max="30" />
+		<attribute name="lower-mov-anim-walkleft" type="String" deprecated="True" default="" max="30" />
+		<attribute name="lower-mov-anim-walkright" type="String" deprecated="True" default="" max="30" />
+		<attribute name="lower-mov-anim-walkleftback" type="String" deprecated="True" default="" max="30" />
+		<attribute name="lower-mov-anim-walkrightback" type="String" deprecated="True" default="" max="30" />
+		<attribute name="upper-mov-anim-runfront" type="String" deprecated="True" default="" max="30" />
+		<attribute name="upper-mov-anim-runback" type="String" deprecated="True" default="" max="30" />
+		<attribute name="upper-mov-anim-runleft" type="String" deprecated="True" default="" max="30" />
+		<attribute name="upper-mov-anim-runright" type="String" deprecated="True" default="" max="30" />
+		<attribute name="upper-mov-anim-runleftback" type="String" deprecated="True" default="" max="30" />
+		<attribute name="upper-mov-anim-runrightback" type="String" deprecated="True" default="" max="30" />
+		<attribute name="lower-mov-anim-runfront" type="String" deprecated="True" default="" max="30" />
+		<attribute name="lower-mov-anim-runback" type="String" deprecated="True" default="" max="30" />
+		<attribute name="lower-mov-anim-runleft" type="String" deprecated="True" default="" max="30" />
+		<attribute name="lower-mov-anim-runright" type="String" deprecated="True" default="" max="30" />
+		<attribute name="lower-mov-anim-runleftback" type="String" deprecated="True" default="" max="30" />
+		<attribute name="lower-mov-anim-runrightback" type="String" deprecated="True" default="" max="30" />
+		<attribute name="summoned-flyingship-attachment-mesh-id" type="XUnknown2" default="" max="256" />
+		<attribute name="summoned-flyingship-attachment-mesh-col" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="summoned-flyingship-attachment-mesh-animset" type="XUnknown2" default="" max="256" />
+		<attribute name="summoned-preset-body-shape-part-value" type="Int8" default="0" max="50" />
+	</el>
+</table>

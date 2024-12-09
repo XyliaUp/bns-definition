@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="randomstoredrawreward" type="306" version="0.2" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32767" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="random-store-number" type="Seq" key="True" required="True">
+			<case name="invalid-number" />
+			<case name="random-store-1" />
+			<case name="random-store-2" />
+		</attribute>
+		<attribute name="required-draw-count" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="fixed-reward" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="fixed-reward-count" type="Int8" repeat="4" default="0" min="-128" max="127" />
+		<attribute name="optional-reward" type="Ref" repeat="8" ref="item" refel="1" />
+		<attribute name="optional-reward-count" type="Int8" repeat="8" default="0" min="-128" max="127" />
+	</el>
+</table>

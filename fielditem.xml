@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="fielditem" type="142" version="1.0" module="270" maxid="65535">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="-2147483647" max="65535" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="remain-duration" type="Msec" required="True" max="2147483647" />
+		<attribute name="pickup-radius" type="Distance" default="0" max="5000" />
+		<attribute name="pickup-duration" type="Msec" required="True" max="2147483647" />
+		<attribute name="putdown-duration" type="Msec" required="True" max="2147483647" />
+		<attribute name="equip-effect" type="Ref" repeat="4" ref="effect" refel="1" />
+		<attribute name="not-change-create-pos" type="Bool" default="n" />
+		<attribute name="parry-event" type="Seq" default="none">
+			<case name="none" />
+			<case name="decrease-use-count" />
+		</attribute>
+		<attribute name="acquire-quest" type="Ref" hidden="True" ref="quest" refel="1" />
+		<attribute name="forwarding-types" type="Seq" hidden="True">
+			<case name="progress-mission" />
+			<case name="acquire-quest" />
+			<case name="skill-target" />
+			<case name="mission-step-rollback" />
+		</attribute>
+		<attribute name="quests" type="Ref" hidden="True" ref="quest" refel="1" />
+		<attribute name="missions" type="Int8" hidden="True" min="-128" max="127" />
+		<attribute name="cases" type="Int8" hidden="True" min="-128" max="127" />
+		<attribute name="case-subtypes" type="Int16" hidden="True" min="-32768" max="32767" />
+		<attribute name="use-count" type="Int16" default="1" min="1" max="10000" />
+		<attribute name="use-skill3" type="Ref" repeat="4" required="True" ref="skill3" refel="1" />
+		<attribute name="consume-use-count" type="Int16" repeat="4" default="1" min="1" max="10000" />
+		<attribute name="throw-skill3" type="Ref" required="True" ref="skill3" refel="1" />
+		<attribute name="init-activated" type="Bool" default="n" />
+		<attribute name="explosion-time" type="Msec" required="True" max="2147483647" />
+		<attribute name="target-radius" type="Distance" required="True" max="320000" />
+		<attribute name="target-decal" type="XUnknown2" default="" max="256" />
+		<attribute name="target-state" type="Seq" default="all">
+			<case name="all" />
+			<case name="friend" />
+			<case name="enemy" />
+			<case name="my-party" />
+			<case name="my-team" />
+		</attribute>
+		<attribute name="invoke-effect" type="Ref" repeat="4" ref="effect" refel="1" />
+		<attribute name="change-activator-by-killer" type="Bool" default="n" />
+		<attribute name="target-first-filter" type="Ref" repeat="4" ref="filter" refel="1" />
+		<attribute name="target-second-filter" type="Ref" repeat="4" ref="filter" refel="1" />
+		<attribute name="first-effect" type="Ref" repeat="4" ref="effect" refel="1" />
+		<attribute name="second-effect" type="Ref" repeat="4" ref="effect" refel="1" />
+		<attribute name="activated-effect" type="Bool" hidden="True" default="n" />
+		<attribute name="activate-show" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="activate-particle" type="XUnknown2" default="" max="256" />
+		<attribute name="activate-particle-duration" type="Msec" required="True" max="2147483647" />
+		<attribute name="activate-particle-attatch-bone" type="String" default="" max="50" />
+		<attribute name="throw-target" type="Bool" default="n" />
+		<attribute name="koreaname" type="String" deprecated="True" default="" max="50" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="mesh-id" type="XUnknown2" default="" max="256" />
+		<attribute name="mesh-col" type="XUnknown2" default="" max="256" />
+		<attribute name="animset-name" type="XUnknown2" default="" max="256" />
+		<attribute name="moveanim" type="Ref" default="" ref="field-item-move-anim" refel="1" />
+		<attribute name="anim-idle" type="String" deprecated="True" default="" max="50" />
+		<attribute name="anim-pick-up" type="String" deprecated="True" default="" max="50" />
+		<attribute name="anim-put-down" type="String" deprecated="True" default="" max="50" />
+		<attribute name="upper-mov-anim-walkfront" type="String" deprecated="True" default="" max="50" />
+		<attribute name="upper-mov-anim-walkback" type="String" deprecated="True" default="" max="50" />
+		<attribute name="upper-mov-anim-walkleft" type="String" deprecated="True" default="" max="50" />
+		<attribute name="upper-mov-anim-walkright" type="String" deprecated="True" default="" max="50" />
+		<attribute name="upper-mov-anim-walkleftback" type="String" deprecated="True" default="" max="50" />
+		<attribute name="upper-mov-anim-walkrightback" type="String" deprecated="True" default="" max="50" />
+		<attribute name="upper-mov-anim-runfront" type="String" deprecated="True" default="" max="50" />
+		<attribute name="upper-mov-anim-runback" type="String" deprecated="True" default="" max="50" />
+		<attribute name="upper-mov-anim-runleft" type="String" deprecated="True" default="" max="50" />
+		<attribute name="upper-mov-anim-runright" type="String" deprecated="True" default="" max="50" />
+		<attribute name="upper-mov-anim-runleftback" type="String" deprecated="True" default="" max="50" />
+		<attribute name="upper-mov-anim-runrightback" type="String" deprecated="True" default="" max="50" />
+		<attribute name="exec-particle" type="XUnknown2" deprecated="True" default="" max="256" />
+		<attribute name="exec-sound" type="XUnknown2" deprecated="True" default="" max="256" />
+		<attribute name="drop-sound" type="XUnknown2" deprecated="True" default="" max="256" />
+		<attribute name="grab-bone" type="String" default="" max="50" />
+		<attribute name="pick-up" type="String" default="" max="60" />
+		<attribute name="put-down" type="String" default="" max="60" />
+		<attribute name="use-item" type="String" deprecated="True" default="" max="60" />
+		<attribute name="throw-item" type="String" default="" max="60" />
+		<attribute name="attach-time" type="Msec" default="1000" max="10000" />
+		<attribute name="detach-time" type="Msec" default="1000" max="10000" />
+		<attribute name="throw-detach-time" type="Msec" default="100" max="10000" />
+		<attribute name="throw-bone" type="String" default="" max="50" />
+		<attribute name="randing" type="Bool" default="n" />
+		<attribute name="throw-straight" type="Bool" default="n" />
+		<attribute name="gadget-stay" type="String" default="" max="60" />
+		<attribute name="gadget-pickup-idle" type="String" default="" max="60" />
+		<attribute name="gadget-putdown-start" type="String" default="" max="60" />
+		<attribute name="gadget-pickup-start" type="String" default="" max="60" />
+		<attribute name="gadget-thrown-start" type="String" default="" max="60" />
+		<attribute name="gadget-thrown-particle" type="String" default="" max="60" />
+		<attribute name="gadget-thrown-endstay" type="String" deprecated="True" default="" max="60" />
+		<attribute name="gadget-landing" type="String" default="" max="60" />
+		<attribute name="action-name" type="String" deprecated="True" default="" max="50" />
+		<attribute name="action-desc" type="String" deprecated="True" default="" max="100" />
+		<attribute name="action-name2" type="Ref" ref="text" refel="1" />
+		<attribute name="action-desc2" type="Ref" ref="text" refel="1" />
+		<attribute name="drop-action-name" type="Ref" ref="text" refel="1" />
+		<attribute name="drop-action-desc" type="Ref" ref="text" refel="1" />
+		<attribute name="description2" type="Ref" ref="text" refel="1" />
+		<attribute name="gadget-dropanim" type="String" default="" max="60" />
+		<attribute name="gadget-putdown-show" type="XUnknown2" default="" max="256" />
+		<attribute name="throw-presentation" type="Bool" default="y" />
+		<attribute name="prefix" type="String" default="" max="60" />
+		<attribute name="gadget-decompose-showdata" type="XUnknown2" default="" max="256" />
+		<attribute name="gadget-consume-showdata" type="XUnknown2" default="" max="256" />
+		<attribute name="gadget-consume-in-hand-showdata" type="XUnknown2" default="" max="256" />
+		<attribute name="ghost-mode" type="Bool" default="n" />
+	</el>
+</table>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="skill-build-up" type="340" version="2.0" module="2054">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="parent-skill3-id" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="max-level" type="Int8" required="True" max="30" />
+		<attribute name="required-build-up-point" type="Int8" repeat="30" default="0" max="15" />
+		<attribute name="required-build-up-point-level" type="Int16" repeat="30" hidden="True" min="-32768" max="32767" />
+		<attribute name="skill-modify-info" type="Ref" repeat="30" ref="skill-modify-info" refel="1" />
+	</el>
+</table>

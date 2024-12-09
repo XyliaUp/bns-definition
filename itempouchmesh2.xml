@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="itempouchmesh2" type="209" version="0.5" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="pouch-appearance" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="money" />
+			<case name="effect" />
+			<case name="distribution-pouch" />
+			<case name="normal-pouch-grade1" />
+			<case name="normal-pouch-grade2" />
+			<case name="normal-pouch-grade3" />
+			<case name="normal-pouch-grade4" />
+			<case name="normal-pouch-grade5" />
+			<case name="normal-pouch-grade6" />
+			<case name="normal-pouch-grade7" />
+			<case name="quality-pouch-grade1" />
+			<case name="quality-pouch-grade2" />
+			<case name="quality-pouch-grade3" />
+			<case name="quality-pouch-grade4" />
+			<case name="quality-pouch-grade5" />
+			<case name="quality-pouch-grade6" />
+			<case name="quality-pouch-grade7" />
+			<case name="high-quality-pouch-grade1" />
+			<case name="high-quality-pouch-grade2" />
+			<case name="high-quality-pouch-grade3" />
+			<case name="high-quality-pouch-grade4" />
+			<case name="high-quality-pouch-grade5" />
+			<case name="high-quality-pouch-grade6" />
+			<case name="high-quality-pouch-grade7" />
+			<case name="normal-box-grade1" />
+			<case name="normal-box-grade2" />
+			<case name="normal-box-grade3" />
+			<case name="normal-box-grade4" />
+			<case name="normal-box-grade5" />
+			<case name="normal-box-grade6" />
+			<case name="normal-box-grade7" />
+			<case name="quality-box-grade1" />
+			<case name="quality-box-grade2" />
+			<case name="quality-box-grade3" />
+			<case name="quality-box-grade4" />
+			<case name="quality-box-grade5" />
+			<case name="quality-box-grade6" />
+			<case name="quality-box-grade7" />
+			<case name="high-quality-box-grade1" />
+			<case name="high-quality-box-grade2" />
+			<case name="high-quality-box-grade3" />
+			<case name="high-quality-box-grade4" />
+			<case name="high-quality-box-grade5" />
+			<case name="high-quality-box-grade6" />
+			<case name="high-quality-box-grade7" />
+			<case name="normal-gembox-grade1" />
+			<case name="normal-gembox-grade2" />
+			<case name="normal-gembox-grade3" />
+			<case name="normal-gembox-grade4" />
+			<case name="normal-gembox-grade5" />
+			<case name="normal-gembox-grade6" />
+			<case name="normal-gembox-grade7" />
+			<case name="quality-gembox-grade1" />
+			<case name="quality-gembox-grade2" />
+			<case name="quality-gembox-grade3" />
+			<case name="quality-gembox-grade4" />
+			<case name="quality-gembox-grade5" />
+			<case name="quality-gembox-grade6" />
+			<case name="quality-gembox-grade7" />
+			<case name="high-quality-gembox-grade1" />
+			<case name="high-quality-gembox-grade2" />
+			<case name="high-quality-gembox-grade3" />
+			<case name="high-quality-gembox-grade4" />
+			<case name="high-quality-gembox-grade5" />
+			<case name="high-quality-gembox-grade6" />
+			<case name="high-quality-gembox-grade7" />
+		</attribute>
+		<attribute name="npc-grade2" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="boss" />
+			<case name="champion" />
+			<case name="normal" />
+			<case name="follower" />
+			<case name="tool" />
+			<case name="weakest" />
+			<case name="weak" />
+			<case name="regular" />
+			<case name="strong" />
+		</attribute>
+		<attribute name="private-pouch" type="Bool" key="True" required="True" />
+		<attribute name="skeletal-mesh" type="XUnknown2" default="00009256.item_0009" max="256" />
+		<attribute name="anim-set" type="XUnknown2" default="00006916.DropItem_Anim" max="256" />
+		<attribute name="physics-asset" type="XUnknown2" default="00009256.item_0009_Physics" max="256" />
+		<attribute name="custom-anim" type="XUnknown2" default="DropItem_Anim" max="256" />
+		<attribute name="despawn-showdata" type="XUnknown2" default="" max="256" />
+		<attribute name="icon" type="Icon" max="32767" />
+		<attribute name="owner-particle" type="XUnknown2" default="" max="256" />
+		<attribute name="mark-particle" type="XUnknown2" default="" max="256" />
+		<attribute name="dropped-pouch-anim-set" type="XUnknown2" default="00006916.DropItem_Anim" max="256" />
+	</el>
+</table>

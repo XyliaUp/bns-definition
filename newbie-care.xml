@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="newbie-care" type="263" version="1.0" module="6" maxid="100">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int8" key="True" required="True" min="1" max="100" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="dungeon" type="Ref" ref="dungeon" refel="1" />
+		<attribute name="achievement-register" type="Ref" ref="achievement-register" refel="1" />
+		<attribute name="reward-default" type="Ref" ref="reward" refel="1" />
+		<attribute name="reward-difficulty-type" type="Ref" repeat="3" ref="reward" refel="1" />
+		<attribute name="attraction-quest" type="Ref" ref="quest" refel="1" />
+	</el>
+</table>

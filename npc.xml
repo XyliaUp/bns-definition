@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="npc" type="265" version="5.0" module="270">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name" type="String" default="" max="50" />
+		<attribute name="title" type="String" default="" max="64" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="title2" type="Ref" ref="text" refel="1" />
+		<attribute name="boss-npc" type="Ref" ref="bossnpc" refel="1" />
+		<attribute name="soul-npc" type="Bool" default="n" />
+		<attribute name="boss-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="huge-boss" />
+			<case name="world-boss" />
+		</attribute>
+		<attribute name="write-combat-log" type="Bool" default="n" />
+		<attribute name="radius" type="Distance" default="0" max="5000" />
+		<attribute name="scale" type="Int16" default="1000" max="10000" />
+		<attribute name="walk-speed" type="Velocity" default="0" max="8000" />
+		<attribute name="run-speed" type="Velocity" default="0" max="8000" />
+		<attribute name="spawn-cinematic" type="Ref" deprecated="True" ref="cinematic" refel="1" />
+		<attribute name="neutral-hostile" type="Seq" default="fightback">
+			<case name="offensive" />
+			<case name="fightback" />
+			<case name="neutral" />
+		</attribute>
+		<attribute name="offensive" type="Bool" default="n" />
+		<attribute name="immune-skill-attribute" type="Seq" repeat="8" default="none">
+			<case name="none" />
+			<case name="막기" />
+			<case name="반격" />
+			<case name="튕기기" />
+			<case name="방어행동" />
+			<case name="대쉬" />
+			<case name="이동" />
+			<case name="회피" />
+			<case name="다운" />
+			<case name="넉백" />
+			<case name="기절" />
+			<case name="그로기" />
+			<case name="공중" />
+			<case name="행동불가" />
+			<case name="이동불가" />
+			<case name="다운대응" />
+			<case name="막기조건" />
+			<case name="회피조건" />
+			<case name="치명타조건" />
+			<case name="연계기" />
+			<case name="스탠스" />
+			<case name="회복" />
+			<case name="게이지회복" />
+			<case name="부활" />
+			<case name="지원" />
+			<case name="즉시시전" />
+			<case name="캐스팅" />
+			<case name="가드브레이크" />
+			<case name="발사체" />
+			<case name="발사체2" />
+			<case name="제압" />
+			<case name="관절기" />
+			<case name="장악" />
+			<case name="비인간장악" />
+			<case name="흡공" />
+			<case name="제압대응" />
+			<case name="장악대응" />
+			<case name="흡공대응" />
+			<case name="해제" />
+			<case name="독" />
+			<case name="쿨타임" />
+			<case name="불" />
+			<case name="얼음" />
+			<case name="전기" />
+			<case name="기공" />
+			<case name="트리거" />
+			<case name="워프" />
+			<case name="근거리" />
+			<case name="원거리" />
+			<case name="광역" />
+			<case name="이동가능" />
+			<case name="데미지존" />
+			<case name="상태면역" />
+			<case name="위치바꾸기" />
+			<case name="은사" />
+			<case name="도발" />
+		</attribute>
+		<attribute name="immune-effect-attribute" type="Seq16" repeat="20" default="none">
+			<case name="none" />
+			<case name="회복" />
+			<case name="진드기" />
+			<case name="불" />
+			<case name="은사" />
+			<case name="거미줄" />
+			<case name="독" />
+			<case name="은신" />
+			<case name="투명" />
+			<case name="광기" />
+			<case name="얼음감옥" />
+			<case name="독나방" />
+			<case name="가젯드랍" />
+			<case name="다운" />
+			<case name="넉백대시" />
+			<case name="방어불가" />
+			<case name="도발" />
+			<case name="도망" />
+			<case name="이동불가" />
+			<case name="대시불가" />
+			<case name="감속" />
+			<case name="기절" />
+			<case name="얼어붙음" />
+			<case name="행동불가" />
+			<case name="출혈" />
+			<case name="치유" />
+			<case name="얼음" />
+			<case name="맹독" />
+			<case name="막기" />
+			<case name="속박" />
+			<case name="제압" />
+			<case name="위치바꾸기" />
+			<case name="장악연계" />
+			<case name="무적" />
+			<case name="멍해짐" />
+			<case name="앞차기" />
+			<case name="혼절" />
+			<case name="광폭해짐" />
+			<case name="공중" />
+			<case name="그로기" />
+			<case name="난무" />
+			<case name="넉백" />
+			<case name="흡공" />
+			<case name="퀘스트-1" />
+			<case name="퀘스트-2" />
+			<case name="퀘스트-3" />
+			<case name="퀘스트-4" />
+			<case name="퀘스트-5" />
+			<case name="대상공중" />
+			<case name="보스-1" />
+			<case name="보스-2" />
+			<case name="보스-3" />
+			<case name="보스대쉬" />
+			<case name="그림자" />
+			<case name="중첩불가1" />
+			<case name="중첩불가2" />
+			<case name="조건만족" />
+			<case name="소환사독" />
+			<case name="탱킹장판" />
+			<case name="검막" />
+			<case name="비트" />
+			<case name="홍옥" />
+			<case name="녹주석" />
+			<case name="보스저항-1" />
+			<case name="보스저항-2" />
+			<case name="보스저항-3" />
+			<case name="보스저항-4" />
+			<case name="보스저항-5" />
+			<case name="낙인저항-1" />
+			<case name="낙인저항-2" />
+			<case name="낙인저항-3" />
+			<case name="낙인저항-4" />
+			<case name="마성-1" />
+			<case name="마성-2" />
+			<case name="마성-3" />
+			<case name="마성-4" />
+			<case name="주술체" />
+			<case name="소울" />
+			<case name="부적" />
+			<case name="환마" />
+			<case name="반사" />
+			<case name="NPC-1" />
+			<case name="NPC-2" />
+			<case name="NPC-3" />
+			<case name="NPC-4" />
+			<case name="NPC-5" />
+			<case name="NPC-6" />
+			<case name="NPC-7" />
+			<case name="NPC-8" />
+			<case name="NPC-9" />
+			<case name="NPC-10" />
+			<case name="낙인저항-5" />
+			<case name="낙인저항-6" />
+			<case name="낙인저항-7" />
+			<case name="낙인저항-8" />
+			<case name="클래스-1" />
+			<case name="클래스-2" />
+			<case name="클래스-3" />
+			<case name="클래스-4" />
+			<case name="클래스-5" />
+			<case name="클래스-6" />
+			<case name="클래스-7" />
+			<case name="클래스-8" />
+			<case name="클래스-9" />
+			<case name="클래스-10" />
+			<case name="클래스-11" />
+			<case name="클래스-12" />
+			<case name="클래스-13" />
+			<case name="클래스-14" />
+			<case name="클래스-15" />
+			<case name="클래스-16" />
+			<case name="클래스-17" />
+			<case name="클래스-18" />
+			<case name="클래스-19" />
+			<case name="클래스-20" />
+			<case name="클래스-21" />
+			<case name="클래스-22" />
+			<case name="클래스-23" />
+			<case name="클래스-24" />
+			<case name="클래스-25" />
+			<case name="클래스-26" />
+			<case name="클래스-27" />
+			<case name="클래스-28" />
+			<case name="클래스-29" />
+			<case name="클래스-30" />
+			<case name="클래스-31" />
+			<case name="클래스-32" />
+			<case name="클래스-33" />
+			<case name="클래스-34" />
+			<case name="클래스-35" />
+			<case name="클래스-36" />
+			<case name="클래스-37" />
+			<case name="클래스-38" />
+			<case name="클래스-39" />
+			<case name="클래스-40" />
+			<case name="클래스-41" />
+			<case name="클래스-42" />
+			<case name="클래스-43" />
+			<case name="클래스-44" />
+			<case name="클래스-45" />
+			<case name="클래스-46" />
+			<case name="클래스-47" />
+			<case name="클래스-48" />
+			<case name="클래스-49" />
+			<case name="클래스-50" />
+			<case name="클래스-51" />
+			<case name="클래스-52" />
+			<case name="클래스-53" />
+			<case name="클래스-54" />
+			<case name="클래스-55" />
+			<case name="클래스-56" />
+			<case name="클래스-57" />
+			<case name="클래스-58" />
+			<case name="클래스-59" />
+			<case name="클래스-60" />
+			<case name="아이템조건-1" />
+			<case name="어택글라이드" />
+			<case name="문양-1" />
+			<case name="문양-2" />
+			<case name="문양-3" />
+			<case name="문양-4" />
+			<case name="문양-5" />
+			<case name="문양-6" />
+			<case name="문양-7" />
+			<case name="문양-8" />
+			<case name="문양-9" />
+			<case name="문양-10" />
+			<case name="문양-11" />
+			<case name="문양-12" />
+			<case name="문양-13" />
+			<case name="문양-14" />
+			<case name="문양-15" />
+			<case name="문양-16" />
+			<case name="문양-17" />
+			<case name="문양-18" />
+			<case name="문양-19" />
+			<case name="문양-20" />
+			<case name="기믹-1" />
+			<case name="기믹-2" />
+			<case name="기믹-3" />
+			<case name="기믹-4" />
+			<case name="기믹-5" />
+			<case name="던전보스-1" />
+			<case name="기믹-6" />
+			<case name="기믹-7" />
+			<case name="기믹-8" />
+			<case name="기믹-9" />
+			<case name="기믹-10" />
+			<case name="중첩불가3" />
+		</attribute>
+		<attribute name="immune-breaker-attribute" type="Seq16" repeat="8" default="none">
+			<case name="none" />
+			<case name="회복" />
+			<case name="진드기" />
+			<case name="불" />
+			<case name="은사" />
+			<case name="거미줄" />
+			<case name="독" />
+			<case name="은신" />
+			<case name="투명" />
+			<case name="광기" />
+			<case name="얼음감옥" />
+			<case name="독나방" />
+			<case name="가젯드랍" />
+			<case name="다운" />
+			<case name="넉백대시" />
+			<case name="방어불가" />
+			<case name="도발" />
+			<case name="도망" />
+			<case name="이동불가" />
+			<case name="대시불가" />
+			<case name="감속" />
+			<case name="기절" />
+			<case name="얼어붙음" />
+			<case name="행동불가" />
+			<case name="출혈" />
+			<case name="치유" />
+			<case name="얼음" />
+			<case name="맹독" />
+			<case name="막기" />
+			<case name="속박" />
+			<case name="제압" />
+			<case name="위치바꾸기" />
+			<case name="장악연계" />
+			<case name="무적" />
+			<case name="멍해짐" />
+			<case name="앞차기" />
+			<case name="혼절" />
+			<case name="광폭해짐" />
+			<case name="공중" />
+			<case name="그로기" />
+			<case name="난무" />
+			<case name="넉백" />
+			<case name="흡공" />
+			<case name="퀘스트-1" />
+			<case name="퀘스트-2" />
+			<case name="퀘스트-3" />
+			<case name="퀘스트-4" />
+			<case name="퀘스트-5" />
+			<case name="대상공중" />
+			<case name="보스-1" />
+			<case name="보스-2" />
+			<case name="보스-3" />
+			<case name="보스대쉬" />
+			<case name="그림자" />
+			<case name="중첩불가1" />
+			<case name="중첩불가2" />
+			<case name="조건만족" />
+			<case name="소환사독" />
+			<case name="탱킹장판" />
+			<case name="검막" />
+			<case name="비트" />
+			<case name="홍옥" />
+			<case name="녹주석" />
+			<case name="보스저항-1" />
+			<case name="보스저항-2" />
+			<case name="보스저항-3" />
+			<case name="보스저항-4" />
+			<case name="보스저항-5" />
+			<case name="낙인저항-1" />
+			<case name="낙인저항-2" />
+			<case name="낙인저항-3" />
+			<case name="낙인저항-4" />
+			<case name="마성-1" />
+			<case name="마성-2" />
+			<case name="마성-3" />
+			<case name="마성-4" />
+			<case name="주술체" />
+			<case name="소울" />
+			<case name="부적" />
+			<case name="환마" />
+			<case name="반사" />
+			<case name="NPC-1" />
+			<case name="NPC-2" />
+			<case name="NPC-3" />
+			<case name="NPC-4" />
+			<case name="NPC-5" />
+			<case name="NPC-6" />
+			<case name="NPC-7" />
+			<case name="NPC-8" />
+			<case name="NPC-9" />
+			<case name="NPC-10" />
+			<case name="낙인저항-5" />
+			<case name="낙인저항-6" />
+			<case name="낙인저항-7" />
+			<case name="낙인저항-8" />
+			<case name="클래스-1" />
+			<case name="클래스-2" />
+			<case name="클래스-3" />
+			<case name="클래스-4" />
+			<case name="클래스-5" />
+			<case name="클래스-6" />
+			<case name="클래스-7" />
+			<case name="클래스-8" />
+			<case name="클래스-9" />
+			<case name="클래스-10" />
+			<case name="클래스-11" />
+			<case name="클래스-12" />
+			<case name="클래스-13" />
+			<case name="클래스-14" />
+			<case name="클래스-15" />
+			<case name="클래스-16" />
+			<case name="클래스-17" />
+			<case name="클래스-18" />
+			<case name="클래스-19" />
+			<case name="클래스-20" />
+			<case name="클래스-21" />
+			<case name="클래스-22" />
+			<case name="클래스-23" />
+			<case name="클래스-24" />
+			<case name="클래스-25" />
+			<case name="클래스-26" />
+			<case name="클래스-27" />
+			<case name="클래스-28" />
+			<case name="클래스-29" />
+			<case name="클래스-30" />
+			<case name="클래스-31" />
+			<case name="클래스-32" />
+			<case name="클래스-33" />
+			<case name="클래스-34" />
+			<case name="클래스-35" />
+			<case name="클래스-36" />
+			<case name="클래스-37" />
+			<case name="클래스-38" />
+			<case name="클래스-39" />
+			<case name="클래스-40" />
+			<case name="클래스-41" />
+			<case name="클래스-42" />
+			<case name="클래스-43" />
+			<case name="클래스-44" />
+			<case name="클래스-45" />
+			<case name="클래스-46" />
+			<case name="클래스-47" />
+			<case name="클래스-48" />
+			<case name="클래스-49" />
+			<case name="클래스-50" />
+			<case name="클래스-51" />
+			<case name="클래스-52" />
+			<case name="클래스-53" />
+			<case name="클래스-54" />
+			<case name="클래스-55" />
+			<case name="클래스-56" />
+			<case name="클래스-57" />
+			<case name="클래스-58" />
+			<case name="클래스-59" />
+			<case name="클래스-60" />
+			<case name="아이템조건-1" />
+			<case name="어택글라이드" />
+			<case name="문양-1" />
+			<case name="문양-2" />
+			<case name="문양-3" />
+			<case name="문양-4" />
+			<case name="문양-5" />
+			<case name="문양-6" />
+			<case name="문양-7" />
+			<case name="문양-8" />
+			<case name="문양-9" />
+			<case name="문양-10" />
+			<case name="문양-11" />
+			<case name="문양-12" />
+			<case name="문양-13" />
+			<case name="문양-14" />
+			<case name="문양-15" />
+			<case name="문양-16" />
+			<case name="문양-17" />
+			<case name="문양-18" />
+			<case name="문양-19" />
+			<case name="문양-20" />
+			<case name="기믹-1" />
+			<case name="기믹-2" />
+			<case name="기믹-3" />
+			<case name="기믹-4" />
+			<case name="기믹-5" />
+			<case name="던전보스-1" />
+			<case name="기믹-6" />
+			<case name="기믹-7" />
+			<case name="기믹-8" />
+			<case name="기믹-9" />
+			<case name="기믹-10" />
+			<case name="중첩불가3" />
+		</attribute>
+		<attribute name="immune-breaker-count" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="immune-breaker-init-duration" type="Msec" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="immune-breaker-show" type="XUnknown2" repeat="8" default="" max="256" />
+		<attribute name="store" type="Ref" ref="store" refel="1" />
+		<attribute name="store-by-item" type="Ref" ref="store-by-item" refel="1" />
+		<attribute name="store2" type="Ref" repeat="6" ref="store2" refel="1" />
+		<attribute name="teleport" type="Ref" ref="teleport" refel="1" />
+		<attribute name="repairer" type="Bool" default="n" />
+		<attribute name="production" type="Seq" default="none">
+			<case name="none" />
+			<case name="production-type-1" />
+			<case name="production-type-2" />
+			<case name="production-type-3" />
+			<case name="production-type-4" />
+			<case name="production-type-5" />
+			<case name="production-type-6" />
+			<case name="production-type-7" />
+			<case name="gathering-type-1" />
+			<case name="gathering-type-2" />
+			<case name="gathering-type-3" />
+			<case name="gathering-type-4" />
+			<case name="gathering-type-5" />
+			<case name="gathering-type-6" />
+			<case name="gathering-type-7" />
+		</attribute>
+		<attribute name="market" type="Bool" default="n" />
+		<attribute name="post-office" type="Bool" default="n" />
+		<attribute name="exchange-faction-score" type="Bool" default="n" />
+		<attribute name="exchange-faction-score-max-faction-level" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="exchange-faction-score-multiply-value" type="Int8" default="1" min="1" max="100" />
+		<attribute name="join-leave-faction" type="Bool" default="n" />
+		<attribute name="transfer-faction" type="Bool" default="n" />
+		<attribute name="depot" type="Bool" default="n" />
+		<attribute name="guild" type="Bool" default="n" />
+		<attribute name="max-faction-score" type="Int32" default="999" max="1000000" />
+		<attribute name="enable-co-ownership-pouch" type="Bool" default="n" />
+		<attribute name="reward-faction-score" type="Int32" default="0" max="100000" />
+		<attribute name="peaktime-reward-sun-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="peaktime-reward-sun-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="peaktime-reward-mon-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="peaktime-reward-mon-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="peaktime-reward-tue-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="peaktime-reward-tue-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="peaktime-reward-wed-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="peaktime-reward-wed-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="peaktime-reward-thu-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="peaktime-reward-thu-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="peaktime-reward-fri-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="peaktime-reward-fri-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="peaktime-reward-sat-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="peaktime-reward-sat-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="contribution-reward" type="Ref" ref="contributionreward" refel="1" />
+		<attribute name="contribution-day-reward-sun" type="Ref" ref="contributionreward" refel="1" />
+		<attribute name="contribution-day-reward-mon" type="Ref" ref="contributionreward" refel="1" />
+		<attribute name="contribution-day-reward-tue" type="Ref" ref="contributionreward" refel="1" />
+		<attribute name="contribution-day-reward-wed" type="Ref" ref="contributionreward" refel="1" />
+		<attribute name="contribution-day-reward-thu" type="Ref" ref="contributionreward" refel="1" />
+		<attribute name="contribution-day-reward-fri" type="Ref" ref="contributionreward" refel="1" />
+		<attribute name="contribution-day-reward-sat" type="Ref" ref="contributionreward" refel="1" />
+		<attribute name="contribution-peaktime-reward-sun-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="contribution-peaktime-reward-sun-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="contribution-peaktime-reward-mon-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="contribution-peaktime-reward-mon-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="contribution-peaktime-reward-tue-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="contribution-peaktime-reward-tue-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="contribution-peaktime-reward-wed-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="contribution-peaktime-reward-wed-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="contribution-peaktime-reward-thu-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="contribution-peaktime-reward-thu-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="contribution-peaktime-reward-fri-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="contribution-peaktime-reward-fri-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="contribution-peaktime-reward-sat-start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="contribution-peaktime-reward-sat-end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="personal-dropped-pouch-reward" type="Ref" ref="reward" refel="1" />
+		<attribute name="personal-dropped-pouch-reward-difficulty-type" type="Ref" repeat="3" ref="reward" refel="1" />
+		<attribute name="reward-sealed-dungeon" type="Ref" ref="npc-sealed-dungeon-reward" refel="1" />
+		<attribute name="fielditemdrop" type="Ref" ref="fielditemdrop" refel="1" />
+		<attribute name="deadbody-fielditemdrop" type="Ref" ref="fielditemdrop" refel="1" />
+		<attribute name="deadbody-pickup-duration" type="Msec" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="burrow" type="Bool" default="n" />
+		<attribute name="manipulate-duration" type="Msec" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="caster-manipulate-animname" type="XUnknown2" default="" max="256" />
+		<attribute name="target-manipulate-animname" type="XUnknown2" default="" max="256" />
+		<attribute name="caster-manipulate-show" type="XUnknown2" default="" max="256" />
+		<attribute name="target-manipulate-show" type="XUnknown2" default="" max="256" />
+		<attribute name="action-name" type="Ref" ref="text" refel="1" />
+		<attribute name="action-desc" type="Ref" ref="text" refel="1" />
+		<attribute name="manipulate-transit-zone" type="Ref" ref="zone" refel="1" />
+		<attribute name="forwarding-types" type="Seq" repeat="120" hidden="True">
+			<case name="progress-mission" />
+			<case name="acquire-quest" />
+			<case name="skill-target" />
+			<case name="mission-step-rollback" />
+		</attribute>
+		<attribute name="quests" type="Ref" repeat="120" hidden="True" ref="quest" refel="1" />
+		<attribute name="missions" type="Int8" repeat="120" hidden="True" min="-128" max="127" />
+		<attribute name="cases" type="Int8" repeat="120" hidden="True" min="-128" max="127" />
+		<attribute name="case-subtypes" type="Int16" repeat="120" hidden="True" min="-32768" max="32767" />
+		<attribute name="loot-forwarding-types" type="Seq" repeat="8" hidden="True">
+			<case name="progress-mission" />
+			<case name="acquire-quest" />
+			<case name="skill-target" />
+			<case name="mission-step-rollback" />
+		</attribute>
+		<attribute name="loot-quests" type="Ref" repeat="8" hidden="True" ref="quest" refel="1" />
+		<attribute name="loot-missions" type="Int8" repeat="8" hidden="True" min="-128" max="127" />
+		<attribute name="loot-cases" type="Int8" repeat="8" hidden="True" min="-128" max="127" />
+		<attribute name="loot-item" type="Ref" repeat="8" hidden="True" ref="item" refel="1" />
+		<attribute name="finish-blow-forwarding-types" type="Seq" repeat="21" hidden="True">
+			<case name="progress-mission" />
+			<case name="acquire-quest" />
+			<case name="skill-target" />
+			<case name="mission-step-rollback" />
+		</attribute>
+		<attribute name="finish-blow-quests" type="Ref" repeat="21" hidden="True" ref="quest" refel="1" />
+		<attribute name="finish-blow-missions" type="Int8" repeat="21" hidden="True" min="-128" max="127" />
+		<attribute name="finish-blow-cases" type="Int8" repeat="21" hidden="True" min="-128" max="127" />
+		<attribute name="walk-ratescale" type="Float32" default="1" fmax="100" />
+		<attribute name="run-ratescale" type="Float32" default="1" fmax="100" />
+		<attribute name="appearance" type="Ref" ref="creatureappearance" refel="1" />
+		<attribute name="animset" type="XUnknown2" default="" max="256" />
+		<attribute name="face-animset" type="XUnknown2" default="" max="256" />
+		<attribute name="talk" type="Bool" default="n" />
+		<attribute name="iconindex" type="Int8" default="0" max="255" />
+		<attribute name="mesh-scale" type="Float32" default="1" fmin="0.100000001" fmax="10" />
+		<attribute name="p-radius" type="Int8" default="0" max="255" />
+		<attribute name="name-pos-diff" type="Int16" default="0" max="1000" />
+		<attribute name="name-pos-stand" type="Int16" default="0" max="1000" />
+		<attribute name="name-pos-sit" type="Int16" default="0" max="1000" />
+		<attribute name="name-pos-dead" type="Int16" default="0" max="1000" />
+		<attribute name="start-talk-action" type="String" default="" max="50" />
+		<attribute name="end-talk-action" type="String" default="" max="50" />
+		<attribute name="spawn-production" type="String" default="" max="50" />
+		<attribute name="dead-production" type="String" default="" max="50" />
+		<attribute name="four-leg" type="Bool" default="n" />
+		<attribute name="despawn-showdata" type="XUnknown2" default="" max="256" />
+		<attribute name="race" type="Prop_seq" default="race-none">
+			<case name="race-none" />
+			<case name="건" />
+			<case name="곤" />
+			<case name="린" />
+			<case name="진" />
+			<case name="나쁜몹" />
+			<case name="더나쁜몹" />
+			<case name="무서운몹" />
+			<case name="더무서운몹" />
+			<case name="더더무서운몹" />
+			<case name="고양이" />
+			<case name="강림체" />
+			<case name="악귀" />
+		</attribute>
+		<attribute name="sex" type="Prop_seq" default="sex-none">
+			<case name="sex-none" />
+			<case name="남" />
+			<case name="여" />
+			<case name="중" />
+		</attribute>
+		<attribute name="job" type="Prop_seq" default="job-none">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="stance" type="Prop_seq" default="npc기본자세">
+			<case name="stance-none" />
+			<case name="npc기본자세" />
+			<case name="천검세" />
+			<case name="검령세" />
+			<case name="단타" />
+			<case name="연계" />
+			<case name="체술" />
+			<case name="납도" />
+			<case name="경기공" />
+			<case name="연기공" />
+			<case name="강기공" />
+			<case name="권총모드" />
+			<case name="런처모드" />
+			<case name="파괴" />
+			<case name="보호" />
+			<case name="철벽" />
+			<case name="소환" />
+			<case name="교란" />
+			<case name="은신" />
+			<case name="암살" />
+			<case name="검술" />
+			<case name="어검" />
+			<case name="발도" />
+			<case name="npc자세1" />
+			<case name="npc자세2" />
+			<case name="npc자세3" />
+			<case name="소환수-follow" />
+			<case name="소환수-command-1" />
+			<case name="소환수-flying" />
+			<case name="주술" />
+			<case name="강림" />
+			<case name="유권" />
+			<case name="기공" />
+			<case name="냉정" />
+			<case name="광기" />
+			<case name="장궁" />
+			<case name="정령궁" />
+			<case name="찌르기" />
+			<case name="베기" />
+			<case name="청뢰" />
+			<case name="혈뢰" />
+			<case name="어검세" />
+			<case name="정수" />
+			<case name="역수" />
+			<case name="한손역수" />
+			<case name="간이연주" />
+			<case name="우퍼" />
+			<case name="연주" />
+			<case name="쌍월" />
+			<case name="뇌신" />
+			<case name="침식" />
+			<case name="염제" />
+			<case name="npc주시자세1" />
+			<case name="npc주시자세2" />
+			<case name="npc주시자세3" />
+		</attribute>
+		<attribute name="level" type="Int8" required="True" min="1" max="70" />
+		<attribute name="mastery-level" type="Int8" required="True" max="100" />
+		<attribute name="faction" type="Ref" ref="faction" refel="1" />
+		<attribute name="attackable" type="Bool" default="y" />
+		<attribute name="detect-hiding" type="Bool" default="n" />
+		<attribute name="default-idle" type="Ref" ref="npcmoveanim" refel="1" />
+		<attribute name="warfare-boss" type="Bool" hidden="True" default="n" />
+		<attribute name="max-hp" type="Int64" required="True" min="1" max="30000000000000" />
+		<attribute name="max-sp" type="Int16" required="True" max="10000" />
+		<attribute name="modify-cast-speed-percent" type="Int16" required="True" min="-1000" max="1000" />
+		<attribute name="hp-regen" type="Int64" required="True" max="1000000000000" />
+		<attribute name="hp-regen-combat" type="Int32" required="True" max="2000000000" />
+		<attribute name="attack-hit-base-percent" type="Int16" required="True" min="-1000" max="10000" />
+		<attribute name="attack-hit-value" type="Int16" required="True" min="-30000" max="30000" />
+		<attribute name="attack-pierce-base-percent" type="Int16" required="True" min="-1000" max="10000" />
+		<attribute name="attack-parry-pierce-percent" type="Int16" required="True" min="-1000" max="10000" />
+		<attribute name="attack-pierce-value" type="Int16" required="True" max="30000" />
+		<attribute name="attack-concentrate-value" type="Int16" required="True" max="30000" />
+		<attribute name="attack-critical-base-percent" type="Int16" required="True" max="30000" />
+		<attribute name="attack-critical-damage-percent" type="Int16" required="True" max="30000" />
+		<attribute name="attack-critical-value" type="Int32" required="True" max="300000" />
+		<attribute name="attack-critical-damage-value" type="Int32" required="True" max="300000" />
+		<attribute name="defend-critical-base-percent" type="Int16" required="True" max="30000" />
+		<attribute name="defend-critical-damage-percent" type="Int16" required="True" max="30000" />
+		<attribute name="defend-critical-value" type="Int32" required="True" max="300000" />
+		<attribute name="defend-bounce-percent" type="Int16" required="True" max="1000" />
+		<attribute name="defend-dodge-base-percent" type="Int16" required="True" max="1000" />
+		<attribute name="defend-dodge-value" type="Int16" required="True" max="30000" />
+		<attribute name="defend-parry-base-percent" type="Int16" required="True" max="1000" />
+		<attribute name="defend-parry-value" type="Int16" required="True" max="30000" />
+		<attribute name="defend-parry-reduce-percent" type="Int16" required="True" max="1000" />
+		<attribute name="defend-parry-reduce-diff" type="Int16" required="True" max="30000" />
+		<attribute name="defend-perfect-parry-base-percent" type="Int16" required="True" max="1000" />
+		<attribute name="defend-perfect-parry-reduce-percent" type="Int16" required="True" max="1000" />
+		<attribute name="defend-counter-reduce-percent" type="Int16" required="True" max="1000" />
+		<attribute name="defend-immune-base-percent" type="Int16" required="True" max="1000" />
+		<attribute name="attack-power-creature-min" type="Int32" required="True" max="1000000" />
+		<attribute name="attack-power-creature-max" type="Int32" required="True" max="1000000" />
+		<attribute name="attack-power-equip-min" type="Int16" required="True" max="30000" />
+		<attribute name="attack-power-equip-max" type="Int16" required="True" max="30000" />
+		<attribute name="defend-power-creature-value" type="Int32" required="True" max="300000" />
+		<attribute name="defend-power-equip-value" type="Int32" required="True" max="300000" />
+		<attribute name="defend-resist-power-creature-value" type="Int16" required="True" max="30000" />
+		<attribute name="defend-resist-power-equip-value" type="Int16" required="True" max="30000" />
+		<attribute name="defend-physical-damage-reduce-percent" type="Int16" required="True" min="-10000" max="1000" />
+		<attribute name="defend-force-damage-reduce-percent" type="Int16" required="True" min="-10000" max="1000" />
+		<attribute name="attack-damage-modify-percent" type="Int16" required="True" min="-3000" max="10000" />
+		<attribute name="attack-damage-modify-diff" type="Int32" required="True" min="-1000000" max="1000000" />
+		<attribute name="defend-damage-modify-percent" type="Int16" required="True" min="-10000" max="3000" />
+		<attribute name="defend-damage-modify-diff" type="Int32" required="True" min="-1000000" max="1000000" />
+		<attribute name="defend-miss-base-percent" type="Int16" required="True" max="1000" />
+		<attribute name="attack-stiff-duration-base-percent" type="Int16" required="True" min="-1000" max="10000" />
+		<attribute name="attack-stiff-duration-value" type="Int16" required="True" max="30000" />
+		<attribute name="defend-stiff-duration-base-percent" type="Int16" required="True" max="1000" />
+		<attribute name="defend-stiff-duration-value" type="Int16" required="True" max="30000" />
+		<attribute name="cast-duration-base-percent" type="Int16" required="True" min="-10000" max="1000" />
+		<attribute name="cast-duration-value" type="Int16" required="True" max="30000" />
+		<attribute name="job-ability-1" type="Int32" required="True" max="300000" />
+		<attribute name="job-ability-2" type="Int32" required="True" max="300000" />
+		<attribute name="heal-power-base-percent" type="Int16" required="True" max="10000" />
+		<attribute name="aoe-defend-base-percent" type="Int16" required="True" max="10000" />
+		<attribute name="aoe-defend-power-value" type="Int16" required="True" max="30000" />
+		<attribute name="hate-base-percent" type="Int16" required="True" max="10000" />
+		<attribute name="hate-power-creature-value" type="Int16" required="True" max="30000" />
+		<attribute name="abnormal-attack-power-value" type="Int32" required="True" max="300000" />
+		<attribute name="abnormal-attack-base-percent" type="Int16" required="True" max="10000" />
+		<attribute name="abnormal-defend-power-value" type="Int16" required="True" max="30000" />
+		<attribute name="abnormal-defend-base-percent" type="Int16" required="True" max="10000" />
+		<attribute name="abnormal-attack-power-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="abnormal-defend-power-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="hate-power-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="heal-power-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="aoe-defend-power-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="attack-hit-value-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="attack-critical-value-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="defend-critical-value-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="defend-dodge-value-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="defend-parry-value-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="defend-physical-value-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="defend-force-value-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="attack-stiff-duration-value-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="defend-stiff-duration-value-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="cast-duration-value-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="attack-critical-damage-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="defend-critical-damage-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="attack-pierce-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="attack-parry-pierce-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="defend-parry-reduce-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="attack-perfect-parry-damage-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="defend-perfect-parry-reduce-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="attack-counter-damage-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="defend-counter-reduce-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="grade" type="Seq" deprecated="True" default="none">
+			<case name="none" />
+			<case name="weakest" />
+			<case name="weak" />
+			<case name="regular" />
+			<case name="strong" />
+			<case name="elite" />
+			<case name="captain" />
+			<case name="bossn" />
+			<case name="bossf" />
+			<case name="bossp" />
+			<case name="boss" />
+		</attribute>
+		<attribute name="grade2" type="Seq" default="none">
+			<case name="none" />
+			<case name="boss" />
+			<case name="champion" />
+			<case name="normal" />
+			<case name="follower" />
+			<case name="tool" />
+			<case name="weakest" />
+			<case name="weak" />
+			<case name="regular" />
+			<case name="strong" />
+		</attribute>
+		<attribute name="grade-imageset" type="String" default="" max="100" />
+		<attribute name="grade-tooltip-text" type="Ref" ref="text" refel="1" />
+		<attribute name="boss-ui-type" type="Seq" default="target">
+			<case name="target" />
+			<case name="list" />
+		</attribute>
+		<attribute name="boss-group-id" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="boss-slot" type="Seq" default="none">
+			<case name="none" />
+			<case name="boss1" />
+			<case name="boss2" />
+			<case name="boss3" />
+			<case name="boss4" />
+		</attribute>
+		<attribute name="boss-kill-hide-slot" type="Bool" default="n" />
+		<attribute name="boss-spawn-message" type="Ref" ref="game-message" refel="1" />
+		<attribute name="boss-icon" type="Icon" max="32767" />
+		<attribute name="boss-aggro-icon" type="Icon" max="32767" />
+		<attribute name="boss-aggro-indicator" type="String" default="" max="50" />
+		<attribute name="boss-aggro-twin-indicator" type="String" default="" max="50" />
+		<attribute name="end-talk-sound" type="XUnknown2" default="" max="256" />
+		<attribute name="end-talk-social" type="Ref" ref="social" refel="1" />
+		<attribute name="burrow-scaned-mark" type="XUnknown2" default="" max="256" />
+		<attribute name="burrow-visual-effect" type="XUnknown2" default="" max="256" />
+		<attribute name="use-foot-print" type="Bool" default="y" />
+		<attribute name="use-water-print" type="Bool" default="y" />
+		<attribute name="default-visible" type="Bool" default="y" />
+		<attribute name="visible-by-quest" type="Bool" deprecated="True" default="n" />
+		<attribute name="visible-on-social" type="Ref" deprecated="True" ref="social" refel="1" />
+		<attribute name="visible-off-social" type="Ref" deprecated="True" ref="social" refel="1" />
+		<attribute name="message" type="Ref" repeat="9" deprecated="True" ref="npctalkmessage" refel="1" />
+		<attribute name="monster-type" type="Seq" deprecated="True" default="none">
+			<case name="none" />
+			<case name="human" />
+			<case name="beastman" />
+			<case name="devils" />
+			<case name="beasts" />
+			<case name="polluted" />
+			<case name="spirits" />
+			<case name="enchanteddoll" />
+			<case name="god" />
+		</attribute>
+		<attribute name="move-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="static" />
+			<case name="ground" />
+			<case name="float" />
+		</attribute>
+		<attribute name="size-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="small" />
+			<case name="regular" />
+			<case name="huge" />
+		</attribute>
+		<attribute name="description" type="String" default="" max="100" />
+		<attribute name="description2" type="Ref" ref="text" refel="1" />
+		<attribute name="dying-message" type="Ref" ref="text" refel="1" />
+		<attribute name="role-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="keeper-inn" />
+			<case name="shop-grocery" />
+			<case name="shop-weapon" />
+			<case name="shop-cloth" />
+			<case name="shop-acc" />
+			<case name="shop-by-item" />
+			<case name="shop-achievement" />
+			<case name="keeper-warp" />
+			<case name="guardian" />
+			<case name="distribution" />
+			<case name="gather-digger" />
+			<case name="gather-farmer" />
+			<case name="gather-fisherman" />
+			<case name="gather-hunter" />
+			<case name="gather-miner" />
+			<case name="gather-gemcolletor" />
+			<case name="gather-lumberjack" />
+			<case name="produce-blacksmith" />
+			<case name="produce-shaman" />
+			<case name="produce-gemmaker" />
+			<case name="produce-accmaker" />
+			<case name="produce-potionmaker" />
+			<case name="produce-cook" />
+			<case name="produce-chinamaker" />
+			<case name="coinshop" />
+			<case name="factionshop" />
+			<case name="faction-exchange" />
+			<case name="broker" />
+			<case name="shop-food" />
+			<case name="shop-beauty" />
+			<case name="depot" />
+			<case name="event" />
+		</attribute>
+		<attribute name="die-shout" type="Ref" ref="text" refel="1" />
+		<attribute name="race-type" type="Seq" default="etc">
+			<case name="etc" />
+			<case name="jin" />
+			<case name="kun" />
+			<case name="gon" />
+			<case name="lyn" />
+		</attribute>
+		<attribute name="default-indicator" type="Ref" deprecated="True" ref="indicator-social" refel="1" />
+		<attribute name="indicator" type="Ref" ref="indicator-social" refel="1" />
+		<attribute name="required-faction" type="Ref" repeat="9" deprecated="True" ref="faction" refel="1" />
+		<attribute name="required-complete-quest" type="Ref" repeat="9" deprecated="True" ref="quest" refel="1" />
+		<attribute name="craft-message-type" type="Seq" repeat="9" deprecated="True" default="none">
+			<case name="none" />
+			<case name="join" />
+			<case name="ask" />
+			<case name="busy" />
+			<case name="receive" />
+			<case name="need-level" />
+			<case name="full-craft" />
+		</attribute>
+		<attribute name="talk-message" type="Ref" repeat="9" deprecated="True" ref="npctalkmessage" refel="1" />
+		<attribute name="default-indicator-social" type="Ref" repeat="9" deprecated="True" ref="indicator-social" refel="1" />
+		<attribute name="relationship-indicator" type="Ref" repeat="9" deprecated="True" ref="indicator-social" refel="1" />
+		<attribute name="relationship-idle" type="Ref" repeat="9" deprecated="True" ref="indicator-idle" refel="1" />
+		<attribute name="neutral-faction-required-complete-quest" type="Ref" deprecated="True" ref="quest" refel="1" />
+		<attribute name="neutral-faction-talk-message" type="Ref" deprecated="True" ref="npctalkmessage" refel="1" />
+		<attribute name="neutral-faction-relationship-indicator" type="Ref" deprecated="True" ref="indicator-social" refel="1" />
+		<attribute name="neutral-faction-relationship-idle" type="Ref" deprecated="True" ref="indicator-idle" refel="1" />
+		<attribute name="neutral-faction-nameplate-enemy" type="Bool" default="n" />
+		<attribute name="banned-response" type="Ref" repeat="2" ref="npcresponse" refel="1" />
+		<attribute name="response" type="Ref" repeat="7" ref="npcresponse" refel="1" />
+		<attribute name="stand-social" type="Ref" repeat="3" ref="social" refel="1" />
+		<attribute name="stand-social-rate" type="Int16" repeat="3" default="0" min="-32768" max="32767" />
+		<attribute name="die-knockback" type="Bool" default="y" />
+		<attribute name="invoke-fx-msg" type="Bool" default="n" />
+		<attribute name="disable-name-spawn" type="Bool" default="n" />
+		<attribute name="play-additional-die" type="Bool" default="y" />
+		<attribute name="summoned-beauty-shop" type="Ref" ref="summonedbeautyshop" refel="1" />
+		<attribute name="boast-contents-id" type="Ref" deprecated="True" ref="boast" refel="1" />
+		<attribute name="boast" type="Ref" hidden="True" ref="boast" refel="1" />
+		<attribute name="always-show-hp" type="Bool" default="false" />
+		<attribute name="use-map-unit-group" type="Bool" hidden="True" default="n" />
+		<attribute name="map-unit" type="Ref" repeat="2" hidden="True" ref="mapunit" refel="1" />
+		<attribute name="use-immediate-load" type="Bool" default="n" />
+		<attribute name="ghost-type" type="Prop_seq" default="none">
+			<case name="none" />
+			<case name="basic" />
+			<case name="beyond" />
+			<case name="phase" />
+		</attribute>
+		<attribute name="ghostmode-beyond-start-show" type="XUnknown2" default="" max="256" />
+		<attribute name="ghostmode-beyond-end-show" type="XUnknown2" default="" max="256" />
+		<attribute name="soul-npc-skill-level" type="Int8" default="0" max="10" />
+		<attribute name="boss-challenge-attraction-score" type="Int16" default="0" max="30000" />
+		<attribute name="is-mysterious-store" type="Bool" default="n" />
+		<attribute name="newbiecare" type="Ref" hidden="True" ref="newbie-care" refel="1" />
+		<attribute name="attack-attribute-value" type="Int32" required="True" max="300000" />
+		<attribute name="attack-attribute-base-percent" type="Int16" required="True" max="10000" />
+		<attribute name="attack-attribute-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="hide-nameplate" type="Bool" default="n" />
+		<attribute name="nameplate-height-modify" type="Int16" default="0" min="-1000" max="1000" />
+		<attribute name="attack-aoe-pierce-value" type="Int16" required="True" max="30000" />
+		<attribute name="attack-abnormal-hit-base-percent" type="Int16" required="True" min="-1000" max="10000" />
+		<attribute name="attack-abnormal-hit-value" type="Int16" required="True" min="-30000" max="30000" />
+		<attribute name="defend-abnormal-dodge-base-percent" type="Int16" required="True" min="-1000" max="10000" />
+		<attribute name="defend-abnormal-dodge-value" type="Int16" required="True" min="-30000" max="30000" />
+		<attribute name="support-power-base-percent" type="Int16" required="True" min="-1000" max="10000" />
+		<attribute name="support-power-value" type="Int16" required="True" max="30000" />
+		<attribute name="heal-power-value" type="Int32" required="True" max="1000000" />
+		<attribute name="hypermove-power-value" type="Int16" required="True" max="30000" />
+		<attribute name="r-attack-aoe-pierce-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="r-attack-abnormal-hit-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="r-defend-abnormal-dodge-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="r-support-power-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="job-change-enter-zone" type="Bool" default="n" />
+		<attribute name="job-change" type="Bool" default="n" />
+		<attribute name="race-type2" type="Seq" default="none">
+			<case name="none" />
+			<case name="race1" />
+			<case name="race2" />
+			<case name="race3" />
+			<case name="race4" />
+			<case name="race5" />
+			<case name="race6" />
+			<case name="race7" />
+		</attribute>
+		<attribute name="attribute-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="attribute1" />
+			<case name="attribute2" />
+			<case name="attribute3" />
+			<case name="attribute4" />
+			<case name="attribute5" />
+			<case name="attribute6" />
+			<case name="attribute7" />
+			<case name="attribute8" />
+			<case name="attribute9" />
+			<case name="attribute10" />
+			<case name="attribute11" />
+			<case name="attribute12" />
+		</attribute>
+		<attribute name="fatigability-consume-amount" type="Int32" default="0" max="2147483647" />
+		<attribute name="release-contents-group" type="Int16" default="0" max="32767" />
+	</el>
+</table>

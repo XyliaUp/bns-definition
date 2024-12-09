@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="duel-bot-training-room-version" type="107" version="0.2" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="version" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="tooltip-info" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

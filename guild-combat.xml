@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="guild-combat" type="167" version="1.0" module="70">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="season-type" type="Seq" key="True" required="True">
+			<case name="invalid" />
+			<case name="duel-death-match-1vs1" />
+			<case name="duel-death-match-3vs3" />
+			<case name="duel-tag-match-3vs3" />
+			<case name="party-battle-occupation-war" />
+			<case name="solo-dungeon-1-best-record" />
+			<case name="infinite-tower-best-record" />
+			<case name="party-battle-capture-the-flag" />
+			<case name="guild-combat" />
+			<case name="solo-dungeon-2-best-record" />
+			<case name="ingame-championship-duel-death-match-1vs1" />
+			<case name="ingame-championship-duel-tag-match-3vs3" />
+			<case name="party-battle-lead-the-ball" />
+			<case name="challenge-party-best-record" />
+			<case name="battle-royal-free-for-all" />
+			<case name="battle-royal-free-for-all-party" />
+			<case name="mastery-exp-best-record" />
+			<case name="sealed-dungeon-total" />
+			<case name="sealed-dungeon-1" />
+			<case name="sealed-dungeon-2" />
+			<case name="sealed-dungeon-3" />
+			<case name="sealed-dungeon-4" />
+			<case name="sealed-dungeon-5" />
+			<case name="sealed-dungeon-6" />
+			<case name="wave-dungeon-1" />
+			<case name="wave-dungeon-2" />
+			<case name="solo-dungeon-3-best-record" />
+			<case name="solo-dungeon-4-best-record" />
+			<case name="solo-dungeon-5-best-record" />
+			<case name="tier-total" />
+			<case name="hyper-racing-game" />
+			<case name="duel-npc-challenge" />
+		</attribute>
+		<attribute name="required-level" type="Int8" required="True" max="127" />
+		<attribute name="required-mastery-level" type="Int16" required="True" max="32767" />
+		<attribute name="available-matching-weekly-time" type="Ref" ref="weeklytimetable" refel="1" />
+		<attribute name="party-battle-point-bonus-rate" type="Int16" default="0" max="1000" />
+	</el>
+</table>

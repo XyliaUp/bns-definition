@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="duel-bot-training-room-reward" type="106" version="0.4" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="job" type="Prop_seq" key="True" required="True" min="1" max="9">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="grade" type="Int16" key="True" required="True" min="1" max="10" />
+		<attribute name="achievement" type="Int8" key="True" required="True" min="1" max="3" />
+		<attribute name="reward-item" type="Ref" repeat="3" ref="item" refel="1" />
+		<attribute name="reward-item-count" type="Int8" repeat="3" default="0" max="101" />
+		<attribute name="reward-exp" type="Int32" default="0" max="100001" />
+	</el>
+</table>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="job-change-quest" type="228" version="2.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="job" type="Prop_seq" key="True" required="True">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="acquire-quest" type="Int16" repeat="4" default="0" min="-32768" max="32767" />
+		<attribute name="complete-quest" type="Int16" repeat="16" default="0" min="-32768" max="32767" />
+		<attribute name="reset-quest" type="Int16" repeat="4" default="0" min="-32768" max="32767" />
+		<attribute name="reset-quest-free" type="Int16" repeat="16" default="0" min="-32768" max="32767" />
+	</el>
+</table>

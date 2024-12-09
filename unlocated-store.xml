@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="unlocated-store" type="430" version="1.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="store2" type="Ref" required="True" ref="store2" refel="1" />
+		<attribute name="available-only-with-grade-benefit" type="Bool" default="n" />
+		<attribute name="unlocated-store-type" type="Seq" required="True" default="unlocated-store">
+			<case name="unlocated-none" />
+			<case name="unlocated-store" />
+			<case name="account-store" />
+			<case name="soul-boost-store-1" />
+			<case name="soul-boost-store-2" />
+			<case name="soul-boost-store-3" />
+			<case name="soul-boost-store-4" />
+			<case name="soul-boost-store-5" />
+			<case name="soul-boost-store-6" />
+			<case name="event-store" />
+		</attribute>
+	</el>
+</table>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="racoon-store" type="300" version="2.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="store-tab-sort-no" type="Int8" required="True" min="-128" max="127" />
+		<attribute name="store-tab-name" type="Ref" ref="text" refel="1" />
+		<attribute name="start-date" type="XUnknown1" required="True" />
+		<attribute name="end-date" type="XUnknown1" required="True" />
+		<attribute name="is-retire" type="Bool" default="n" />
+		<attribute name="slot-group" type="Int32" repeat="8" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="free-reset-amount" type="Int8" default="0" max="125" />
+		<attribute name="paid-reset-amount" type="Int8" default="0" max="125" />
+		<attribute name="paid-reset-cost-type" type="Seq" required="True">
+			<case name="none" />
+			<case name="item" />
+			<case name="stone" />
+			<case name="red-stone" />
+			<case name="money" />
+		</attribute>
+		<attribute name="paid-reset-cost-item" type="Ref" ref="item" refel="1" />
+		<attribute name="paid-reset-cost-amount" type="Int64" required="True" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="auto-reset-time" type="XUnknown1" required="True" />
+	</el>
+</table>

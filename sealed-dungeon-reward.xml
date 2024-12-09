@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="sealed-dungeon-reward" type="330" version="1.2" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="dungeon" type="Ref" ref="dungeon" refel="1" />
+		<attribute name="sealed-level" type="Int8" required="True" max="127" />
+		<attribute name="reward-item" type="Ref" repeat="5" ref="item" refel="1" />
+		<attribute name="reward-item-count" type="Int16" repeat="5" default="0" min="-32768" max="32767" />
+	</el>
+</table>

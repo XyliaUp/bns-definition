@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="soul-boost-mission-step" type="386" version="7.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="event" type="Ref" ref="soul-boost-event" refel="1" />
+		<attribute name="step-number" type="Int8" default="0" min="1" max="40" />
+		<attribute name="open-condition-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="free" />
+			<case name="season" />
+			<case name="participate-character" />
+			<case name="newbie-event" />
+			<case name="mission-task-count" />
+			<case name="character-level" />
+			<case name="character-mastery-level" />
+		</attribute>
+		<attribute name="open-condition-value" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="viewable-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="before-open" />
+			<case name="after-open" />
+		</attribute>
+		<attribute name="mission-task" type="Ref" repeat="50" ref="soul-boost-mission-task" refel="1" />
+		<attribute name="mission-step-reward-item" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="mission-step-reward-item-count" type="Int16" repeat="4" default="0" min="-32768" max="32767" />
+		<attribute name="name" type="String" default="" max="16" />
+		<attribute name="name-en" type="String" default="" max="16" />
+		<attribute name="name-fr" type="String" default="" max="16" />
+		<attribute name="name-de" type="String" default="" max="16" />
+		<attribute name="name-pt" type="String" default="" max="16" />
+		<attribute name="name-th" type="String" default="" max="16" />
+		<attribute name="name-vn" type="String" default="" max="16" />
+		<attribute name="name-text" type="Ref" ref="text" refel="1" />
+		<attribute name="description" type="String" default="" max="128" />
+		<attribute name="description-en" type="String" default="" max="128" />
+		<attribute name="description-fr" type="String" default="" max="128" />
+		<attribute name="description-de" type="String" default="" max="128" />
+		<attribute name="description-pt" type="String" default="" max="128" />
+		<attribute name="description-th" type="String" default="" max="128" />
+		<attribute name="description-vn" type="String" default="" max="128" />
+		<attribute name="description-text" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

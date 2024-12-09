@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="account-post-charge" type="5" version="0.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="charge-money" type="Int32" default="0" max="10000000" />
+		<attribute name="charge-item" type="Ref" repeat="2" ref="item" refel="1" />
+		<attribute name="charge-item-amount" type="Int32" repeat="2" default="0" max="100" />
+	</el>
+</table>

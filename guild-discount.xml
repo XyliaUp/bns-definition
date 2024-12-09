@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="guild-discount" type="171" version="2.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="item-growth" type="Int8" default="0" max="100" />
+		<attribute name="item-awakening" type="Int8" default="0" max="100" />
+		<attribute name="weapon-tranform" type="Int8" default="0" max="100" />
+		<attribute name="accessory-tranform" type="Int8" default="0" max="100" />
+		<attribute name="weapon-gem-tranform" type="Int8" default="0" max="100" />
+		<attribute name="pet-gem-tranform" type="Int8" default="0" max="100" />
+		<attribute name="post-charge-discount-rate" type="Int8" default="0" max="100" />
+		<attribute name="post-charge-discount-max" type="Int32" default="0" max="2000000000" />
+		<attribute name="detach-weapon-gem-money-cost-discount-rate" type="Int8" default="0" max="100" />
+		<attribute name="purify-item-discount-rate" type="Int8" default="0" max="100" />
+		<attribute name="item-improve" type="Int8" default="0" max="100" />
+	</el>
+</table>

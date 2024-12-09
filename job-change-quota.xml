@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="job-change-quota" type="229" version="1.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="world-cluster-id" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="start-time" type="XUnknown1" required="True" />
+		<attribute name="end-time" type="XUnknown1" required="True" />
+		<attribute name="job" type="Prop_seq" repeat="30" default="job-none">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="quota-mon" type="Int16" repeat="30" default="0" min="-32768" max="32767" />
+		<attribute name="quota-tue" type="Int16" repeat="30" default="0" min="-32768" max="32767" />
+		<attribute name="quota-wed" type="Int16" repeat="30" default="0" min="-32768" max="32767" />
+		<attribute name="quota-thu" type="Int16" repeat="30" default="0" min="-32768" max="32767" />
+		<attribute name="quota-fri" type="Int16" repeat="30" default="0" min="-32768" max="32767" />
+		<attribute name="quota-sat" type="Int16" repeat="30" default="0" min="-32768" max="32767" />
+		<attribute name="quota-sun" type="Int16" repeat="30" default="0" min="-32768" max="32767" />
+	</el>
+</table>
