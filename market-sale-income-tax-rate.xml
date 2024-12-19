@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="market-sale-income-tax-rate" type="251" version="0.4" module="132">
+<table name="market-sale-income-tax-rate" type="255" version="0.5" module="134">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="interval" type="Int64" required="True" min="-9223372036854775807" max="9223372036854775807" />

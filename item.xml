@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="item" type="195" version="55.2" module="11534">
+<table name="item" type="197" version="58.0" module="11534">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
@@ -28,6 +28,7 @@
 			<case name="build-up-stone" />
 			<case name="badge" />
 			<case name="relic" />
+			<case name="skill-train-by-item-extract" />
 			<case name="medicine" />
 			<case name="food" />
 			<case name="tool" />
@@ -251,6 +252,7 @@
 			<case name="aquamarine-amber" />
 			<case name="relic-1" />
 			<case name="star-stone" />
+			<case name="skill-train-by-item-extract" />
 		</attribute>
 		<attribute name="market-category-1" type="Seq" required="True">
 			<case name="none" />
@@ -284,6 +286,9 @@
 			<case name="etc-box" />
 			<case name="badge" />
 			<case name="relic" />
+			<case name="skill-train-by-item-extract" />
+			<case name="gold" />
+			<case name="spirit" />
 		</attribute>
 		<attribute name="market-category-3" type="Seq16" required="True" max="1000">
 			<case name="none" />
@@ -424,6 +429,15 @@
 			<case name="voucher" />
 			<case name="armlet-1" />
 			<case name="armlet-2" />
+			<case name="skill-train-by-item-extract" />
+			<case name="gold" />
+			<case name="spirit" />
+			<case name="skill-train-by-item-extract-neck" />
+			<case name="skill-train-by-item-extract-finger" />
+			<case name="skill-train-by-item-extract-ear" />
+			<case name="skill-train-by-item-extract-wrist" />
+			<case name="skill-train-by-item-extract-waist" />
+			<case name="skill-train-by-item-extract-gloves" />
 		</attribute>
 		<attribute name="cannot-dispose" type="Bool" default="n" />
 		<attribute name="cannot-sell" type="Bool" default="n" />
@@ -742,8 +756,6 @@
 		<attribute name="r-defend-strength-equip-value" type="Int32" default="0" max="300000" />
 		<attribute name="r-attack-precise-equip-value" type="Int32" default="0" max="300000" />
 		<attribute name="r-attack-aoe-pierce-value-equip" type="Int16" default="0" max="30000" />
-		<attribute name="r-attack-abnormal-hit-equip-value" type="Int16" default="0" min="-30000" max="30000" />
-		<attribute name="r-defend-abnormal-dodge-equip-value" type="Int16" default="0" min="-30000" max="30000" />
 		<attribute name="r-support-power-equip-value" type="Int16" default="0" max="30000" />
 		<attribute name="r-hypermove-power-equip-value" type="Int16" default="0" max="30000" />
 		<attribute name="defend-difficulty-type-damage-reduce-percent" type="Int16" default="0" max="1000" />
@@ -802,6 +814,8 @@
 		<attribute name="hate-power-equip-value" type="Int16" default="0" max="30000" />
 		<attribute name="additional-exp-diff-by-kill" type="Int16" default="0" max="30000" />
 		<attribute name="additional-exp-percent-by-kill" type="Int16" default="0" max="1000" />
+		<attribute name="attack-abnormal-hit-equip-value" type="Int32" default="0" min="-30000" max="30000" />
+		<attribute name="defend-abnormal-resistance-equip-value" type="Int32" default="0" min="-30000" max="30000" />
 		<attribute name="potential-attack-power-equip-min" type="Int16" default="0" max="30000" />
 		<attribute name="potential-attack-power-equip-max" type="Int16" default="0" max="30000" />
 		<attribute name="potential-defend-power-equip-value" type="Int16" default="0" max="30000" />
@@ -967,6 +981,8 @@
 			<case name="hate-power-equip-value" />
 			<case name="additional-exp-diff-by-kill" />
 			<case name="additional-exp-percent-by-kill" />
+			<case name="attack-abnormal-hit-equip-value" />
+			<case name="defend-abnormal-resistance-equip-value" />
 		</attribute>
 		<attribute name="pccafe-ncsoft-korea-only" type="Bool" default="n" />
 		<attribute name="growth-id" type="Int32" default="0" min="-2147483647" max="2147483647" />
@@ -1318,6 +1334,7 @@
 			<case name="soul-short" />
 		</attribute>
 		<attribute name="release-contents-group" type="Int16" default="0" max="32767" />
+		<attribute name="randomoption-reset-cost-group" type="Ref" ref="cost-group" refel="1" />
 		<sub name="weapon">
 			<attribute name="weapon-type" type="Seq" required="True">
 				<case name="none" />
@@ -1428,6 +1445,8 @@
 				<case name="relic-material" />
 				<case name="star-stone" />
 				<case name="voucher" />
+				<case name="capital-teleport" />
+				<case name="skill-train-by-item-extract" />
 			</attribute>
 			<attribute name="stack-count" type="Int16" default="1" min="1" max="30000" />
 			<attribute name="store-bundle-count" type="Int16" default="0" max="1000" />
@@ -1859,6 +1878,8 @@
 			<attribute name="blue-virtual-currency-additional-quota" type="Int32" default="0" max="2147483647" />
 			<attribute name="lock-type" type="Int16" default="0" max="32767" />
 			<attribute name="lock-index" type="Int16" default="0" max="32767" />
+			<attribute name="skill-train-by-item-for-transmit" type="Ref" hidden="True" ref="skill-train-by-item" refel="1" />
+			<attribute name="decompose-random-box-replaced-by-decompose-item" type="Ref" ref="item" refel="1" />
 		</sub>
 		<sub name="gem">
 			<attribute name="gem-type" type="Seq" required="True">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="relic-set-item" type="322" version="4.0" module="6">
+<table name="relic-set-item" type="327" version="4.0" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="alias" type="String" required="True" max="70" />
@@ -77,6 +77,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="count-1-ability-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
 		<attribute name="count-1-ability-base-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
@@ -154,6 +156,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="count-2-ability-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
 		<attribute name="count-2-ability-base-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
@@ -231,6 +235,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="count-3-ability-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
 		<attribute name="count-3-ability-base-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
@@ -308,6 +314,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="count-4-ability-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
 		<attribute name="count-4-ability-base-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
@@ -385,6 +393,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="count-5-ability-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
 		<attribute name="count-5-ability-base-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
@@ -462,6 +472,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="count-6-ability-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
 		<attribute name="count-6-ability-base-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
@@ -539,6 +551,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="count-7-ability-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
 		<attribute name="count-7-ability-base-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
@@ -616,6 +630,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="count-8-ability-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
 		<attribute name="count-8-ability-base-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
@@ -693,6 +709,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="count-9-ability-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
 		<attribute name="count-9-ability-base-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
@@ -770,6 +788,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="count-10-ability-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />
 		<attribute name="count-10-ability-base-value" type="Int32" repeat="8" default="1" min="1" max="1000000" />

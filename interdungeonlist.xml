@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="interdungeonlist" type="188" version="5.0" module="70" maxid="299">
+<table name="interdungeonlist" type="189" version="5.0" module="70" maxid="299">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="-32768" max="32767" />

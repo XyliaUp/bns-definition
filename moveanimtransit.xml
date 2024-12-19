@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="moveanimtransit" type="262" version="0.3" module="12">
+<table name="moveanimtransit" type="266" version="0.3" module="12">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="before-idle" type="Seq" key="True" required="True">

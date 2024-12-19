@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="skillcastcondition3" type="344" version="7.0" module="2062">
+<table name="skillcastcondition3" type="349" version="7.0" module="2062">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="alias" type="String" required="True" max="70" />

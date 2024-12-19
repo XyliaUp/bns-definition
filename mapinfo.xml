@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="mapinfo" type="247" version="1.42" module="12">
+<table name="mapinfo" type="249" version="1.5" module="12">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="-32768" max="32767" />
@@ -42,5 +42,6 @@
 		<attribute name="arena-dungeon-use-pos-in-parent" type="Bool" default="n" />
 		<attribute name="arena-dungeon-pos-in-parent-x" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
 		<attribute name="arena-dungeon-pos-in-parent-y" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="capital" type="Bool" hidden="True" default="n" />
 	</el>
 </table>

@@ -119,6 +119,8 @@
 			<case name="hate-power-equip-value" />
 			<case name="additional-exp-diff-by-kill" />
 			<case name="additional-exp-percent-by-kill" />
+			<case name="attack-abnormal-hit-equip-value" />
+			<case name="defend-abnormal-resistance-equip-value" />
 		</attribute>
 		<attribute name="value" type="Int16" default="0" max="30000" />
 	</el>

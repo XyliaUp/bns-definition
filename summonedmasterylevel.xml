@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="summonedmasterylevel" type="407" version="0.12" module="6">
+<table name="summonedmasterylevel" type="412" version="0.15" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="race" type="Prop_seq" key="True" default="race-none">
@@ -41,7 +41,7 @@
 			<case name="소환수-defender" />
 			<case name="소환수-controller" />
 		</attribute>
-		<attribute name="mastery-level" type="Int16" key="True" required="True" max="50" />
+		<attribute name="mastery-level" type="Int16" key="True" required="True" max="100" />
 		<attribute name="is-duelbot-summoned" type="Bool" key="True" default="n" />
 		<attribute name="max-hp" type="Int64" required="True" min="1" max="30000000000000" />
 		<attribute name="modify-cast-speed-percent" type="Int16" required="True" min="-1000" max="1000" />
@@ -122,22 +122,6 @@
 		<attribute name="attack-attribute-value" type="Int32" required="True" max="300000" />
 		<attribute name="attack-attribute-base-percent" type="Int16" required="True" max="10000" />
 		<attribute name="attack-attribute-modify" type="Int16" required="True" min="-32768" max="32767" />
-		<attribute name="attack-pierce-base-percent" type="Int16" required="True" min="-1000" max="10000" />
-		<attribute name="defend-critical-damage-percent" type="Int16" required="True" max="30000" />
-		<attribute name="defend-strength-creature-value" type="Int32" required="True" max="300000" />
-		<attribute name="attack-precise-creature-value" type="Int32" required="True" max="300000" />
-		<attribute name="attack-aoe-pierce-value" type="Int16" required="True" max="30000" />
-		<attribute name="attack-abnormal-hit-base-percent" type="Int16" required="True" min="-1000" max="10000" />
-		<attribute name="attack-abnormal-hit-value" type="Int16" required="True" min="-30000" max="30000" />
-		<attribute name="defend-abnormal-dodge-base-percent" type="Int16" required="True" min="-1000" max="10000" />
-		<attribute name="defend-abnormal-dodge-value" type="Int16" required="True" min="-30000" max="30000" />
-		<attribute name="support-power-base-percent" type="Int16" required="True" min="-1000" max="10000" />
-		<attribute name="support-power-value" type="Int16" required="True" max="30000" />
-		<attribute name="heal-power-value" type="Int32" required="True" max="1000000" />
-		<attribute name="hypermove-power-value" type="Int16" required="True" max="30000" />
-		<attribute name="r-attack-aoe-pierce-modify" type="Int16" required="True" min="-32768" max="32767" />
-		<attribute name="r-attack-abnormal-hit-modify" type="Int16" required="True" min="-32768" max="32767" />
-		<attribute name="r-defend-abnormal-dodge-modify" type="Int16" required="True" min="-32768" max="32767" />
-		<attribute name="r-support-power-modify" type="Int16" required="True" min="-32768" max="32767" />
+		<attribute name="defend-critical-damage-value" type="Int16" required="True" max="30000" />
 	</el>
 </table>

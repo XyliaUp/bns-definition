@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="zonerespawn" type="471" version="0.46" module="14" maxid="127">
+<table name="zonerespawn" type="478" version="0.46" module="14" maxid="127">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="zone" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />

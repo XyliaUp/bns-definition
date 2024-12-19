@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="relic-symbol" type="323" version="0.5" module="6">
+<table name="relic-symbol" type="328" version="0.5" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="teleport" type="416" version="0.23" module="270" maxid="10000">
+<table name="teleport" type="421" version="1.0" module="270" maxid="10000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="10000" />
@@ -19,6 +19,8 @@
 		<attribute name="required-pc-mastery-level" type="Int8" default="0" max="100" />
 		<attribute name="required-faction-level" type="Int8" default="0" max="127" />
 		<attribute name="ui-preceding-quest" type="Ref" ref="quest" refel="1" />
+		<attribute name="required-quest" type="Ref" ref="quest" refel="1" />
+		<attribute name="capital" type="Bool" default="n" />
 		<attribute name="select-destination-msg" type="Ref" deprecated="True" ref="text" refel="1" />
 		<attribute name="not-enough-money-msg" type="Ref" deprecated="True" ref="text" refel="1" />
 		<attribute name="confirm-msg" type="Ref" deprecated="True" ref="text" refel="1" />

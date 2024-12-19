@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="itemrewardskill3" type="213" version="0.3" module="4">
+<table name="itemrewardskill3" type="215" version="1.0" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="job" type="Prop_seq" key="True" required="True">
@@ -27,9 +27,9 @@
 			<case name="소환수-controller" />
 		</attribute>
 		<attribute name="head-skill-id" type="Ref" key="True" required="True" ref="skill3" refel="1" />
-		<attribute name="change-skill-id" type="Ref" repeat="10" ref="skill3" refel="1" />
+		<attribute name="change-skill-id" type="Ref" repeat="15" ref="skill3" refel="1" />
 		<attribute name="head-skill-acquire-route" type="Ref" ref="itemrewardskillacquireroute" refel="1" />
-		<attribute name="change-skill-acquire-route" type="Ref" repeat="10" ref="itemrewardskillacquireroute" refel="1" />
+		<attribute name="change-skill-acquire-route" type="Ref" repeat="15" ref="itemrewardskillacquireroute" refel="1" />
 		<attribute name="equip-type" type="Seq" default="none">
 			<case name="none" />
 			<case name="weapon" />

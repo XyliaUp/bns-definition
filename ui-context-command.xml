@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="ui-context-command" type="429" version="0.44" module="4">
+<table name="ui-context-command" type="434" version="0.45" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="target" type="Seq" key="True" required="True">
@@ -99,6 +99,7 @@
 			<case name="enhance-relics" />
 			<case name="disassemble-relics" />
 			<case name="achievement-inspector" />
+			<case name="inventory-randomoption-reset" />
 		</attribute>
 		<attribute name="command" type="Seq" repeat="30" default="none">
 			<case name="none" />
@@ -225,6 +226,7 @@
 			<case name="show-item-probability" />
 			<case name="open-worldaccount-cardbook" />
 			<case name="achievement-search" />
+			<case name="register-to-related-ui" />
 		</attribute>
 		<attribute name="default-command" type="Seq" repeat="15" default="none">
 			<case name="none" />
@@ -351,6 +353,7 @@
 			<case name="show-item-probability" />
 			<case name="open-worldaccount-cardbook" />
 			<case name="achievement-search" />
+			<case name="register-to-related-ui" />
 		</attribute>
 		<attribute name="main-command-count" type="Int8" default="1" min="1" max="20" />
 	</el>

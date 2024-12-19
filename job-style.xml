@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="job-style" type="232" version="0.15" module="14">
+<table name="job-style" type="234" version="0.16" module="14">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="job" type="Prop_seq" key="True" required="True">
@@ -52,6 +52,7 @@
 		<attribute name="left-weapon-particle-socket" type="XUnknown2" default="" max="256" />
 		<attribute name="phantom-weapon-ribbon-particle-ref" type="XUnknown2" default="" max="256" />
 		<attribute name="auto-combat-attack-distance" type="Distance" default="50" min="50" max="32767" />
+		<attribute name="auto-combat-battle-field-distance" type="Distance" default="50" min="50" max="32767" />
 		<attribute name="auto-combat-converted-distance-attacker-enemy" type="Distance" default="0" max="32767" />
 		<attribute name="auto-combat-converted-distance-pouch" type="Distance" default="0" max="32767" />
 		<attribute name="auto-combat-converted-distance-enemy" type="Distance" default="0" max="32767" />

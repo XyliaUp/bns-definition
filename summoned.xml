@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="summoned" type="403" version="0.6" module="2062" maxid="65500">
+<table name="summoned" type="408" version="0.6" module="2062" maxid="65500">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int64" required="True" max="65500" />
@@ -67,7 +67,7 @@
 		<attribute name="radius" type="Distance" default="0" max="5000" />
 		<attribute name="trace-master-skill-target" type="Bool" default="n" />
 		<attribute name="summoned-sequence" type="Ref" required="True" ref="summoned-sequence" refel="1" />
-		<attribute name="seq-skill" type="Int32" repeat="10" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="seq-skill" type="Int32" repeat="30" default="0" min="-2147483647" max="2147483647" />
 		<attribute name="spawn-skill-id" type="Int32" default="0" min="-2147483647" max="2147483647" />
 		<attribute name="immune-skill-attribute" type="Seq" repeat="4" default="none">
 			<case name="none" />

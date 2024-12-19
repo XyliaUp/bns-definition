@@ -630,6 +630,7 @@
 			<case name="toggle-notification-center" />
 			<case name="toggle-joypad-lock-on" />
 			<case name="joypad-dash-backward" />
+			<case name="classic-control-mode-lock-on" />
 		</attribute>
 		<attribute name="skip-condition-target-check" type="Bool" default="n" />
 		<attribute name="skip-condition-move-check" type="Bool" default="n" />

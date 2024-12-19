@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="game-menu-control" type="155" version="2.0" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="menu-type" type="Seq" key="True" required="True">
+			<case name="pc_filter_hidden" />
+			<case name="pet_filter_hidden" />
+			<case name="outward_appearance_filter_hidden" />
+			<case name="second_pasword" />
+			<case name="immediate_escape" />
+			<case name="callcenter" />
+			<case name="survay" />
+			<case name="petition" />
+			<case name="tgos" />
+			<case name="help" />
+			<case name="hud_customize" />
+			<case name="system_option" />
+			<case name="change_channel" />
+			<case name="return_to_arena_lobby" />
+			<case name="return_world_server" />
+			<case name="select_character" />
+			<case name="log_out" />
+			<case name="exit_game" />
+			<case name="game_option_type_exit_game" />
+			<case name="power_book" />
+			<case name="web_character_info" />
+			<case name="delivery" />
+			<case name="auction" />
+			<case name="cross" />
+			<case name="craft" />
+			<case name="search_party" />
+			<case name="guild" />
+			<case name="blacklist" />
+			<case name="photo_album" />
+			<case name="wardrobe" />
+			<case name="wardrobe2" />
+			<case name="attendnace" />
+			<case name="attendnace_benefit" />
+			<case name="web_contents_guide" />
+			<case name="web_event_guide" />
+			<case name="nshop" />
+			<case name="appearance_pictorial_book" />
+			<case name="sandbox" />
+			<case name="duel_lobby_return_to_world" />
+			<case name="dungeon_lobby_return_to_world" />
+			<case name="duel_lobby_leave_room" />
+			<case name="guild_customize_leave" />
+			<case name="dungeon_guide" />
+			<case name="relic" />
+			<case name="jpn_dungeon_guide" />
+			<case name="leave_attraction" />
+			<case name="jpn_payment" />
+			<case name="jpn_commerce" />
+			<case name="content_rating" />
+			<case name="fish_collecting" />
+			<case name="guide_movie" />
+			<case name="pvp_data" />
+			<case name="zone_exit" />
+			<case name="renewal_interserver_dungeon" />
+			<case name="renewal_party_search" />
+			<case name="renewal_public_raid" />
+			<case name="renewal_public_raid3" />
+			<case name="renewal_public_raid2" />
+			<case name="renewal_journal" />
+			<case name="renewal_map" />
+			<case name="renewal_craft" />
+			<case name="renewal_fish_collecting" />
+			<case name="renewal_skill_training_room" />
+			<case name="renewal_contents_journal_2" />
+			<case name="renewal_game_information" />
+			<case name="renewal_dungeon_guide" />
+			<case name="renewal_web_contents_guide" />
+			<case name="renewal_jpn_dungeon_guide" />
+			<case name="renewal_customize" />
+			<case name="renewal_web_character_info" />
+			<case name="renewal_jumping_level" />
+			<case name="renewal_job_change" />
+			<case name="renewal_achievement" />
+			<case name="renewal_account_contents" />
+			<case name="renewal_inventory" />
+			<case name="renewal_skilltraining" />
+			<case name="renewal_slate" />
+			<case name="renewal_museum" />
+			<case name="renewal_wardrobe2" />
+			<case name="renewal_personal_customize" />
+			<case name="renewal_wardrobe" />
+			<case name="renewal_sandbox" />
+			<case name="renewal_friends" />
+			<case name="renewal_power_book" />
+			<case name="renewal_guild" />
+			<case name="renewal_auction" />
+			<case name="renewal_ranking" />
+			<case name="renewal_ranking2" />
+			<case name="renewal_delivery" />
+			<case name="renewal_qq" />
+			<case name="renewal_pvp_data" />
+			<case name="renewal_photo_album" />
+			<case name="renewal_attendance_timetable" />
+			<case name="renewal_attendnace" />
+			<case name="renewal_attendnace_benefit" />
+			<case name="renewal_goods" />
+			<case name="renewal_nshop" />
+			<case name="renewal_tencent_ingameshop" />
+			<case name="renewal_np_auction" />
+			<case name="renewal_dragon_jade_shop" />
+			<case name="renewal_mentoring" />
+			<case name="renewal_ingame_notice" />
+			<case name="renewal_tencent_event_notice" />
+			<case name="renewal_tencent_community_event" />
+			<case name="renewal_goods_store" />
+			<case name="renewal_random_store" />
+			<case name="renewal_boardgacha" />
+			<case name="renewal_treasureboard" />
+			<case name="renewal_web_event_guide" />
+			<case name="renewal_glyph_inventory" />
+			<case name="renewal_constealltion" />
+			<case name="renewal_public_raid5" />
+			<case name="renewal_sealeddungeonreward" />
+			<case name="renewal_inter_battle_field" />
+			<case name="renewal_guerrilla_event1" />
+			<case name="renewal_guerrilla_event2" />
+			<case name="renewal_guerrilla_event3" />
+			<case name="renewal_wanted_mission" />
+			<case name="renewal_expedition" />
+			<case name="renewal_neopass" />
+			<case name="renewal_worldachivement" />
+			<case name="renewal_racoon_store" />
+			<case name="renewal_notification_center" />
+		</attribute>
+		<attribute name="required-level" type="Int8" default="0" max="70" />
+		<attribute name="required-master-level" type="Int8" default="0" max="100" />
+		<attribute name="required-acquired-and-complete-quest" type="Ref" ref="quest" refel="1" />
+		<attribute name="required-complete-quest" type="Ref" ref="quest" refel="1" />
+		<attribute name="restrict-gameoption-display-type" type="Seq" default="hide">
+			<case name="hide" />
+			<case name="lock" />
+		</attribute>
+		<attribute name="restrict-content-type" type="Seq" default="all">
+			<case name="none" />
+			<case name="gameoption" />
+			<case name="system-menu" />
+			<case name="all" />
+		</attribute>
+		<attribute name="notifycenter-message" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

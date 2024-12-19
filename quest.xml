@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="quest" type="294" version="11.0" module="262" maxid="32001" pattern="Quest\QuestData*.xml">
+<table name="quest" type="298" version="11.0" module="262" maxid="32001" pattern="Quest\QuestData*.xml">
 	<el name="table" child="quest" />
 	<el name="quest" child="acquisition,mission-step,giveup-loss,completion,transit">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32001" />
@@ -759,6 +759,12 @@
 				<case name="attribute-type-12-defend-damage-modify-percent" />
 				<case name="defend-critical-damage-value" />
 				<case name="defend-critical-damage-value-equip" />
+				<case name="attack-abnormal-hit-base-percent" />
+				<case name="attack-abnormal-hit-value" />
+				<case name="attack-abnormal-hit-equip-value" />
+				<case name="defend-abnormal-resistance-base-percent" />
+				<case name="defend-abnormal-resistance-value" />
+				<case name="defend-abnormal-resistance-equip-value" />
 				<case name="invisible" />
 				<case name="block-move" />
 				<case name="block-skill" />
@@ -824,27 +830,6 @@
 				<case name="equip-speech-bubble-appearance" />
 				<case name="equip-talk-social-item" />
 				<case name="equip-soul-gem" />
-				<case name="attack-stiff-duration-equip-value" />
-				<case name="defend-stiff-duration-equip-value" />
-				<case name="aoe-defend-power-value-equip" />
-				<case name="heal-power-equip-value" />
-				<case name="defend-strength-creature-value" />
-				<case name="defend-strength-equip-value" />
-				<case name="attack-precise-creature-value" />
-				<case name="attack-precise-equip-value" />
-				<case name="attack-aoe-pierce-value" />
-				<case name="attack-aoe-pierce-value-equip" />
-				<case name="attack-abnormal-hit-base-percent" />
-				<case name="attack-abnormal-hit-value" />
-				<case name="attack-abnormal-hit-equip-value" />
-				<case name="defend-abnormal-dodge-base-percent" />
-				<case name="defend-abnormal-dodge-value" />
-				<case name="defend-abnormal-dodge-equip-value" />
-				<case name="support-power-base-percent" />
-				<case name="support-power-value" />
-				<case name="support-power-equip-value" />
-				<case name="hypermove-power-value" />
-				<case name="hypermove-power-equip-value" />
 			</attribute>
 			<attribute name="op" type="Seq" required="True">
 				<case name="eq" />
@@ -1270,6 +1255,12 @@
 				<case name="attribute-type-12-defend-damage-modify-percent" />
 				<case name="defend-critical-damage-value" />
 				<case name="defend-critical-damage-value-equip" />
+				<case name="attack-abnormal-hit-base-percent" />
+				<case name="attack-abnormal-hit-value" />
+				<case name="attack-abnormal-hit-equip-value" />
+				<case name="defend-abnormal-resistance-base-percent" />
+				<case name="defend-abnormal-resistance-value" />
+				<case name="defend-abnormal-resistance-equip-value" />
 				<case name="invisible" />
 				<case name="block-move" />
 				<case name="block-skill" />
@@ -1335,27 +1326,6 @@
 				<case name="equip-speech-bubble-appearance" />
 				<case name="equip-talk-social-item" />
 				<case name="equip-soul-gem" />
-				<case name="attack-stiff-duration-equip-value" />
-				<case name="defend-stiff-duration-equip-value" />
-				<case name="aoe-defend-power-value-equip" />
-				<case name="heal-power-equip-value" />
-				<case name="defend-strength-creature-value" />
-				<case name="defend-strength-equip-value" />
-				<case name="attack-precise-creature-value" />
-				<case name="attack-precise-equip-value" />
-				<case name="attack-aoe-pierce-value" />
-				<case name="attack-aoe-pierce-value-equip" />
-				<case name="attack-abnormal-hit-base-percent" />
-				<case name="attack-abnormal-hit-value" />
-				<case name="attack-abnormal-hit-equip-value" />
-				<case name="defend-abnormal-dodge-base-percent" />
-				<case name="defend-abnormal-dodge-value" />
-				<case name="defend-abnormal-dodge-equip-value" />
-				<case name="support-power-base-percent" />
-				<case name="support-power-value" />
-				<case name="support-power-equip-value" />
-				<case name="hypermove-power-value" />
-				<case name="hypermove-power-equip-value" />
 			</attribute>
 			<attribute name="op" type="Seq" required="True">
 				<case name="eq" />
@@ -1781,6 +1751,12 @@
 				<case name="attribute-type-12-defend-damage-modify-percent" />
 				<case name="defend-critical-damage-value" />
 				<case name="defend-critical-damage-value-equip" />
+				<case name="attack-abnormal-hit-base-percent" />
+				<case name="attack-abnormal-hit-value" />
+				<case name="attack-abnormal-hit-equip-value" />
+				<case name="defend-abnormal-resistance-base-percent" />
+				<case name="defend-abnormal-resistance-value" />
+				<case name="defend-abnormal-resistance-equip-value" />
 				<case name="invisible" />
 				<case name="block-move" />
 				<case name="block-skill" />
@@ -1846,27 +1822,6 @@
 				<case name="equip-speech-bubble-appearance" />
 				<case name="equip-talk-social-item" />
 				<case name="equip-soul-gem" />
-				<case name="attack-stiff-duration-equip-value" />
-				<case name="defend-stiff-duration-equip-value" />
-				<case name="aoe-defend-power-value-equip" />
-				<case name="heal-power-equip-value" />
-				<case name="defend-strength-creature-value" />
-				<case name="defend-strength-equip-value" />
-				<case name="attack-precise-creature-value" />
-				<case name="attack-precise-equip-value" />
-				<case name="attack-aoe-pierce-value" />
-				<case name="attack-aoe-pierce-value-equip" />
-				<case name="attack-abnormal-hit-base-percent" />
-				<case name="attack-abnormal-hit-value" />
-				<case name="attack-abnormal-hit-equip-value" />
-				<case name="defend-abnormal-dodge-base-percent" />
-				<case name="defend-abnormal-dodge-value" />
-				<case name="defend-abnormal-dodge-equip-value" />
-				<case name="support-power-base-percent" />
-				<case name="support-power-value" />
-				<case name="support-power-equip-value" />
-				<case name="hypermove-power-value" />
-				<case name="hypermove-power-equip-value" />
 			</attribute>
 			<attribute name="flag" type="Bool" required="True" />
 		</sub>
@@ -3262,6 +3217,7 @@
 				<case name="build-up-stone" />
 				<case name="badge" />
 				<case name="relic" />
+				<case name="skill-train-by-item-extract" />
 				<case name="medicine" />
 				<case name="food" />
 				<case name="tool" />
@@ -3296,6 +3252,7 @@
 				<case name="build-up-stone" />
 				<case name="badge" />
 				<case name="relic" />
+				<case name="skill-train-by-item-extract" />
 				<case name="medicine" />
 				<case name="food" />
 				<case name="tool" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="skill" type="348" version="4.0" module="2062" maxid="200000000">
+<table name="skill" type="353" version="4.0" module="2062" maxid="200000000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="200000000" />
@@ -204,6 +204,7 @@
 			<case name="toggle-notification-center" />
 			<case name="toggle-joypad-lock-on" />
 			<case name="joypad-dash-backward" />
+			<case name="classic-control-mode-lock-on" />
 		</attribute>
 		<attribute name="short-cut-key-classic" type="Seq16" default="none">
 			<case name="none" />
@@ -399,6 +400,7 @@
 			<case name="toggle-notification-center" />
 			<case name="toggle-joypad-lock-on" />
 			<case name="joypad-dash-backward" />
+			<case name="classic-control-mode-lock-on" />
 		</attribute>
 		<sub name="active-skill">
 			<attribute name="cast-condition" type="Ref" ref="skillcastcondition3" refel="1" />

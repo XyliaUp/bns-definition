@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="summoneddesignerpreset" type="404" version="0.3" module="6">
+<table name="summoneddesignerpreset" type="409" version="0.3" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="alias" type="String" required="True" max="70" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="effect" type="115" version="38.0" module="2318" maxid="200000000">
+<table name="effect" type="115" version="41.1" module="2318" maxid="200000000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="200000000" />
@@ -1650,6 +1650,12 @@
 			<case name="attribute-type-12-defend-damage-modify-percent" />
 			<case name="defend-critical-damage-value" />
 			<case name="defend-critical-damage-value-equip" />
+			<case name="attack-abnormal-hit-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="attack-abnormal-hit-equip-value" />
+			<case name="defend-abnormal-resistance-base-percent" />
+			<case name="defend-abnormal-resistance-value" />
+			<case name="defend-abnormal-resistance-equip-value" />
 			<case name="invisible" />
 			<case name="block-move" />
 			<case name="block-skill" />
@@ -1715,27 +1721,6 @@
 			<case name="equip-speech-bubble-appearance" />
 			<case name="equip-talk-social-item" />
 			<case name="equip-soul-gem" />
-			<case name="attack-stiff-duration-equip-value" />
-			<case name="defend-stiff-duration-equip-value" />
-			<case name="aoe-defend-power-value-equip" />
-			<case name="heal-power-equip-value" />
-			<case name="defend-strength-creature-value" />
-			<case name="defend-strength-equip-value" />
-			<case name="attack-precise-creature-value" />
-			<case name="attack-precise-equip-value" />
-			<case name="attack-aoe-pierce-value" />
-			<case name="attack-aoe-pierce-value-equip" />
-			<case name="attack-abnormal-hit-base-percent" />
-			<case name="attack-abnormal-hit-value" />
-			<case name="attack-abnormal-hit-equip-value" />
-			<case name="defend-abnormal-dodge-base-percent" />
-			<case name="defend-abnormal-dodge-value" />
-			<case name="defend-abnormal-dodge-equip-value" />
-			<case name="support-power-base-percent" />
-			<case name="support-power-value" />
-			<case name="support-power-equip-value" />
-			<case name="hypermove-power-value" />
-			<case name="hypermove-power-equip-value" />
 		</attribute>
 		<attribute name="modify-ability-diff" type="Int64" repeat="8" default="0" min="-9223372036854775807" max="9223372036854775807" />
 		<attribute name="modify-ability-percent" type="Int16" repeat="8" default="0" min="-32768" max="32767" />
@@ -3933,6 +3918,44 @@
 			<attribute name="abnormal-attack-power-value-equip" type="Int32" hidden="True" default="0" max="300000" />
 			<attribute name="abnormal-defend-base-percent" type="Int16" hidden="True" default="0" max="10000" />
 			<attribute name="abnormal-defend-power-value" type="Int16" hidden="True" default="0" max="30000" />
+			<attribute name="race-type-1-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-2-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-3-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-4-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-5-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-6-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-7-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-1-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-2-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-3-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-4-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-5-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-6-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="race-type-7-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-1-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-2-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-3-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-4-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-5-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-6-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-7-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-8-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-9-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-10-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-11-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-12-attack-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-1-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-2-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-3-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-4-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-5-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-6-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-7-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-8-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-9-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-10-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-11-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
+			<attribute name="attribute-type-12-defend-damage-modify-percent" type="Int16" hidden="True" default="0" max="10000" />
 			<attribute name="hate-power-equip-value" type="Int16" hidden="True" default="0" max="30000" />
 			<attribute name="additional-exp-diff-by-kill" type="Int16" hidden="True" default="0" max="30000" />
 			<attribute name="additional-exp-percent-by-kill" type="Int16" hidden="True" default="0" max="1000" />
@@ -3956,8 +3979,6 @@
 			<attribute name="r-defend-strength-equip-value" type="Int32" hidden="True" default="0" max="300000" />
 			<attribute name="r-attack-precise-equip-value" type="Int32" hidden="True" default="0" max="300000" />
 			<attribute name="r-attack-aoe-pierce-value-equip" type="Int16" hidden="True" default="0" max="30000" />
-			<attribute name="r-attack-abnormal-hit-equip-value" type="Int16" hidden="True" default="0" min="-30000" max="30000" />
-			<attribute name="r-defend-abnormal-dodge-equip-value" type="Int16" hidden="True" default="0" min="-30000" max="30000" />
 			<attribute name="r-support-power-equip-value" type="Int16" hidden="True" default="0" max="30000" />
 			<attribute name="r-hypermove-power-equip-value" type="Int16" hidden="True" default="0" max="30000" />
 			<attribute name="defend-difficulty-type-damage-reduce-percent" type="Int16" hidden="True" default="0" max="1000" />
@@ -4396,6 +4417,12 @@
 				<case name="attribute-type-12-defend-damage-modify-percent" />
 				<case name="defend-critical-damage-value" />
 				<case name="defend-critical-damage-value-equip" />
+				<case name="attack-abnormal-hit-base-percent" />
+				<case name="attack-abnormal-hit-value" />
+				<case name="attack-abnormal-hit-equip-value" />
+				<case name="defend-abnormal-resistance-base-percent" />
+				<case name="defend-abnormal-resistance-value" />
+				<case name="defend-abnormal-resistance-equip-value" />
 				<case name="invisible" />
 				<case name="block-move" />
 				<case name="block-skill" />
@@ -4461,27 +4488,6 @@
 				<case name="equip-speech-bubble-appearance" />
 				<case name="equip-talk-social-item" />
 				<case name="equip-soul-gem" />
-				<case name="attack-stiff-duration-equip-value" />
-				<case name="defend-stiff-duration-equip-value" />
-				<case name="aoe-defend-power-value-equip" />
-				<case name="heal-power-equip-value" />
-				<case name="defend-strength-creature-value" />
-				<case name="defend-strength-equip-value" />
-				<case name="attack-precise-creature-value" />
-				<case name="attack-precise-equip-value" />
-				<case name="attack-aoe-pierce-value" />
-				<case name="attack-aoe-pierce-value-equip" />
-				<case name="attack-abnormal-hit-base-percent" />
-				<case name="attack-abnormal-hit-value" />
-				<case name="attack-abnormal-hit-equip-value" />
-				<case name="defend-abnormal-dodge-base-percent" />
-				<case name="defend-abnormal-dodge-value" />
-				<case name="defend-abnormal-dodge-equip-value" />
-				<case name="support-power-base-percent" />
-				<case name="support-power-value" />
-				<case name="support-power-equip-value" />
-				<case name="hypermove-power-value" />
-				<case name="hypermove-power-equip-value" />
 			</attribute>
 			<attribute name="modify-ability-diff-for-mastery" type="Int64" repeat="16" default="0" min="-9223372036854775807" max="9223372036854775807" />
 			<attribute name="modify-ability-percent-for-mastery" type="Int16" repeat="16" default="0" min="-32768" max="32767" />

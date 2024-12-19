@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="ui-command" type="428" version="0.59" module="4">
+<table name="ui-command" type="433" version="0.60" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="command" type="Seq" key="True" required="True">
@@ -127,6 +127,7 @@
 			<case name="show-item-probability" />
 			<case name="open-worldaccount-cardbook" />
 			<case name="achievement-search" />
+			<case name="register-to-related-ui" />
 		</attribute>
 		<attribute name="name2" type="Ref" ref="text" refel="1" />
 		<attribute name="icon" type="String" default="" max="128" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="mapunit" type="249" version="1.79" module="12">
+<table name="mapunit" type="251" version="1.81" module="12">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
@@ -131,6 +131,7 @@
 			<attribute name="attraction" type="TRef" />
 			<attribute name="attraction-position-x" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
 			<attribute name="attraction-position-y" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+			<attribute name="party-chat-channel" type="Ref" ref="partychatchannel" refel="1" />
 		</sub>
 		<sub name="npc-group">
 			<attribute name="npc" type="Ref" ref="npc" refel="1" />

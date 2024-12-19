@@ -79,6 +79,8 @@
 				<case name="attack-critical-damage-percent" />
 				<case name="attack-damage-modify-percent" />
 				<case name="attack-critical-base-percent" />
+				<case name="attack-abnormal-hit-value" />
+				<case name="defend-abnormal-resistance-value" />
 			</attribute>
 			<attribute name="modify-ability-value-min" type="Int32" default="0" min="-2147483647" max="2147483647" />
 			<attribute name="modify-ability-value-max" type="Int32" default="0" min="-2147483647" max="2147483647" />

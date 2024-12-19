@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="store-by-item" type="399" version="0.4" module="6">
+<table name="store-by-item" type="404" version="0.4" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int64" key="True" required="True" min="-9223372036854775807" max="9223372036854775807" />

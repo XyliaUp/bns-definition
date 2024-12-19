@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="slatestone" type="380" version="2.0" module="6" maxid="32000">
+<table name="slatestone" type="385" version="2.0" module="6" maxid="32000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32000" />
@@ -82,6 +82,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="init-ability-value" type="Int32" repeat="4" default="0" min="-2147483647" max="2147483647" />
 		<attribute name="unit-ability-value" type="Int32" repeat="4" default="0" min="-2147483647" max="2147483647" />

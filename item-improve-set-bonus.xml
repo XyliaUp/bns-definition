@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="item-improve-set-bonus" type="207" version="6.0" module="6">
+<table name="item-improve-set-bonus" type="209" version="6.0" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
@@ -229,6 +229,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="total-improve-level-ability-value" type="Int32" repeat="30" default="0" max="1000000" />
 		<attribute name="total-improve-level-ability-base-value" type="Int32" repeat="30" default="0" max="1000000" />
@@ -310,6 +312,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="min-improve-level-ability-value" type="Int32" repeat="30" default="0" max="1000000" />
 		<attribute name="min-improve-level-ability-base-value" type="Int32" repeat="30" default="0" max="1000000" />

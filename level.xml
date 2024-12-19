@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="level" type="239" version="0.17" module="6">
+<table name="level" type="241" version="1.0" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="level" type="Int8" key="True" required="True" min="1" max="60" />
@@ -34,5 +34,6 @@
 		<attribute name="level-guide-path" type="String" default="" max="100" />
 		<attribute name="exceed-level-quest" type="Ref" ref="quest" refel="1" />
 		<attribute name="exceed-level-next-level" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="teleport-price-level-weight" type="Int16" default="100" max="10000" />
 	</el>
 </table>

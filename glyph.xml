@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="glyph" type="157" version="7.0" module="6" maxid="30000">
+<table name="glyph" type="158" version="7.0" module="6" maxid="30000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="30000" />
@@ -106,6 +106,8 @@
 			<case name="attack-critical-damage-percent" />
 			<case name="attack-damage-modify-percent" />
 			<case name="attack-critical-base-percent" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
 		</attribute>
 		<attribute name="ability-value" type="Int32" repeat="5" default="0" max="1000000" />
 		<attribute name="ability-id" type="Int16" default="0" max="30000" />

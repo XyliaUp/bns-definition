@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="job" type="230" version="0.61" module="14">
+<table name="job" type="232" version="0.61" module="14">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="job" type="Prop_seq" key="True" required="True">
@@ -303,6 +303,7 @@
 			<case name="toggle-notification-center" />
 			<case name="toggle-joypad-lock-on" />
 			<case name="joypad-dash-backward" />
+			<case name="classic-control-mode-lock-on" />
 		</attribute>
 		<attribute name="bns-action-key" type="Seq16" default="action2">
 			<case name="none" />
@@ -498,6 +499,7 @@
 			<case name="toggle-notification-center" />
 			<case name="toggle-joypad-lock-on" />
 			<case name="joypad-dash-backward" />
+			<case name="classic-control-mode-lock-on" />
 		</attribute>
 		<attribute name="training-desc-default" type="Ref" ref="text" refel="1" />
 		<attribute name="training-desc-attack" type="Ref" ref="text" refel="1" />

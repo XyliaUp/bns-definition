@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="itemcategory" type="192" version="0.1" module="4">
+<table name="itemcategory" type="193" version="0.1" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="game-category-3" type="Seq16" key="True" required="True">
@@ -204,6 +204,7 @@
 			<case name="aquamarine-amber" />
 			<case name="relic-1" />
 			<case name="star-stone" />
+			<case name="skill-train-by-item-extract" />
 		</attribute>
 		<attribute name="sort-order" type="Int16" required="True" min="-32768" max="32767" />
 	</el>

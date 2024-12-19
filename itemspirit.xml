@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="itemspirit" type="217" version="0.6" module="6">
+<table name="itemspirit" type="219" version="0.8" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="alias" type="String" required="True" max="70" />
@@ -59,7 +59,7 @@
 		<attribute name="distribution-type" type="Ref" ref="random-distribution" refel="1" />
 		<attribute name="fixed-ingredient" type="Ref" repeat="8" ref="item" refel="1" />
 		<attribute name="fixed-ingredient-stack-count" type="Int16" repeat="8" default="0" max="1000" />
-		<attribute name="attach-ability" type="Seq" repeat="2" default="none">
+		<attribute name="attach-ability" type="Seq" repeat="10" default="none">
 			<case name="none" />
 			<case name="attack-power-equip-min-and-max" />
 			<case name="defend-power-equip-value" />
@@ -174,14 +174,20 @@
 			<case name="hate-power-equip-value" />
 			<case name="additional-exp-diff-by-kill" />
 			<case name="additional-exp-percent-by-kill" />
+			<case name="attack-abnormal-hit-equip-value" />
+			<case name="defend-abnormal-resistance-equip-value" />
 		</attribute>
-		<attribute name="ability-min" type="Int32" repeat="2" default="0" min="-2147483647" max="2147483647" />
-		<attribute name="ability-max" type="Int32" repeat="2" default="0" min="-2147483647" max="2147483647" />
-		<attribute name="once-attach-ability-min" type="Int32" repeat="2" default="0" min="-2147483647" max="2147483647" />
-		<attribute name="once-attach-ability-max" type="Int32" repeat="2" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="attach-ability-total_count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="ability-min" type="Int32" repeat="10" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="ability-max" type="Int32" repeat="10" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="once-attach-ability-min" type="Int32" repeat="10" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="once-attach-ability-max" type="Int32" repeat="10" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="attach-ability-weight" type="Int16" repeat="10" default="0" max="32768" />
 		<attribute name="warning" type="Seq" default="none">
 			<case name="none" />
 			<case name="fail" />
 		</attribute>
+		<attribute name="use-random-ability-value-select" type="Bool" default="n" />
+		<attribute name="select-count" type="Int32" default="0" max="4" />
 	</el>
 </table>

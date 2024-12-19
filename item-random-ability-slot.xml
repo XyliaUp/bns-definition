@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="item-random-ability-slot" type="211" version="0.3" module="6">
+<table name="item-random-ability-slot" type="213" version="0.3" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
@@ -119,6 +119,8 @@
 			<case name="hate-power-equip-value" />
 			<case name="additional-exp-diff-by-kill" />
 			<case name="additional-exp-percent-by-kill" />
+			<case name="attack-abnormal-hit-equip-value" />
+			<case name="defend-abnormal-resistance-equip-value" />
 		</attribute>
 		<attribute name="value-min" type="Int32" default="0" min="-2147483647" max="2147483647" />
 		<attribute name="value-max" type="Int32" default="0" min="-2147483647" max="2147483647" />

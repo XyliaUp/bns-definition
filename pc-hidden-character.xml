@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="pc-hidden-character" type="279" version="0.1" module="4">
+<table name="pc-hidden-character" type="283" version="0.1" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="race" type="Prop_seq" key="True" required="True">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="soul-boost-season" type="388" version="4.1" module="16390">
+<table name="soul-boost-season" type="393" version="5.0" module="16390">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
@@ -24,5 +24,9 @@
 		<attribute name="required-mastery-level" type="Int8" default="0" max="100" />
 		<attribute name="required-preceding-quest" type="Ref" repeat="2" ref="quest" refel="1" />
 		<attribute name="purchase-grade-item" type="Ref" repeat="10" hidden="True" ref="item" refel="1" />
+		<attribute name="bm-enable-cost" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="item-point-cost-unit" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="item-point-per-cost-unit" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="membership-benefit" type="Ref" repeat="10" ref="membership-benefit" refel="1" />
 	</el>
 </table>

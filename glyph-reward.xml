@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="glyph-reward" type="159" version="4.0" module="6" maxid="30000">
+<table name="glyph-reward" type="160" version="5.0" module="6" maxid="30000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int16" key="True" required="True" min="1" max="30000" />
@@ -49,5 +49,6 @@
 		<attribute name="result-group-id" type="Int16" repeat="8" default="0" max="10000" />
 		<attribute name="group-prob-weight" type="Int16" repeat="8" default="0" max="10000" />
 		<attribute name="group-prob-weight-total" type="Int16" hidden="True" default="0" max="10000" />
+		<attribute name="mileage-weight" type="Int32" default="0" max="100000000" />
 	</el>
 </table>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="challengelist" type="51" version="0.8" module="6">
+<table name="challengelist" type="51" version="1.0" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="challenge-type" type="Seq" key="True" required="True">
@@ -54,6 +54,7 @@
 		<attribute name="challenge-reward-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
 		<attribute name="challenge-count-for-reward" type="Int8" repeat="20" default="0" max="127" />
 		<attribute name="reward" type="Ref" repeat="20" ref="challengelistreward" refel="1" />
+		<attribute name="account-reward-quota" type="Ref" repeat="20" ref="content-quota" refel="1" />
 		<sub name="dayofweek" />
 		<sub name="week">
 			<attribute name="week-start-date-time" type="Time64" default="" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="summoned-appearance" type="401" version="0.8" module="4">
+<table name="summoned-appearance" type="406" version="0.8" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="race" type="Prop_seq" key="True" default="race-none">

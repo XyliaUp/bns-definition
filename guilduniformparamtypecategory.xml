@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="guilduniformparamtypecategory" type="175" version="0.4" module="6">
+<table name="guilduniformparamtypecategory" type="176" version="0.4" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="param-type-category" type="Seq" key="True" required="True">

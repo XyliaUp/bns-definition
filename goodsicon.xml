@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="goodsicon" type="161" version="0.1" module="4" maxid="200000000">
+<table name="goodsicon" type="162" version="0.1" module="4" maxid="200000000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="200000000" />

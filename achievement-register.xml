@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="achievement-register" type="7" version="5.0" module="262" maxid="10000">
+<table name="achievement-register" type="7" version="5.1" module="262" maxid="10000">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="alias" type="String" required="True" max="70" />
@@ -539,7 +539,7 @@
 			<attribute name="item-grade" type="Int8" default="0" min="-128" max="127" />
 		</sub>
 		<sub name="check-combination-count" />
-		<sub name="completition-star-words" />
+		<sub name="complete-star-words" />
 		<sub name="detach-post-attachment-count" />
 		<sub name="detach-post-attachment-money" />
 		<sub name="detach-post-attachment-item">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="indicator-image" type="184" version="0.30" module="4">
+<table name="indicator-image" type="185" version="0.30" module="4">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="indicator" type="Seq16" key="True" required="True">

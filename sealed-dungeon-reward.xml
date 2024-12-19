@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="sealed-dungeon-reward" type="330" version="1.2" module="6">
+<table name="sealed-dungeon-reward" type="335" version="1.2" module="6">
 	<el name="table" child="record" />
 	<el name="record" child="">
 		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
