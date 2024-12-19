@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="social" type="387" version="0.25" module="14">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="duration" type="Msec" default="1000" min="100" max="60000" />
+		<attribute name="balloon-text" type="Ref" ref="text" refel="1" />
+		<attribute name="voice-sync" type="Bool" default="n" />
+		<attribute name="balloon-icon-texture" type="Ref" deprecated="True" ref="icontexture" refel="1" />
+		<attribute name="balloon-icon-index" type="Int16" deprecated="True" default="0" min="-32768" max="32767" />
+		<attribute name="balloon-icon" type="Icon" deprecated="True" max="32767" />
+		<attribute name="show" type="XUnknown2" default="" max="256" />
+		<attribute name="balloon-duration" type="Msec" default="0" min="-2147483647" max="10000" />
+		<attribute name="anim" type="String" deprecated="True" default="" max="50" />
+		<attribute name="sound" type="XUnknown2" deprecated="True" default="" max="256" />
+		<attribute name="kismet-start-time" type="Msec" default="0" max="60000" />
+		<attribute name="kismet" type="XUnknown2" default="" max="256" />
+		<attribute name="rotate" type="Seq" default="keep">
+			<case name="keep" />
+			<case name="server-yaw" />
+			<case name="toplayer" />
+		</attribute>
+		<attribute name="spawn-cinematic" type="Ref" ref="cinematic" refel="1" />
+		<attribute name="message" type="Ref" ref="game-message" refel="1" />
+		<attribute name="message-target-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="activated-faction-1" />
+			<case name="activated-faction-2" />
+		</attribute>
+		<attribute name="message-contents-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="faction-stage-in-volume" />
+		</attribute>
+		<attribute name="id" type="Int64" key="True" required="True" deprecated="True" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="social-type" type="Seq" deprecated="True" default="show">
+			<case name="anim" />
+			<case name="kismet" />
+			<case name="show" />
+		</attribute>
+		<attribute name="social-name" type="String" deprecated="True" default="" max="50" />
+	</el>
+</table>

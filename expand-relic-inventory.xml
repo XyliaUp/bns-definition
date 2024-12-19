@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="expand-relic-inventory" type="131" version="1.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="inventory-size" type="Int8" key="True" required="True" max="80" />
+		<attribute name="money" type="Int32" default="0" max="2147483647" />
+		<attribute name="required-item" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="required-item-count" type="Int8" repeat="4" default="1" min="-128" max="127" />
+	</el>
+</table>

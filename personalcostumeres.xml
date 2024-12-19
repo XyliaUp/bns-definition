@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="personalcostumeres" type="11" version="0.2" module="24">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int8" key="True" required="True" min="-128" max="127" />
+		<attribute name="table-resourcetype" type="Seq" key="True" required="True">
+			<case name="color" />
+			<case name="texture-mask" />
+		</attribute>
+		<attribute name="alias" type="String" required="True" max="128" />
+		<attribute name="data-version" type="Int16" default="1" min="-32768" max="32767" />
+		<sub name="colorres">
+			<attribute name="color" type="FColor" repeat="10" default="0,0,0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		</sub>
+		<sub name="textureres">
+			<attribute name="texture-path" type="XUnknown2" default="" max="256" />
+		</sub>
+	</el>
+</table>

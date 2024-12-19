@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="weapon-appearance-change-cost" type="447" version="0.3" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="item-grade" type="Int8" key="True" required="True" min="-128" max="127" />
+		<attribute name="growth-efficient-level" type="Int8" key="True" required="True" min="-128" max="127" />
+		<attribute name="weapon-cost-type" type="Seq" key="True" required="True">
+			<case name="weapon" />
+			<case name="pet-1" />
+			<case name="pet-2" />
+		</attribute>
+		<attribute name="cost-apply-item" type="Ref" repeat="2" ref="item" refel="1" />
+		<attribute name="cost-apply-item-amount" type="Int16" repeat="2" default="0" min="-32768" max="32767" />
+		<attribute name="cost-apply-money" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="cost-remove-separable" type="Bool" default="no" />
+		<attribute name="cost-remove-item" type="Ref" repeat="2" ref="item" refel="1" />
+		<attribute name="cost-remove-item-amount" type="Int16" repeat="2" default="0" min="-32768" max="32767" />
+		<attribute name="cost-remove-money" type="Int32" default="0" min="-2147483647" max="2147483647" />
+	</el>
+</table>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="season-ability-goal" type="336" version="0.5" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="ability" type="Seq" key="True" default="none">
+			<case name="none" />
+			<case name="attack-power-creature-min-max" />
+			<case name="pve-boss-level-npc-attack-power-creature-min-max" />
+			<case name="pvp-attack-power-creature-min-max" />
+			<case name="attack-hit-value" />
+			<case name="attack-critical-value" />
+			<case name="attack-critical-damage-value" />
+			<case name="attack-attribute-value" />
+			<case name="attack-pierce-value" />
+			<case name="abnormal-attack-power-value" />
+			<case name="max-hp" />
+			<case name="defend-power-creature-value" />
+			<case name="pve-boss-level-npc-defend-power-creature-value" />
+			<case name="pvp-defend-power-creature-value" />
+			<case name="defend-dodge-value" />
+			<case name="defend-parry-value" />
+			<case name="defend-critical-value" />
+			<case name="hp-regen" />
+			<case name="heal-power-value" />
+			<case name="abnormal-defend-power-value" />
+			<case name="attack-stiff-duration-value" />
+			<case name="defend-stiff-duration-value" />
+			<case name="attack-concentrate-value" />
+			<case name="aoe-defend-power-value" />
+			<case name="hate-power-creature-value" />
+			<case name="attack-damage-modify-diff" />
+			<case name="defend-damage-modify-diff" />
+			<case name="attack-abnormal-hit-value" />
+			<case name="defend-abnormal-resistance-value" />
+		</attribute>
+		<attribute name="scale" type="Int8" repeat="10" default="0" max="100" />
+		<attribute name="value" type="Int32" repeat="10" default="0" max="1000000" />
+	</el>
+</table>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="itemgrowth" type="205" version="0.5" module="6" maxid="100000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="100000" />
+		<attribute name="level" type="Int8" key="True" required="True" min="1" max="26" />
+		<attribute name="exp" type="Int32" required="True" max="30000" />
+		<attribute name="r-enchant-trial-count" type="Int8" default="3" min="1" max="3" />
+		<attribute name="r-enchant-point" type="Int16" default="0" max="10000" />
+		<attribute name="r-enchant-crack-percent" type="Int16" default="0" max="1000" />
+		<attribute name="r-enchant-destroy-percent" type="Int16" default="0" max="1000" />
+		<attribute name="r-enchant-broken-percent" type="Int16" default="0" max="1000" />
+		<attribute name="r-enchant-reset-enable" type="Bool" default="y" />
+		<attribute name="r-enchant-cost-group-1" type="Ref" repeat="3" ref="cost-group" refel="1" />
+		<attribute name="r-enchant-cost-group-2" type="Ref" repeat="3" ref="cost-group" refel="1" />
+		<attribute name="r-enchant-cost-group-3" type="Ref" repeat="3" ref="cost-group" refel="1" />
+		<attribute name="r-enchant-restore-cost-group" type="Ref" repeat="4" ref="cost-group" refel="1" />
+		<attribute name="r-enchant-restore-percent" type="Int16" repeat="4" default="0" min="-32768" max="10000" />
+		<attribute name="r-enchant-restore-equivalent-calibration-percent" type="Int16" default="100" max="1000" />
+		<attribute name="r-enchant-restore-lesser-calibration-percent" type="Int16" default="0" max="1000" />
+	</el>
+</table>

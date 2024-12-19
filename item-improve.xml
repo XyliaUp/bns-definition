@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="item-improve" type="206" version="6.4" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="level" type="Int8" key="True" required="True" max="127" />
+		<attribute name="cost-main-item" type="Ref" repeat="5" ref="item" refel="1" />
+		<attribute name="cost-main-item-count" type="Int16" repeat="5" default="0" max="30000" />
+		<attribute name="cost-sub-item-1" type="Ref" repeat="8" ref="item" refel="1" />
+		<attribute name="cost-sub-item-count-1" type="Int16" repeat="8" default="0" max="30000" />
+		<attribute name="cost-sub-item-2" type="Ref" repeat="8" ref="item" refel="1" />
+		<attribute name="cost-sub-item-count-2" type="Int16" repeat="8" default="0" max="30000" />
+		<attribute name="cost-sub-item-3" type="Ref" repeat="8" ref="item" refel="1" />
+		<attribute name="cost-sub-item-count-3" type="Int16" repeat="8" default="0" max="30000" />
+		<attribute name="cost-sub-item-4" type="Ref" repeat="8" ref="item" refel="1" />
+		<attribute name="cost-sub-item-count-4" type="Int16" repeat="8" default="0" max="30000" />
+		<attribute name="cost-sub-item-5" type="Ref" repeat="8" ref="item" refel="1" />
+		<attribute name="cost-sub-item-count-5" type="Int16" repeat="8" default="0" max="30000" />
+		<attribute name="cost-money" type="Int32" repeat="5" default="0" max="2147483647" />
+		<attribute name="success-probability" type="Int16" repeat="5" default="0" max="1000" />
+		<attribute name="use-success-probability" type="Bool" repeat="5" default="n" />
+		<attribute name="mileage-enable" type="Bool" default="n" />
+		<attribute name="mileage-save" type="Bool" repeat="5" default="n" />
+		<attribute name="mileage-random-distribution" type="Ref" repeat="5" ref="random-distribution" refel="1" />
+		<attribute name="cost-item-discount-minimum-value" type="Int8" repeat="5" default="0" max="100" />
+		<attribute name="success-option-list-id" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="success-option-slot-number" type="Int8" default="0" max="127" />
+		<attribute name="fail-level-diff" type="Int8" repeat="5" default="0" max="127" />
+		<attribute name="fixed-all-option" type="Bool" default="n" />
+		<attribute name="success-option-list-id-all" type="Int32" repeat="5" hidden="True" default="0" max="2147483647" />
+		<attribute name="success-option-list-id-all-count" type="Int8" hidden="True" default="0" max="127" />
+	</el>
+</table>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="world-account-combination" type="455" version="3.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="count" type="Int32" default="0" max="2147483647" />
+		<attribute name="item-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="star-gem" />
+			<case name="world-account-card" />
+		</attribute>
+		<attribute name="material-group" type="Ref" ref="item-group" refel="1" />
+		<attribute name="material-group-name" type="Ref" ref="text" refel="1" />
+		<attribute name="great-success-probability" type="Int16" default="0" max="10000" />
+		<attribute name="great-success-item-group" type="Ref" ref="item-group" refel="1" />
+		<attribute name="success-probability" type="Int16" default="0" max="10000" />
+		<attribute name="success-item-group" type="Ref" ref="item-group" refel="1" />
+		<attribute name="fail-probability" type="Int16" default="0" max="10000" />
+		<attribute name="fail-item-group" type="Ref" ref="item-group" refel="1" />
+		<attribute name="big-fail-probability" type="Int16" default="0" max="10000" />
+		<attribute name="big-fail-item-group" type="Ref" ref="item-group" refel="1" />
+		<attribute name="world-account-combination-cost-group" type="Ref" ref="cost-group" refel="1" />
+		<attribute name="reward-group-name" type="Ref" ref="text" refel="1" />
+		<attribute name="mileage-weight" type="Int32" default="0" max="100000000" />
+	</el>
+</table>

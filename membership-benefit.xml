@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="membership-benefit" type="262" version="3.2" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="benefit-type" type="Seq" key="True" default="none">
+			<case name="none" />
+			<case name="gettable-blue-virtual-currency" />
+			<case name="discount-market-tax" />
+			<case name="concurrent-sale-count-bonus" />
+			<case name="accumulated-sale-count-bonus" />
+			<case name="unlocated-warehouse" />
+			<case name="premium-depository" />
+			<case name="consume-depository" />
+			<case name="stack-sale-bonus" />
+		</attribute>
+		<attribute name="value" type="Int64" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="description" type="Ref" ref="text" refel="1" />
+		<attribute name="icon" type="Icon" max="32767" />
+		<attribute name="icon-image-set" type="String" default="" max="150" />
+	</el>
+</table>

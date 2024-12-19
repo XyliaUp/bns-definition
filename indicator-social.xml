@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="indicator-social" type="186" version="0.18" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="balloon-text" type="Ref" deprecated="True" ref="text" refel="1" />
+		<attribute name="show" type="XUnknown2" deprecated="True" default="" max="256" />
+		<attribute name="interval" type="Msec" default="0" max="600000" />
+		<attribute name="rotate" type="Seq" deprecated="True" default="keep">
+			<case name="keep" />
+			<case name="server-yaw" />
+			<case name="toplayer" />
+		</attribute>
+		<attribute name="look-player" type="Bool" deprecated="True" default="n" />
+		<attribute name="duration2" type="Msec" default="0" max="600000" />
+		<attribute name="begine-time2" type="Msec" repeat="10" default="0" max="60000" />
+		<attribute name="balloon-text2" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="balloon-text2-loop" type="Bool" repeat="10" deprecated="True" default="y" />
+		<attribute name="balloon-text2-duration" type="Msec" repeat="10" default="3000" min="-2147483647" max="2147483647" />
+		<attribute name="voice-sync" type="Bool" repeat="10" default="n" />
+		<attribute name="show2" type="XUnknown2" repeat="10" default="" max="256" />
+		<attribute name="rotate2" type="Seq" repeat="10" default="keep">
+			<case name="keep" />
+			<case name="server-yaw" />
+			<case name="toplayer" />
+		</attribute>
+		<attribute name="look-player2" type="Bool" repeat="10" deprecated="True" default="n" />
+		<attribute name="sub-npc2" type="Ref" repeat="10" ref="npc" refel="1" />
+		<attribute name="sub-indicator-social2" type="Ref" repeat="10" ref="indicator-social" refel="1" />
+	</el>
+</table>

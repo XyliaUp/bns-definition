@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="partychatchannel" type="276" version="0.98" module="4" maxid="10000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="-32768" max="10000" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="chnnelid" type="Seq" required="True">
+			<case name="none" />
+			<case name="1" />
+			<case name="2" />
+			<case name="3" />
+			<case name="4" />
+			<case name="5" />
+			<case name="6" />
+		</attribute>
+		<attribute name="name" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="name-party-number" type="Ref" ref="text" refel="1" />
+		<attribute name="district" type="Ref" ref="district" refel="1" />
+		<attribute name="map-group-1" type="Ref" ref="map-group-1" refel="1" />
+		<attribute name="arrange-type" type="Seq" default="district">
+			<case name="district" />
+			<case name="group-name" />
+		</attribute>
+		<attribute name="group-name" type="Ref" ref="text" refel="1" />
+		<attribute name="grade" type="Int8" default="0" min="-128" max="6" />
+		<attribute name="auto-recruittime" type="Int16" default="10" min="10" max="360" />
+		<attribute name="use-team-type" type="Bool" default="n" />
+		<attribute name="use-difficulty-type" type="Bool" repeat="3" default="n" />
+		<attribute name="interdungeon" type="Ref" ref="interdungeonlist" refel="1" />
+		<attribute name="party-match" type="Ref" ref="partymatch" refel="1" />
+		<sub name="normal" />
+		<sub name="main-faction">
+			<attribute name="faction-1-party-match" type="Ref" ref="partymatch" refel="1" />
+			<attribute name="faction-2-party-match" type="Ref" ref="partymatch" refel="1" />
+		</sub>
+	</el>
+</table>

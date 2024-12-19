@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="fielditemdrop" type="144" version="0.9" module="14">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="fielditem" type="Ref" repeat="3" ref="fielditem" refel="1" />
+		<attribute name="prob" type="Int8" repeat="3" default="100" max="100" />
+		<sub name="npc">
+			<attribute name="drop-case" type="Seq" required="True">
+				<case name="none" />
+				<case name="effect" />
+				<case name="bleeding" />
+				<case name="effect-and-bleeding" />
+				<case name="killed" />
+			</attribute>
+			<attribute name="effect-attribute" type="Seq16" repeat="4" default="none">
+				<case name="none" />
+				<case name="회복" />
+				<case name="진드기" />
+				<case name="불" />
+				<case name="은사" />
+				<case name="거미줄" />
+				<case name="독" />
+				<case name="은신" />
+				<case name="투명" />
+				<case name="광기" />
+				<case name="얼음감옥" />
+				<case name="독나방" />
+				<case name="가젯드랍" />
+				<case name="다운" />
+				<case name="넉백대시" />
+				<case name="방어불가" />
+				<case name="도발" />
+				<case name="도망" />
+				<case name="이동불가" />
+				<case name="대시불가" />
+				<case name="감속" />
+				<case name="기절" />
+				<case name="얼어붙음" />
+				<case name="행동불가" />
+				<case name="출혈" />
+				<case name="치유" />
+				<case name="얼음" />
+				<case name="맹독" />
+				<case name="막기" />
+				<case name="속박" />
+				<case name="제압" />
+				<case name="위치바꾸기" />
+				<case name="장악연계" />
+				<case name="무적" />
+				<case name="멍해짐" />
+				<case name="앞차기" />
+				<case name="혼절" />
+				<case name="광폭해짐" />
+				<case name="공중" />
+				<case name="그로기" />
+				<case name="난무" />
+				<case name="넉백" />
+				<case name="흡공" />
+				<case name="퀘스트-1" />
+				<case name="퀘스트-2" />
+				<case name="퀘스트-3" />
+				<case name="퀘스트-4" />
+				<case name="퀘스트-5" />
+				<case name="대상공중" />
+				<case name="보스-1" />
+				<case name="보스-2" />
+				<case name="보스-3" />
+				<case name="보스대쉬" />
+				<case name="그림자" />
+				<case name="중첩불가1" />
+				<case name="중첩불가2" />
+				<case name="조건만족" />
+				<case name="소환사독" />
+				<case name="탱킹장판" />
+				<case name="검막" />
+				<case name="비트" />
+				<case name="홍옥" />
+				<case name="녹주석" />
+				<case name="보스저항-1" />
+				<case name="보스저항-2" />
+				<case name="보스저항-3" />
+				<case name="보스저항-4" />
+				<case name="보스저항-5" />
+				<case name="낙인저항-1" />
+				<case name="낙인저항-2" />
+				<case name="낙인저항-3" />
+				<case name="낙인저항-4" />
+				<case name="마성-1" />
+				<case name="마성-2" />
+				<case name="마성-3" />
+				<case name="마성-4" />
+				<case name="주술체" />
+				<case name="소울" />
+				<case name="부적" />
+				<case name="환마" />
+				<case name="반사" />
+				<case name="NPC-1" />
+				<case name="NPC-2" />
+				<case name="NPC-3" />
+				<case name="NPC-4" />
+				<case name="NPC-5" />
+				<case name="NPC-6" />
+				<case name="NPC-7" />
+				<case name="NPC-8" />
+				<case name="NPC-9" />
+				<case name="NPC-10" />
+				<case name="낙인저항-5" />
+				<case name="낙인저항-6" />
+				<case name="낙인저항-7" />
+				<case name="낙인저항-8" />
+				<case name="클래스-1" />
+				<case name="클래스-2" />
+				<case name="클래스-3" />
+				<case name="클래스-4" />
+				<case name="클래스-5" />
+				<case name="클래스-6" />
+				<case name="클래스-7" />
+				<case name="클래스-8" />
+				<case name="클래스-9" />
+				<case name="클래스-10" />
+				<case name="클래스-11" />
+				<case name="클래스-12" />
+				<case name="클래스-13" />
+				<case name="클래스-14" />
+				<case name="클래스-15" />
+				<case name="클래스-16" />
+				<case name="클래스-17" />
+				<case name="클래스-18" />
+				<case name="클래스-19" />
+				<case name="클래스-20" />
+				<case name="클래스-21" />
+				<case name="클래스-22" />
+				<case name="클래스-23" />
+				<case name="클래스-24" />
+				<case name="클래스-25" />
+				<case name="클래스-26" />
+				<case name="클래스-27" />
+				<case name="클래스-28" />
+				<case name="클래스-29" />
+				<case name="클래스-30" />
+				<case name="클래스-31" />
+				<case name="클래스-32" />
+				<case name="클래스-33" />
+				<case name="클래스-34" />
+				<case name="클래스-35" />
+				<case name="클래스-36" />
+				<case name="클래스-37" />
+				<case name="클래스-38" />
+				<case name="클래스-39" />
+				<case name="클래스-40" />
+				<case name="클래스-41" />
+				<case name="클래스-42" />
+				<case name="클래스-43" />
+				<case name="클래스-44" />
+				<case name="클래스-45" />
+				<case name="클래스-46" />
+				<case name="클래스-47" />
+				<case name="클래스-48" />
+				<case name="클래스-49" />
+				<case name="클래스-50" />
+				<case name="클래스-51" />
+				<case name="클래스-52" />
+				<case name="클래스-53" />
+				<case name="클래스-54" />
+				<case name="클래스-55" />
+				<case name="클래스-56" />
+				<case name="클래스-57" />
+				<case name="클래스-58" />
+				<case name="클래스-59" />
+				<case name="클래스-60" />
+				<case name="아이템조건-1" />
+				<case name="어택글라이드" />
+				<case name="문양-1" />
+				<case name="문양-2" />
+				<case name="문양-3" />
+				<case name="문양-4" />
+				<case name="문양-5" />
+				<case name="문양-6" />
+				<case name="문양-7" />
+				<case name="문양-8" />
+				<case name="문양-9" />
+				<case name="문양-10" />
+				<case name="문양-11" />
+				<case name="문양-12" />
+				<case name="문양-13" />
+				<case name="문양-14" />
+				<case name="문양-15" />
+				<case name="문양-16" />
+				<case name="문양-17" />
+				<case name="문양-18" />
+				<case name="문양-19" />
+				<case name="문양-20" />
+				<case name="기믹-1" />
+				<case name="기믹-2" />
+				<case name="기믹-3" />
+				<case name="기믹-4" />
+				<case name="기믹-5" />
+				<case name="던전보스-1" />
+				<case name="기믹-6" />
+				<case name="기믹-7" />
+				<case name="기믹-8" />
+				<case name="기믹-9" />
+				<case name="기믹-10" />
+				<case name="중첩불가3" />
+			</attribute>
+			<attribute name="effect-attribute-value" type="Int64" hidden="True" min="-9223372036854775807" max="9223372036854775807" />
+			<attribute name="effect-attribute-value-2" type="Int64" hidden="True" min="-9223372036854775807" max="9223372036854775807" />
+			<attribute name="effect-attribute-value-3" type="Int64" hidden="True" min="-9223372036854775807" max="9223372036854775807" />
+			<attribute name="hp-percent" type="Int8" default="100" max="100" />
+		</sub>
+		<sub name="env">
+			<attribute name="drop-case" type="Seq" required="True">
+				<case name="none" />
+				<case name="manipulated" />
+				<case name="killed" />
+			</attribute>
+			<attribute name="drop-place" type="Seq" required="True">
+				<case name="none" />
+				<case name="area" />
+				<case name="hand" />
+			</attribute>
+			<attribute name="area" type="Ref" ref="zonearea" refel="1" />
+		</sub>
+		<sub name="quest">
+			<attribute name="drop-place" type="Seq" required="True">
+				<case name="none" />
+				<case name="front-npc" />
+				<case name="area" />
+				<case name="hand" />
+			</attribute>
+			<attribute name="area" type="Ref" ref="zonearea" refel="1" />
+		</sub>
+		<sub name="npc-deadbody">
+			<attribute name="quest-id" type="Int16" default="0" max="32767" />
+			<attribute name="quest-mission-step" type="Int8" default="0" max="127" />
+		</sub>
+	</el>
+</table>

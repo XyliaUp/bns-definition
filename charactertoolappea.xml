@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="charactertoolappea" type="5" version="0.30" module="24">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" default="" max="128" />
+		<attribute name="name" type="String" default="" max="128" />
+		<attribute name="group" type="String" default="" max="256" />
+		<attribute name="file-name" type="String" default="" max="256" />
+		<attribute name="anim-set" type="XUnknown2" default="" max="256" />
+		<attribute name="face-anim-set" type="XUnknown2" default="" max="256" />
+		<attribute name="npc-voice-set" type="XUnknown2" default="" max="256" />
+		<attribute name="npc-dialogue-set" type="XUnknown2" default="" max="256" />
+		<attribute name="change-material-name" type="XUnknown2" repeat="2" default="" max="256" />
+		<attribute name="body-material-name" type="XUnknown2" default="" max="256" />
+		<attribute name="race" type="Prop_seq" default="0">
+			<case name="race-none" />
+			<case name="건" />
+			<case name="곤" />
+			<case name="린" />
+			<case name="진" />
+			<case name="나쁜몹" />
+			<case name="더나쁜몹" />
+			<case name="무서운몹" />
+			<case name="더무서운몹" />
+			<case name="더더무서운몹" />
+			<case name="고양이" />
+			<case name="강림체" />
+			<case name="악귀" />
+		</attribute>
+		<attribute name="sex" type="Prop_seq" default="0">
+			<case name="sex-none" />
+			<case name="남" />
+			<case name="여" />
+			<case name="중" />
+		</attribute>
+		<attribute name="job" type="Prop_seq" default="0">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="pc-type" type="Seq" default="0">
+			<case name="pc" />
+			<case name="none-pc" />
+			<case name="none-pc-customizable" />
+		</attribute>
+		<attribute name="leg-type" type="Seq" default="0">
+			<case name="pc_leg2" />
+			<case name="npc_leg2" />
+			<case name="npc_inv_leg2" />
+			<case name="leg4" />
+			<case name="normal_leg4" />
+		</attribute>
+		<attribute name="sub-material-name" type="XUnknown2" repeat="10" default="" max="256" />
+		<attribute name="attach-effect" type="XUnknown2" default="" max="256" />
+		<attribute name="unique-soundcue" type="XUnknown2" default="" max="256" />
+		<attribute name="unique-soundculldist" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="unique-soundfadetime" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="unique-delaystoptime" type="Float32" default="5.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="sound-attenuation-scale" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="sound-volume-scale" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="decal-radius" type="Float32" default="1.0" fmax="100" />
+		<attribute name="enable-physbrst" type="Bool" default="y" />
+		<attribute name="pc-customize" type="Bool" default="n" />
+		<attribute name="npcattach" type="String" repeat="2" default="" max="128" />
+		<attribute name="npcattach-material" type="XUnknown2" repeat="2" default="" max="256" />
+		<attribute name="mesh-voice-ref" type="Ref" repeat="10" ref="abnormalmoveanim" refel="1" />
+		<attribute name="color-ref" type="Ref" repeat="9" ref="ability-list" refel="1" />
+		<attribute name="scalar" type="Float32" repeat="13" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="face-image" type="Ref" repeat="8" ref="account-level" refel="1" />
+		<attribute name="face-custom-value" type="Float32" repeat="32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="body-custom-value" type="Float32" repeat="30" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="scale-value" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="guild-factor" type="Int8" repeat="28" default="0" min="-128" max="127" />
+		<attribute name="personal-costume-factor" type="Int8" repeat="13" default="0" min="-128" max="127" />
+	</el>
+</table>

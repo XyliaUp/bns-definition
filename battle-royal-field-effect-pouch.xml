@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="battle-royal-field-effect-pouch" type="33" version="0.7" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32767" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="effect" type="Ref" repeat="4" ref="effect" refel="1" />
+		<attribute name="radius" type="Distance" default="16" max="5000" />
+	</el>
+</table>

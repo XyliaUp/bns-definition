@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="duel-npc-challenge-strategic-skill" type="112" version="2.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="max-strategic-skill-level" type="Int8" default="1" min="-128" max="10" />
+		<attribute name="icon-texture" type="Ref" ref="icontexture" refel="1" />
+		<attribute name="icon-index" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="grade" type="Int8" default="1" min="-128" max="127" />
+		<attribute name="skill-image-set" type="String" default="" max="150" />
+		<attribute name="skill-tooltip" type="Ref" ref="text" refel="1" />
+		<attribute name="description2" type="Ref" ref="text" refel="1" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<sub name="active">
+			<attribute name="strategic-skill" type="Ref" ref="skill3" refel="1" />
+			<attribute name="unlimited" type="Bool" default="n" />
+			<attribute name="bullet-count" type="Int8" default="0" min="-128" max="127" />
+		</sub>
+		<sub name="passive">
+			<attribute name="condition-event" type="Ref" repeat="3" ref="condition-event" refel="1" />
+		</sub>
+	</el>
+</table>

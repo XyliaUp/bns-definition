@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="item-brand-tooltip" type="191" version="0.9" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="brand-id" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="item-condition-type" type="Seq" key="True" required="True">
+			<case name="none" />
+			<case name="all" />
+			<case name="weapon" />
+			<case name="sword" />
+			<case name="blade-master-sword" />
+			<case name="lyn-sword" />
+			<case name="gauntlet" />
+			<case name="staff" />
+			<case name="aura-bangle" />
+			<case name="dagger" />
+			<case name="axe" />
+			<case name="accessory" />
+			<case name="ring" />
+			<case name="earring" />
+			<case name="necklace" />
+			<case name="belt" />
+			<case name="bracelet" />
+			<case name="soul" />
+			<case name="assassin-dagger" />
+			<case name="warlock-dagger" />
+			<case name="gem-1" />
+			<case name="gem-2" />
+			<case name="gem-3" />
+			<case name="gem-4" />
+			<case name="gem-5" />
+			<case name="gem-6" />
+			<case name="gem-7" />
+			<case name="gem-8" />
+			<case name="soul-2" />
+			<case name="gloves" />
+			<case name="pet-1" />
+			<case name="pet-2" />
+			<case name="kung-fu-fighter-gauntlet" />
+			<case name="soul-fighter-gauntlet" />
+			<case name="shooter-gun" />
+			<case name="rune-1" />
+			<case name="rune-2" />
+			<case name="weapon-enchant-gem" />
+			<case name="weapon-enchant-gem-1" />
+			<case name="weapon-enchant-gem-2" />
+			<case name="great-sword" />
+			<case name="long-bow" />
+			<case name="spear" />
+			<case name="orb" />
+			<case name="dual-blade" />
+			<case name="nova" />
+			<case name="badge-1" />
+			<case name="badge-2" />
+			<case name="badge-3" />
+			<case name="badge-appearance" />
+			<case name="accessory-enchant-gem" />
+			<case name="ring-enchant-gem-1" />
+			<case name="ring-enchant-gem-2" />
+			<case name="ring-enchant-gem-3" />
+			<case name="earring-enchant-gem-1" />
+			<case name="earring-enchant-gem-2" />
+			<case name="earring-enchant-gem-3" />
+			<case name="necklace-enchant-gem-1" />
+			<case name="necklace-enchant-gem-2" />
+			<case name="necklace-enchant-gem-3" />
+			<case name="belt-enchant-gem-1" />
+			<case name="belt-enchant-gem-2" />
+			<case name="belt-enchant-gem-3" />
+			<case name="bracelet-enchant-gem-1" />
+			<case name="bracelet-enchant-gem-2" />
+			<case name="bracelet-enchant-gem-3" />
+			<case name="gloves-enchant-gem-1" />
+			<case name="gloves-enchant-gem-2" />
+			<case name="gloves-enchant-gem-3" />
+			<case name="instrument" />
+			<case name="armlet-1" />
+			<case name="armlet-2" />
+		</attribute>
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="game-category-3" type="Seq16" required="True">
+			<case name="none" />
+			<case name="sword" />
+			<case name="gauntlet" />
+			<case name="aura-bangle" />
+			<case name="axe" />
+			<case name="dagger" />
+			<case name="staff" />
+			<case name="lyn-sword" />
+			<case name="warlock-dagger" />
+			<case name="soul-fighter-gauntlet" />
+			<case name="gun" />
+			<case name="great-sword" />
+			<case name="long-bow" />
+			<case name="spear" />
+			<case name="orb" />
+			<case name="dual-blade" />
+			<case name="instrument" />
+			<case name="necklace" />
+			<case name="ring" />
+			<case name="earring" />
+			<case name="bracelet" />
+			<case name="belt" />
+			<case name="gloves" />
+			<case name="soul" />
+			<case name="soul-2" />
+			<case name="rune-1" />
+			<case name="rune-2" />
+			<case name="pet" />
+			<case name="nova" />
+			<case name="vehicle" />
+			<case name="normal-state-appearance" />
+			<case name="idle-state-appearance" />
+			<case name="chatting-symbol" />
+			<case name="portrait-appearance" />
+			<case name="hypermove-appearance" />
+			<case name="name-plate-appearance" />
+			<case name="speech-bubble-appearance" />
+			<case name="talk-social" />
+			<case name="armlet-1" />
+			<case name="armlet-2" />
+			<case name="costume" />
+			<case name="head-attach" />
+			<case name="face-attach" />
+			<case name="costume-attach" />
+			<case name="summoned-pet-costume" />
+			<case name="summoned-pet-hat" />
+			<case name="summoned-pet-attach" />
+			<case name="gam1" />
+			<case name="gan2" />
+			<case name="jin3" />
+			<case name="son4" />
+			<case name="ri5" />
+			<case name="gon6" />
+			<case name="tae7" />
+			<case name="geon8" />
+			<case name="synthesis-gem" />
+			<case name="feed-gem" />
+			<case name="diamond" />
+			<case name="ruby" />
+			<case name="topaz" />
+			<case name="sapphire" />
+			<case name="jade" />
+			<case name="emerald" />
+			<case name="amethyst" />
+			<case name="aquamarine" />
+			<case name="amber" />
+			<case name="obsidian" />
+			<case name="garnet" />
+			<case name="ruby-topaz" />
+			<case name="ruby-sapphire" />
+			<case name="ruby-jade" />
+			<case name="ruby-amethyst" />
+			<case name="ruby-emerald" />
+			<case name="ruby-diamond" />
+			<case name="topaz-sapphire" />
+			<case name="topaz-jade" />
+			<case name="topaz-amethyst" />
+			<case name="topaz-emerald" />
+			<case name="topaz-diamond" />
+			<case name="sapphire-jade" />
+			<case name="sapphire-amethyst" />
+			<case name="sapphire-emerald" />
+			<case name="sapphire-diamond" />
+			<case name="jade-amethyst" />
+			<case name="jade-emerald" />
+			<case name="jade-diamond" />
+			<case name="amethyst-emerald" />
+			<case name="amethyst-diamond" />
+			<case name="emerald-diamond" />
+			<case name="aquamarine-diamond" />
+			<case name="amber-diamond" />
+			<case name="obsidian-garnet" />
+			<case name="corundum-white" />
+			<case name="corundum-black" />
+			<case name="corundum-pink" />
+			<case name="corundum-yellow" />
+			<case name="corundum-bluegreen" />
+			<case name="corundum-blue" />
+			<case name="corundum-aquamarine" />
+			<case name="corundum-amber" />
+			<case name="corundum-ruby" />
+			<case name="corundum-amethyst" />
+			<case name="corundum-jade" />
+			<case name="skill-stone" />
+			<case name="skill-stone-1" />
+			<case name="skill-stone-2" />
+			<case name="accessory-stone" />
+			<case name="weapon-soul-gem" />
+			<case name="regenerate-potion" />
+			<case name="heal-potion" />
+			<case name="secret-potion" />
+			<case name="detox-potion" />
+			<case name="magic-potion" />
+			<case name="hwan-dan" />
+			<case name="cook" />
+			<case name="exp-cook" />
+			<case name="alcohol" />
+			<case name="normal-repair-tool" />
+			<case name="urgency-repair-tool" />
+			<case name="key" />
+			<case name="weapon-gem-make" />
+			<case name="festival-tool" />
+			<case name="fishing-goods" />
+			<case name="voucher" />
+			<case name="reset-talisman" />
+			<case name="revive-talisman" />
+			<case name="party-revive-talisman" />
+			<case name="growth-talisman" />
+			<case name="unseal-talisman" />
+			<case name="seal-talisman" />
+			<case name="escape-talisman" />
+			<case name="build-up-talisman" />
+			<case name="valuables" />
+			<case name="wealth" />
+			<case name="holy-material" />
+			<case name="weapon-material" />
+			<case name="party-battle-material" />
+			<case name="raid-material" />
+			<case name="weapon-seed-material" />
+			<case name="accessory-material" />
+			<case name="synthetic-material" />
+			<case name="weapon-exp" />
+			<case name="accessory-exp" />
+			<case name="weapon-maker" />
+			<case name="talis-maker" />
+			<case name="equip-gem-maker" />
+			<case name="accessory-maker" />
+			<case name="medicine-maker" />
+			<case name="food-maker" />
+			<case name="common-maker" />
+			<case name="hypermove-material" />
+			<case name="production-material" />
+			<case name="cloth" />
+			<case name="dress-design" />
+			<case name="color-material" />
+			<case name="pattern" />
+			<case name="special-material" />
+			<case name="normal-material" />
+			<case name="weapon-coin" />
+			<case name="token" />
+			<case name="naryu-coin" />
+			<case name="pvp-coin" />
+			<case name="rvr-coin" />
+			<case name="festival-coin" />
+			<case name="hero-coin" />
+			<case name="spirit-coin" />
+			<case name="normal-coin" />
+			<case name="skill-deed" />
+			<case name="skill-take-deed" />
+			<case name="ticket" />
+			<case name="reset-deed" />
+			<case name="extend-deed" />
+			<case name="exchange-deed" />
+			<case name="switch-deed" />
+			<case name="normal-deed" />
+			<case name="guild-deed" />
+			<case name="quest-start" />
+			<case name="quest-virtual" />
+			<case name="chack-item" />
+			<case name="sundry-item" />
+			<case name="normal-weapon-box" />
+			<case name="shape-weapon-box" />
+			<case name="normal-accessory-box" />
+			<case name="normal-dress-box" />
+			<case name="normal-equip-gem-box" />
+			<case name="normal-weapon-gem-box" />
+			<case name="normal-material-box" />
+			<case name="normal-booty-box" />
+			<case name="normal-etc-box" />
+			<case name="badge-1-premium" />
+			<case name="badge-2-premium" />
+			<case name="badge-3-premium" />
+			<case name="badge-1-normal" />
+			<case name="badge-2-normal" />
+			<case name="badge-3-normal" />
+			<case name="badge-appearance" />
+			<case name="fusion-material" />
+			<case name="card" />
+			<case name="aquamarine-amber" />
+			<case name="relic-1" />
+			<case name="star-stone" />
+			<case name="skill-train-by-item-extract" />
+		</attribute>
+		<attribute name="item-grade" type="Int8" default="1" min="1" max="9" />
+		<attribute name="equip-level" type="Int8" default="1" min="1" max="100" />
+		<attribute name="equip-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="equip-job" type="Prop_seq" deprecated="True" default="job-none">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="equip-job-check" type="Prop_seq" repeat="4" default="job-none">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="equip-sex" type="Seq" default="all">
+			<case name="none" />
+			<case name="all" />
+			<case name="male" />
+			<case name="female" />
+		</attribute>
+		<attribute name="equip-race" type="Seq" default="all">
+			<case name="none" />
+			<case name="all" />
+			<case name="jin" />
+			<case name="gon" />
+			<case name="lyn" />
+			<case name="kun" />
+			<case name="summoned-all" />
+			<case name="summoned-cat" />
+		</attribute>
+		<attribute name="equip-solo-duel-grade" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="equip-team-duel-grade" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="icon" type="Icon" max="32767" />
+		<attribute name="tag-icon" type="Icon" max="32767" />
+		<attribute name="tag-icon-grade" type="Icon" max="32767" />
+		<attribute name="main-info" type="Ref" ref="text" refel="1" />
+		<attribute name="sub-info" type="Ref" ref="text" refel="1" />
+		<attribute name="description2" type="Ref" ref="text" refel="1" />
+		<attribute name="description4-title" type="Ref" ref="text" refel="1" />
+		<attribute name="description5-title" type="Ref" ref="text" refel="1" />
+		<attribute name="description6-title" type="Ref" ref="text" refel="1" />
+		<attribute name="description4" type="Ref" ref="text" refel="1" />
+		<attribute name="description5" type="Ref" ref="text" refel="1" />
+		<attribute name="description6" type="Ref" ref="text" refel="1" />
+		<attribute name="store-description" type="Ref" ref="text" refel="1" />
+		<attribute name="title-item" type="Ref" ref="item" refel="1" />
+	</el>
+</table>

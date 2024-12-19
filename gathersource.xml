@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="gathersource" type="157" version="0.7" module="14">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int64" key="True" required="True" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="gather-type" type="Seq" required="True">
+			<case name="hand-collection" />
+		</attribute>
+		<attribute name="required-pc-level" type="Int16" default="1" min="1" max="70" />
+		<attribute name="required-gather-level" type="Int8" default="1" min="-128" max="127" />
+		<attribute name="max-range" type="Distance" default="0" min="-32768" max="32767" />
+		<attribute name="item" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="item-count-min" type="Int8" repeat="4" default="1" min="1" max="100" />
+		<attribute name="item-count-max" type="Int8" repeat="4" default="1" min="1" max="100" />
+		<attribute name="item-probability" type="Int8" repeat="4" default="0" max="100" />
+		<attribute name="reward-exp" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="gather-action-duration" type="Msec" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="respawn-time" type="Msec" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="mesh-name" type="String" required="True" max="50" />
+		<attribute name="animset-name" type="String" required="True" max="50" />
+		<attribute name="gather-start-animname" type="String" required="True" max="50" />
+		<attribute name="gather-end-animname" type="String" required="True" max="50" />
+		<attribute name="gather-stay-animname" type="String" required="True" max="50" />
+	</el>
+</table>

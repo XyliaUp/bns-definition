@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="teleport" type="421" version="1.0" module="270" maxid="10000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="10000" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="zone" type="Int32" required="True" deprecated="True" min="-2147483647" max="2147483647" />
+		<attribute name="retired" type="Bool" default="n" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="destination-position" type="Vector32" required="True" deprecated="True" min="-2147483647" max="2147483647" />
+		<attribute name="teleport-position" type="Ref" ref="zoneteleportposition" refel="1" />
+		<attribute name="distance-from-start-teleport" type="Distance" default="0" min="-32768" max="32767" />
+		<attribute name="price-percent" type="Int32" default="0" max="1000000" />
+		<attribute name="description2" type="Ref" ref="text" refel="1" />
+		<attribute name="map" type="Ref" deprecated="True" ref="mapinfo" refel="1" />
+		<attribute name="activated-faction" type="Ref" ref="faction" refel="1" />
+		<attribute name="joined-faction" type="Bool" default="n" />
+		<attribute name="required-pc-level" type="Int8" default="0" max="127" />
+		<attribute name="required-pc-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="required-faction-level" type="Int8" default="0" max="127" />
+		<attribute name="ui-preceding-quest" type="Ref" ref="quest" refel="1" />
+		<attribute name="required-quest" type="Ref" ref="quest" refel="1" />
+		<attribute name="capital" type="Bool" default="n" />
+		<attribute name="select-destination-msg" type="Ref" deprecated="True" ref="text" refel="1" />
+		<attribute name="not-enough-money-msg" type="Ref" deprecated="True" ref="text" refel="1" />
+		<attribute name="confirm-msg" type="Ref" deprecated="True" ref="text" refel="1" />
+		<attribute name="cancel-msg" type="Ref" deprecated="True" ref="text" refel="1" />
+	</el>
+</table>

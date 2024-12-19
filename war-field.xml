@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="war-field" type="443" version="0.3" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="main-zone" type="Ref" required="True" ref="zone" refel="1" />
+		<attribute name="battle-zone" type="Ref" repeat="10" required="True" ref="zone" refel="1" />
+		<attribute name="field-break-zone" type="Ref" repeat="2" required="True" ref="zone" refel="1" />
+		<attribute name="field-break-boss-zone" type="Ref" required="True" ref="zone" refel="1" />
+		<attribute name="required-level" type="Int8" default="0" max="100" />
+		<attribute name="required-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="required-preceding-quest" type="Ref" repeat="3" ref="quest" refel="1" />
+		<attribute name="required-preceding-quest-check" type="Seq" default="and">
+			<case name="and" />
+			<case name="or" />
+		</attribute>
+		<attribute name="field-break-zone-imprint-effect" type="Ref" required="True" ref="effect" refel="1" />
+		<attribute name="field-break-zone-imprint-env" type="Ref" repeat="2" required="True" ref="zoneenv2spawn" refel="1" />
+		<attribute name="boss-battle-zone-entrance-effect" type="Ref" required="True" ref="effect" refel="1" />
+		<attribute name="group" type="Ref" ref="attraction-group" refel="1" />
+		<attribute name="finish-pc-respawn" type="Ref" required="True" ref="zonepcspawn" refel="1" />
+	</el>
+</table>

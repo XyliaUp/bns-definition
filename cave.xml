@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="cave" type="50" version="0.4" module="6" maxid="31999">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="31999" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="zone" type="Ref" repeat="40" ref="zone" refel="1" />
+	</el>
+</table>

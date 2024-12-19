@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="guildlevel" type="173" version="1.11" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="level" type="Int8" key="True" required="True" min="1" max="50" />
+		<attribute name="guild-type" type="Int8" key="True" required="True" min="1" max="2" />
+		<attribute name="money" type="Int32" required="True" max="1000000000" />
+		<attribute name="required-item" type="Ref" repeat="5" ref="item" refel="1" />
+		<attribute name="required-item-count" type="Int32" repeat="5" default="0" max="30000" />
+		<attribute name="required-guild-point" type="Int32" default="0" max="20000000000" />
+		<attribute name="reputation" type="Int32" required="True" max="25000000" />
+		<attribute name="min-member-count" type="Int32" required="True" max="100" />
+		<attribute name="max-member-count" type="Int32" required="True" max="100" />
+		<attribute name="min-enable-member-count" type="Int32" required="True" max="100" />
+		<attribute name="guild-discount" type="Ref" ref="guild-discount" refel="1" />
+		<attribute name="level-skill-imageset" type="String" repeat="10" default="" max="100" />
+		<attribute name="level-skill-name" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="level-skill-description" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="display-basic-skill-imageset" type="String" repeat="10" default="" max="100" />
+		<attribute name="display-basic-skill-name" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="display-basic-skill-description" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="display-add-skill-imageset" type="String" repeat="10" default="" max="100" />
+		<attribute name="display-add-skill-name" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="display-add-skill-description" type="Ref" repeat="10" ref="text" refel="1" />
+		<attribute name="guildcraft-small-usable-count" type="Int8" default="0" max="50" />
+		<attribute name="guildcraft-small-rentable-count" type="Int8" default="0" max="50" />
+		<attribute name="guildcraft-big-usable-count" type="Int8" default="0" max="50" />
+		<attribute name="guildcraft-big-rentable-count" type="Int8" default="0" max="50" />
+		<attribute name="levelup-text" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

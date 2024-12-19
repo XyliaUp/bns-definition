@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="jobskillset" type="233" version="0.3" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="job" type="Prop_seq" key="True" required="True">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="skill" type="Int32" repeat="100" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="acquire-type" type="Seq" repeat="100" default="none">
+			<case name="none" />
+			<case name="by-quest" />
+			<case name="by-level-up" />
+			<case name="by-training" />
+		</attribute>
+		<attribute name="style-level-2-skill" type="Int32" repeat="2" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="style-level-3-skill" type="Int32" repeat="2" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="style-level-4-skill" type="Int32" repeat="2" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="style-level-5-skill" type="Int32" repeat="2" default="0" min="-2147483647" max="2147483647" />
+	</el>
+</table>

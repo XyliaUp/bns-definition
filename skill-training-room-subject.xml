@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="skill-training-room-subject" type="377" version="0.11" module="262">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="subject-name" type="Ref" ref="text" refel="1" />
+		<attribute name="group-data-id" type="Ref" hidden="True" default="0" ref="skill-training-room-group" refel="1" />
+		<attribute name="system-msg" type="Ref" ref="game-message" refel="1" />
+		<attribute name="start-kismet-name" type="String" repeat="2" default="" max="50" />
+		<attribute name="end-kismet-name" type="String" repeat="2" default="" max="50" />
+		<attribute name="sort-number" type="Int16" default="0" min="-32768" max="32767" />
+		<sub name="class-training">
+			<attribute name="main-skill" type="Ref" ref="skill3" refel="1" />
+			<attribute name="skill-combo-desc" type="Ref" ref="text" refel="1" />
+			<attribute name="skill-combo-tips-main" type="Ref" ref="text" refel="1" />
+			<attribute name="skill-combo-tips-desc" type="Ref" ref="text" refel="1" />
+			<attribute name="skill-training-sequence" type="Ref" required="True" ref="skill-training-sequence" refel="1" />
+			<attribute name="guide-text" type="Ref" ref="text" refel="1" />
+			<attribute name="base-job-style" type="Seq" required="True">
+				<case name="base-1" />
+				<case name="base-2" />
+				<case name="base-3" />
+				<case name="base-4" />
+				<case name="base-5" />
+				<case name="advanced-1" />
+				<case name="advanced-2" />
+				<case name="advanced-3" />
+				<case name="advanced-4" />
+				<case name="advanced-5" />
+			</attribute>
+			<attribute name="advanced-job-style" type="Seq" required="True">
+				<case name="base-1" />
+				<case name="base-2" />
+				<case name="base-3" />
+				<case name="base-4" />
+				<case name="base-5" />
+				<case name="advanced-1" />
+				<case name="advanced-2" />
+				<case name="advanced-3" />
+				<case name="advanced-4" />
+				<case name="advanced-5" />
+			</attribute>
+			<attribute name="advanced-tier-variation" type="Int8" repeat="5" default="0" max="3" />
+			<attribute name="advanced-tier-variation-flag-op" type="Seq" repeat="5" default="equal">
+				<case name="equal" />
+				<case name="not" />
+			</attribute>
+		</sub>
+		<sub name="boss-training">
+			<attribute name="boss-npc" type="Ref" ref="npc" refel="1" />
+			<attribute name="boss-desc" type="Ref" ref="text" refel="1" />
+			<attribute name="boss-combat-desc" type="Ref" ref="text" refel="1" />
+			<attribute name="boss-combat-tips-desc" type="Ref" ref="text" refel="1" />
+			<attribute name="boss-image" type="String" default="" max="50" />
+			<attribute name="dungeon-name" type="Ref" ref="text" refel="1" />
+			<attribute name="dungeon-group" type="Seq" default="none">
+				<case name="none" />
+				<case name="party" />
+				<case name="team" />
+			</attribute>
+		</sub>
+	</el>
+</table>
