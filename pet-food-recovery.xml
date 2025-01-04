@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="pet-food-recovery" type="290" version="1.0" module="6" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="item-grade" type="Int8" repeat="4" default="0" max="9" />
+		<attribute name="recovery-amount" type="Int16" repeat="4" default="0" max="30000" />
+	</el>
+</table>

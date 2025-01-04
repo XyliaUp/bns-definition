@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="sealed-dungeon-modify" type="334" version="6.4" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="32767" />
+		<attribute name="sealed-level" type="Int8" key="True" required="True" max="127" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="modify-npc-exp-percent" type="Int16" default="0" max="32767" />
+		<attribute name="modify-npc-sealed-dungeon-exp-percent" type="Int16" default="0" max="32767" />
+		<attribute name="modify-clear-sealed-dungeon-exp-percent" type="Int32" default="0" max="2147483647" />
+		<attribute name="modify-npc-immune-breaker-count" type="Int8" default="0" max="127" />
+		<attribute name="modify-npc-immune-breaker-init-duration" type="Msec" default="0" max="2147483647" />
+		<attribute name="modify-skill-duration" type="Int16" default="100" min="100" max="32767" />
+		<attribute name="gimmick-option-fixed" type="Ref" repeat="5" ref="sealed-dungeon-gimmick" refel="1" />
+		<attribute name="gimmick-option-week-1" type="Ref" repeat="2" ref="sealed-dungeon-gimmick" refel="1" />
+		<attribute name="gimmick-option-week-2" type="Ref" repeat="2" ref="sealed-dungeon-gimmick" refel="1" />
+		<attribute name="gimmick-option-week-3" type="Ref" repeat="2" ref="sealed-dungeon-gimmick" refel="1" />
+		<attribute name="gimmick-option-week-4" type="Ref" repeat="2" ref="sealed-dungeon-gimmick" refel="1" />
+		<attribute name="gimmick-option-week-5" type="Ref" repeat="2" ref="sealed-dungeon-gimmick" refel="1" />
+		<attribute name="target-boss-npc" type="Ref" repeat="3" ref="npc" refel="1" />
+		<attribute name="boss-npc-effect-week-1" type="Ref" repeat="5" ref="effect" refel="1" />
+		<attribute name="boss-npc-effect-week-2" type="Ref" repeat="5" ref="effect" refel="1" />
+		<attribute name="boss-npc-effect-week-3" type="Ref" repeat="5" ref="effect" refel="1" />
+		<attribute name="boss-npc-effect-week-4" type="Ref" repeat="5" ref="effect" refel="1" />
+		<attribute name="boss-npc-effect-week-5" type="Ref" repeat="5" ref="effect" refel="1" />
+		<attribute name="boss-npc-effect-tooltip-week-1" type="String" default="" max="90" />
+		<attribute name="boss-npc-effect-tooltip-week-2" type="String" default="" max="90" />
+		<attribute name="boss-npc-effect-tooltip-week-3" type="String" default="" max="90" />
+		<attribute name="boss-npc-effect-tooltip-week-4" type="String" default="" max="90" />
+		<attribute name="boss-npc-effect-tooltip-week-5" type="String" default="" max="90" />
+		<attribute name="boss-npc-effect-icon-week-1" type="Ref" ref="icontexture" refel="1" />
+		<attribute name="boss-npc-effect-icon-week-2" type="Ref" ref="icontexture" refel="1" />
+		<attribute name="boss-npc-effect-icon-week-3" type="Ref" ref="icontexture" refel="1" />
+		<attribute name="boss-npc-effect-icon-week-4" type="Ref" ref="icontexture" refel="1" />
+		<attribute name="boss-npc-effect-icon-week-5" type="Ref" ref="icontexture" refel="1" />
+		<attribute name="boss-npc-effect-icon-index-week-1" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="boss-npc-effect-icon-index-week-2" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="boss-npc-effect-icon-index-week-3" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="boss-npc-effect-icon-index-week-4" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="boss-npc-effect-icon-index-week-5" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="contents-reset" type="Ref" ref="contents-reset" refel="1" />
+		<attribute name="use-level-first-clear" type="Bool" default="n" />
+		<attribute name="use-level-first-clear-next-level" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="dungeon-id" type="Ref" hidden="True" ref="dungeon" refel="1" />
+		<attribute name="reward-summary" type="Ref" ref="attractionrewardsummary" refel="1" />
+		<attribute name="scroll-boss-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="scroll-boss-back-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="recommend-attack-power-sealed-dungeon" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="recommend-alias-sealed-dungeon" type="Ref" ref="contentsjournalrecommenditem" refel="1" />
+		<attribute name="hide-skill-decal" type="Bool" default="n" />
+	</el>
+</table>

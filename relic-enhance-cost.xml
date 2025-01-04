@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="relic-enhance-cost" type="325" version="1.0" module="6" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="enhance-money" type="Int32" default="0" max="2147483647" />
+		<attribute name="enhance-required-item" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="enhance-required-item-count" type="Int16" repeat="4" default="1" min="-32768" max="32767" />
+		<attribute name="enhance-reset-enable" type="Bool" default="n" />
+		<attribute name="enhance-reset-money" type="Int32" default="0" max="2147483647" />
+		<attribute name="enhance-reset-required-item" type="Ref" repeat="4" ref="item" refel="1" />
+		<attribute name="enhance-reset-required-item-count" type="Int16" repeat="4" default="1" min="-32768" max="32767" />
+	</el>
+</table>

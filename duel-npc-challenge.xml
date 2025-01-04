@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="duel-npc-challenge" type="110" version="2.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="season-enable" type="Bool" default="n" />
+		<attribute name="zone" type="Ref" required="True" ref="zone" refel="1" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="group" type="Ref" ref="attraction-group" refel="1" />
+		<attribute name="required-level" type="Int8" default="0" max="100" />
+		<attribute name="required-mastery-level" type="Int8" default="0" max="100" />
+		<attribute name="required-preceding-quest" type="Ref" repeat="3" ref="quest" refel="1" />
+		<attribute name="required-preceding-quest-check" type="Seq" default="and">
+			<case name="and" />
+			<case name="or" />
+		</attribute>
+		<attribute name="recommend-attack-power" type="Int16" default="0" max="9999" />
+		<attribute name="standard-gear-weapon" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="center-x" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="center-y" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="center-z" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="radius" type="Float32" default="0" fmin="1" fmax="3.40282347E+38" />
+		<attribute name="duel-npc-spawn-delay" type="Msec" default="0" max="3600000" />
+		<attribute name="ready-duration" type="Msec" default="0" max="3600000" />
+		<attribute name="waiting-time" type="Msec" default="0" max="3600000" />
+		<attribute name="stand-by-time" type="Msec" default="0" max="3600000" />
+		<attribute name="choose-skill-time" type="Msec" default="0" max="3600000" />
+		<attribute name="choose-skill-time-only" type="Msec" default="40000" max="1000000" />
+		<attribute name="wating-leave-time" type="Msec" default="0" max="3600000" />
+		<attribute name="total-round" type="Int8" default="5" min="1" max="20" />
+		<attribute name="max-floor" type="Int16" default="1" min="1" max="100" />
+		<attribute name="usable-floor" type="Int16" default="1" min="1" max="100" />
+		<attribute name="duel-npc-challenge-group" type="Ref" repeat="100" ref="duel-npc-challenge-group" refel="1" />
+		<attribute name="card-select-delay-duration" type="Msec" default="0" max="3600000" />
+		<attribute name="change-floor-delay-duration" type="Msec" default="0" max="3600000" />
+		<attribute name="change-floor-kismet-name" type="String" repeat="10" default="" max="50" />
+		<attribute name="change-floor-show-name" type="String" repeat="10" default="" max="50" />
+		<attribute name="result-show-delay-duration" type="Msec" default="0" max="3600000" />
+		<attribute name="scroll-boss-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="countdown-sound-name" type="String" default="" max="50" />
+		<attribute name="active-strategic-skill-count" type="Int8" default="1" min="-128" max="127" />
+		<attribute name="passive-strategic-skill-count" type="Int8" default="6" min="-128" max="127" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="dungeon-name2" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="dungeon-desc" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="arena-minimap" type="String" default="" max="70" />
+		<attribute name="reward-summary" type="Ref" ref="attractionrewardsummary" refel="1" />
+		<attribute name="ui-text-grade" type="Int8" default="0" min="-128" max="8" />
+		<attribute name="recommand-level-min" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-level-max" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-mastery-level-min" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="recommand-mastery-level-max" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="display-quests" type="Ref" repeat="12" hidden="True" ref="quest" refel="1" />
+		<attribute name="tactic" type="Ref" ref="text" refel="1" />
+		<attribute name="recommend-alias" type="Ref" ref="contentsjournalrecommenditem" refel="1" />
+		<attribute name="entrance-quota" type="Ref" ref="content-quota" refel="1" />
+		<attribute name="contents-reset" type="Ref" hidden="True" ref="contents-reset" refel="1" />
+	</el>
+</table>

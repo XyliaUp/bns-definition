@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="item-graph" type="202" version="1.16" module="4" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<sub name="seed">
+			<attribute name="seed-item" type="Ref" repeat="42" ref="item" refel="1" />
+			<attribute name="seed-item-group" type="Ref" ref="item-graph-seed-group" refel="1" />
+			<attribute name="seed-item-sub-group" type="Seq" repeat="42" default="sub-group-1">
+				<case name="sub-group-1" />
+				<case name="sub-group-2" />
+			</attribute>
+			<attribute name="node-type" type="Seq" required="True">
+				<case name="seed-normal" />
+				<case name="seed-black-sky" />
+			</attribute>
+			<attribute name="attribute-group" type="Seq" default="none">
+				<case name="none" />
+				<case name="attribute-group-1" />
+				<case name="attribute-group-2" />
+			</attribute>
+			<attribute name="item-equip-type" type="Seq" required="True">
+				<case name="none" />
+				<case name="weapon" />
+				<case name="costume" />
+				<case name="earring" />
+				<case name="eyeglass" />
+				<case name="hat" />
+				<case name="ring" />
+				<case name="necklace" />
+				<case name="gem-1" />
+				<case name="gem-2" />
+				<case name="gem-3" />
+				<case name="gem-4" />
+				<case name="gem-5" />
+				<case name="gem-6" />
+				<case name="gem-7" />
+				<case name="gem-8" />
+				<case name="attach" />
+				<case name="belt" />
+				<case name="bracelet" />
+				<case name="soul" />
+				<case name="soul-2" />
+				<case name="gloves" />
+				<case name="pet-1" />
+				<case name="pet-2" />
+				<case name="rune-1" />
+				<case name="rune-2" />
+				<case name="nova" />
+				<case name="badge-1-premium" />
+				<case name="badge-2-premium" />
+				<case name="badge-3-premium" />
+				<case name="badge-1-normal" />
+				<case name="badge-2-normal" />
+				<case name="badge-3-normal" />
+				<case name="badge-appearance" />
+				<case name="vehicle" />
+				<case name="normal-state-appearance" />
+				<case name="idle-state-appearance" />
+				<case name="chatting-symbol" />
+				<case name="portrait-appearance" />
+				<case name="hypermove-appearance" />
+				<case name="name-plate-appearance" />
+				<case name="speech-bubble-appearance" />
+				<case name="talk-social" />
+				<case name="armlet-1" />
+				<case name="armlet-2" />
+			</attribute>
+			<attribute name="growth-category" type="Seq" default="none">
+				<case name="none" />
+				<case name="dungeon" />
+				<case name="raid" />
+				<case name="pvp" />
+				<case name="attribute" />
+				<case name="etc1" />
+				<case name="etc2" />
+			</attribute>
+			<attribute name="row" type="Int16" default="0" max="30000" />
+			<attribute name="column" type="Int16" default="0" max="30000" />
+		</sub>
+		<sub name="edge">
+			<attribute name="edge-type" type="Seq" required="True">
+				<case name="growth" />
+				<case name="awaken" />
+				<case name="transform" />
+				<case name="jump-transform" />
+				<case name="purification" />
+			</attribute>
+			<attribute name="attribute-group" type="Seq" default="none">
+				<case name="none" />
+				<case name="attribute-group-1" />
+				<case name="attribute-group-2" />
+			</attribute>
+			<attribute name="seed-item-sub-group" type="Seq" default="sub-group-1">
+				<case name="sub-group-1" />
+				<case name="sub-group-2" />
+			</attribute>
+			<attribute name="feed-item" type="Ref" ref="item" refel="1" />
+			<attribute name="feed-recipe" type="Ref" ref="itemtransformrecipe" refel="1" />
+			<attribute name="start-item" type="Ref" required="True" ref="item" refel="1" />
+			<attribute name="start-orientation" type="Seq" default="vertical">
+				<case name="horizontal" />
+				<case name="vertical" />
+			</attribute>
+			<attribute name="end-item" type="Ref" required="True" ref="item" refel="1" />
+			<attribute name="end-orientation" type="Seq" default="vertical">
+				<case name="horizontal" />
+				<case name="vertical" />
+			</attribute>
+			<attribute name="success-probability" type="Seq" default="definite">
+				<case name="definite" />
+				<case name="stochastic" />
+			</attribute>
+			<attribute name="has-arrow" type="Bool" default="y" />
+		</sub>
+	</el>
+</table>

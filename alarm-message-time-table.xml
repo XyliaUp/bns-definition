@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="alarm-message-time-table" type="10" version="0.1" module="4" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="enable" type="Bool" required="True" />
+		<attribute name="alarm-type" type="Seq" required="True">
+			<case name="none" />
+			<case name="bns-tv-end" />
+			<case name="fevertime-duel-end" />
+			<case name="fevertime-party_battle-field-end" />
+			<case name="fevertime-tendency-field-end" />
+			<case name="championship-duel-end" />
+			<case name="guild-battle-field-end" />
+			<case name="guild-combat-end" />
+			<case name="peaktime-end" />
+			<case name="invade-town-end" />
+			<case name="training-duel-end" />
+			<case name="training-party-battle-field-end" />
+			<case name="faction-battle-field-end" />
+			<case name="public-raid-entrance-end" />
+			<case name="public-raid-2-entrance-end" />
+			<case name="public-raid-3-entrance-end" />
+			<case name="public-raid-5-entrance-end" />
+			<case name="timelimit-duel-solo-end" />
+			<case name="timelimit-duel-tagmatch-end" />
+			<case name="battleroyal-entrance-end" />
+			<case name="boardgacha-end" />
+			<case name="bns-tv-start" />
+			<case name="fevertime-duel-start" />
+			<case name="fevertime-party_battle-field-start" />
+			<case name="fevertime-tendency-field-start" />
+			<case name="championship-duel-start" />
+			<case name="guild-battle-field-start" />
+			<case name="guild-combat-start" />
+			<case name="peaktime-start" />
+			<case name="invade-town-start" />
+			<case name="training-duel-start" />
+			<case name="training-party-battle-field-start" />
+			<case name="faction-battle-field-start" />
+			<case name="public-raid-entrance-start" />
+			<case name="public-raid-2-entrance-start" />
+			<case name="public-raid-3-entrance-start" />
+			<case name="public-raid-5-entrance-start" />
+			<case name="timelimit-duel-solo-start" />
+			<case name="timelimit-duel-tagmatch-start" />
+			<case name="battleroyal-entrance-start" />
+			<case name="boardgacha-start" />
+			<case name="attendance-playable" />
+			<case name="attendance-reset" />
+			<case name="random-store-reset" />
+			<case name="daily-quest-reset" />
+			<case name="weekly-quest-reset" />
+			<case name="daily-dungeon-reset" />
+			<case name="raid-dungeon-reset" />
+			<case name="goods-store-today-goods-reset" />
+			<case name="attendance-time-table-reset" />
+			<case name="public-raid-entrance-notify" />
+			<case name="public-raid-2-entrance-notify" />
+			<case name="public-raid-3-entrance-notify" />
+			<case name="public-raid-5-entrance-notify" />
+			<case name="battleroyal-entrance-notify" />
+			<case name="life-contents-time-table-reset" />
+			<case name="energy-point-reward-reset" />
+			<case name="dungeon-bonus-reward-reset" />
+			<case name="start-new-type" />
+			<case name="worldboss" />
+		</attribute>
+		<attribute name="sun-start-hour" type="Int8" repeat="12" default="-1" min="-1" max="23" />
+		<attribute name="sun-end-hour" type="Int8" repeat="12" default="-1" min="-1" max="30" />
+		<attribute name="mon-start-hour" type="Int8" repeat="12" default="-1" min="-1" max="23" />
+		<attribute name="mon-end-hour" type="Int8" repeat="12" default="-1" min="-1" max="30" />
+		<attribute name="tue-start-hour" type="Int8" repeat="12" default="-1" min="-1" max="23" />
+		<attribute name="tue-end-hour" type="Int8" repeat="12" default="-1" min="-1" max="30" />
+		<attribute name="wed-start-hour" type="Int8" repeat="12" default="-1" min="-1" max="23" />
+		<attribute name="wed-end-hour" type="Int8" repeat="12" default="-1" min="-1" max="30" />
+		<attribute name="thu-start-hour" type="Int8" repeat="12" default="-1" min="-1" max="23" />
+		<attribute name="thu-end-hour" type="Int8" repeat="12" default="-1" min="-1" max="30" />
+		<attribute name="fri-start-hour" type="Int8" repeat="12" default="-1" min="-1" max="23" />
+		<attribute name="fri-end-hour" type="Int8" repeat="12" default="-1" min="-1" max="30" />
+		<attribute name="sat-start-hour" type="Int8" repeat="12" default="-1" min="-1" max="23" />
+		<attribute name="sat-end-hour" type="Int8" repeat="12" default="-1" min="-1" max="30" />
+		<attribute name="start-minute" type="Int8" default="-1" min="-1" max="59" />
+		<attribute name="end-minute" type="Int8" default="-1" min="-1" max="59" />
+		<attribute name="start-gamemessage" type="Ref" ref="game-message" refel="1" />
+		<attribute name="start-gamemessage_remain" type="Ref" ref="game-message" refel="1" />
+		<attribute name="end-gamemessage" type="Ref" ref="game-message" refel="1" />
+		<attribute name="end-gamemessage_remain" type="Ref" ref="game-message" refel="1" />
+		<attribute name="clock-alarm-desc-start" type="Ref" ref="text" refel="1" />
+		<attribute name="clock-alarm-desc-progressing" type="Ref" ref="text" refel="1" />
+		<attribute name="clock-alarm-desc-end" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

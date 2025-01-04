@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="skill-train-category" type="373" version="0.39" module="14">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="job" type="Prop_seq" key="True" required="True">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="view-skill-id" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="tree-id" type="Int32" default="1" min="1" max="200000000" />
+		<attribute name="pc-level" type="Int16" default="1" min="1" max="70" />
+		<attribute name="pc-mastery-level" type="Int16" default="0" max="100" />
+		<attribute name="complete-quest" type="Ref" ref="quest" refel="1" />
+		<attribute name="jumping-pc-complete-quest" type="Ref" ref="quest" refel="1" />
+		<attribute name="consumed-tp" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="sort-id" type="Int8" default="0" max="255" />
+		<attribute name="ui-invisible" type="Bool" default="n" />
+		<attribute name="context-lock-disable" type="Bool" default="n" />
+	</el>
+</table>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="ranking2-reward-group" type="317" version="3.0" module="16390">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="reward-group-ranking-top" type="Int32" repeat="20" default="0" max="5000" />
+		<attribute name="reward-group-ranking-bottom" type="Int32" repeat="20" default="0" max="5000" />
+		<attribute name="reward" type="Ref" repeat="20" ref="ranking2-reward" refel="1" />
+		<attribute name="effect-reward-group-ranking-top" type="Int32" repeat="20" default="0" max="1000" />
+		<attribute name="effect-reward-group-ranking-bottom" type="Int32" repeat="20" default="0" max="1000" />
+		<attribute name="effect-reward" type="Ref" repeat="20" ref="ranking2-effect-reward" refel="1" />
+		<attribute name="default-job-ranking-imageset-large" type="XUnknown2" default="" max="256" />
+		<attribute name="default-job-ranking-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="job-ranking-imageset-large" type="XUnknown2" repeat="20" default="" max="256" />
+		<attribute name="job-ranking-imageset" type="XUnknown2" repeat="20" default="" max="256" />
+		<attribute name="default-total-ranking-imageset-large" type="XUnknown2" default="" max="256" />
+		<attribute name="default-total-ranking-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="total-ranking-imageset-large" type="XUnknown2" repeat="20" default="" max="256" />
+		<attribute name="total-ranking-imageset" type="XUnknown2" repeat="20" default="" max="256" />
+		<attribute name="ranking-buff-imageset" type="XUnknown2" repeat="20" default="" max="256" />
+		<attribute name="ranking-top-ranker-imageset" type="XUnknown2" repeat="3" default="" max="256" />
+	</el>
+</table>

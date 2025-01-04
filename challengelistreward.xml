@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="challengelistreward" type="52" version="0.1" module="6" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="reward-item" type="Ref" repeat="6" ref="item" refel="1" />
+		<attribute name="reward-item-count" type="Int16" repeat="6" default="1" min="-32768" max="32767" />
+		<attribute name="reward-money" type="Int32" default="0" max="2147483647" />
+		<attribute name="reward-account-exp" type="Int32" default="0" min="-2147483647" max="2147483647" />
+	</el>
+</table>

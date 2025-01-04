@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="event-contents" type="127" version="0.5" module="4" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="publisher" type="Seq" default="none">
+			<case name="none" />
+			<case name="nc-korea" />
+			<case name="tencent" />
+			<case name="nc-taiwan" />
+			<case name="nc-japan" />
+			<case name="nc-west" />
+			<case name="innova" />
+			<case name="rncs" />
+			<case name="rtx" />
+			<case name="zncs" />
+			<case name="ztx" />
+			<case name="all" />
+		</attribute>
+		<attribute name="zone-id" type="Int32" default="0" min="-2147483647" max="30000" />
+		<attribute name="start-year" type="Int16" default="0" max="32767" />
+		<attribute name="start-month" type="Int8" default="0" max="12" />
+		<attribute name="start-day" type="Int8" default="0" max="31" />
+		<attribute name="start-hour" type="Int8" default="-1" min="-1" max="23" />
+		<attribute name="end-year" type="Int16" default="0" max="32767" />
+		<attribute name="end-month" type="Int8" default="0" max="12" />
+		<attribute name="end-day" type="Int8" default="0" max="31" />
+		<attribute name="end-hour" type="Int8" default="-1" min="-1" max="24" />
+		<attribute name="sub-level-ref" type="String" default="" max="80" />
+	</el>
+</table>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="item-group" type="204" version="1.3" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="member-item" type="Ref" repeat="50" ref="item" refel="1" />
+		<attribute name="member-item-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+	</el>
+</table>

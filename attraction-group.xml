@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="attraction-group" type="16" version="0.1" module="14" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+	</el>
+</table>

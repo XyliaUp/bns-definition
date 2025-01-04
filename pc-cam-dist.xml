@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="pc-cam-dist" type="281" version="0.5" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="race" type="Prop_seq" key="True" required="True">
+			<case name="race-none" />
+			<case name="건" />
+			<case name="곤" />
+			<case name="린" />
+			<case name="진" />
+			<case name="나쁜몹" />
+			<case name="더나쁜몹" />
+			<case name="무서운몹" />
+			<case name="더무서운몹" />
+			<case name="더더무서운몹" />
+			<case name="고양이" />
+			<case name="강림체" />
+			<case name="악귀" />
+		</attribute>
+		<attribute name="sex" type="Prop_seq" key="True" required="True">
+			<case name="sex-none" />
+			<case name="남" />
+			<case name="여" />
+			<case name="중" />
+		</attribute>
+		<attribute name="stance" type="Prop_seq" key="True" required="True">
+			<case name="stance-none" />
+			<case name="npc기본자세" />
+			<case name="천검세" />
+			<case name="검령세" />
+			<case name="단타" />
+			<case name="연계" />
+			<case name="체술" />
+			<case name="납도" />
+			<case name="경기공" />
+			<case name="연기공" />
+			<case name="강기공" />
+			<case name="권총모드" />
+			<case name="런처모드" />
+			<case name="파괴" />
+			<case name="보호" />
+			<case name="철벽" />
+			<case name="소환" />
+			<case name="교란" />
+			<case name="은신" />
+			<case name="암살" />
+			<case name="검술" />
+			<case name="어검" />
+			<case name="발도" />
+			<case name="npc자세1" />
+			<case name="npc자세2" />
+			<case name="npc자세3" />
+			<case name="소환수-follow" />
+			<case name="소환수-command-1" />
+			<case name="소환수-flying" />
+			<case name="주술" />
+			<case name="강림" />
+			<case name="유권" />
+			<case name="기공" />
+			<case name="냉정" />
+			<case name="광기" />
+			<case name="장궁" />
+			<case name="정령궁" />
+			<case name="찌르기" />
+			<case name="베기" />
+			<case name="청뢰" />
+			<case name="혈뢰" />
+			<case name="어검세" />
+			<case name="정수" />
+			<case name="역수" />
+			<case name="한손역수" />
+			<case name="간이연주" />
+			<case name="우퍼" />
+			<case name="연주" />
+			<case name="쌍월" />
+			<case name="뇌신" />
+			<case name="침식" />
+			<case name="염제" />
+			<case name="npc주시자세1" />
+			<case name="npc주시자세2" />
+			<case name="npc주시자세3" />
+		</attribute>
+		<attribute name="combat-mode" type="Bool" key="True" required="True" />
+		<attribute name="height-transition" type="Float32" default="180" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="middle-transition" type="Float32" default="180" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="far-limit" type="Float32" deprecated="True" default="300" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="far-limit-min" type="Float32" default="300" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="far-limit-max" type="Float32" default="700" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="worldboss-camera-limit-min" type="Float32" default="300" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="worldboss-camera-limit-max" type="Float32" default="700" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="transparency" type="Float32" default="45" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="far-height" type="Float32" default="72" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="middle-height" type="Float32" default="72" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="near-height" type="Float32" default="70" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="modulate-factor" type="Float32" default="70" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+	</el>
+</table>

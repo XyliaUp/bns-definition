@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="guilduniformrecipe" type="178" version="0.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="recipe-id" type="Int32" key="True" required="True" min="2" max="2000000000" />
+		<attribute name="required-item" type="Ref" repeat="2" ref="item" refel="1" />
+		<attribute name="required-item-count" type="Int32" repeat="2" default="0" max="30000" />
+		<attribute name="required-item-is-bm" type="Bool" repeat="2" default="n" />
+		<attribute name="bank-money" type="Int32" required="True" max="1000000000" />
+		<attribute name="bank-required-item" type="Ref" repeat="5" ref="item" refel="1" />
+		<attribute name="bank-required-item-count" type="Int32" repeat="5" default="0" max="30000" />
+	</el>
+</table>

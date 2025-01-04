@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="mapinfo" type="249" version="1.5" module="12">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="-32768" max="32767" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="group-id" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="floor" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="parent-mapinfo" type="Ref" ref="mapinfo" refel="1" />
+		<attribute name="scale" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="district" type="Ref" ref="district" refel="1" />
+		<attribute name="map-group-1" type="Ref" ref="map-group-1" refel="1" />
+		<attribute name="map-group-2" type="Ref" ref="map-group-2" refel="1" />
+		<attribute name="origin-x" type="Int32" deprecated="True" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="origin-y" type="Int32" deprecated="True" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="local-axis-x" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="local-axis-y" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="offset-x" type="Int16" deprecated="True" default="0" min="-32768" max="32767" />
+		<attribute name="offset-y" type="Int16" deprecated="True" default="0" min="-32768" max="32767" />
+		<attribute name="image-size" type="Int16" default="1" min="-32768" max="32767" />
+		<attribute name="imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="imageset-alphamap" type="XUnknown2" default="" max="256" />
+		<attribute name="imageset-condition-category" type="Seq" default="none">
+			<case name="none" />
+			<case name="quest-complete" />
+		</attribute>
+		<attribute name="imageset-condition-value" type="Int64" default="0" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="conditional-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="conditional-imageset-alphamap" type="XUnknown2" default="" max="256" />
+		<attribute name="overlay" type="Ref" repeat="30" ref="mapoverlay" refel="1" />
+		<attribute name="use-pos-in-parent" type="Bool" default="n" />
+		<attribute name="pos-in-parent-x" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="pos-in-parent-y" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="terrain" type="Ref" ref="terrain" refel="1" />
+		<attribute name="world-coord-x" type="Float32" deprecated="True" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="world-coord-y" type="Float32" deprecated="True" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="zoom" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="sort-no" type="Int16" default="0" min="-32768" max="30000" />
+		<attribute name="show-navigaion-list" type="Bool" default="true" />
+		<attribute name="arena-dungeon-parent-mapinfo" type="Ref" ref="mapinfo" refel="1" />
+		<attribute name="arena-dungeon-use-pos-in-parent" type="Bool" default="n" />
+		<attribute name="arena-dungeon-pos-in-parent-x" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="arena-dungeon-pos-in-parent-y" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="capital" type="Bool" hidden="True" default="n" />
+	</el>
+</table>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="battleroyalfieldeffectpouchmesh" type="34" version="0.2" module="4" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="skeletal-mesh" type="String" default="00009256.item_0009" max="128" />
+		<attribute name="anim-set" type="String" default="00006916.DropItem_Anim" max="128" />
+		<attribute name="physics-asset" type="String" default="00009256.item_0009_Physics" max="128" />
+		<attribute name="icon" type="Icon" max="32767" />
+		<attribute name="owner-particle" type="String" default="" max="50" />
+		<attribute name="mark-particle" type="String" default="" max="50" />
+	</el>
+</table>

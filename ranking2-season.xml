@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="ranking2-season" type="318" version="9.3" module="16390">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="season-group" type="Ref" ref="ranking2-season-group" refel="1" dynamic="True" />
+		<attribute name="season-number" type="Int8" default="0" min="1" max="10" dynamic="True" />
+		<attribute name="season-type" type="Seq" default="normal" dynamic="True">
+			<case name="invalid" />
+			<case name="normal" />
+			<case name="free" />
+		</attribute>
+		<attribute name="name" type="String" default="" max="70" dynamic="True" />
+		<attribute name="name-en" type="String" default="" max="70" dynamic="True" />
+		<attribute name="name-fr" type="String" default="" max="70" dynamic="True" />
+		<attribute name="name-de" type="String" default="" max="70" dynamic="True" />
+		<attribute name="name-pt" type="String" default="" max="70" dynamic="True" />
+		<attribute name="name-th" type="String" default="" max="70" dynamic="True" />
+		<attribute name="name-vn" type="String" default="" max="70" dynamic="True" />
+		<attribute name="name-text" type="Ref" ref="text" refel="1" />
+		<attribute name="job-ranking" type="Bool" default="n" dynamic="True" />
+		<attribute name="total-season" type="Ref" ref="ranking2-season" refel="1" dynamic="True" />
+		<attribute name="season-schedule" type="Ref" repeat="20" ref="ranking2-season-schedule" refel="1" dynamic="True" />
+		<attribute name="main-season-schedule" type="Ref" ref="ranking2-season-schedule" refel="1" dynamic="True" />
+		<attribute name="season-representative-icon" type="XUnknown2" default="" max="256" />
+		<attribute name="list-background-imageset" type="XUnknown2" default="" max="256" />
+	</el>
+</table>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="text" type="425" version="0.6" module="1052" autokey="True" pattern="TextData*.x16">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="text" type="Native" default="" />
+	</el>
+</table>

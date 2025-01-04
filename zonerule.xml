@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="zonerule" type="479" version="9.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="zone" type="Int32" key="True" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="enable-infinite-hyper-energy" type="Bool" default="n" />
+		<attribute name="enable-reset-combat-mode" type="Bool" default="n" />
+		<attribute name="reset-combat-mode-recycle-duration" type="Msec" default="0" max="600000" />
+		<attribute name="enable-co-ownership-pouch" type="Bool" default="n" />
+		<attribute name="enable-pvp" type="Bool" default="n" />
+		<attribute name="pvp-mode-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="free-for-all" />
+		</attribute>
+		<attribute name="required_inactivated_main_faction" type="Bool" default="n" />
+		<attribute name="required-activated-main-faction" type="Bool" default="n" />
+		<attribute name="apply-content-ban-id" type="Seq" default="invalid">
+			<case name="invalid" />
+			<case name="duel" />
+			<case name="faction battle field" />
+			<case name="dungeon" />
+			<case name="attendance" />
+			<case name="jumping character" />
+			<case name="duel bot challenge" />
+			<case name="fraud" />
+			<case name="zone rule group" />
+			<case name="party battle field matching" />
+			<case name="duel matching" />
+		</attribute>
+		<attribute name="allow-invite-party-in-arena" type="Bool" default="n" />
+		<attribute name="show-leave-zone-popup-when-no-party-in-arena-enterance" type="Bool" default="y" />
+		<attribute name="required-available-weekly-time" type="Ref" ref="weeklytimetable" refel="1" />
+		<attribute name="town" type="Bool" default="n" />
+		<attribute name="reentrance-pcspawn-check-later-when-enterworld" type="Bool" default="n" />
+		<attribute name="infinite-durability" type="Bool" default="n" />
+		<attribute name="enable-auto-mode" type="Bool" default="n" />
+		<attribute name="auto-mode-type" type="Seq" default="basic">
+			<case name="disallow" />
+			<case name="basic" />
+			<case name="advanced" />
+		</attribute>
+		<attribute name="enable-auto-item-support" type="Bool" default="y" />
+		<attribute name="activate-vehicle" type="Bool" default="n" />
+		<attribute name="enable-change-channel" type="Bool" default="y" />
+		<attribute name="allow-invite-party-in-same-channel-only" type="Bool" default="n" />
+		<attribute name="enable-performance-option" type="Bool" default="n" />
+		<attribute name="is-world-boss-spawn-zone" type="Bool" default="n" />
+		<attribute name="use-default-skill" type="Bool" default="n" />
+	</el>
+</table>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="contentsjournal" type="71" version="0.10" module="4" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="cave" type="Ref" ref="cave2" refel="1" />
+		<attribute name="dungeon" type="Ref" ref="dungeon" refel="1" />
+		<attribute name="dungeon-solo" type="Ref" ref="dungeon" refel="1" />
+		<attribute name="raid-dungeon" type="Ref" ref="raid-dungeon" refel="1" />
+		<attribute name="sealed-dungeon-modify" type="Ref" ref="sealed-dungeon-modify" refel="1" />
+		<attribute name="boss-challenge" type="Ref" ref="boss-challenge" refel="1" />
+		<attribute name="duel-bot-challenge" type="Ref" ref="duel-bot-challenge" refel="1" />
+		<attribute name="duel-bot-training-room" type="Ref" ref="duel-bot-training-room" refel="1" />
+		<attribute name="tendency-field" type="Ref" ref="tendency-field" refel="1" />
+		<attribute name="simple-field" type="Ref" ref="simple-field" refel="1" />
+		<attribute name="classic-field-zone" type="Ref" ref="classic-field-zone" refel="1" />
+		<attribute name="time-limit-field-zone" type="Ref" ref="time-limit-field-zone" refel="1" />
+		<attribute name="teleport" type="Ref" ref="teleport" refel="1" />
+		<attribute name="sort-no" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="event" type="Bool" default="n" />
+	</el>
+</table>

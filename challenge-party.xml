@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="challenge-party" type="53" version="0.14" module="6" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="zone" type="Ref" required="True" ref="zone" refel="1" />
+		<attribute name="name2" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="arena-minimap" type="String" default="" max="70" />
+		<attribute name="required-item" type="Ref" repeat="2" ref="item" refel="1" />
+		<attribute name="required-item-count" type="Int16" repeat="2" default="1" max="1000" />
+		<attribute name="use-training-mode" type="Bool" default="n" />
+		<attribute name="group" type="Ref" ref="attraction-group" refel="1" />
+		<attribute name="play-time" type="Msec" default="0" max="3600000" />
+		<attribute name="pattern-time" type="Msec" repeat="8" default="0" max="600000" />
+		<attribute name="score-per-evaluate" type="Int32" default="100000" max="2147483647" />
+		<attribute name="kill-score" type="Int32" default="0" max="99999" />
+	</el>
+</table>

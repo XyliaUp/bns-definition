@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="world-account-card" type="454" version="0.5" module="6" maxid="30000">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int16" key="True" required="True" min="1" max="30000" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="item" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="disabled" type="Bool" default="n" />
+		<attribute name="sort-no" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="card-image" type="String" default="" max="128" />
+		<attribute name="card-original-image" type="String" repeat="4" default="" max="128" />
+		<attribute name="card-original-image-desc" type="Ref" repeat="4" ref="text" refel="1" />
+		<attribute name="set-card-original-image" type="Bool" hidden="True" default="n" />
+		<attribute name="special-effect" type="Bool" default="n" />
+		<attribute name="season" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="expedition" type="Ref" repeat="8" hidden="True" ref="worldaccountexpedition" refel="1" />
+	</el>
+</table>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="pet" type="289" version="0.7" module="12" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="mesh-name" type="XUnknown2" default="" max="256" />
+		<attribute name="mesh-scale" type="Float32" default="1.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="material-name" type="XUnknown2" repeat="3" default="" max="256" />
+		<attribute name="anim-set-name" type="XUnknown2" default="" max="256" />
+		<attribute name="anim-tree-name" type="XUnknown2" default="" max="256" />
+		<attribute name="caster-spawn-show" type="XUnknown2" default="" max="256" />
+		<attribute name="caster-despawn-show" type="XUnknown2" default="" max="256" />
+		<attribute name="idle-anim" type="String" default="" max="128" />
+		<attribute name="combat-idle-anim" type="String" default="" max="128" />
+		<attribute name="spawn-show" type="XUnknown2" default="" max="256" />
+		<attribute name="effect-show" type="XUnknown2" default="" max="256" />
+		<attribute name="despawn-show" type="XUnknown2" default="" max="256" />
+		<attribute name="food-show" type="XUnknown2" default="" max="256" />
+	</el>
+</table>

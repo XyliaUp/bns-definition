@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="partymatch" type="277" version="0.6" module="518" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name" type="Ref" required="True" ref="text" refel="1" />
+		<attribute name="faction" type="Ref" ref="faction" refel="1" />
+		<attribute name="level" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="party-chat-channel" type="Ref" ref="partychatchannel" refel="1" />
+	</el>
+</table>

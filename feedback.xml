@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="feedback" type="139" version="4.5" module="262" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="max-score-except-boss-npc" type="Int32" default="0" max="2147483647" />
+		<attribute name="boss-npc-kill-count" type="Int8" default="1" min="1" max="4" />
+		<attribute name="boss-npc" type="Ref" repeat="4" ref="feedback-boss-npc" refel="1" />
+		<attribute name="use-progress-info-ui" type="Bool" default="n" />
+		<attribute name="use-simple-result-ui" type="Bool" default="n" />
+		<attribute name="use-combat-signal-ui" type="Bool" default="n" />
+		<attribute name="attack-damage-rank" type="Ref" ref="feedback-rank" refel="1" />
+		<attribute name="received-damage-rank" type="Ref" ref="feedback-rank" refel="1" />
+		<attribute name="attack-response-rank" type="Ref" ref="feedback-rank" refel="1" />
+	</el>
+</table>

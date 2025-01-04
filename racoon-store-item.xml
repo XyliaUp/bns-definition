@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="racoon-store-item" type="306" version="3.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="slot-group" type="Int32" required="True" min="-2147483647" max="2147483647" />
+		<attribute name="item" type="Ref" required="True" ref="item" refel="1" />
+		<attribute name="item-count" type="Int16" default="0" min="-32768" max="32767" />
+		<attribute name="item-grade" type="Seq" default="good">
+			<case name="none" />
+			<case name="good" />
+			<case name="great" />
+			<case name="big-great" />
+		</attribute>
+		<attribute name="item-prob-weight" type="Int16" required="True" min="1" max="10000" />
+		<attribute name="item-cost" type="Int32" default="0" max="2100000000" />
+		<attribute name="cost-type" type="Seq" required="True">
+			<case name="none" />
+			<case name="item" />
+			<case name="stone" />
+			<case name="red-stone" />
+			<case name="money" />
+		</attribute>
+		<attribute name="cost-item" type="Ref" ref="item" refel="1" />
+	</el>
+</table>

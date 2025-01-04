@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="soul-boost-event" type="388" version="7.1" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="event-name-text" type="Ref" ref="text" refel="1" />
+		<attribute name="event-name" type="String" default="" max="32" dynamic="True" />
+		<attribute name="event-name-en" type="String" default="" max="32" dynamic="True" />
+		<attribute name="event-name-fr" type="String" default="" max="32" dynamic="True" />
+		<attribute name="event-name-de" type="String" default="" max="32" dynamic="True" />
+		<attribute name="event-name-pt" type="String" default="" max="32" dynamic="True" />
+		<attribute name="event-name-th" type="String" default="" max="32" dynamic="True" />
+		<attribute name="event-name-vn" type="String" default="" max="32" dynamic="True" />
+		<attribute name="mission-step-name-type" type="Seq" default="none" dynamic="True">
+			<case name="none" />
+			<case name="type-1" />
+			<case name="type-2" />
+			<case name="type-3" />
+			<case name="type-4" />
+			<case name="type-5" />
+			<case name="type-6" />
+			<case name="type-7" />
+			<case name="type-8" />
+		</attribute>
+		<attribute name="front-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="back-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="foot-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="slot-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="max-point" type="Int32" default="1" min="1" max="2000000000" dynamic="True" />
+		<attribute name="max-item-point" type="Int32" default="0" max="100000000" dynamic="True" />
+		<attribute name="grade-point" type="Int32" repeat="100" default="0" max="10000000" dynamic="True" />
+		<attribute name="grade-reward" type="Ref" repeat="100" ref="soul-boost-grade-reward" refel="1" dynamic="True" />
+		<attribute name="bm-grade-reward" type="Ref" repeat="100" ref="soul-boost-grade-reward" refel="1" dynamic="True" />
+		<attribute name="exchange-reward-point" type="Int32" default="0" max="10000000" dynamic="True" />
+		<attribute name="exchange-reward-item" type="Ref" ref="item" refel="1" dynamic="True" />
+		<attribute name="exchange-reward-item-count" type="Int16" default="1" min="1" max="32767" dynamic="True" />
+		<attribute name="exchange-reward-contribution" type="Int32" default="0" max="10000000" dynamic="True" />
+		<attribute name="bm-exchange-reward-point" type="Int32" default="0" max="10000000" dynamic="True" />
+		<attribute name="bm-exchange-reward-item" type="Ref" ref="item" refel="1" dynamic="True" />
+		<attribute name="bm-exchange-reward-item-count" type="Int16" default="1" min="1" max="32767" dynamic="True" />
+		<attribute name="bm-exchange-reward-contribution" type="Int32" default="0" max="10000000" dynamic="True" />
+		<attribute name="bm-accumulate-reward-interval-day" type="Int8" default="0" max="127" dynamic="True" />
+		<attribute name="bm-accumulate-reward-item" type="Ref" ref="item" refel="1" dynamic="True" />
+		<attribute name="bm-accumulate-reward-item-count" type="Int16" default="1" min="1" max="32767" dynamic="True" />
+		<attribute name="bm-accumulate-reward-start-time-type" type="Seq" default="season-start-time" dynamic="True">
+			<case name="none" />
+			<case name="season-start-time" />
+			<case name="participation-time" />
+		</attribute>
+		<attribute name="bm-activate-item" type="Ref" ref="item" refel="1" dynamic="True" />
+		<attribute name="bm-activate-item-count" type="Int16" default="1" min="1" max="32767" dynamic="True" />
+		<attribute name="unlocated-store-type" type="Seq" default="unlocated-none" dynamic="True">
+			<case name="unlocated-none" />
+			<case name="unlocated-store" />
+			<case name="account-store" />
+			<case name="soul-boost-store-1" />
+			<case name="soul-boost-store-2" />
+			<case name="soul-boost-store-3" />
+			<case name="soul-boost-store-4" />
+			<case name="soul-boost-store-5" />
+			<case name="soul-boost-store-6" />
+			<case name="event-store" />
+		</attribute>
+		<attribute name="mission-step" type="Ref" repeat="40" ref="soul-boost-mission-step" refel="1" dynamic="True" />
+		<attribute name="core-reward-item" type="Ref" repeat="10" ref="item" refel="1" dynamic="True" />
+		<attribute name="purchase-grade" type="Bool" default="n" dynamic="True" />
+	</el>
+</table>

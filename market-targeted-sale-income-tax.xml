@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="market-targeted-sale-income-tax" type="256" version="1.0" module="134" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="tax" type="Int32" required="True" min="-2147483647" max="2147483647" />
+	</el>
+</table>

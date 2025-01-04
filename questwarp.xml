@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="questwarp" type="302" version="1.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="quest-id" type="Int16" key="True" required="True" min="1" max="32001" />
+		<attribute name="mission-step-id" type="Int8" key="True" required="True" min="1" max="16" />
+		<attribute name="zone" type="Ref" ref="zone" refel="1" />
+		<attribute name="x" type="Int16" required="True" min="-32000" max="31999" />
+		<attribute name="y" type="Int16" required="True" min="-32000" max="31999" />
+		<attribute name="z" type="Int16" required="True" min="-32000" max="31999" />
+		<attribute name="yaw" type="Int16" required="True" min="-32000" max="31999" />
+	</el>
+</table>

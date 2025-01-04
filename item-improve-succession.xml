@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="item-improve-succession" type="210" version="2.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int32" key="True" required="True" min="1" max="2147483647" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="seed-improve-id" type="Int32" required="True" min="1" max="2147483647" />
+		<attribute name="seed-improve-level" type="Int8" required="True" max="127" />
+		<attribute name="result-improve-id" type="Int32" required="True" min="1" max="2147483647" />
+		<attribute name="result-improve-level" type="Int8" required="True" max="127" />
+		<attribute name="feed-main-improve-id" type="Int32" default="0" max="2147483647" />
+		<attribute name="feed-main-improve-level" type="Int8" default="0" max="127" />
+		<attribute name="feed-main-ingredient" type="Ref" ref="item" refel="1" />
+		<attribute name="feed-main-ingredient-count" type="Int16" default="0" max="30000" />
+		<attribute name="feed-sub-ingredient" type="Ref" repeat="8" ref="item" refel="1" />
+		<attribute name="feed-sub-ingredient-count" type="Int16" repeat="8" default="0" max="30000" />
+		<attribute name="cost-money" type="Int32" default="0" max="2147483647" />
+		<attribute name="feed-succession-option-step" type="Int8" repeat="5" default="0" max="5" />
+		<attribute name="result-succession-option-step" type="Int8" repeat="5" default="0" max="5" />
+		<attribute name="keep-main-ingredient-spirit" type="Bool" default="false" />
+	</el>
+</table>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="effect-list" type="117" version="1.1" module="6" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="effect" type="Ref" repeat="20" ref="effect" refel="1" />
+		<attribute name="effect-weight" type="Int16" repeat="20" default="0" max="32767" />
+		<attribute name="effect-total-weight" type="Int32" hidden="True" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="effect-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="draw-enable" type="Bool" default="n" />
+	</el>
+</table>

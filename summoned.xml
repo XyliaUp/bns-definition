@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="summoned" type="408" version="0.6" module="2062" maxid="65500">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int64" required="True" max="65500" />
+		<attribute name="race" type="Prop_seq" key="True" default="race-none">
+			<case name="race-none" />
+			<case name="건" />
+			<case name="곤" />
+			<case name="린" />
+			<case name="진" />
+			<case name="나쁜몹" />
+			<case name="더나쁜몹" />
+			<case name="무서운몹" />
+			<case name="더무서운몹" />
+			<case name="더더무서운몹" />
+			<case name="고양이" />
+			<case name="강림체" />
+			<case name="악귀" />
+		</attribute>
+		<attribute name="sex" type="Prop_seq" default="sex-none">
+			<case name="sex-none" />
+			<case name="남" />
+			<case name="여" />
+			<case name="중" />
+		</attribute>
+		<attribute name="job" type="Prop_seq" key="True" default="job-none">
+			<case name="job-none" />
+			<case name="검사" />
+			<case name="권사" />
+			<case name="기공사" />
+			<case name="격사" />
+			<case name="역사" />
+			<case name="소환사" />
+			<case name="암살자" />
+			<case name="귀검사" />
+			<case name="주술사" />
+			<case name="기권사" />
+			<case name="투사" />
+			<case name="궁사" />
+			<case name="창술사" />
+			<case name="뇌전술사" />
+			<case name="쌍검사" />
+			<case name="악사" />
+			<case name="pc-max" />
+			<case name="소환수-루키" />
+			<case name="소환수-striker" />
+			<case name="소환수-defender" />
+			<case name="소환수-controller" />
+		</attribute>
+		<attribute name="summoned-type" type="Seq" default="normal">
+			<case name="normal" />
+			<case name="ethereal" />
+		</attribute>
+		<attribute name="brain-type" type="Seq" default="normal">
+			<case name="normal" />
+			<case name="combat-follow" />
+			<case name="fixed" />
+		</attribute>
+		<attribute name="combat-follow-distance" type="Distance" default="200" min="200" max="32767" />
+		<attribute name="far-event-distance" type="Distance" default="0" max="32767" />
+		<attribute name="far-event-action-type" type="Seq" default="none">
+			<case name="none" />
+			<case name="recall" />
+			<case name="despawn" />
+		</attribute>
+		<attribute name="radius" type="Distance" default="0" max="5000" />
+		<attribute name="trace-master-skill-target" type="Bool" default="n" />
+		<attribute name="summoned-sequence" type="Ref" required="True" ref="summoned-sequence" refel="1" />
+		<attribute name="seq-skill" type="Int32" repeat="30" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="spawn-skill-id" type="Int32" default="0" min="-2147483647" max="2147483647" />
+		<attribute name="immune-skill-attribute" type="Seq" repeat="4" default="none">
+			<case name="none" />
+			<case name="막기" />
+			<case name="반격" />
+			<case name="튕기기" />
+			<case name="방어행동" />
+			<case name="대쉬" />
+			<case name="이동" />
+			<case name="회피" />
+			<case name="다운" />
+			<case name="넉백" />
+			<case name="기절" />
+			<case name="그로기" />
+			<case name="공중" />
+			<case name="행동불가" />
+			<case name="이동불가" />
+			<case name="다운대응" />
+			<case name="막기조건" />
+			<case name="회피조건" />
+			<case name="치명타조건" />
+			<case name="연계기" />
+			<case name="스탠스" />
+			<case name="회복" />
+			<case name="게이지회복" />
+			<case name="부활" />
+			<case name="지원" />
+			<case name="즉시시전" />
+			<case name="캐스팅" />
+			<case name="가드브레이크" />
+			<case name="발사체" />
+			<case name="발사체2" />
+			<case name="제압" />
+			<case name="관절기" />
+			<case name="장악" />
+			<case name="비인간장악" />
+			<case name="흡공" />
+			<case name="제압대응" />
+			<case name="장악대응" />
+			<case name="흡공대응" />
+			<case name="해제" />
+			<case name="독" />
+			<case name="쿨타임" />
+			<case name="불" />
+			<case name="얼음" />
+			<case name="전기" />
+			<case name="기공" />
+			<case name="트리거" />
+			<case name="워프" />
+			<case name="근거리" />
+			<case name="원거리" />
+			<case name="광역" />
+			<case name="이동가능" />
+			<case name="데미지존" />
+			<case name="상태면역" />
+			<case name="위치바꾸기" />
+			<case name="은사" />
+			<case name="도발" />
+		</attribute>
+		<attribute name="immune-effect-attribute" type="Seq16" repeat="8" default="none">
+			<case name="none" />
+			<case name="회복" />
+			<case name="진드기" />
+			<case name="불" />
+			<case name="은사" />
+			<case name="거미줄" />
+			<case name="독" />
+			<case name="은신" />
+			<case name="투명" />
+			<case name="광기" />
+			<case name="얼음감옥" />
+			<case name="독나방" />
+			<case name="가젯드랍" />
+			<case name="다운" />
+			<case name="넉백대시" />
+			<case name="방어불가" />
+			<case name="도발" />
+			<case name="도망" />
+			<case name="이동불가" />
+			<case name="대시불가" />
+			<case name="감속" />
+			<case name="기절" />
+			<case name="얼어붙음" />
+			<case name="행동불가" />
+			<case name="출혈" />
+			<case name="치유" />
+			<case name="얼음" />
+			<case name="맹독" />
+			<case name="막기" />
+			<case name="속박" />
+			<case name="제압" />
+			<case name="위치바꾸기" />
+			<case name="장악연계" />
+			<case name="무적" />
+			<case name="멍해짐" />
+			<case name="앞차기" />
+			<case name="혼절" />
+			<case name="광폭해짐" />
+			<case name="공중" />
+			<case name="그로기" />
+			<case name="난무" />
+			<case name="넉백" />
+			<case name="흡공" />
+			<case name="퀘스트-1" />
+			<case name="퀘스트-2" />
+			<case name="퀘스트-3" />
+			<case name="퀘스트-4" />
+			<case name="퀘스트-5" />
+			<case name="대상공중" />
+			<case name="보스-1" />
+			<case name="보스-2" />
+			<case name="보스-3" />
+			<case name="보스대쉬" />
+			<case name="그림자" />
+			<case name="중첩불가1" />
+			<case name="중첩불가2" />
+			<case name="조건만족" />
+			<case name="소환사독" />
+			<case name="탱킹장판" />
+			<case name="검막" />
+			<case name="비트" />
+			<case name="홍옥" />
+			<case name="녹주석" />
+			<case name="보스저항-1" />
+			<case name="보스저항-2" />
+			<case name="보스저항-3" />
+			<case name="보스저항-4" />
+			<case name="보스저항-5" />
+			<case name="낙인저항-1" />
+			<case name="낙인저항-2" />
+			<case name="낙인저항-3" />
+			<case name="낙인저항-4" />
+			<case name="마성-1" />
+			<case name="마성-2" />
+			<case name="마성-3" />
+			<case name="마성-4" />
+			<case name="주술체" />
+			<case name="소울" />
+			<case name="부적" />
+			<case name="환마" />
+			<case name="반사" />
+			<case name="NPC-1" />
+			<case name="NPC-2" />
+			<case name="NPC-3" />
+			<case name="NPC-4" />
+			<case name="NPC-5" />
+			<case name="NPC-6" />
+			<case name="NPC-7" />
+			<case name="NPC-8" />
+			<case name="NPC-9" />
+			<case name="NPC-10" />
+			<case name="낙인저항-5" />
+			<case name="낙인저항-6" />
+			<case name="낙인저항-7" />
+			<case name="낙인저항-8" />
+			<case name="클래스-1" />
+			<case name="클래스-2" />
+			<case name="클래스-3" />
+			<case name="클래스-4" />
+			<case name="클래스-5" />
+			<case name="클래스-6" />
+			<case name="클래스-7" />
+			<case name="클래스-8" />
+			<case name="클래스-9" />
+			<case name="클래스-10" />
+			<case name="클래스-11" />
+			<case name="클래스-12" />
+			<case name="클래스-13" />
+			<case name="클래스-14" />
+			<case name="클래스-15" />
+			<case name="클래스-16" />
+			<case name="클래스-17" />
+			<case name="클래스-18" />
+			<case name="클래스-19" />
+			<case name="클래스-20" />
+			<case name="클래스-21" />
+			<case name="클래스-22" />
+			<case name="클래스-23" />
+			<case name="클래스-24" />
+			<case name="클래스-25" />
+			<case name="클래스-26" />
+			<case name="클래스-27" />
+			<case name="클래스-28" />
+			<case name="클래스-29" />
+			<case name="클래스-30" />
+			<case name="클래스-31" />
+			<case name="클래스-32" />
+			<case name="클래스-33" />
+			<case name="클래스-34" />
+			<case name="클래스-35" />
+			<case name="클래스-36" />
+			<case name="클래스-37" />
+			<case name="클래스-38" />
+			<case name="클래스-39" />
+			<case name="클래스-40" />
+			<case name="클래스-41" />
+			<case name="클래스-42" />
+			<case name="클래스-43" />
+			<case name="클래스-44" />
+			<case name="클래스-45" />
+			<case name="클래스-46" />
+			<case name="클래스-47" />
+			<case name="클래스-48" />
+			<case name="클래스-49" />
+			<case name="클래스-50" />
+			<case name="클래스-51" />
+			<case name="클래스-52" />
+			<case name="클래스-53" />
+			<case name="클래스-54" />
+			<case name="클래스-55" />
+			<case name="클래스-56" />
+			<case name="클래스-57" />
+			<case name="클래스-58" />
+			<case name="클래스-59" />
+			<case name="클래스-60" />
+			<case name="아이템조건-1" />
+			<case name="어택글라이드" />
+			<case name="문양-1" />
+			<case name="문양-2" />
+			<case name="문양-3" />
+			<case name="문양-4" />
+			<case name="문양-5" />
+			<case name="문양-6" />
+			<case name="문양-7" />
+			<case name="문양-8" />
+			<case name="문양-9" />
+			<case name="문양-10" />
+			<case name="문양-11" />
+			<case name="문양-12" />
+			<case name="문양-13" />
+			<case name="문양-14" />
+			<case name="문양-15" />
+			<case name="문양-16" />
+			<case name="문양-17" />
+			<case name="문양-18" />
+			<case name="문양-19" />
+			<case name="문양-20" />
+			<case name="기믹-1" />
+			<case name="기믹-2" />
+			<case name="기믹-3" />
+			<case name="기믹-4" />
+			<case name="기믹-5" />
+			<case name="던전보스-1" />
+			<case name="기믹-6" />
+			<case name="기믹-7" />
+			<case name="기믹-8" />
+			<case name="기믹-9" />
+			<case name="기믹-10" />
+			<case name="중첩불가3" />
+		</attribute>
+		<attribute name="stance" type="Prop_seq" default="소환수-follow">
+			<case name="stance-none" />
+			<case name="npc기본자세" />
+			<case name="천검세" />
+			<case name="검령세" />
+			<case name="단타" />
+			<case name="연계" />
+			<case name="체술" />
+			<case name="납도" />
+			<case name="경기공" />
+			<case name="연기공" />
+			<case name="강기공" />
+			<case name="권총모드" />
+			<case name="런처모드" />
+			<case name="파괴" />
+			<case name="보호" />
+			<case name="철벽" />
+			<case name="소환" />
+			<case name="교란" />
+			<case name="은신" />
+			<case name="암살" />
+			<case name="검술" />
+			<case name="어검" />
+			<case name="발도" />
+			<case name="npc자세1" />
+			<case name="npc자세2" />
+			<case name="npc자세3" />
+			<case name="소환수-follow" />
+			<case name="소환수-command-1" />
+			<case name="소환수-flying" />
+			<case name="주술" />
+			<case name="강림" />
+			<case name="유권" />
+			<case name="기공" />
+			<case name="냉정" />
+			<case name="광기" />
+			<case name="장궁" />
+			<case name="정령궁" />
+			<case name="찌르기" />
+			<case name="베기" />
+			<case name="청뢰" />
+			<case name="혈뢰" />
+			<case name="어검세" />
+			<case name="정수" />
+			<case name="역수" />
+			<case name="한손역수" />
+			<case name="간이연주" />
+			<case name="우퍼" />
+			<case name="연주" />
+			<case name="쌍월" />
+			<case name="뇌신" />
+			<case name="침식" />
+			<case name="염제" />
+			<case name="npc주시자세1" />
+			<case name="npc주시자세2" />
+			<case name="npc주시자세3" />
+		</attribute>
+		<attribute name="lifetime-duration" type="Msec" default="0" max="120000" />
+		<attribute name="max-speed-near-master" type="Velocity" default="0" max="8000" />
+		<attribute name="min-distance-to-lerp-speed" type="Distance" default="50" min="50" max="32767" />
+		<attribute name="max-distance-to-lerp-speed" type="Distance" default="50" min="50" max="32767" />
+		<attribute name="speed" type="Velocity" default="0" max="8000" />
+		<attribute name="use-customized-appearance" type="Bool" default="n" />
+		<attribute name="appearance" type="Ref" ref="creatureappearance" refel="1" />
+		<attribute name="animset" type="XUnknown2" default="" max="256" />
+		<attribute name="moveanim" type="Ref" deprecated="True" ref="summonedmoveanim" refel="1" />
+		<attribute name="spawn-social" type="Ref" ref="social" refel="1" />
+		<attribute name="dead-social" type="Ref" deprecated="True" ref="social" refel="1" />
+		<attribute name="despawn-social" type="Ref" deprecated="True" ref="social" refel="1" />
+		<attribute name="respawn-in-social" type="Ref" ref="social" refel="1" />
+		<attribute name="respawn-out-social" type="Ref" ref="social" refel="1" />
+		<attribute name="spawn-show" type="XUnknown2" default="" max="256" />
+		<attribute name="despawn-show" type="XUnknown2" default="" max="256" />
+		<attribute name="combat-side-player-continuance-show" type="XUnknown2" default="" max="256" />
+		<attribute name="combat-side-friend-continuance-show" type="XUnknown2" default="" max="256" />
+		<attribute name="combat-side-enemy-continuance-show" type="XUnknown2" default="" max="256" />
+		<attribute name="icon" type="Icon" max="32767" />
+		<attribute name="ui-show-buff-list" type="Bool" default="y" />
+		<attribute name="ui-show-nameplate" type="Bool" default="y" />
+		<attribute name="ui-show-summoned-stat" type="Bool" default="y" />
+		<attribute name="ui-enable-pc-tooltip" type="Bool" default="y" />
+		<attribute name="mapunit-width" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="mapunit-height" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="mapunit-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="mapunit-outsight-width" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="mapunit-outsight-height" type="Float32" default="0.0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="mapunit-outsight-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="fixed-name" type="Ref" ref="text" refel="1" />
+		<attribute name="nameplate-title-state-normal" type="Ref" ref="text" refel="1" />
+		<attribute name="nameplate-title-state-duel-other-team" type="Ref" ref="text" refel="1" />
+		<attribute name="nameplate-name-state-anonymity" type="Ref" ref="text" refel="1" />
+		<attribute name="nameplate-name-state-duel-other-team" type="Ref" ref="text" refel="1" />
+		<attribute name="term-sequence-range-sim-check" type="Float32" default="0.5" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+	</el>
+</table>

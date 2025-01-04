@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="job-style-specialization" type="235" version="1.0" module="4" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="specialization-tag-imageset" type="XUnknown2" default="" max="256" />
+		<attribute name="description" type="Ref" ref="text" refel="1" />
+	</el>
+</table>

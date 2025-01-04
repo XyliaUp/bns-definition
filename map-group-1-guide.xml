@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="map-group-1-guide" type="247" version="0.1" module="4" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="map-group-1" type="Ref" required="True" ref="map-group-1" refel="1" />
+		<attribute name="expedition-desc" type="Ref" ref="text" refel="1" />
+		<attribute name="expedition-image" type="XUnknown2" default="" max="256" />
+	</el>
+</table>

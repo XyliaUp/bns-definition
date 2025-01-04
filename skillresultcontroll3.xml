@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="skillresultcontroll3" type="360" version="0.8" module="2062" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="immune-target-counter-skill" type="Bool" repeat="5" default="n" />
+		<attribute name="immune-target-parry-skill" type="Bool" repeat="5" default="n" />
+		<attribute name="immune-target-perfect-parry-skill" type="Bool" repeat="5" default="n" />
+		<attribute name="immune-target-bounce-skill" type="Bool" repeat="5" default="n" />
+		<attribute name="immune-target-dodge-skill" type="Bool" repeat="5" default="n" />
+		<attribute name="immune-miss-result" type="Bool" repeat="5" default="n" />
+	</el>
+</table>

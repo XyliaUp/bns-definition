@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="smart-drop-reward" type="386" version="2.0" module="6">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="id" type="Int64" key="True" required="True" min="-9223372036854775807" max="9223372036854775807" />
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="item" type="Ref" repeat="100" ref="item" refel="1" />
+		<attribute name="item-total-count" type="Int8" hidden="True" default="0" min="-128" max="127" />
+		<attribute name="common-pouch-drop-rate" type="Int16" default="0" max="100" />
+		<attribute name="personal-pouch-drop-rate" type="Int16" default="0" max="100" />
+	</el>
+</table>

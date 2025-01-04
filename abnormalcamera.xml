@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="abnormalcamera" type="2" version="0.3" module="4">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="idle-type" type="Seq" key="True" required="True">
+			<case name="normal" />
+			<case name="dead" />
+			<case name="dead-hide" />
+			<case name="dead-back" />
+			<case name="dead-front" />
+			<case name="dead-swim-area" />
+			<case name="exhaustion" />
+			<case name="mount-linker" />
+			<case name="mount-linkee" />
+			<case name="inhalation_linker" />
+			<case name="inhalation_linkee" />
+			<case name="stun" />
+			<case name="stagger" />
+			<case name="down" />
+			<case name="block" />
+			<case name="air" />
+			<case name="air2" />
+			<case name="air3" />
+			<case name="kneel" />
+			<case name="magnetic" />
+			<case name="stiff" />
+			<case name="front_down" />
+			<case name="block2" />
+			<case name="flee" />
+			<case name="knockback-stand" />
+			<case name="knockback-kneel" />
+			<case name="knockback-frontdown" />
+			<case name="knockback-down" />
+			<case name="picking" />
+			<case name="fast-freezing" />
+			<case name="impregnability" />
+			<case name="hide" />
+			<case name="burrow" />
+			<case name="restoration" />
+			<case name="block3" />
+			<case name="landing-shock" />
+			<case name="catch" />
+			<case name="catched" />
+			<case name="catch-none-human" />
+			<case name="catched-none-human" />
+			<case name="catch-friend" />
+			<case name="catched-friend" />
+			<case name="catch-inhalation" />
+			<case name="catched-inhalation" />
+			<case name="npc-block" />
+			<case name="sit-down" />
+			<case name="silver-wep" />
+			<case name="ironfotess" />
+			<case name="presentation-linke" />
+			<case name="spider-web" />
+			<case name="state-social" />
+			<case name="block4" />
+			<case name="dead-duel" />
+		</attribute>
+		<attribute name="camera-type" type="Seq" required="True">
+			<case name="forcibly-pose" />
+			<case name="zoom-near-far" />
+		</attribute>
+		<attribute name="location-x" type="Float32" required="True" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="location-y" type="Float32" required="True" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="location-z" type="Float32" required="True" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="target-x" type="Float32" required="True" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="target-y" type="Float32" required="True" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="target-z" type="Float32" required="True" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="enter-duration" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="leave-smooth" type="Bool" default="n" />
+		<attribute name="leave-duration" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="height-far" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="height-middle" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+		<attribute name="height-near" type="Float32" default="0" fmin="-3.40282347E+38" fmax="3.40282347E+38" />
+	</el>
+</table>

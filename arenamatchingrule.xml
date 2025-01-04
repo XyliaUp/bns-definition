@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="arenamatchingrule" type="12" version="0.10" module="70" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="" />
+</table>

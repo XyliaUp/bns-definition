@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="npctalkmessage" type="274" version="0.61" module="4" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="name" type="String" deprecated="True" max="50" />
+		<attribute name="name2" type="Ref" ref="text" refel="1" />
+		<attribute name="required-faction" type="Ref" ref="faction" refel="1" />
+		<attribute name="required-complete-quest" type="Ref" ref="quest" refel="1" />
+		<attribute name="step-text" type="Ref" repeat="30" ref="text" refel="1" />
+		<attribute name="step-subtext" type="Ref" repeat="30" ref="text" refel="1" />
+		<attribute name="step-next" type="Ref" repeat="30" ref="text" refel="1" />
+		<attribute name="step-kismet" type="String" repeat="30" default="" max="50" />
+		<attribute name="step-cinematic" type="Ref" repeat="30" ref="cinematic" refel="1" />
+		<attribute name="step-show" type="XUnknown2" repeat="30" default="" max="256" />
+		<attribute name="step-camera-show" type="XUnknown2" repeat="30" default="" max="256" />
+		<attribute name="step-sound" type="String" repeat="30" deprecated="True" default="" max="50" />
+		<attribute name="function-step" type="Int8" default="0" min="-128" max="127" />
+		<attribute name="end-talk-social" type="Ref" ref="social" refel="1" />
+		<attribute name="end-talk-sound" type="String" default="" max="70" />
+		<sub name="branch">
+			<attribute name="initial-branch" type="Bool" default="n" />
+			<attribute name="branch-msg" type="Ref" repeat="4" ref="npctalkmessage" refel="1" />
+		</sub>
+		<sub name="questmessage">
+			<attribute name="acquire-quest" type="Ref" deprecated="True" hidden="True" ref="quest" refel="1" />
+			<attribute name="progress-quest" type="Ref" deprecated="True" hidden="True" ref="quest" refel="1" />
+			<attribute name="progress-mission" type="Int8" deprecated="True" hidden="True" default="0" min="-128" max="127" />
+			<attribute name="progress-talkcase" type="Int8" deprecated="True" hidden="True" default="0" min="-128" max="127" />
+			<attribute name="end-talk-social-quest-ok" type="Ref" ref="social" refel="1" />
+			<attribute name="end-talk-sound-quest-ok" type="String" default="" max="70" />
+		</sub>
+		<sub name="teleport" />
+		<sub name="craft">
+			<attribute name="craft-message-type" type="Seq" default="none">
+				<case name="none" />
+				<case name="join" />
+				<case name="ask" />
+				<case name="busy" />
+				<case name="receive" />
+				<case name="need-level" />
+				<case name="full-craft" />
+			</attribute>
+		</sub>
+		<sub name="faction-coin-exchange" />
+		<sub name="store">
+			<attribute name="store-message-type" type="Seq" default="sale">
+				<case name="sale" />
+				<case name="NotAuthority" />
+			</attribute>
+		</sub>
+		<sub name="warehouse" />
+		<sub name="auction" />
+		<sub name="delivery" />
+		<sub name="make-summoned">
+			<attribute name="end-talk-social-ok" type="Ref" ref="social" refel="1" />
+		</sub>
+		<sub name="summoned-beauty-shop" />
+		<sub name="summoned-name-change">
+			<attribute name="end-talk-show-ok" type="String" default="" max="70" />
+			<attribute name="end-talk-sound-ok" type="String" default="" max="70" />
+		</sub>
+		<sub name="create-guild">
+			<attribute name="end-talk-social-ok" type="Ref" ref="social" refel="1" />
+			<attribute name="end-talk-sound-ok" type="String" default="" max="70" />
+		</sub>
+		<sub name="join-faction">
+			<attribute name="population-statistics" type="Seq" default="equal">
+				<case name="none" />
+				<case name="faction-1-high" />
+				<case name="equal" />
+				<case name="faction-1-low" />
+				<case name="joined-guild" />
+				<case name="transfer-cooltime" />
+			</attribute>
+			<attribute name="end-talk-social-ok" type="Ref" ref="social" refel="1" />
+			<attribute name="fail-population-message" type="Ref" ref="npctalkmessage" refel="1" />
+		</sub>
+		<sub name="transfer-faction">
+			<attribute name="population-statistics" type="Seq" default="equal">
+				<case name="none" />
+				<case name="faction-1-high" />
+				<case name="equal" />
+				<case name="faction-1-low" />
+				<case name="joined-guild" />
+				<case name="transfer-cooltime" />
+			</attribute>
+			<attribute name="end-talk-sound-ok" type="String" default="" max="70" />
+			<attribute name="fail-population-message" type="Ref" ref="npctalkmessage" refel="1" />
+		</sub>
+		<sub name="contribute-guild-reputation" />
+		<sub name="dungeon-progress">
+			<attribute name="dungeon" type="Ref" ref="dungeon" refel="1" />
+		</sub>
+		<sub name="select-join-faction">
+			<attribute name="population-statistics" type="Seq" default="equal">
+				<case name="none" />
+				<case name="faction-1-high" />
+				<case name="equal" />
+				<case name="faction-1-low" />
+				<case name="joined-guild" />
+				<case name="transfer-cooltime" />
+			</attribute>
+			<attribute name="msg" type="Ref" repeat="2" ref="npctalkmessage" refel="1" />
+			<attribute name="faction" type="Ref" repeat="2" ref="faction" refel="1" />
+		</sub>
+		<sub name="guild-customize">
+			<attribute name="guild-customize-message-type" type="Seq" default="EnterCustomize">
+				<case name="none" />
+				<case name="EnterCustomize" />
+				<case name="NotAuthority" />
+				<case name="ActivateFaction" />
+				<case name="WaitingArena" />
+			</attribute>
+		</sub>
+		<sub name="job-change-join" />
+		<sub name="job-change-show" />
+		<sub name="randomoption-reset" />
+	</el>
+</table>

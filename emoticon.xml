@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="emoticon" type="118" version="0.5" module="4" autokey="True">
+	<el name="table" child="record" />
+	<el name="record" child="">
+		<attribute name="alias" type="String" required="True" max="70" />
+		<attribute name="index" type="Int32" required="True" min="-2147483647" max="2147483647" />
+		<sub name="emoticon">
+			<attribute name="tip" type="Ref" default="" ref="text" refel="1" />
+			<attribute name="name2" type="Ref" default="" ref="text" refel="1" />
+			<attribute name="candidate-name" type="Ref" default="" ref="text" refel="1" />
+			<attribute name="single-name" type="Ref" default="" ref="text" refel="1" />
+		</sub>
+		<sub name="profile">
+			<attribute name="profile-image-set-path" type="String" default="" max="70" />
+		</sub>
+	</el>
+</table>
